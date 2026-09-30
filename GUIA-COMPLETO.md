@@ -142,13 +142,16 @@ O servidor serve o app (com manifest, service worker e ícones) e faz o proxy da
 | ⚡ **Geradores infinitos** | 13 tipos de questões de RLM/Matemática criadas na hora, com resolução comentada — não acabam nunca |
 | ⏱️ **Simulado** | Monte provas com a distribuição que quiser, cronômetro, correção comentada e diagnóstico por matéria |
 | 🤖 **IA** | Tutor do edital em **Hugging Face, Gemini ou Groq** (reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada" |
+| 📥 **Importar provas antigas** | Cola o texto de questões de PDFs da banca (Ctrl+C / Ctrl+V) e o app separa enunciado, alternativas e gabarito; revisa, salva no seu banco e exporta em `.json` |
 | 📚 **Teoria** | Resumos de bolso das 14 matérias + tópicos oficiais para marcar como estudados |
 | 📈 **Progresso** | Prioridades, tópicos mais errados, evolução dos simulados, conquistas, nuvem e backup |
 | 🗓️ **Plano até a prova** | Cronograma dos próximos 7 dias + estratégia por peso das matérias |
 
-**Banco inicial:** 291 questões comentadas + 14 matérias com resumo + 13 geradores infinitos.
+**Banco inicial: 1.704 questões comentadas** (14 matérias) + 13 geradores infinitos + importador de provas antigas.
 
-Língua Portuguesa 30 · Legislação e Ética 30 · Informática 28 · Raciocínio Lógico 25 · Secretaria/Adm. Geral 24 · Direito Administrativo 28 · Direito Constitucional 24 · Processual Constitucional 10 · **Processo Legislativo/RIALEPA/LC 95: 30** · Financeiro 12 · Previdenciário 12 · Civil 16 · Processual Civil 12 · Direitos Humanos 10.
+Língua Portuguesa 131 · Legislação e Ética 148 · Informática 107 · Raciocínio Lógico 152 · Secretaria/Adm. Geral 249 · **Direito Administrativo 295** · Direito Constitucional 129 · Processual Constitucional 35 · **Processo Legislativo/RIALEPA/LC 95: 136** · Direito Financeiro 102 · Previdenciário 46 · Civil 55 · Processual Civil 54 · Direitos Humanos 65.
+
+Todas têm comentário com o **fundamento legal** (artigo/lei) e alternativas plausíveis. As questões novas aparecem com o selo **“Estilo CETAP”** — foram escritas a partir de uma base de **506 fatos** extraídos do conteúdo programático (cada fato rende 3 questões: pergunta direta, “assinale a correta” e “qual pergunta corresponde a esta resposta”). Se você importar provas antigas, elas se somam a esse banco.
 
 ---
 
@@ -156,11 +159,13 @@ Língua Portuguesa 30 · Legislação e Ética 30 · Informática 28 · Raciocí
 
 | Fonte | Volume estimado |
 |---|---|
-| Banco curado | 291 |
+| Banco curado | **1.704** (já pronto) |
+| Importador de provas antigas CETAP (1 prova ≈ 40 questões) | +200 a +600 |
+| Questões vindas das suas provas antigas (arquivo .json) | ilimitado |
 | Geradores infinitos — 15 min/dia ≈ 25 questões | ~1.850 em 74 dias |
 | Questões geradas pela IA (5 por clique, 1 tópico/dia) | ~370 |
 | Simulados (2 por semana × 60 questões) | ~1.200 |
-| **Total possível** | **~3.700** |
+| **Total possível** | **~5.000+** |
 
 Rotina sugerida: **manhã** 20 questões do banco (matéria fraca) → **tarde** 20 nos geradores → **noite** 1 tópico gerado por IA + um resumo de bolso. **Domingo:** simulado de 60 questões e correção no mesmo dia.
 
@@ -183,15 +188,18 @@ app/
   server.py             ← servidor local (app + proxy de IA + sincronização em nuvem)
   build.py              ← regenera o app a partir das fontes
   src/app.ias.js        ← as 11 IAs: chaves, modelos, reserva, uso simultâneo e diagnóstico
+  src/app.import.js     ← importador de questões de provas antigas (colar do PDF)
   provedores.py         ← os mesmos provedores, para o servidor intermediar a chamada
   data/edital.json      ← árvore de tópicos do Anexo II (14 matérias)
   data/teoria.json      ← resumos de bolso
-  questoes/*.json       ← banco de questões comentadas (14 arquivos)
+  questoes/*.json       ← banco de questões comentadas (14 arquivos curados + 13 gerados)
+  fatos/*.json          ← base de fatos (506) que gera as questões “Estilo CETAP”
+  gerar_fatos.py        ← gera o banco a partir dos fatos: python3 app/gerar_fatos.py
   pwa/                  ← manifest.webmanifest e sw.js (modo aplicativo/offline)
   assets/               ← ícones do app (192 e 512 px)
   src/                  ← template, CSS e JavaScript
 tests/
-  smoke.js              ← 137 verificações (assistente, chaves, IAs, abas, métricas, sync, PWA)
+  smoke.js              ← 153 verificações (assistente, chaves, IAs, abas, métricas, sync, PWA, importador)
   geradores.js          ← confere os 13 geradores, o banco e os filtros
   telas.js              ← gera imagens das telas (desktop e celular) para conferir o visual
 uploads/alepa.pdf       ← o edital que você enviou
@@ -199,6 +207,29 @@ uploads/alepa.pdf       ← o edital que você enviou
 
 Para rodar os testes: `cd tests && npm install jsdom && node smoke.js && node geradores.js`
 Para gerar as telas: `npm install puppeteer && node telas.js` (salva em `views/`).
+
+### 📥 Importar as provas antigas da CETAP (dentro do app)
+
+1. Baixe o PDF de uma prova anterior da banca (veja os portais abaixo).
+2. Abra o PDF, **selecione as questões com as alternativas** e copie (**Ctrl+C** no PC / toque longo → copiar no celular).
+3. No app: aba **✍️ Treinar** → botão **📥 Importar questões de provas antigas da CETAP**.
+4. Cole no campo, escolha **matéria** e **tópico** (opcional), clique em **🔍 Analisar texto colado**.
+5. Confira a prévia: se o gabarito não vier no texto, **clique no círculo** da alternativa correta (aparece “defina o gabarito”).
+6. **✔ Salvar no meu banco** — as questões entram no treino, no simulado, nas estatísticas e na revisão espaçada. Use **⬇ Exportar minhas questões (.json)** para levar para outro aparelho.
+
+O parser entende `Questão 1`, `1)`, `1.`, alternativas em linhas (`A)`, `(A)`, `A -`) e também tudo na mesma linha, além de `Gabarito: C` / `Resposta: C`. Questões repetidas são descartadas automaticamente.
+
+**Onde baixar provas da banca (grátis):**
+
+| Portal | Endereço |
+|---|---|
+| QConcursos (banco CETAP) | qconcursos.com/questoes-de-concursos/bancas/cetap |
+| Tec Concursos | tecconcursos.com.br/bancas/cetap |
+| Provas Brasil | provasbrasil.com.br/provas-anteriores/cetap/ |
+| Ética Concursos | eticaconcursos.com.br/provas/bancas/cetap |
+| Site oficial da banca | cetapnet.com.br · fundacaocetap.com.br |
+
+Provas para começar: **SEOP-PA 2024**, **BANPARÁ 2025**, **SEPLAD/JUCEPA 2021**, **SEAP-PA 2021**, **Prefeitura de Marituba 2025** — todas com blocos de Direito Administrativo, Constitucional, Português e Informática parecidos com o seu edital.
 
 ### Como adicionar mais questões
 

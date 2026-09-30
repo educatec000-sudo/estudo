@@ -6,7 +6,8 @@ App de estudos (PWA, funciona offline) para o concurso da **Assembleia Legislati
 
 ## ✨ O que tem
 
-- **Banco com 291 questões comentadas** cobrindo as 14 matérias do cargo 15 (com base legal e análise de distratores)
+- **Banco com 1.704 questões comentadas** cobrindo as 14 matérias do cargo 15 (com base legal, comentário e alternativas plausíveis)
+- **📥 Importador de provas antigas da CETAP**: cola o texto do PDF (Ctrl+C/Ctrl+V), o app separa enunciado, alternativas e gabarito e salva no seu banco
 - **⚡ 13 geradores infinitos** de questões de RLM/Matemática, criadas na hora com resolução comentada
 - **⏱️ Simulados** com cronômetro, correção comentada e diagnóstico por matéria
 - **🤖 Tutor de IA com 11 provedores** (Hugging Face, Google Gemini, Groq, ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok, IA local e API própria)

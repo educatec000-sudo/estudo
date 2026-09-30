@@ -242,14 +242,14 @@ function estadoInicial() {
     v: 1, criado: Date.now(),
     config: {
       metaDia: 41, metaTotal: 3000, dataProva: EDITAL.data_prova,
-      tempoProvaMin: 240, nome: '', modeloIA: 'Qwen/Qwen2.5-7B-Instruct', tokenIA: ''
+      tempoProvaMin: 240, nome: '', modeloIA: 'openai/gpt-oss-120b', tokenIA: ''
     },
     resp: {},        // qid -> {t,a,ok,ult,cx,prox}
     hist: {},        // 'YYYY-MM-DD' -> {q,a,min}
     fav: {}, notas: {}, teoria: {},
     geradas: [],     // questões criadas pela IA
     provas: [],      // simulados concluídos
-    ia: { msgs: [] }
+    ia: { msgs: [], comparar: false, gerarParalelo: false }
   };
 }
 let S = (() => {
@@ -845,6 +845,480 @@ window.iniciarRevisao = iniciarRevisao;
 window.irPara = irPara;
 window.iniciarPorMateria = iniciarPorMateria;
 </script>
+<script>/* ============================================================================
+   CAMADA DE IAs — Arena Estudos ALEPA
+   Suporta vários provedores com chaves independentes, modelo por provedor,
+   verificação da chave, listagem dos modelos reais do provedor e RESERVA
+   automática (se a IA principal falhar, o app tenta a próxima configurada).
+   ============================================================================ */
+
+const PROVEDORES = {
+  hf: {
+    nome: 'Hugging Face', emoji: '🤗', tipo: 'openai',
+    url: 'https://router.huggingface.co/v1/chat/completions',
+    urlModelos: 'https://router.huggingface.co/v1/models',
+    criar: 'https://huggingface.co/settings/tokens/new?tokenType=fineGrained&name=Arena%20Estudos%20ALEPA',
+    ajuda: 'Grátis. Crie o token e marque a permissão “Make calls to Inference Providers”.',
+    prefixo: 'hf_', custo: 'grátis (cota diária)',
+    modelos: ['openai/gpt-oss-120b', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct', 'google/gemma-3-4b-it', 'Qwen/Qwen2.5-7B-Instruct'],
+    obs: 'Também é a IA usada para sincronizar o progresso entre aparelhos (precisa de permissão de escrita se você usar a nuvem).'
+  },
+  gemini: {
+    nome: 'Google Gemini', emoji: '✨', tipo: 'gemini',
+    urlBase: 'https://generativelanguage.googleapis.com/v1beta/models/',
+    urlModelos: 'https://generativelanguage.googleapis.com/v1beta/models',
+    criar: 'https://aistudio.google.com/apikey',
+    ajuda: 'Grátis. No Google AI Studio, clique em “Create API key” e copie a chave (começa com AIza).',
+    prefixo: 'AIza', custo: 'grátis (cota diária generosa)',
+    modelos: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-flash'],
+    obs: 'Ótima para explicar questões e resumir leis. Usa conexão especial que dispensa o bloqueio do navegador.'
+  },
+  groq: {
+    nome: 'Groq', emoji: '⚡', tipo: 'openai',
+    url: 'https://api.groq.com/openai/v1/chat/completions',
+    urlModelos: 'https://api.groq.com/openai/v1/models',
+    criar: 'https://console.groq.com/keys',
+    ajuda: 'Grátis e muito rápido. Crie a chave em console.groq.com/keys (começa com gsk_).',
+    prefixo: 'gsk_', custo: 'grátis (com limites por minuto)',
+    modelos: ['llama-3.3-70b-versatile', 'openai/gpt-oss-120b', 'llama-3.1-8b-instant'],
+    obs: 'A resposta mais rápida entre as gratuitas — boa para gerar questões em sequência.'
+  },
+  openai: {
+    nome: 'ChatGPT (OpenAI)', emoji: '💬', tipo: 'openai',
+    url: 'https://api.openai.com/v1/chat/completions',
+    urlModelos: 'https://api.openai.com/v1/models',
+    criar: 'https://platform.openai.com/api-keys',
+    ajuda: 'Pago (precisa de créditos na conta). Crie a chave em platform.openai.com/api-keys (começa com sk-).',
+    prefixo: 'sk-', custo: 'pago',
+    modelos: ['gpt-4o-mini', 'gpt-4.1-mini', 'gpt-4o'],
+    obs: 'Use “buscar modelos disponíveis” para ver os nomes atuais da sua conta.'
+  },
+  anthropic: {
+    nome: 'Claude (Anthropic)', emoji: '🧠', tipo: 'anthropic',
+    url: 'https://api.anthropic.com/v1/messages',
+    urlModelos: 'https://api.anthropic.com/v1/models',
+    criar: 'https://console.anthropic.com/settings/keys',
+    ajuda: 'Pago (precisa de créditos). Crie a chave em console.anthropic.com/settings/keys (começa com sk-ant-).',
+    prefixo: 'sk-ant-', custo: 'pago',
+    modelos: ['claude-sonnet-4-5', 'claude-haiku-4-5', 'claude-opus-4-1'],
+    obs: 'Muito bom em texto longo e explicações jurídicas.'
+  },
+  openrouter: {
+    nome: 'OpenRouter (vários modelos)', emoji: '🔀', tipo: 'openai',
+    url: 'https://openrouter.ai/api/v1/chat/completions',
+    urlModelos: 'https://openrouter.ai/api/v1/models',
+    criar: 'https://openrouter.ai/settings/keys',
+    ajuda: 'Tem modelos gratuitos (os que terminam com “:free”). Crie a chave em openrouter.ai/settings/keys (começa com sk-or-).',
+    prefixo: 'sk-or-', custo: 'grátis em alguns modelos',
+    modelos: ['deepseek/deepseek-chat-v3.1:free', 'meta-llama/llama-3.3-70b-instruct:free', 'qwen/qwen3-235b-a22b:free', 'anthropic/claude-sonnet-4.5'],
+    obs: 'Um só cadastro dá acesso a dezenas de IAs diferentes. Procure modelos com “:free” para não pagar nada.'
+  },
+  mistral: {
+    nome: 'Mistral', emoji: '🌬️', tipo: 'openai',
+    url: 'https://api.mistral.ai/v1/chat/completions',
+    urlModelos: 'https://api.mistral.ai/v1/models',
+    criar: 'https://console.mistral.ai/api-keys',
+    ajuda: 'Tem plano gratuito de teste. Pegue a chave em console.mistral.ai/api-keys.',
+    custo: 'grátis (plano de teste) / pago',
+    modelos: ['mistral-large-latest', 'mistral-small-latest', 'open-mistral-nemo'],
+    obs: 'Modelos europeus, bons em múltiplos idiomas.'
+  },
+  deepseek: {
+    nome: 'DeepSeek', emoji: '🐋', tipo: 'openai',
+    url: 'https://api.deepseek.com/chat/completions',
+    urlModelos: 'https://api.deepseek.com/models',
+    criar: 'https://platform.deepseek.com/api_keys',
+    ajuda: 'Pago, mas bem barato. Crie a chave em platform.deepseek.com/api_keys.',
+    prefixo: 'sk-', custo: 'pago (baixo custo)',
+    modelos: ['deepseek-chat', 'deepseek-reasoner'],
+    obs: 'O “deepseek-reasoner” raciocina passo a passo — bom para questões de raciocínio lógico.'
+  },
+  xai: {
+    nome: 'Grok (xAI)', emoji: '🛰️', tipo: 'openai',
+    url: 'https://api.x.ai/v1/chat/completions',
+    urlModelos: 'https://api.x.ai/v1/models',
+    criar: 'https://console.x.ai',
+    ajuda: 'Pago. Crie a chave no console.x.ai.',
+    prefixo: 'xai-', custo: 'pago',
+    modelos: ['grok-4', 'grok-3-mini'],
+    obs: ''
+  },
+  ollama: {
+    nome: 'IA no seu computador (Ollama/LM Studio)', emoji: '💻', tipo: 'openai', semChave: true,
+    urlPadrao: 'http://localhost:11434/v1/chat/completions',
+    urlModelos: 'http://localhost:11434/v1/models',
+    criar: 'https://ollama.com/download',
+    ajuda: 'Grátis e 100% offline: instale o Ollama, rode “ollama pull llama3.2” e pronto. No LM Studio, use http://localhost:1234/v1.',
+    custo: 'grátis (roda no seu aparelho)',
+    modelos: ['llama3.2', 'qwen2.5:7b', 'mistral', 'gemma3:4b'],
+    obs: 'Só funciona com o app aberto no mesmo computador do Ollama (ou pelo servidor local). Não gasta internet nem cota.'
+  },
+  custom: {
+    nome: 'Outra IA (compatível com OpenAI)', emoji: '🔧', tipo: 'openai', urlLivre: true, semChaveOpcional: true,
+    criar: 'https://platform.openai.com/docs/api-reference',
+    ajuda: 'Cole o endereço completo da API (…/v1/chat/completions) e a chave. Serve para Together, Fireworks, vLLM, texto local e qualquer serviço compatível com o padrão da OpenAI.',
+    custo: 'depende do serviço',
+    modelos: [],
+    obs: 'Avançado: use se você já recebeu um endereço de API de outro serviço.'
+  },
+};
+
+const IDS_IA = Object.keys(PROVEDORES);
+
+/* ---------- estado da conexão (servidor local / proxy da Vercel) ---------- */
+const IA_STATUS = { servidor: null, erro: '', erroSync: '', tokenNoServidor: false };
+
+/* Existe um intermediário (server.py local ou função da Vercel) em /api/health? */
+async function checarServidor() {
+  try {
+    const r = await fetchTimeout('api/health', { method: 'GET' }, 4000);
+    const j = await r.json().catch(() => ({}));
+    IA_STATUS.servidor = !!j.ok;
+    IA_STATUS.tokenNoServidor = !!(j && j.tem_token_no_servidor);
+    IA_STATUS.iaNoServidor = (j && j.app) || 'local';
+    return IA_STATUS.servidor;
+  } catch (e) { IA_STATUS.servidor = false; return false; }
+}
+
+/* ---------- configuração por provedor (chaves independentes) ---------- */
+function migrarIA() {
+  try {
+    S.config.ias = S.config.ias || {};
+    /* aproveita a configuração antiga (quando existia só o Hugging Face) */
+    const hf = S.config.ias.hf;
+    if ((!hf || !hf.token) && (S.config.tokenIA || S.config.modeloIA)) {
+      S.config.ias.hf = Object.assign({}, hf, { token: (S.config.tokenIA || '').trim(), modelo: S.config.modeloIA || PROVEDORES.hf.modelos[0] });
+    }
+    if (!S.config.iaPrincipal) S.config.iaPrincipal = 'hf';
+    if (typeof S.config.iaReserva !== 'boolean') S.config.iaReserva = true;
+    if (!Array.isArray(S.config.iaParalelo)) S.config.iaParalelo = [];   /* vazio = todas as ligadas */
+  } catch (e) { console.warn('migrarIA:', e); }
+}
+function cfgProv(id) {
+  S.config.ias = S.config.ias || {};
+  S.config.ias[id] = S.config.ias[id] || { token: '', modelo: '', baseUrl: '' };
+  const c = S.config.ias[id];
+  /* o modelo sugerido pode ser preenchido sozinho; o endereço/chave NÃO —
+     só contam como "ligada" quando o estudante salva a configuração */
+  if (!c.modelo && PROVEDORES[id] && PROVEDORES[id].modelos[0]) c.modelo = PROVEDORES[id].modelos[0];
+  return c;
+}
+function provAtualId() { return (S.config.iaPrincipal && PROVEDORES[S.config.iaPrincipal]) ? S.config.iaPrincipal : 'hf'; }
+function provAtual() { return PROVEDORES[provAtualId()]; }
+function iaConfigurada(id) {
+  const p = PROVEDORES[id]; if (!p) return false;
+  const c = cfgProv(id);
+  if (p.semChave) return !!String(c.baseUrl || '').trim();   /* IA no computador: só conta depois de configurada */
+  return !!String(c.token || '').trim();
+}
+function provedoresConfigurados() { return IDS_IA.filter(iaConfigurada); }
+function temChaveIA() { return provedoresConfigurados().length > 0; }
+/* ordem de tentativa: a IA principal e, se a reserva estiver ligada, as outras já configuradas */
+function ordemProvedores() {
+  const principal = provAtualId();
+  const lista = [principal];
+  if (S.config.iaReserva !== false) provedoresConfigurados().forEach(id => { if (id !== principal) lista.push(id); });
+  return lista;
+}
+function modeloDe(id) { const c = cfgProv(id); return c.modelo || (PROVEDORES[id].modelos[0] || ''); }
+/* chave do provedor principal (compatibilidade com o resto do app) */
+function tokenAtual() { const c = cfgProv(provAtualId()); return String(c.token || '').trim(); }
+/* a nuvem de progresso usa especificamente o Hugging Face */
+function tokenHF() { const c = cfgProv('hf'); return String(c.token || '').trim(); }
+function rotuloIA() { const p = provAtual(); return (p.emoji || '🤖') + ' ' + p.nome + (modeloDe(provAtualId()) ? ' · ' + modeloDe(provAtualId()) : ''); }
+
+/* Quais IAs participam do uso SIMULTÂNEO (comparar respostas / gerar questões).
+   A principal vem primeiro e o limite é 4, para não estourar as cotas grátis. */
+function iasParalelo() {
+  const todas = provedoresConfigurados();
+  if (!todas.length) return [];
+  const escolhidas = (Array.isArray(S.config.iaParalelo) && S.config.iaParalelo.length)
+    ? todas.filter(id => S.config.iaParalelo.indexOf(id) >= 0)
+    : todas;
+  const lista = escolhidas.length ? escolhidas : todas;
+  const principal = provAtualId();
+  const ordenado = ([principal].indexOf(principal) >= 0 && lista.indexOf(principal) >= 0 ? [principal] : []).concat(lista.filter(id => id !== principal));
+  return ordenado.slice(0, 4);
+}
+
+/* Chamada pelo intermediário (server.py local ou função da Vercel). */
+async function chamarViaServidor(id, mensagens, opts) {
+  const cfg = cfgProv(id);
+  const r = await fetchTimeout('api/ia', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ provedor: id, modelo: cfg.modelo, baseUrl: cfg.baseUrl, token: cfg.token, mensagens, max_tokens: (opts && opts.max_tokens) || 1200, temperature: (opts && opts.temperature) === undefined ? 0.6 : opts.temperature }),
+  }, (opts && opts.timeout) || 90000);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.content) { const x = new Error(j.error || ('HTTP ' + r.status)); x.__http = r.status; throw x; }
+  return j.content;
+}
+
+/* Faz a MESMA pergunta para várias IAs AO MESMO TEMPO e devolve todas as respostas.
+   Se o intermediário estiver ativo, as chaves não passam pelo navegador. */
+async function chamarVariasIA(mensagens, opts = {}, idsEscolhidos) {
+  migrarIA();
+  const ids = (idsEscolhidos && idsEscolhidos.length) ? idsEscolhidos.filter(iaConfigurada) : iasParalelo();
+  if (!ids.length) throw new Error('Nenhuma IA ligada. Toque no botão 🔑 no topo e ligue pelo menos uma.');
+  const tarefas = ids.map(async (id) => {
+    const t0 = Date.now();
+    try {
+      /* cada IA enxerga a conversa e as PRÓPRIAS respostas anteriores (não as das outras) */
+      const hist = mensagens.filter(m => m.role !== 'assistant' || !m.de || m.de === id).map(m => ({ role: m.role, content: m.content }));
+      const resposta = IA_STATUS.servidor ? await chamarViaServidor(id, hist, opts) : await chamarIAProvedor(id, hist, opts);
+      return { id, nome: PROVEDORES[id].nome, emoji: PROVEDORES[id].emoji, ok: true, resposta, ms: Date.now() - t0 };
+    } catch (e) {
+      return { id, nome: PROVEDORES[id].nome, emoji: PROVEDORES[id].emoji, ok: false, erro: explicarErroIA(e, id), ms: Date.now() - t0 };
+    }
+  });
+  return Promise.all(tarefas);
+}
+
+/* ---------- montagem e leitura das requisições ---------- */
+function urlDoProvedor(id, cfg) {
+  const p = PROVEDORES[id];
+  if (p.urlLivre) return String(cfg.baseUrl || '').trim();
+  if (p.tipo === 'gemini') return p.urlBase + encodeURIComponent(cfg.modelo || p.modelos[0]) + ':generateContent?key=' + encodeURIComponent(cfg.token || '');
+  if (p.semChave) return String(cfg.baseUrl || p.urlPadrao || '').trim();   /* IA no próprio computador */
+  return p.url;
+}
+function cabecalhosDoProvedor(id, cfg) {
+  const p = PROVEDORES[id], h = {};
+  if (p.tipo === 'gemini') {
+    /* truque para o navegador não bloquear com "Failed to fetch":
+       tipo de conteúdo "simples" dispensa o preflight (o Google aceita o JSON normalmente) */
+    h['Content-Type'] = 'text/plain;charset=UTF-8';
+  } else {
+    h['Content-Type'] = 'application/json';
+  }
+  if (p.tipo === 'anthropic') {
+    h['x-api-key'] = cfg.token || '';
+    h['anthropic-version'] = '2023-06-01';
+    h['anthropic-dangerous-direct-browser-access'] = 'true';
+  } else if (!p.semChave && cfg.token) {
+    h['Authorization'] = 'Bearer ' + cfg.token;
+  }
+  if (id === 'openrouter') { try { h['HTTP-Referer'] = location.origin; h['X-Title'] = 'Arena Estudos ALEPA'; } catch (e) { } }
+  return h;
+}
+function corpoDoProvedor(id, cfg, mensagens, opts) {
+  const p = PROVEDORES[id];
+  const maxT = opts.max_tokens || 1200;
+  const temp = opts.temperature ?? 0.6;
+  if (p.tipo === 'gemini') {
+    const sistema = mensagens.filter(m => m.role === 'system').map(m => m.content).join('\n');
+    const conversa = mensagens.filter(m => m.role !== 'system').map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] }));
+    const b = { contents: conversa, generationConfig: { maxOutputTokens: maxT, temperature: temp } };
+    if (sistema) b.systemInstruction = { parts: [{ text: sistema }] };
+    return b;
+  }
+  if (p.tipo === 'anthropic') {
+    const sistema = mensagens.filter(m => m.role === 'system').map(m => m.content).join('\n');
+    const conversa = mensagens.filter(m => m.role !== 'system').map(m => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.content }));
+    const b = { model: cfg.modelo, max_tokens: maxT, temperature: temp, messages: conversa };
+    if (sistema) b.system = sistema;
+    return b;
+  }
+  return { model: cfg.modelo, messages: mensagens, max_tokens: maxT, temperature: temp };
+}
+function lerResposta(id, j) {
+  const p = PROVEDORES[id];
+  if (p.tipo === 'gemini') {
+    const c = j && j.candidates && j.candidates[0];
+    const partes = c && c.content && c.content.parts;
+    if (partes && partes.length) return partes.map(x => x.text || '').join('').trim();
+    if (j && j.promptFeedback && j.promptFeedback.blockReason) throw new Error('O Gemini bloqueou esta resposta (' + j.promptFeedback.blockReason + '). Tente reformular a pergunta.');
+    return '';
+  }
+  if (p.tipo === 'anthropic') {
+    const bloco = j && j.content && j.content.find(x => x.type === 'text');
+    return bloco ? bloco.text : '';
+  }
+  return (j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
+}
+function mensagemDeErro(id, status, txt, j) {
+  const p = PROVEDORES[id];
+  let msg = (j && j.error && (j.error.message || j.error)) || (j && j.message) || (txt || '').slice(0, 200);
+  if (!msg && status) msg = 'HTTP ' + status;
+  return String(msg).slice(0, 300);
+}
+
+/* ---------- erros explicados em português ---------- */
+function ambienteRestrito() {
+  try { return location.origin === 'null' || !/^https?:$/.test(location.protocol); } catch (e) { return true; }
+}
+function errRede(e) { const x = new Error((e && e.message) || String(e)); x.__rede = true; x.__abort = !!(e && e.name === 'AbortError'); return x; }
+function errHTTP(status, msg) { const x = new Error(msg || ('HTTP ' + status)); x.__http = status; return x; }
+function fetchTimeout(url, opts, ms) {
+  if (typeof AbortController === 'undefined') return fetch(url, opts);
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), ms || 60000);
+  return fetch(url, Object.assign({}, opts, { signal: ctl.signal })).finally(() => clearTimeout(t));
+}
+function explicarErroIA(e, provedorId) {
+  const p = PROVEDORES[provedorId] || { nome: 'IA' };
+  const m = String((e && e.message) || e || 'erro desconhecido');
+  if (e && e.__rede) {
+    if (e.__abort) return 'A resposta demorou demais e foi cancelada (60 s). Tente de novo ou escolha um modelo mais leve no botão 🔑.';
+    if (ambienteRestrito()) return 'O navegador bloqueou a conversa com a IA porque o app está aberto como ARQUIVO LOCAL (file://) ou dentro de um visualizador restrito.\n\nComo resolver (qualquer uma serve):\n1) PUBLIQUE o app e abra pelo link https:// (Opção A do LEIA-ME);\n2) ou rode: python3 app/server.py e acesse http://localhost:8000';
+    return 'Não consegui falar com o serviço da ' + p.nome + '. Verifique sua internet (ou VPN, antivírus, DNS/firewall bloqueando). Detalhe: ' + m;
+  }
+  if (e && e.__http) {
+    const s = e.__http;
+    if (s === 401 || s === 403) return 'A ' + p.nome + ' RECUSOU a chave (erro ' + s + '). Isso acontece quando o token foi copiado incompleto, expirou, foi revogado ou não tem a permissão necessária.\n\nComo resolver: crie outra chave em ' + (p.criar || '') + ' e cole de novo.';
+    if (s === 404) return 'O modelo “' + (modeloDe(provedorId) || 'escolhido') + '” não existe ou não está disponível na ' + p.nome + ' (404). Toque em 🔄 “buscar modelos disponíveis” na janela 🔑 e escolha um da lista.';
+    if (s === 429) return 'A ' + p.nome + ' recusou por LIMITE DE USO (429). Espere um minuto e tente de novo — a cota gratuita renova sozinha.' + (p.custo.indexOf('grátis') === 0 ? '' : '');
+    if (s === 402) return 'Créditos insuficientes na ' + p.nome + ' (erro 402). Recarregue a conta ou troque para uma IA gratuita (Hugging Face, Groq, Gemini ou OpenRouter com modelos “:free”).';
+    if (s === 400 && /credit|balance|quota|billing/i.test(m)) return 'A conta da ' + p.nome + ' está sem créditos (400): ' + m;
+    if (s === 503) return 'O serviço da ' + p.nome + ' está sobrecarregado (503). Tente de novo em uns 20 segundos.';
+    return 'A ' + p.nome + ' respondeu ' + s + ': ' + m;
+  }
+  return m;
+}
+
+/* ---------- chamada unificada, com reserva automática ---------- */
+async function chamarIAProvedor(id, mensagens, opts) {
+  const p = PROVEDORES[id], cfg = cfgProv(id);
+  if (!p) throw new Error('Provedor de IA desconhecido: ' + id);
+  if (opts && opts.modelo) cfg.modelo = opts.modelo;
+  const url = urlDoProvedor(id, cfg);
+  if (!url) throw new Error('Falta o endereço da API na configuração da ' + p.nome + ' (janela 🔑).');
+  const r = await fetchTimeout(url, {
+    method: 'POST',
+    headers: cabecalhosDoProvedor(id, cfg),
+    body: JSON.stringify(corpoDoProvedor(id, cfg, mensagens, opts || {})),
+  }, (opts && opts.timeout) || 60000);
+  const txt = await r.text();
+  let j = {}; try { j = JSON.parse(txt); } catch (e) { }
+  if (!r.ok) throw errHTTP(r.status, mensagemDeErro(id, r.status, txt, j));
+  const conteudo = lerResposta(id, j);
+  if (!conteudo) throw new Error('A ' + p.nome + ' respondeu sem texto. Tente de novo ou troque o modelo.');
+  return conteudo;
+}
+
+async function chamarIA(mensagens, opts = {}) {
+  migrarIA();
+  const ordem = ordemProvedores();
+  if (!ordem.some(iaConfigurada)) {
+    throw new Error('Nenhuma IA configurada ainda. Toque no botão 🔑 no topo da tela: escolha uma IA (Hugging Face, Gemini, Groq…) e cole a sua chave. É grátis e leva 1 minuto.');
+  }
+  /* 1) servidor local/published com proxy: a chave não viaja no navegador */
+  if (IA_STATUS.servidor) {
+    try { return await chamarViaServidor(provAtualId(), mensagens, opts); }
+    catch (e) {
+      IA_STATUS.erro = String((e && e.message) || e);
+      if (e && e.__http && e.__http !== 404 && e.__http !== 502) throw new Error(explicarErroIA(e, provAtualId()));
+      /* 404/502 = intermediário sem suporte a essa IA: segue pela chamada direta */
+    }
+  }
+  /* 2) chamada direta do navegador, tentando a principal e depois as reservas */
+  let ultimoErro = null, ultimoProv = provAtualId();
+  for (const id of ordem) {
+    ultimoProv = id;
+    try {
+      const conteudo = await chamarIAProvedor(id, mensagens, opts);
+      if (id !== provAtualId()) {                     /* a principal falhou: passa a usar a que funcionou */
+        const antigo = provAtualId();
+        S.config.iaPrincipal = id;
+        try { salvar(); } catch (e) { }
+        if (typeof toast === 'function') toast('Usei a ' + PROVEDORES[id].nome + ' (a ' + PROVEDORES[antigo].nome + ' não respondeu)');
+      }
+      return conteudo;
+    } catch (e) {
+      /* marca se foi falha de rede (o TypeError seco do navegador) para explicar direito */
+      ultimoErro = (e && e.__http) ? e : errRede(e);
+      if (ultimoErro.__http && (ultimoErro.__http === 401 || ultimoErro.__http === 403)) {
+        /* chave inválida: se houver outra IA configurada, segue para ela; senão, explica */
+        if (ordem.filter(iaConfigurada).length > 1) continue;
+        throw new Error(explicarErroIA(e, id));
+      }
+    }
+  }
+  throw new Error(explicarErroIA(ultimoErro, ultimoProv));
+}
+
+/* ---------- listar os modelos que a chave realmente enxerga ---------- */
+async function listarModelos(id) {
+  const p = PROVEDORES[id], cfg = cfgProv(id);
+  if (!p) return [];
+  let url = p.urlModelos;
+  const cab = {};
+  if (p.tipo === 'gemini') { if (!cfg.token) throw new Error('Informe a chave primeiro.'); url = p.urlModelos + '?key=' + encodeURIComponent(cfg.token); }
+  else {
+    if (p.semChave) url = (cfg.baseUrl || p.urlPadrao || '').replace(/\/chat\/completions\/?$/, '/models');
+    else {
+      if (!cfg.token) throw new Error('Informe a chave primeiro.');
+      cab['Authorization'] = 'Bearer ' + cfg.token;
+    }
+    if (p.tipo === 'anthropic') { delete cab['Authorization']; cab['x-api-key'] = cfg.token; cab['anthropic-version'] = '2023-06-01'; cab['anthropic-dangerous-direct-browser-access'] = 'true'; }
+  }
+  if (!url) throw new Error('Falta o endereço da API.');
+  const r = await fetchTimeout(url, { method: 'GET', headers: cab }, 25000);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(mensagemDeErro(id, r.status, '', j));
+  let ids = [];
+  if (p.tipo === 'gemini') ids = (j.models || []).filter(m => (m.supportedGenerationMethods || []).indexOf('generateContent') >= 0).map(m => String(m.name || '').replace(/^models\//, ''));
+  else ids = (j.data || j.models || []).map(m => m.id || m.name || m.model).filter(Boolean).map(String);
+  ids = Array.from(new Set(ids));
+  const peso = m => (/(flash|mini|small|instant|8b|7b|nemo|free)/i.test(m) ? 0 : 1);
+  return ids.sort((a, b) => peso(a) - peso(b) || a.localeCompare(b)).slice(0, 300);
+}
+
+/* ---------- diagnóstico de todas as IAs ---------- */
+async function diagnosticarIA() {
+  migrarIA();
+  const L = [];
+  const add = (i, t) => L.push(i + ' ' + t);
+  add('•', 'Endereço do app: ' + ((typeof location !== 'undefined' && location.href) || '').slice(0, 70));
+  if (ambienteRestrito()) add('❌', 'O app está aberto como arquivo local (file://) ou em visualizador restrito: o navegador BLOQUEIA a IA nesse modo. Publique o app (Opção A do LEIA-ME) ou rode: python3 app/server.py');
+  else add('✅', 'O app está aberto por um endereço http(s) — modo correto.');
+  if (IA_STATUS.servidor) add('✅', 'Existe um servidor/proxy ativo — as chaves são usadas por trás, sem exposição.');
+  const configurados = provedoresConfigurados();
+  if (!configurados.length) { add('❌', 'Nenhuma IA configurada. Toque no botão 🔑 e cole a chave de uma das IAs.'); return L.join('\n'); }
+  add('•', 'IA principal: ' + PROVEDORES[provAtualId()].nome + ' · modelo ' + (modeloDe(provAtualId()) || '(padrão)'));
+  add('•', 'Reserva automática: ' + (S.config.iaReserva === false ? 'desligada' : 'ligada'));
+  /* quem já está configurado */
+  configurados.forEach(id => {
+    const c = cfgProv(id), p = PROVEDORES[id];
+    if (p.semChave) add('✅', p.nome + ': endereço ' + (c.baseUrl || p.urlPadrao));
+    else add('✅', p.nome + ': chave ' + String(c.token).slice(0, 7) + '…' + String(c.token).slice(-4) + ' (' + String(c.token).length + ' caracteres)');
+    const pref = p.prefixo;
+    if (pref && c.token && String(c.token).indexOf(pref) !== 0) add('⚠️', 'A chave do ' + p.nome + ' normalmente começa com “' + pref + '” — confira se copiou o campo certo.');
+  });
+  /* teste real de cada uma (menos no modo arquivo local) */
+  for (const id of configurados) {
+    if (ambienteRestrito() && !IA_STATUS.servidor) { add('⚠️', PROVEDORES[id].nome + ': não testado (app em modo arquivo local).'); continue; }
+    try {
+      const t0 = Date.now();
+      let resposta;
+      if (IA_STATUS.servidor) {
+        const cfg = cfgProv(id);
+        const r = await fetchTimeout('api/ia', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provedor: id, modelo: cfg.modelo, baseUrl: cfg.baseUrl, token: cfg.token, mensagens: [{ role: 'user', content: 'Responda apenas: OK' }], max_tokens: 5, temperature: 0 }) }, 30000);
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(j.error || ('HTTP ' + r.status));
+        resposta = j.content;
+      } else {
+        resposta = await chamarIAProvedor(id, [{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 5, temperature: 0, timeout: 30000 });
+      }
+      add('✅', PROVEDORES[id].nome + ' respondeu em ' + ((Date.now() - t0) / 1000).toFixed(1) + 's (“' + String(resposta).trim().slice(0, 20) + '”) — esta IA está funcionando.');
+    } catch (e) {
+      add('❌', PROVEDORES[id].nome + ' falhou: ' + explicarErroIA(e, id).split('\n')[0]);
+      if (id === 'hf') { try { const r2 = await fetchTimeout('https://huggingface.co/api/whoami-v2', { headers: { Authorization: 'Bearer ' + cfgProv('hf').token } }, 20000); add(r2.ok ? '✅' : '❌', 'Hugging Face: a chave ' + (r2.ok ? 'é válida.' : 'NÃO é aceita (código ' + r2.status + ').')); } catch (e2) { } }
+    }
+  }
+  add('•', 'Se pelo menos uma apareceu ✅, o tutor de IA vai funcionar. Você pode deixar várias configuradas: o app usa a principal e passa para as outras sozinho se alguma falhar.');
+  return L.join('\n');
+}
+
+/* ajuda: descreve o que está configurado, para mostrar na aba IA */
+function resumoIA() {
+  const ids = provedoresConfigurados();
+  if (!ids.length) return 'Nenhuma IA configurada ainda.';
+  return ids.map(id => PROVEDORES[id].nome + (id === provAtualId() ? ' (principal)' : '')).join(', ');
+}
+
+/* aproveita a configuração de quem já usava o app (só Hugging Face) */
+try { migrarIA(); } catch (e) { }
+</script>
 <script>/* ==========================================================================
    ARENA ESTUDOS — parte 2: geradores infinitos, IA (Hugging Face),
    teoria, progresso e plano até a prova.
@@ -1049,78 +1523,42 @@ const GERADORES = [
   }
 ];
 
-/* --------------------------- 11. IA / HUGGING FACE ----------------------- */
-const HF_URLS = ['https://router.huggingface.co/v1/chat/completions', 'https://api-inference.huggingface.co/v1/chat/completions'];
-const editalResumo = () => `CONCURSO: ${EDITAL.concurso} — BANCA: ${EDITAL.banca} — ${EDITAL.cargo}. Prova em 13/12/2026.
-CONTEÚDO PROGRAMÁTICO (Anexo II):
-${MATERIAS.map(m => `• ${m.nome}: ${m.topicos.join('; ')}`).join('\n')}`;
-
-let IA_STATUS = { servidor: null, erro: null, ultimo: null };
-async function checarServidor() {
-  try {
-    const c = new AbortController(); const t = setTimeout(() => c.abort(), 2500);
-    const r = await fetch('api/health', { signal: c.signal }); clearTimeout(t);
-    const j = await r.json(); IA_STATUS.servidor = !!j.ok; IA_STATUS.modeloPadrao = j.modelo;
-  } catch (e) { IA_STATUS.servidor = false; }
-  return IA_STATUS.servidor;
-}
-function tokenAtual() { return (S.config.tokenIA || '').trim(); }
-async function chamarIA(mensagens, opts = {}) {
-  const modelo = opts.modelo || S.config.modeloIA;
-  const corpo = { model: modelo, messages: mensagens, max_tokens: opts.max_tokens || 1200, temperature: opts.temperature ?? 0.6 };
-  // 1) tenta o servidor local (proxy) — não precisa de token no navegador
-  if (IA_STATUS.servidor) {
-    try {
-      const r = await fetch('api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.assign({}, corpo, { token: tokenAtual() })) });
-      if (r.ok) { const j = await r.json(); return j.content || (j.choices && j.choices[0].message.content); }
-      IA_STATUS.erro = (await r.json().catch(() => ({}))).error || 'erro no servidor';
-    } catch (e) { IA_STATUS.erro = String(e.message || e); }
-  }
-  // 2) chamada direta do navegador para o Hugging Face
-  const tok = tokenAtual();
-  if (!tok) throw new Error('Informe seu token do Hugging Face na aba IA (grátis em huggingface.co/settings/tokens).');
-  let lastErr;
-  for (const url of HF_URLS) {
-    try {
-      const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok }, body: JSON.stringify(corpo) });
-      const j = await r.json();
-      if (!r.ok) { lastErr = new Error(j.error && (j.error.message || j.error) || ('HTTP ' + r.status)); continue; }
-      const c = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
-      if (c) return c;
-      lastErr = new Error('resposta vazia do modelo');
-    } catch (e) { lastErr = e; }
-  }
-  throw lastErr || new Error('falha na chamada à IA');
-}
+/* --------------- 11. IA: telas de tutoria e geração de questões ----------
+   (a lógica dos provedores de IA está em app.ias.js: Hugging Face, Gemini,
+    Groq, OpenAI, Claude, OpenRouter, Mistral, DeepSeek, Grok e IA local)      */
 const IAPERSONA = `Você é um professor de cursinho especialista em concursos públicos brasileiros, focado na banca Fundação CETAP e no concurso da Assembleia Legislativa do Estado do Pará (ALEPA 002/2026), cargo de Analista Legislativo – Assistência Legislativa (cargo 15).
 Regras: responda em português do Brasil, direto e didático, com base na legislação vigente (CF/88, Constituição do Pará, Leis 14.133/2021, 8.429/1992, LC 101/2000, LC 95/1998, LGPD, Lei 5.810/1994, Regimento Interno da ALEPA). Cite o dispositivo quando souber; se não tiver certeza de um artigo específico, explique o instituto sem inventar número de artigo. Use tópicos curtos e, quando ajudar, um exemplo prático de prova.`;
+
+/* Resumo do Anexo II (cargo 15) usado como contexto nas conversas com as IAs. */
+function editalResumo() {
+  try {
+    const linhas = (MATERIAS || []).map(m => {
+      const tops = (m.topicos || []);
+      return '\u2022 ' + m.nome + ': ' + tops.slice(0, 12).join('; ') + (tops.length > 12 ? ' \u2026' : '');
+    });
+    const cab = 'Concurso ' + EDITAL.orgao + ' \u2014 banca ' + EDITAL.banca + ', cargo 15 (Analista Legislativo \u2013 Assist\u00eancia Legislativa). Prova em 13/12/2026.';
+    return cab + '\nMat\u00e9rias e t\u00f3picos do Anexo II:\n' + linhas.join('\n');
+  } catch (e) {
+    return 'Concurso ALEPA 002/2026 (Funda\u00e7\u00e3o CETAP), cargo 15 \u2014 Analista Legislativo/Assist\u00eancia Legislativa. Prova em 13/12/2026.';
+  }
+}
 
 function renderIA(root) {
   const srv = IA_STATUS.servidor;
   const msgs = S.ia.msgs;
   root.innerHTML = `
   <div class="card">
-    <h2>🤖 Tutor de IA (Hugging Face) + gerador de questões</h2>
-    <div class="muted small">Estude as <b>35+ páginas</b> do Anexo II conversando: peça explicações, resumos, mnemônicos, comparações e questões inéditas sobre qualquer tópico do edital.</div>
+    <h2>🤖 Tutor de IA + gerador de questões</h2>
+    <div class="muted small">Estude as <b>35+ páginas</b> do Anexo II conversando: peça explicações, resumos, mnemônicos, comparações e questões inéditas sobre qualquer tópico do edital. Funciona com <b>várias IAs</b> — Hugging Face, Google Gemini, Groq, ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok ou uma IA no seu computador.</div>
     <div class="row" style="margin-top:10px">
-      <button class="btn gold" onclick="abrirConfigIA()">🔑 ${tokenAtual() ? 'Trocar/verificar minha chave' : 'Informar minha chave do Hugging Face'}</button>
-      <span class="badge ${srv ? 'ok' : 'warn'}" id="ia-status">${srv === null ? 'verificando conexão…' : srv ? '✅ servidor local ativo (token protegido)' : '⚠️ modo navegador (usa seu token direto)'}</span>
-      <span class="badge">${esc(S.config.modeloIA)}</span>
+      <button class="btn gold" onclick="abrirConfigIA()">🔑 ${temChaveIA() ? 'Minhas IAs / trocar a chave' : 'Escolher e ligar uma IA (grátis)'}</button>
+      <span class="badge ${srv ? 'ok' : 'warn'}" id="ia-status">${srv === null ? 'verificando conexão…' : srv ? '✅ servidor local ativo (chaves protegidas)' : (temChaveIA() ? '⚠️ modo navegador (usa sua chave direto)' : '⚠️ nenhuma IA ligada ainda')}</span>
+      <span class="badge">${esc(rotuloIA())}</span>
     </div>
-    <details style="margin-top:10px"><summary>⚙️ Configurar token e modelo</summary>
-      <label class="f">Token do Hugging Face (grátis, começa com <code>hf_</code>)</label>
-      <input type="password" id="ia-token" placeholder="hf_..." value="${esc(tokenAtual())}">
-      <div class="tiny muted" style="margin-top:5px">Gere em <b>huggingface.co/settings/tokens</b> → New token → marque “Make calls to Inference Providers”. O token fica salvo apenas no seu aparelho (localStorage). Se aparecer erro de CORS/rede no modo navegador, peça a versão com servidor: nela o token é usado por trás, sem exposição.</div>
-      <label class="f">Modelo</label>
-      <select id="ia-modelo">
-        ${['Qwen/Qwen2.5-7B-Instruct', 'meta-llama/Llama-3.1-8B-Instruct', 'google/gemma-3-4b-it', 'Qwen/Qwen2.5-Coder-7B-Instruct', 'openai/gpt-oss-120b'].map(m => `<option${m === S.config.modeloIA ? ' selected' : ''}>${m}</option>`).join('')}
-      </select>
-      <div class="row" style="margin-top:9px">
-        <button class="btn sm pri" id="ia-salvar">Salvar</button>
-        <button class="btn sm" id="ia-testar">Testar conexão</button>
-        <button class="btn sm" id="ia-limpar">Limpar conversa</button>
-      </div>
-    </details>
+    <div class="row" style="margin-top:8px">
+      <span class="muted tiny">Ligadas: ${esc(resumoIA())}</span>
+      <button class="btn sm ghost" id="ia-limpar">🧹 Limpar conversa</button>
+    </div>
   </div>
 
   <div class="card">
@@ -1138,17 +1576,19 @@ function renderIA(root) {
       <button class="btn" id="g-treinar" ${S.geradas.length ? '' : 'disabled'}>▶ Treinar as ${S.geradas.length} questões geradas</button>
       <button class="btn" id="g-limpar" ${S.geradas.length ? '' : 'disabled'}>🗑️ Apagar geradas</button>
     </div>
+    ${iasParalelo().length > 1 ? `<label class="row tiny" style="margin-top:8px;gap:6px;cursor:pointer"><input type="checkbox" id="g-paralelo" style="width:auto" ${S.ia.gerarParalelo ? 'checked' : ''}> ⚡ <b>usar todas as ${iasParalelo().length} IAs ligadas ao mesmo tempo</b> — cada uma gera o mesmo lote (sai muito mais questão de uma vez, e as repetidas são descartadas automaticamente)</label>` : ''}
     <div id="g-out" class="small muted" style="margin-top:8px"></div>
   </div>
 
   <div class="card">
-    <h3 style="margin-top:0">💬 Conversar com o tutor</h3>
+    <h3 style="margin-top:0">💬 Conversar com o tutor <span class="muted tiny">(${esc(rotuloIA())})</span></h3>
     <div class="chat" id="chat">
       ${msgs.length ? '' : '<div class="msg sys">Ex.: "Explique o processo legislativo estadual do início ao fim", "Faça um resumo de licitações da Lei 14.133/2021 com pegadinhas da CETAP", "Não entendi a diferença entre decreto legislativo e resolução".</div>'}
     </div>
     <div class="row" style="margin:10px 0 4px">
       ${['Resumo geral do edital', 'Pegadinhas da CETAP em Português', 'Como estudar Processo Legislativo em 30 dias', 'Diferenças: decreto legislativo x resolução x lei'].map(s => `<button class="btn sm" data-qs="${esc(s)}">${esc(s)}</button>`).join('')}
     </div>
+    ${iasParalelo().length > 1 ? `<label class="row tiny" style="margin:0 0 6px;gap:6px;cursor:pointer"><input type="checkbox" id="ia-comparar" style="width:auto" ${S.ia.comparar ? 'checked' : ''}> ⚖️ <b>perguntar para as ${iasParalelo().length} IAs ao mesmo tempo</b> (${iasParalelo().map(id => PROVEDORES[id].emoji).join(' ')}) — compare as explicações e escolha a melhor</label>` : `<div class="tiny muted" style="margin:0 0 6px">💡 Ligue uma segunda IA no botão 🔑 para poder <b>perguntar para várias ao mesmo tempo</b> e comparar as respostas.</div>`}
     <div class="chatbar">
       <textarea id="ia-in" placeholder="Pergunte qualquer coisa do edital… (Enter envia)"></textarea>
       <button class="btn pri" id="ia-send">Enviar</button>
@@ -1158,10 +1598,12 @@ function renderIA(root) {
   const gm = $('#g-mat'), gt = $('#g-top');
   const povoarTop = () => { const m = MATBYID[gm.value]; gt.innerHTML = m.topicos.map(t => `<option>${esc(t)}</option>`).join('') + '<option>Aleatório dentro da matéria</option>'; };
   gm.onchange = povoarTop; povoarTop();
-  $('#ia-salvar').onclick = () => { S.config.tokenIA = $('#ia-token').value.trim(); S.config.modeloIA = $('#ia-modelo').value; salvar(); toast('Configuração salva ✅'); };
-  $('#ia-testar').onclick = async e => { e.target.innerHTML = '<span class="spin"></span> testando…'; try { const r = await chamarIA([{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 10 }); toast('IA respondeu: ' + r.slice(0, 40)); } catch (err) { toast('Erro: ' + err.message, 5000); } e.target.textContent = 'Testar conexão'; };
   $('#ia-limpar').onclick = () => { S.ia.msgs = []; salvar(); renderIA($('#app')); };
   $('#g-go').onclick = gerarQuestoesIA;
+  const gpara = $('#g-paralelo');
+  if (gpara) gpara.onchange = e => { S.ia.gerarParalelo = e.target.checked; try { salvar(); } catch (err) { } };
+  const comp = $('#ia-comparar');
+  if (comp) comp.onchange = e => { S.ia.comparar = e.target.checked; try { salvar(); } catch (err) { } };
   $('#g-treinar').onclick = () => { if (!S.geradas.length) return; abrirSessao(S.geradas.map(g => g), 0, 'Questões geradas pela IA'); };
   $('#g-limpar').onclick = () => { if (confirm('Apagar todas as questões geradas pela IA?')) { S.geradas = []; salvar(); reindexar(); renderIA($('#app')); } };
   $$('[data-qs]').forEach(b => b.onclick = () => { $('#ia-in').value = b.dataset.qs; enviarChat(); });
@@ -1172,19 +1614,48 @@ function renderIA(root) {
 }
 function desenharChat() {
   const box = $('#chat'); if (!box) return;
-  box.innerHTML = S.ia.msgs.length ? S.ia.msgs.map(m => `<div class="msg ${m.role === 'user' ? 'user' : 'bot'}">${esc(m.content)}</div>`).join('') : '<div class="msg sys">Comece a conversa! 👇</div>';
+  box.innerHTML = S.ia.msgs.length ? S.ia.msgs.map(m => {
+    if (m.role === 'user') return `<div class="msg user">${esc(m.content)}</div>`;
+    const p = m.de && PROVEDORES[m.de];
+    const rotulo = p ? `${p.emoji} <b>${esc(p.nome)}</b>${m.ms ? ' · ' + (m.ms / 1000).toFixed(1) + 's' : ''}` : '🤖 Tutor';
+    const botao = (p && iasParalelo().length > 1 && S.ia.comparar) ? ` <button class="btn sm ghost" data-seguir="${m.de}">seguir só com esta</button>` : '';
+    return `<div class="msg bot"><div class="tiny muted" style="margin-bottom:5px">${rotulo}${botao}</div>${esc(m.content)}</div>`;
+  }).join('') : '<div class="msg sys">Comece a conversa! 👇</div>';
+  box.onclick = e => {
+    const b = e.target.closest('[data-seguir]'); if (!b) return;
+    S.config.iaPrincipal = b.dataset.seguir; S.ia.comparar = false;
+    try { salvar(); } catch (err) { }
+    toast('Agora as respostas vêm só da ' + PROVEDORES[b.dataset.seguir].nome + ' 🎯');
+    atualizarAvisoIA(); renderIA($('#app'));
+  };
   box.scrollTop = box.scrollHeight;
 }
 async function enviarChat() {
   const inp = $('#ia-in'); const txt = inp.value.trim(); if (!txt) return;
   inp.value = '';
   S.ia.msgs.push({ role: 'user', content: txt }); salvar(); desenharChat();
-  const box = $('#chat'); box.insertAdjacentHTML('beforeend', '<div class="msg bot" id="ia-wait"><span class="spin"></span> pensando…</div>'); box.scrollTop = box.scrollHeight;
-  const hist = S.ia.msgs.slice(-8).map(m => ({ role: m.role, content: m.content }));
+  const box = $('#chat');
+  const varias = S.ia.comparar && iasParalelo().length > 1;
+  const quem = varias ? iasParalelo() : [provAtualId()];
+  box.insertAdjacentHTML('beforeend', `<div class="msg bot" id="ia-wait"><span class="spin"></span> ${varias ? 'perguntando para ' + quem.length + ' IAs ao mesmo tempo (' + quem.map(id => PROVEDORES[id].emoji).join(' ') + ')…' : 'pensando…'}</div>`);
+  box.scrollTop = box.scrollHeight;
+  const hist = S.ia.msgs.slice(-9, -1).map(m => ({ role: m.role, content: m.content, de: m.de }));
+  const conversa = [{ role: 'system', content: IAPERSONA + '\n\nContexto do concurso:\n' + editalResumo() }, ...hist, { role: 'user', content: txt }];
   try {
-    const out = await chamarIA([{ role: 'system', content: IAPERSONA + '\n\nContexto do concurso:\n' + editalResumo() }, ...hist], { max_tokens: 1400 });
     const w = $('#ia-wait'); if (w) w.remove();
-    S.ia.msgs.push({ role: 'assistant', content: out }); salvar(); desenharChat();
+    if (varias) {
+      const respostas = await chamarVariasIA(conversa, { max_tokens: 1400 }, quem);
+      respostas.forEach(r => {
+        S.ia.msgs.push(r.ok
+          ? { role: 'assistant', content: r.resposta, de: r.id, ms: r.ms }
+          : { role: 'assistant', content: '⚠️ Não respondeu: ' + r.erro, de: r.id });
+      });
+      S.ia.msgs.push({ role: 'assistant', content: '⚖️ ' + respostas.filter(r => r.ok).length + ' de ' + respostas.length + ' IAs responderam. Compare as explicações e clique em “seguir só com esta” na que você preferir.', de: null });
+    } else {
+      const out = await chamarIA(conversa, { max_tokens: 1400 });
+      S.ia.msgs.push({ role: 'assistant', content: out, de: quem[0] });
+    }
+    salvar(); desenharChat();
   } catch (e) {
     const w = $('#ia-wait'); if (w) w.remove();
     box.insertAdjacentHTML('beforeend', `<div class="msg sys">⚠️ ${esc(e.message)}</div>`);
@@ -1193,15 +1664,39 @@ async function enviarChat() {
 async function gerarQuestoesIA() {
   const mid = $('#g-mat').value, top = $('#g-top').value, n = +$('#g-n').value;
   const mat = MATBYID[mid];
-  const out = $('#g-out'); out.innerHTML = `<span class="spin"></span> gerando ${n} questões sobre "${esc(top)}"… (pode levar até 1 minuto)`;
+  const varias = $('#g-paralelo') && $('#g-paralelo').checked && iasParalelo().length > 1;
+  const ides = varias ? iasParalelo() : [provAtualId()];
+  const out = $('#g-out');
+  out.innerHTML = varias
+    ? `<span class="spin"></span> gerando ${n} questões com CADA uma das ${ides.length} IAs ligadas (${ides.map(id => PROVEDORES[id].emoji).join(' ')}) — até ${n * ides.length} de uma vez…`
+    : `<span class="spin"></span> gerando ${n} questões sobre "${esc(top)}"… (pode levar até 1 minuto)`;
   const prompt = `Gere ${n} questões de múltipla escolha INÉDITAS, no estilo da banca Fundação CETAP (5 alternativas A–E, apenas uma correta), sobre o tópico "${top}" da matéria ${mat.nome}, no nível de concurso para Analista Legislativo da ALEPA.
 Responda SOMENTE com um JSON válido (sem texto antes ou depois, sem markdown), no formato:
 [{"enunciado":"...","alternativas":["...","...","...","...","..."],"correta":0,"comentario":"explicação fundamentada com base legal e o motivo de cada distrator estar errado","dif":"facil|media|dificil","topico":"${top}"}]
 Regras: use `+ '`'+`...`+'`'+ ` para destacar termos; "correta" é o índice (0 a 4) da alternativa certa; comentários devem citar a base normativa quando houver (ex.: CF art. 59; Lei 14.133/2021 art. 28; LC 95/1998 art. 3º); não repita a mesma pergunta; evite afirmativas ambíguas.`;
   try {
-    const txt = await chamarIA([{ role: 'system', content: IAPERSONA }, { role: 'user', content: prompt }], { max_tokens: 3000, temperature: 0.8 });
-    const arr = parseJSONArr(txt);
-    if (!arr || !arr.length) throw new Error('a IA não devolveu JSON válido — tente de novo');
+    /* pede o MESMO lote para cada IA em paralelo e junta tudo, sem repetir questões */
+    let arr = [], falhas = [];
+    if (varias) {
+      const respostas = await chamarVariasIA([{ role: 'system', content: IAPERSONA }, { role: 'user', content: prompt }], { max_tokens: 3000, temperature: 0.8 }, ides);
+      respostas.forEach(r => {
+        if (!r.ok) { falhas.push(r.emoji + ' ' + r.nome); return; }
+        const lista = parseJSONArr(r.resposta) || [];
+        lista.forEach(q => { if (q) arr.push(Object.assign({}, q, { __ia: r.nome })); });
+      });
+    } else {
+      const txt = await chamarIA([{ role: 'system', content: IAPERSONA }, { role: 'user', content: prompt }], { max_tokens: 3000, temperature: 0.8 });
+      arr = parseJSONArr(txt) || [];
+    }
+    /* remove questões repetidas (entre IAs diferentes ou dentro do mesmo lote) */
+    const vistos = {};
+    arr = arr.filter(q => {
+      if (!q || !q.enunciado) return false;
+      const chave = normalizarParaComparar(q.enunciado).slice(0, 90);
+      if (vistos[chave]) return false;
+      vistos[chave] = true; return true;
+    });
+    if (!arr.length) throw new Error('a IA não devolveu JSON válido — tente de novo');
     let ok = 0;
     arr.forEach(q => {
       if (!q || !q.enunciado || !Array.isArray(q.alternativas) || q.alternativas.length < 3) return;
@@ -1209,18 +1704,28 @@ Regras: use `+ '`'+`...`+'`'+ ` para destacar termos; "correta" é o índice (0 
       if (!(idx >= 0 && idx < q.alternativas.length)) return;
       S.geradas.push({
         id: 'IA-' + Date.now().toString(36) + '-' + (ok + 1), materia: mid, topico: q.topico || top, dif: q.dif || 'media',
-        banca: 'IA · Fundação CETAP', ano: new Date().getFullYear(),
+        banca: 'IA' + (q.__ia ? ' (' + q.__ia + ')' : '') + ' · Fundação CETAP', ano: new Date().getFullYear(),
         enunciado: q.enunciado, alternativas: q.alternativas.slice(0, 5), correta: idx, comentario: q.comentario || '', analise: '', ia: true
       }); ok++;
     });
     salvar(); reindexar();
-    out.innerHTML = ok ? `✅ ${ok} questões adicionadas ao seu banco! Já valem no treino, no simulado e nas estatísticas.` : '⚠️ Nenhuma questão válida retornada. Tente novamente.';
+    out.innerHTML = ok
+      ? `✅ ${ok} questões adicionadas ao seu banco${varias ? ` (geradas por ${ides.length - falhas.length} IA(s))` : ''}! Já valem no treino, no simulado e nas estatísticas.${falhas.length ? ' Não responderam: ' + esc(falhas.join(', ')) + '.' : ''}`
+      : '⚠️ Nenhuma questão válida retornada. Tente novamente.';
     if (ok) { toast(`${ok} questões novas 🤖`); setTimeout(() => iniciarSessaoGeradasIA(ok), 400); }
   } catch (e) { out.innerHTML = `⚠️ ${esc(e.message)}`; }
 }
 function iniciarSessaoGeradasIA() {
   const ult = S.geradas.slice(-20);
   abrirSessao(ult, 0, 'Questões geradas pela IA 🤖');
+}
+/* texto normalizado, para comparar questões e achar repetidas (ignora acentos/pontuação) */
+function normalizarParaComparar(t) {
+  return String(t || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9 ]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 function parseJSONArr(txt) {
   if (!txt) return null;
@@ -1427,15 +1932,7 @@ const ESTRATEGIA = `1) PROCESSO LEGISLATIVO E RIALEPA é o coração da prova de
 7) Ritmo: 40 questões/dia + 1 simulado de 60 questões por semana. Corrija o simulado no mesmo dia e mande as erradas para a revisão espaçada.
 8) Na reta final (últimos 15 dias): diminua teoria, aumente simulados e revisão de erros. Releia os resumos de bolso deste app.`;
 
-/* ------------------ 15. ACTUALIZAÇÃO PÓS-LOAD DA IA STATUS -------------- */
-window.addEventListener('load', async () => {
-  const ok = await checarServidor();
-  const st = $('#ia-status');
-  if (st) {
-    st.className = 'badge ' + (ok ? 'ok' : 'warn');
-    st.textContent = ok ? '✅ servidor local ativo (token protegido)' : (tokenAtual() ? '⚠️ modo navegador (usa seu token direto)' : '⚠️ informe seu token do Hugging Face');
-  }
-});
+
 </script>
 <script>/* ==========================================================================
    ARENA ESTUDOS — parte 3:
@@ -1466,79 +1963,186 @@ function abrirModal(html, largura) {
 }
 function fecharModal() { const m = $('#modal-root'); if (m) m.remove(); }
 
-/* --------------- CONFIGURAÇÃO DA IA (onde vai a chave!) ------------------ */
+/* ------------- CONFIGURAÇÃO DAS IAs (onde vai a chave!) ------------------ */
+/* Cada IA tem a SUA chave e o SEU modelo. Você pode ligar várias: o app usa a
+   principal e, se ela falhar, passa para as outras (reserva automática). */
 function conteudoConfigIA() {
-  const temToken = !!tokenAtual();
+  migrarIA();
+  const id = provAtualId(), p = PROVEDORES[id], c = cfgProv(id);
+  const ligadas = provedoresConfigurados();
   return `
   <div class="row" style="justify-content:space-between;align-items:flex-start">
-    <h3 style="margin:0">🔑 Chave (token) do Hugging Face</h3>
-    <button class="btn sm" onclick="fecharModal()">✖</button>
+    <h3 style="margin:0">🔑 Escolha e configure a sua IA</h3>
+    <button class="btn sm ghost" onclick="fecharModal()">✕</button>
   </div>
-  <div class="muted small" style="margin:8px 0 12px">A chave é o único jeito de o app conversar com a IA. Ela fica salva <b>somente neste aparelho</b> (memória do navegador) e não é enviada a mais ninguém além do próprio Hugging Face.</div>
+  <div class="muted small" style="margin-top:6px">A chave de cada IA fica salva <b>somente neste aparelho</b>. Ligue mais de uma: o app usa a principal, passa para as outras sozinho se alguma falhar e — se você quiser — pergunta para <b>várias ao mesmo tempo</b> para comparar as respostas.</div>
 
-  <div class="card" style="margin:0 0 12px;background:#0c142c">
-    <b class="small">Passo a passo (leva 1 minuto, é grátis)</b>
-    <ol class="small" style="margin:8px 0 0;padding-left:20px;line-height:1.75">
-      <li>Entre (ou crie a conta gratuita) em <a href="${HF_SIGNUP_URL}" target="_blank" rel="noopener">huggingface.co/join</a> — não pede cartão.</li>
-      <li>Abra <a href="${HF_TOKENS_URL}" target="_blank" rel="noopener"><b>huggingface.co/settings/tokens</b> → “New token”</a>.</li>
-      <li>Tipo: <b>Fine-grained</b> (recomendado). Marque a permissão <b>“Make calls to Inference Providers”</b>.<br><span class="muted tiny">Se preferir, use um token <b>Read</b> — também funciona para conversar com a IA.</span></li>
-      <li>Clique em <b>Create token</b> e <b>copie</b> o código que começa com <code>hf_</code>.</li>
-      <li><b>Cole no campo abaixo</b>, escolha o modelo e clique em <b>Salvar e testar</b>.</li>
-    </ol>
-  </div>
-
-  <label class="f">Cole aqui a sua chave (hf_...)</label>
-  <input type="password" id="ia-token" placeholder="hf_..." value="${esc(tokenAtual())}" autocomplete="off" spellcheck="false">
-  <div class="row tiny muted" style="margin-top:5px">
-    <label style="display:flex;gap:6px;align-items:center;cursor:pointer"><input type="checkbox" id="ia-mostrar" style="width:auto"> mostrar a chave</label>
-    <span>·</span><span>${temToken ? '✅ já existe uma chave salva neste aparelho' : '⚠️ nenhuma chave salva ainda'}</span>
-  </div>
-
-  <label class="f">Modelo</label>
-  <select id="ia-modelo">
-    ${['Qwen/Qwen2.5-7B-Instruct', 'meta-llama/Llama-3.1-8B-Instruct', 'google/gemma-3-4b-it', 'openai/gpt-oss-120b'].map(m => `<option${m === S.config.modeloIA ? ' selected' : ''}>${m}</option>`).join('')}
+  <label class="f" style="margin-top:12px">Qual IA usar como principal?</label>
+  <select id="ia-prov">
+    ${IDS_IA.map(k => `<option value="${k}"${k === id ? ' selected' : ''}>${PROVEDORES[k].emoji} ${esc(PROVEDORES[k].nome)}${iaConfigurada(k) ? '  ✅' : ''}</option>`).join('')}
   </select>
+  <div class="tiny muted" style="margin-top:4px">✅ = já tem chave salva neste aparelho · ${ligadas.length} IA(s) ligada(s): ${esc(resumoIA())}</div>
+
+  <div style="margin-top:12px;background:#0d1526;border:1px solid var(--line);border-radius:12px;padding:12px">
+    <div class="row" style="justify-content:space-between">
+      <b>${p.emoji} ${esc(p.nome)}</b>
+      <span class="badge ${String(p.custo).indexOf('grátis') === 0 ? 'ok' : 'warn'}">${esc(p.custo)}</span>
+    </div>
+    <div class="small muted" style="margin-top:6px">${esc(p.ajuda)}</div>
+    <div class="row" style="margin-top:8px">
+      <a class="btn sm gold" href="${p.criar}" target="_blank" rel="noopener">🔗 Como conseguir a chave</a>
+      ${p.obs ? `<span class="tiny muted">${esc(p.obs)}</span>` : ''}
+    </div>
+
+    ${p.semChave
+      ? `<label class="f" style="margin-top:10px">Endereço da IA no seu computador</label>
+         <input id="ia-base" placeholder="${esc(p.urlPadrao || 'http://localhost:11434/v1/chat/completions')}" value="${esc(c.baseUrl || p.urlPadrao || '')}">`
+      : `<label class="f" style="margin-top:10px">Cole aqui a sua chave ${p.prefixo ? `(começa com <code>${esc(p.prefixo)}</code>)` : ''}</label>
+         <input type="password" id="ia-token" placeholder="${esc(p.prefixo || 'sua chave')}..." value="${esc(c.token || '')}" autocomplete="off" spellcheck="false">
+         <div class="row tiny muted" style="margin-top:5px">
+           <label style="display:flex;gap:6px;align-items:center;cursor:pointer"><input type="checkbox" id="ia-mostrar" style="width:auto"> mostrar</label>
+           <span>·</span><span>${iaConfigurada(id) ? '✅ já existe uma chave salva' : '⚠️ nenhuma chave ainda'}</span>
+         </div>`}
+
+    ${p.urlLivre ? `<label class="f" style="margin-top:8px">Endereço da API (…/v1/chat/completions)</label>
+         <input id="ia-base" placeholder="https://servico.com/v1/chat/completions" value="${esc(c.baseUrl || '')}">` : ''}
+
+    <label class="f" style="margin-top:8px">Modelo</label>
+    <div class="row" style="align-items:stretch">
+      <input id="ia-modelo" list="ia-modelos-lista" placeholder="${esc((p.modelos && p.modelos[0]) || 'nome do modelo')}" value="${esc(c.modelo || '')}" style="flex:1">
+      <button class="btn sm" id="ia-buscar-modelos" title="Buscar os modelos que a sua chave enxerga">🔄 buscas modelos</button>
+    </div>
+    <datalist id="ia-modelos-lista">${(p.modelos || []).map(m => `<option value="${esc(m)}">`).join('')}</datalist>
+    <div class="tiny muted" style="margin-top:4px" id="ia-modelos-hint">Sugestões: ${esc((p.modelos || []).slice(0, 4).join(' · ') || 'clique em “buscas modelos”')}</div>
+
+    <div class="row" style="margin-top:10px">
+      <label style="display:flex;gap:6px;align-items:center;cursor:pointer" class="small"><input type="checkbox" id="ia-reserva" style="width:auto" ${S.config.iaReserva !== false ? 'checked' : ''}> usar as outras IAs ligadas como reserva</label>
+    </div>
+  </div>
+
+  ${ligadas.length > 1 ? `
+  <div style="margin-top:12px;background:#0d1526;border:1px solid var(--line);border-radius:12px;padding:12px">
+    <b>⚡ Uso simultâneo (comparar respostas / gerar questões em paralelo)</b>
+    <div class="small muted" style="margin-top:4px">Marque quais IAs devem responder <b>ao mesmo tempo</b> quando você ativar o modo comparar ou o gerador paralelo. Máximo de 4 (para não estourar as cotas grátis). A principal aparece primeiro.</div>
+    <div class="row" style="margin-top:8px;flex-wrap:wrap">
+      ${ligadas.map(k => `<label style="display:flex;gap:6px;align-items:center;cursor:pointer" class="small"><input type="checkbox" data-paralelo="${k}" style="width:auto" ${(S.config.iaParalelo.length ? S.config.iaParalelo.indexOf(k) >= 0 : true) ? 'checked' : ''}> ${PROVEDORES[k].emoji} ${esc(PROVEDORES[k].nome)}</label>`).join('')}
+    </div>
+  </div>` : ''}
 
   <div style="margin-top:12px" id="ia-teste-out"></div>
   <div class="row" style="margin-top:10px">
     <button class="btn pri" id="ia-salvar-testar">💾 Salvar e testar</button>
+    <button class="btn" id="ia-diag">🔍 Testar todas as minhas IAs</button>
     <button class="btn" id="ia-somente-salvar">Salvar sem testar</button>
-    <button class="btn ghost" onclick="fecharModal()">Fechar</button>
   </div>
-  <div class="tiny muted" style="margin-top:10px">🔒 Dica de segurança: use um token <b>Fine-grained</b> apenas com a permissão de Inference Providers — assim, mesmo se vazar, ele não dá acesso à sua conta. Você pode revogá-lo a qualquer momento na mesma página.</div>`;
+  <div class="tiny muted" style="margin-top:10px">🔒 Sobre segurança: a chave fica no seu aparelho e serve só para o app. Se usar uma chave com permissões restritas (como no Hugging Face: só “Inference Providers”), mesmo que ela vaze não dá acesso à sua conta. Você pode revogar quando quiser.</div>
+  <div class="tiny muted" style="margin-top:6px">☁️ Para <b>sincronizar o progresso entre aparelhos</b> é preciso a chave do <b>Hugging Face</b> (com permissão de escrita) — é a única que guarda o arquivo do seu progresso.</div>`;
 }
+
 function abrirConfigIA() {
+  migrarIA();
   abrirModal(conteudoConfigIA());
-  $('#ia-mostrar').onchange = e => { $('#ia-token').type = e.target.checked ? 'text' : 'password'; };
-  $('#ia-somente-salvar').onclick = () => { S.config.tokenIA = $('#ia-token').value.trim(); S.config.modeloIA = $('#ia-modelo').value; salvar(); toast('Chave salva ✅'); fecharModal(); atualizarAvisoIA(); };
-  $('#ia-salvar-testar').onclick = async () => {
-    S.config.tokenIA = $('#ia-token').value.trim(); S.config.modeloIA = $('#ia-modelo').value; salvar();
-    const out = $('#ia-teste-out'); out.innerHTML = '<span class="badge"><span class="spin"></span> testando a chave…</span>';
+  ligarConfigIA();
+}
+
+function ligarConfigIA() {
+  const id0 = provAtualId();
+  const trocarProvedor = () => {
+    S.config.iaPrincipal = $('#ia-prov').value;
+    try { salvar(); } catch (e) { }
+    abrirConfigIA();
+  };
+  $('#ia-prov').onchange = trocarProvedor;
+  const mostrar = $('#ia-mostrar');
+  if (mostrar) mostrar.onchange = e => { $('#ia-token').type = e.target.checked ? 'text' : 'password'; if (e.target.checked) $('#ia-token').focus(); };
+  const reserva = $('#ia-reserva');
+  if (reserva) reserva.onchange = e => { S.config.iaReserva = e.target.checked; try { salvar(); } catch (e2) { } };
+  $('#ia-buscar-modelos').onclick = async e => {
+    const id = provAtualId();
+    if (!iaConfigurada(id)) { toast('Informe a chave primeiro e clique em buscar.'); return; }
+    const b = e.target; b.innerHTML = '<span class="spin"></span> buscando…';
     try {
-      const r = await chamarIA([{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 10, temperature: 0 });
-      out.innerHTML = `<div class="fb right"><div class="tt">✅ Chave funcionando!</div><div class="com">O modelo respondeu: "${esc(String(r).slice(0, 60))}". Agora use a aba IA para gerar questões e tirar dúvidas.</div></div>`;
-      atualizarAvisoIA(); setTimeout(fecharModal, 1600);
+      const lista = await listarModelos(id);
+      const dl = $('#ia-modelos-lista');
+      if (dl) dl.innerHTML = lista.map(m => `<option value="${esc(m)}">`).join('');
+      const hint = $('#ia-modelos-hint');
+      if (hint) hint.textContent = lista.length ? lista.length + ' modelos encontrados — clique no campo Modelo para ver a lista' : 'Não encontrei modelos; digite o nome manualmente.';
+      toast(lista.length + ' modelos encontrados ✅');
+    } catch (err) { toast('Não consegui listar: ' + err.message, 5000); }
+    b.textContent = '🔄 buscas modelos';
+  };
+  document.querySelectorAll('[data-paralelo]').forEach(cx => {
+    cx.onchange = () => {
+      S.config.iaParalelo = Array.prototype.slice.call(document.querySelectorAll('[data-paralelo]')).filter(c => c.checked).map(c => c.dataset.paralelo);
+      try { salvar(); } catch (err) { }
+      toast(S.config.iaParalelo.length ? 'Simultâneo com: ' + S.config.iaParalelo.map(k => PROVEDORES[k].nome).join(', ') : 'Vazio = usa todas as ligadas');
+    };
+  });
+  $('#ia-somente-salvar').onclick = () => { salvarConfigIA(); toast('Configuração salva ✅'); fecharModal(); atualizarAvisoIA(); };
+  $('#ia-salvar-testar').onclick = async () => {
+    salvarConfigIA();
+    const out = $('#ia-teste-out'); out.innerHTML = '<span class="badge"><span class="spin"></span> testando a IA…</span>';
+    const id = provAtualId();
+    try {
+      const r = await chamarIAProvedor(id, [{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 10, temperature: 0 });
+      out.innerHTML = `<div class="fb right"><div class="tt">✅ ${esc(PROVEDORES[id].nome)} funcionando!</div><div class="com">O modelo respondeu: "${esc(String(r).slice(0, 60))}". Agora use a aba IA para gerar questões e tirar dúvidas.</div></div>`;
+      atualizarAvisoIA(); setTimeout(fecharModal, 1700);
     } catch (e) {
-      out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Não funcionou</div><div class="com">${esc(e.message)}\n\nVerifique: 1) a chave começa com hf_ e foi copiada inteira; 2) você marcou "Make calls to Inference Providers"; 3) se estiver no modo arquivo local (file://), a chamada direta pode ser bloqueada pelo navegador — nesse caso use a versão publicada (veja o LEIA-ME) ou o servidor local.</div></div>`;
+      out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Não funcionou</div><div class="com" style="white-space:pre-wrap">${esc(e.message)}</div>
+        <div class="row" style="margin-top:8px"><button class="btn sm" id="ia-diag2">🔍 Testar todas as minhas IAs</button></div></div>`;
+      const d2 = $('#ia-diag2'); if (d2) d2.onclick = rodarDiagnostico;
     }
   };
+  $('#ia-diag').onclick = rodarDiagnostico;
+  void id0;
 }
+function salvarConfigIA() {
+  const id = provAtualId(), c = cfgProv(id), p = PROVEDORES[id];
+  const campoTok = $('#ia-token'), campoBase = $('#ia-base'), campoMod = $('#ia-modelo');
+  if (campoTok) c.token = campoTok.value.trim();
+  if (campoBase) c.baseUrl = campoBase.value.trim();
+  if (campoMod) c.modelo = campoMod.value.trim();
+  S.config.iaPrincipal = ($('#ia-prov') && $('#ia-prov').value) || id;
+  if (p.semChave && !c.baseUrl) c.baseUrl = p.urlPadrao || '';
+  if (!c.modelo) c.modelo = (p.modelos && p.modelos[0]) || c.modelo;
+  try { salvar(); } catch (e) { }
+}
+
+async function rodarDiagnostico() {
+  const out = $('#ia-teste-out');
+  out.innerHTML = '<span class="badge"><span class="spin"></span> testando endereço, chave e modelos… (pode levar ~30s)</span>';
+  let rel;
+  try { rel = await diagnosticarIA(); } catch (e) { rel = 'Erro ao diagnosticar: ' + ((e && e.message) || e); }
+  out.innerHTML = `<div class="fb" style="background:#101a2e;border:1px solid #1e3a8a"><div class="tt">🔍 Diagnóstico do tutor de IA</div>
+    <pre style="white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;margin:0;color:#dbeafe">${esc(rel)}</pre>
+    <div class="row" style="margin-top:8px">
+      <button class="btn sm" id="ia-copiar-diag">📋 Copiar relatório</button>
+      <button class="btn sm ghost" id="ia-fechar-diag">Fechar</button>
+    </div></div>`;
+  const b = $('#ia-copiar-diag'); if (b) b.onclick = () => { navigator.clipboard && navigator.clipboard.writeText(rel).then(() => toast('Relatório copiado ✅')).catch(() => { }); };
+  const f = $('#ia-fechar-diag'); if (f) f.onclick = () => { out.innerHTML = ''; };
+}
+
 /* aviso permanente no topo do painel quando não há chave */
 function cartaoIA() {
-  if (tokenAtual() || IA_STATUS.servidor) return '';
+  if (temChaveIA() || IA_STATUS.servidor) return '';
   return `<div class="card" style="border-color:#78350f;background:linear-gradient(180deg,#241802,#1a1206)">
     <div class="row" style="justify-content:space-between">
-      <div><b>🤖 A IA ainda não está ativada</b>
-        <div class="small muted">Cole a sua chave gratuita do Hugging Face (passo a passo de 1 minuto) para o tutor explicar questões e criar questões inéditas para você.</div>
+      <div><b>🤖 Nenhuma IA ligada ainda</b>
+        <div class="small muted">Escolha a sua IA (Hugging Face, Google Gemini, Groq… — as gratuitas estão marcadas) e cole a chave. Leva 1 minuto e libera o tutor, os resumos e a geração de questões inéditas.</div>
       </div>
-      <button class="btn gold" onclick="abrirConfigIA()">🔑 Informar minha chave</button>
+      <button class="btn gold" onclick="abrirConfigIA()">🔑 Escolher minha IA</button>
     </div>
   </div>`;
 }
 function atualizarAvisoIA() {
   const c = $('#cartao-ia'); if (c) c.innerHTML = cartaoIA();
   const b = $('#badge-ia');
-  if (b) { const on = !!tokenAtual() || IA_STATUS.servidor; b.textContent = on ? '🔑 IA ativa' : '🔑 IA desligada'; b.className = 'badge ' + (on ? 'ok' : 'warn'); }
+  if (b) {
+    const on = temChaveIA() || IA_STATUS.servidor;
+    b.textContent = on ? ('🔑 ' + PROVEDORES[provAtualId()].nome.split(' ')[0] + ' ativa') : '🔑 Ligar uma IA';
+    b.className = 'badge ' + (on ? 'ok' : 'warn');
+  }
 }
 
 /* --------------------------- PRIMEIRA ABERTURA --------------------------- */
@@ -1570,7 +2174,7 @@ function passo1() {
 }
 function passo2() {
   abrirModal(`
-    <h2 style="margin:0 0 6px">🤖 Passo 2 de 3 — Ativar a IA (opcional, mas recomendado)</h2>
+    <h2 style="margin:0 0 6px">🤖 Passo 2 de 3 — Ligar a IA (opcional, mas recomendado)</h2>
     <div class="muted small" style="margin-bottom:12px">A IA serve para: explicar qualquer questão que você errar, resumir matérias do edital e <b>criar questões inéditas</b> sobre qualquer tópico. É gratuita e usa a sua conta do Hugging Face.</div>
     <div class="card" style="margin:0 0 12px;background:#0c142c">
       <b class="small">Onde colocar a chave — em 5 passos</b>
@@ -1580,6 +2184,7 @@ function passo2() {
         <li>Escolha <b>Fine-grained</b> e marque <b>“Make calls to Inference Providers”</b>.</li>
         <li>Copie o código que começa com <b>hf_</b>.</li>
         <li>Cole no campo abaixo ⇩ e toque em <b>Salvar e testar</b>.</li>
+      <li><b>Prefere outra IA?</b> Dá para usar Google Gemini, Groq, ChatGPT, Claude, OpenRouter, DeepSeek… Depois de concluir, toque no botão <b>🔑 no topo</b> e escolha a sua — cada uma tem o seu campo de chave e o app testa para você.</li>
       </ol>
     </div>
     <label class="f">Sua chave do Hugging Face</label>
@@ -1596,10 +2201,13 @@ function passo2() {
   $('#ob-pular').onclick = passo3;
   $('#ob-salvar').onclick = async () => {
     S.config.tokenIA = $('#ia-token').value.trim(); salvar();
-    if (!tokenAtual()) { toast('Sem chave por enquanto — você pode informar depois pelo botão 🔑'); return passo3(); }
+    if (!temChaveIA()) { toast('Sem IA por enquanto — você pode ligar depois pelo botão 🔑'); return passo3(); }
     const out = $('#ia-teste-out'); out.innerHTML = '<span class="badge"><span class="spin"></span> testando…</span>';
     try { await chamarIA([{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 10, temperature: 0 }); out.innerHTML = '<div class="fb right"><div class="tt">✅ Chave funcionando!</div></div>'; setTimeout(passo3, 900); }
-    catch (e) { out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Deu erro</div><div class="com">${esc(e.message)}</div><div class="row" style="margin-top:8px"><button class="btn sm" onclick="passo3()">Continuar mesmo assim →</button></div></div>`; }
+    catch (e) {
+      out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Deu erro</div><div class="com" style="white-space:pre-wrap">${esc(e.message)}</div>
+        <div class="row" style="margin-top:8px"><button class="btn sm" onclick="passo3()">Continuar mesmo assim →</button></div></div>`;
+    }
   };
 }
 function passo3() {
@@ -1635,11 +2243,21 @@ function cfgSync() {
   try { S.config.sync = S.config.sync || { repo: '', auto: true, ultimo: 0 }; return S.config.sync; }
   catch (e) { return { repo: '', auto: false, ultimo: 0 }; }
 }
+/* Configuração sem NENHUMA chave de IA — backup e nuvem nunca levam segredos. */
+function configSemSegredos() {
+  const c = Object.assign({}, S.config, { tokenIA: '' });
+  if (c.ias) {
+    const limpo = {};
+    Object.keys(c.ias).forEach(k => { limpo[k] = Object.assign({}, c.ias[k], { token: '' }); });
+    c.ias = limpo;
+  }
+  return c;
+}
 function pacoteProgresso() {
-  return { app: 'ArenaEstudos-ALEPA', versao: 1, atualizadoEm: Date.now(), hist: S.hist, resp: S.resp, fav: S.fav, notas: S.notas, teoria: S.teoria, geradas: S.geradas, provas: S.provas, config: Object.assign({}, S.config, { tokenIA: '' }) };
+  return { app: 'ArenaEstudos-ALEPA', versao: 1, atualizadoEm: Date.now(), hist: S.hist, resp: S.resp, fav: S.fav, notas: S.notas, teoria: S.teoria, geradas: S.geradas, provas: S.provas, config: configSemSegredos() };
 }
 async function hfApi(caminho, opts = {}) {
-  const tok = tokenAtual();
+  const tok = tokenHF();
   if (!tok) throw new Error('Informe a chave do Hugging Face primeiro (botão 🔑).');
   const r = await fetch('https://huggingface.co' + caminho, Object.assign({}, opts, { headers: Object.assign({ Authorization: 'Bearer ' + tok }, opts.headers || {}) }));
   if (!r.ok) { let d = ''; try { d = (await r.text()).slice(0, 200); } catch (e) { } throw new Error('Hugging Face respondeu ' + r.status + (d ? ' — ' + d : '')); }
@@ -1658,7 +2276,7 @@ async function empurrarProgresso(repo) {
   if (!repo) throw new Error('Informe o repositório (ex.: seunome/alepa-progresso).');
   const dados = JSON.stringify(pacoteProgresso());
   if (IA_STATUS.servidor) {
-    const r = await fetch('api/sync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'push', repo, dados, token: tokenAtual() }) });
+    const r = await fetch('api/sync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'push', repo, dados, token: tokenHF() }) });
     if (r.ok) return (await r.json());
     throw new Error((await r.json().catch(() => ({}))).error || 'falha no servidor');
   }
@@ -1669,19 +2287,37 @@ async function puxarProgresso(repo) {
   repo = repo || cfgSync().repo;
   if (!repo) throw new Error('Informe o repositório.');
   if (IA_STATUS.servidor) {
-    const r = await fetch('api/sync?acao=pull&repo=' + encodeURIComponent(repo) + '&token=' + encodeURIComponent(tokenAtual() || ''));
+    const r = await fetch('api/sync?acao=pull&repo=' + encodeURIComponent(repo) + '&token=' + encodeURIComponent(tokenHF() || ''));
     if (r.ok) return await r.json();
     throw new Error((await r.json().catch(() => ({}))).error || 'falha no servidor');
   }
   const r = await hfApi(`/datasets/${repo}/resolve/main/progresso.json?download=true`);
   return await r.json();
 }
+/* aplica o pacote mantendo as chaves já salvas neste aparelho */
+function semApagarChaves(configRecebida) {
+  const c = Object.assign({}, configRecebida || {});
+  delete c.tokenIA;
+  if (c.ias) {
+    const local = S.config.ias || {};
+    Object.keys(c.ias).forEach(k => {
+      const guardada = (local[k] && local[k].token) || '';
+      c.ias[k] = Object.assign({}, c.ias[k], { token: guardada });
+    });
+    Object.keys(local).forEach(k => { if (!c.ias[k]) c.ias[k] = local[k]; });
+  } else {
+    c.ias = S.config.ias;
+  }
+  return c;
+}
 function aplicarPacote(p, substituir = true) {
   if (!p || !p.atualizadoEm) throw new Error('arquivo de progresso inválido');
   if (substituir) {
     const tok = S.config.tokenIA, sync = S.config.sync;
     S.hist = p.hist || {}; S.resp = p.resp || {}; S.fav = p.fav || {}; S.notas = p.notas || {}; S.teoria = p.teoria || {}; S.geradas = p.geradas || []; S.provas = p.provas || [];
-    S.config = Object.assign(estadoInicial().config, p.config || {}, { tokenIA: tok, sync: sync });
+    const cfgRecebida = semApagarChaves(p.config);
+    S.config = Object.assign(estadoInicial().config, cfgRecebida, { tokenIA: tok, sync: sync });
+    migrarIA();
   }
   salvar(); reindexar(); atualizarBadges();
 }
@@ -1708,6 +2344,7 @@ function agendarPush() {
   SYNC_TIMER = setTimeout(() => sincronizar('push', true), 20000);
 }
 function blocoSync() {
+  const temHF = !!tokenHF();
   const sc = cfgSync();
   return `
   <h3 style="margin-top:0">☁️ Sincronizar progresso (estudar no celular e no PC)</h3>
@@ -1723,6 +2360,7 @@ function blocoSync() {
     <button class="btn" id="sy-pull">⬇️ Baixar progresso</button>
   </div>
   <div id="sy-out" class="small muted" style="margin-top:8px">${sc.ultimo ? 'Último envio: ' + new Date(sc.ultimo).toLocaleString('pt-BR') : 'Ainda não sincronizado.'}</div>
+  ${temHF ? '' : '<div class="fb wrong" style="margin-top:8px"><div class="tt">⚠️ Falta a chave do Hugging Face</div><div class="com">A nuvem de progresso usa o Hugging Face (as outras IAs servem para conversar, não para guardar arquivos). Toque no botão 🔑 no topo, escolha “Hugging Face” e cole uma chave com permissão de escrita — ou use o backup por arquivo logo abaixo, que funciona sempre.</div></div>'}
   <div class="tiny muted" style="margin-top:6px">A chave usada aqui precisa ter permissão de <b>escrita</b> (token Fine-grained com “Write access to contents of repos” ou um token Read/Write clássico). Se você usou só “Make calls to Inference Providers”, use o botão de backup por arquivo abaixo.</div>`;
 }
 function ligarSync() {

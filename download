@@ -1,0 +1,7 @@
+# Nada de chaves nem arquivos locais no repositório
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vercel/
+.netlify/

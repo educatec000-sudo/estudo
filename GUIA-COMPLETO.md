@@ -91,7 +91,9 @@ Se algo falhar, **clique no botão 🔍 "Testar tudo (diagnóstico)"** dentro da
 | Mensagem | O que fazer |
 |---|---|
 | "Failed to fetch" / "Não alcancei huggingface.co" | A chamada nem saiu do navegador. Acontece quando o app está aberto **como arquivo local (`file://`)** ou dentro de um **visualizador/preview restrito** (por exemplo, o preview aqui dentro da conversa): nesses lugares o navegador bloqueia a conversa com o Hugging Face. **Publique o app** (Opção A) ou rode o servidor local e abra por `http://localhost:8000`. |
-| "O Hugging Face RECUSOU a chave (erro 401)" | A chave está incompleta, expirou ou foi revogada. Gere outra em huggingface.co/settings/tokens (New token → Fine-grained → "Make calls to Inference Providers"). |
+| **"O Hugging Face RECUSOU a chave (erro 401)"** | A chave está incompleta, expirou ou foi revogada — **é o erro mais comum**. Gere outra em huggingface.co/settings/tokens → *New token* → **Fine-grained** → marque **"Make calls to Inference Providers"** → copie o código `hf_…` **inteiro** (37 caracteres) e cole no botão 🔑. |
+| **"O modelo … não está mais disponível"** | Os provedores **aposentam modelos de tempos em tempos** (a Groq desligou o `llama-3.3-70b-versatile` em 16/08/2026 e o Google está aposentando os `gemini-2.5`). O app **se corrige sozinho**: descobre a lista real da sua conta e passa a usar um modelo que funciona. Se quiser forçar, clique em **✨ "escolher por mim"** na janela 🔑 — ele escolhe e já testa. |
+| "respondeu sem texto" | Pode ser modelo sem provedor no momento ou resposta vazia. O app mostra o trecho recebido e já tenta outros modelos sozinho; se persistir, use **✨ escolher por mim**. |
 | "A chave não tem permissão (erro 403)" | Falta marcar "Make calls to Inference Providers". Se o modelo for Llama ou Gemma, aceite a licença na página do modelo. |
 | "O modelo ... não está com provedor disponível (404)" | Não precisa fazer nada: o app já troca de modelo sozinho. Se preferir escolher manualmente, use o seletor no botão 🔑 (o **openai/gpt-oss-120b** é o que tem mais provedores). |
 | "Limite do plano gratuito atingido (429)" | Espere 1 minuto e tente de novo — a cota renova sozinha. |
@@ -100,43 +102,24 @@ Se algo falhar, **clique no botão 🔍 "Testar tudo (diagnóstico)"** dentro da
 
 > O app **troca de modelo automaticamente** quando o escolhido não tem provedor disponível no momento e avisa qual passou a usar. Você não precisa entender nada disso para estudar.
 
-### 🔀 Quero usar OUTRA IA além do Hugging Face (ChatGPT, Gemini, Groq…)?
+### 🔑 As três IAs do app (modo simples)
 
-Dá — o app aceita **11 opções de IA**, cada uma com a sua própria chave:
+O app mostra **apenas três IAs**, todas **gratuitas** — é o que basta:
 
 | IA | Custo | Onde pegar a chave |
 |---|---|---|
-| **Hugging Face** (padrão) | grátis | huggingface.co/settings/tokens → permissão “Make calls to Inference Providers” |
-| **Google Gemini** | grátis | aistudio.google.com/apikey → “Create API key” |
-| **Groq** (a mais rápida) | grátis | console.groq.com/keys |
-| **OpenRouter** (vários modelos) | grátis nos modelos com `:free` | openrouter.ai/settings/keys |
-| **ChatGPT (OpenAI)** | pago | platform.openai.com/api-keys |
-| **Claude (Anthropic)** | pago | console.anthropic.com/settings/keys |
-| **Mistral** | plano de teste | console.mistral.ai/api-keys |
-| **DeepSeek** | pago e barato | platform.deepseek.com/api_keys |
-| **Grok (xAI)** | pago | console.x.ai |
-| **IA no seu computador** (Ollama/LM Studio) | grátis e offline | instale o Ollama e rode `ollama pull llama3.2` |
-| **Outra IA** (qualquer serviço compatível com OpenAI) | depende | você informa o endereço e a chave |
+| 🤗 **Hugging Face** (a principal) | grátis | huggingface.co/settings/tokens → *New token* → **Fine-grained** → marque **"Make calls to Inference Providers"** |
+| ✨ **Google Gemini** | grátis | aistudio.google.com/apikey → *Create API key* (modelos atuais: `gemini-3.8-flash`, `gemini-3.5-flash`) |
+| ⚡ **Groq** (a mais rápida) | grátis | console.groq.com/keys (modelos atuais: `openai/gpt-oss-120b`, `openai/gpt-oss-20b`) |
 
-**Como trocar/ligar:** toque no botão **🔑 no topo do app** → escolha a IA na lista → cole a chave → **💾 Salvar e testar**.
-- O botão **🔄 buscas modelos** mostra todos os modelos que a *sua* chave enxerga — assim você nunca erra o nome do modelo.
-- Pode ligar **quantas quiser**: o app usa a principal e, se ela falhar (sem cota, caiu a internet, chave sem permissão), **passa sozinho para a próxima** e avisa qual usou.
-- **Prefere IA grátis?** O trio Hugging Face + Gemini + Groq é 100% gratuito e, com as três ligadas, é quase impossível ficar sem IA.
-- **Sobre a nuvem de progresso:** só o **Hugging Face** guarda o seu progresso entre aparelhos (as outras servem para conversar e gerar questões). Se quiser sincronizar, mantenha uma chave do Hugging Face ligada — nem que seja como reserva.
-### ⚡ Dá para usar DUAS OU MAIS IAs AO MESMO TEMPO? Dá — de três jeitos
+**Como ligar:** botão **🔑 no topo do app** → escolha a IA na lista → cole a chave → **💾 Salvar e testar**.
+- O botão **🔄 buscas modelos** mostra os modelos que a *sua* chave enxerga — e **✨ escolher por mim** escolhe automaticamente um bom modelo de conversa e já testa. Assim você nunca depende de eu acertar o nome de um modelo (eles mudam toda hora).
+- **Ligue as três e pronto:** a principal responde e, se ela falhar (cota cheia, internet, chave), o app **passa sozinho para a próxima** e avisa qual usou. Com as três ligadas é quase impossível ficar sem IA.
+- **Uso simultâneo** (aba 🤖 IA): **⚖️ comparar** — manda a mesma pergunta para as três ao mesmo tempo e mostra uma resposta de cada, com nome e tempo; e **⚡ gerar questões em paralelo** — cada uma gera o lote, o app junta tudo e descarta as repetidas.
+- **A nuvem de progresso** (entre celular e computador) usa a chave do **Hugging Face** — mantenha ela ligada nem que seja como reserva.
+- **Privacidade:** as chaves ficam **só no seu aparelho**; o backup e a nuvem **não levam nenhuma chave**.
 
-**1) Reserva automática (já vem ligada).** Se a IA principal falhar (cota cheia, internet, chave sem permissão), o app **passa sozinho** para a próxima ligada e avisa qual usou. Você nem percebe.
-
-**2) Comparar respostas (⚖️).** Na aba **🤖 IA**, acima do campo de pergunta, marque **“perguntar para as N IAs ao mesmo tempo”**. O app manda a *mesma* pergunta para todas em paralelo e mostra uma resposta por IA, com **nome e tempo de cada uma**. É ótimo quando uma explicação não convence: você compara com a outra e escolhe a melhor — e, para conteúdo jurídico, é a melhor forma de perceber quando uma IA errou.
-- Cada IA enxerga **só as próprias respostas anteriores** (as conversas não se misturam).
-- Achou a melhor? Clique em **“seguir só com esta”** e a conversa continua apenas com ela.
-- Se uma falhar, as outras respondem normalmente e o app mostra o motivo da falha.
-
-**3) Gerar questões em paralelo (⚡).** Na mesma aba, no gerador de questões, marque **“usar todas as N IAs ligadas ao mesmo tempo”**: cada uma gera o lote pedido, o app **junta tudo e descarta as questões repetidas**. Pedindo 5 com 3 IAs ligadas dá até 15 questões de uma vez — e cada questão fica marcada com a IA que a criou. É o jeito mais rápido de engordar o banco rumo às 3.000 questões.
-
-> No botão **🔑** existe a seção **“Uso simultâneo”**, onde você marca **quais** IAs participam (máximo 4, para não estourar as cotas grátis). Deixando tudo desmarcado, valem todas as ligadas. Dica: HF + Gemini + Groq (as três grátis) dão um bom equilíbrio de velocidade e qualidade.
-
-- **Privacidade:** todas as chaves ficam **só no seu aparelho**; quando você publica com o `publicar/api/`, elas passam pelo seu próprio deploy em vez de irem direto do navegador. O backup e a nuvem **não levam nenhuma chave**.
+**Precisa de outra IA?** (ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok, IA local…) Na janela 🔑 marque **"mostrar todas as IAs"** — aparecem as 11 opções, cada uma com o seu campo de chave. Depois é só desmarcar para voltar ao modo simples.
 
 ### Modo servidor (opcional, para quem usa computador)
 
@@ -158,7 +141,7 @@ O servidor serve o app (com manifest, service worker e ícones) e faz o proxy da
 | ✍️ **Treinar** | Filtros por matéria, tópico do edital, dificuldade e modo (não vistas / caderno de erros / revisão de hoje / favoritas) |
 | ⚡ **Geradores infinitos** | 13 tipos de questões de RLM/Matemática criadas na hora, com resolução comentada — não acabam nunca |
 | ⏱️ **Simulado** | Monte provas com a distribuição que quiser, cronômetro, correção comentada e diagnóstico por matéria |
-| 🤖 **IA** | Tutor do edital em **11 IAs diferentes** (com reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada" |
+| 🤖 **IA** | Tutor do edital em **Hugging Face, Gemini ou Groq** (reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada" |
 | 📚 **Teoria** | Resumos de bolso das 14 matérias + tópicos oficiais para marcar como estudados |
 | 📈 **Progresso** | Prioridades, tópicos mais errados, evolução dos simulados, conquistas, nuvem e backup |
 | 🗓️ **Plano até a prova** | Cronograma dos próximos 7 dias + estratégia por peso das matérias |
@@ -208,12 +191,14 @@ app/
   assets/               ← ícones do app (192 e 512 px)
   src/                  ← template, CSS e JavaScript
 tests/
-  smoke.js              ← 46 verificações do app (assistente, chave, IA, abas, sync, PWA)
+  smoke.js              ← 137 verificações (assistente, chaves, IAs, abas, métricas, sync, PWA)
   geradores.js          ← confere os 13 geradores, o banco e os filtros
+  telas.js              ← gera imagens das telas (desktop e celular) para conferir o visual
 uploads/alepa.pdf       ← o edital que você enviou
 ```
 
-Para rodar os testes: `cd tests && npm install jsdom && node smoke.js && node geradores.js`.
+Para rodar os testes: `cd tests && npm install jsdom && node smoke.js && node geradores.js`
+Para gerar as telas: `npm install puppeteer && node telas.js` (salva em `views/`).
 
 ### Como adicionar mais questões
 

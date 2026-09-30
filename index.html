@@ -3,166 +3,286 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1020">
+<meta name="theme-color" content="#080b13">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Estudos ALEPA">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Arena Estudos — ALEPA 002/2026 (Fundação CETAP) — Cargo 15</title>
-<style>:root{
-  --bg:#0b1020; --bg2:#111a33; --card:#151f3d; --card2:#1b2748; --line:#26325a;
-  --txt:#e8ecff; --txt2:#a3adcf; --pri:#3b82f6; --pri2:#60a5fa;
-  --ok:#22c55e; --err:#ef4444; --warn:#f59e0b; --gold:#facc15;
-  --r:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+<style>/* ============================================================================
+   Arena Estudos ALEPA — folha de estilo
+   Direção visual: painel profissional sóbrio (navy/slate), uma cor de destaque,
+   tipografia com hierarquia clara, superfícies planas com bordas de 1px e
+   microinterações discretas. Nenhum efeito "chamativo": o conteúdo é o herói.
+   ========================================================================== */
+
+:root{
+  /* superfícies */
+  --bg:#080b13; --bg2:#0d1220; --card:#0f1523; --card2:#141b2d; --line:#232c47;
+  --line2:#2e3860;                       /* borda em hover/destaque */
+  /* texto */
+  --txt:#e9edf8; --txt2:#98a4c2; --txt3:#6f7b9c;
+  /* cores funcionais */
+  --pri:#4f7dfb; --pri2:#7fa0ff; --ok:#34d399; --err:#fb7185; --warn:#fbbf24; --gold:#f5c451;
+  /* formas */
+  --r:14px; --r-sm:10px; --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -12px rgba(0,0,0,.55);
+  --ring:0 0 0 3px rgba(79,125,251,.28);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
+
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0;height:100%}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0;min-height:100%}
 body{
-  background:radial-gradient(1200px 600px at 20% -10%,#1b2a5e 0%,transparent 60%),radial-gradient(900px 500px at 110% 10%,#2a1b5e 0%,transparent 55%),var(--bg);
-  color:var(--txt);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(1100px 520px at 12% -8%,rgba(79,125,251,.16) 0%,transparent 62%),
+    radial-gradient(760px 420px at 104% 4%,rgba(56,189,248,.10) 0%,transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-feature-settings:"cv05","ss01";
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
   overflow-x:hidden;
 }
-a{color:var(--pri2)}
+a{color:var(--pri2);text-decoration:none;border-bottom:1px solid rgba(127,160,255,.35)}
+a:hover{border-bottom-color:var(--pri2)}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer;border:none;background:none}
+::selection{background:rgba(79,125,251,.35)}
 .hidden{display:none !important}
+:focus-visible{outline:none;box-shadow:var(--ring);border-radius:8px}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#232c47;border:3px solid transparent;background-clip:content-box;border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:#39456e;background-clip:content-box}
 
-/* ---------- Layout ---------- */
-.wrap{max-width:1080px;margin:0 auto;padding:14px 14px 90px}
+/* ---------------------------------- Layout ------------------------------- */
+.wrap{max-width:1060px;margin:0 auto;padding:20px 16px 96px}
 header.top{
-  position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-  background:rgba(11,16,32,.82);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  background:rgba(8,11,19,.86);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
 }
-.top-in{max-width:1080px;margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.2px}
-.logo .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#22d3ee,#3b82f6);display:grid;place-items:center;font-size:16px}
-.logo small{display:block;font-weight:500;color:var(--txt2);font-size:11px;line-height:1}
+.top-in{max-width:1060px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:15px}
+.logo .dot{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:15px;
+  background:linear-gradient(150deg,#1d3a7a,#0f1c3d);border:1px solid #2c4a8f;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10)
+}
+.logo small{display:block;font-weight:500;color:var(--txt2);font-size:11px;line-height:1.35;letter-spacing:0}
 .spacer{flex:1}
-nav.tabs{display:flex;gap:6px;overflow-x:auto;max-width:100%;padding:6px 4px;scrollbar-width:none}
+
+/* abas: controle segmentado */
+nav.tabs{display:flex;gap:2px;overflow-x:auto;max-width:100%;padding:6px 12px 8px;scrollbar-width:none;box-shadow:inset 0 -1px 0 var(--line)}
 nav.tabs::-webkit-scrollbar{display:none}
 nav.tabs button{
-  white-space:nowrap;padding:8px 13px;border-radius:999px;color:var(--txt2);
-  border:1px solid transparent;font-weight:600;font-size:13.5px
+  white-space:nowrap;padding:7px 13px;border-radius:9px;color:var(--txt2);
+  border:1px solid transparent;font-weight:600;font-size:13.5px;letter-spacing:-.005em;
+  transition:background .16s ease,color .16s ease,border-color .16s ease
 }
-nav.tabs button.active{background:var(--card2);color:#fff;border-color:var(--line)}
-nav.tabs button:hover{color:#fff}
+nav.tabs button:hover{color:var(--txt);background:rgba(255,255,255,.04)}
+nav.tabs button.active{background:var(--card2);color:#fff;border-color:var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
 
-/* ---------- Cards / UI ---------- */
-.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
-.card h2{margin:0 0 10px;font-size:17px}
-.card h3{margin:14px 0 8px;font-size:15px;color:#fff}
+/* ----------------------------------- Cards -------------------------------- */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);border-radius:var(--r);padding:18px;
+  box-shadow:var(--shadow);margin-bottom:14px;position:relative;overflow:hidden
+}
+.card::before{ /* fio de luz superior: dá profundidade sem parecer "brinquedo" */
+  content:"";position:absolute;inset:0 0 auto;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.10) 22%,rgba(255,255,255,.10) 78%,transparent)
+}
+.card h2{margin:0 0 10px;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.card h3{margin:16px 0 8px;font-size:15px;font-weight:650;color:#fff;letter-spacing:-.01em}
+.card h3:first-child{margin-top:0}
+h4{font-size:14px;font-weight:650;letter-spacing:-.005em}
 .muted{color:var(--txt2)}
 .small{font-size:12.5px}
-.tiny{font-size:11.5px}
+.tiny{font-size:11.5px;line-height:1.5}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .grid{display:grid;gap:12px}
-.grid.c2{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.grid.c3{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
-.grid.c4{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
-.badge{display:inline-flex;align-items:center;gap:5px;background:#0e1730;border:1px solid var(--line);color:var(--txt2);padding:3px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
-.badge.ok{color:#86efac;border-color:#14532d;background:#08170f}
-.badge.err{color:#fca5a5;border-color:#7f1d1d;background:#170808}
-.badge.warn{color:#fcd34d;border-color:#78350f;background:#170f02}
-.badge.pri{color:#bfdbfe;border-color:#1e3a8a;background:#081020}
-.btn{background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:10px 15px;font-weight:650;transition:.15s}
-.btn:hover{border-color:#3b4a80;transform:translateY(-1px)}
-.btn.pri{background:linear-gradient(135deg,#3b82f6,#6366f1);border-color:transparent;color:#fff}
-.btn.ok{background:linear-gradient(135deg,#16a34a,#22c55e);border-color:transparent;color:#052e16}
-.btn.gold{background:linear-gradient(135deg,#f59e0b,#facc15);border-color:transparent;color:#291c00}
-.btn.ghost{background:transparent}
-.btn.sm{padding:6px 11px;font-size:13px;border-radius:9px}
-.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
-input[type=text],input[type=number],input[type=date],input[type=password],select,textarea{
-  background:#0d1530;border:1px solid var(--line);border-radius:10px;padding:9px 11px;width:100%;outline:none
-}
-input:focus,select:focus,textarea:focus{border-color:var(--pri)}
-label.f{display:block;font-size:12.5px;color:var(--txt2);margin:9px 0 4px;font-weight:600}
-.bar{height:9px;background:#0d1530;border-radius:99px;overflow:hidden;border:1px solid var(--line)}
-.bar > i{display:block;height:100%;background:linear-gradient(90deg,#22d3ee,#3b82f6);transition:width .4s}
-.bar.ok > i{background:linear-gradient(90deg,#16a34a,#4ade80)}
-.bar.gold > i{background:linear-gradient(90deg,#f59e0b,#facc15)}
-.kpi{background:#0e1730;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
-.kpi b{display:block;font-size:23px;line-height:1.2}
-.kpi span{font-size:11.5px;color:var(--txt2)}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(175px,1fr))}
+.grid.c4{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}
 
-/* ---------- Questão ---------- */
-.qhead{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
-.qtext{font-size:16.5px;line-height:1.6;white-space:pre-wrap}
-.qtext code{background:#0d1530;border:1px solid var(--line);border-radius:6px;padding:1px 5px;font-size:14px}
-.alt{
-  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
-  background:#0e1730;border:1px solid var(--line);border-radius:12px;padding:12px 13px;margin:8px 0;transition:.15s
+/* ---------------------------------- Badges -------------------------------- */
+.badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt2);
+  padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:600;
+  font-variant-numeric:tabular-nums;white-space:nowrap
 }
-.alt:hover{border-color:#3b4a80;background:#111c3d}
-.alt .ltr{flex:0 0 26px;height:26px;border-radius:8px;background:#1b2748;display:grid;place-items:center;font-weight:800;font-size:13px}
-.alt .tx{flex:1;white-space:pre-wrap}
-.alt.sel{border-color:var(--pri);background:#101f45}
-.alt.sel .ltr{background:var(--pri);color:#fff}
-.alt.right{border-color:#16a34a;background:#07200f}
-.alt.right .ltr{background:#16a34a;color:#fff}
-.alt.wrong{border-color:#b91c1c;background:#1c0808}
-.alt.wrong .ltr{background:#b91c1c;color:#fff}
+.badge.ok{color:#6ee7b7;border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.09)}
+.badge.err{color:#fda4af;border-color:rgba(251,113,133,.35);background:rgba(251,113,133,.10)}
+.badge.warn{color:#fcd34d;border-color:rgba(251,191,36,.32);background:rgba(251,191,36,.09)}
+.badge.pri{color:#bfd4ff;border-color:rgba(79,125,251,.38);background:rgba(79,125,251,.12)}
+
+/* ---------------------------------- Botões -------------------------------- */
+.btn{
+  background:var(--card2);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:10px 15px;font-weight:600;font-size:14px;letter-spacing:-.005em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  transition:transform .12s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease
+}
+.btn:hover{border-color:var(--line2);background:#182136;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.pri{background:linear-gradient(180deg,#5b86ff,#3f6ae8);border-color:#3f6ae8;color:#fff;box-shadow:0 6px 16px -8px rgba(79,125,251,.9),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn.pri:hover{background:linear-gradient(180deg,#6b93ff,#4a75f0);border-color:#4a75f0}
+.btn.ok{background:linear-gradient(180deg,#2fbf7d,#1e9c62);border-color:#1e9c62;color:#04150e;box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+.btn.gold{background:linear-gradient(180deg,#f7cf63,#e0ad2f);border-color:#d9a527;color:#241a02;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.btn.ghost{background:transparent;box-shadow:none}
+.btn.ghost:hover{background:rgba(255,255,255,.045)}
+.btn.sm{padding:6px 11px;font-size:13px;border-radius:9px}
+.btn:disabled{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* ---------------------------------- Campos -------------------------------- */
+input[type=text],input[type=number],input[type=date],input[type=password],select,textarea{
+  background:#0b1020;border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:10px 12px;width:100%;outline:none;color:var(--txt);
+  transition:border-color .16s ease,box-shadow .16s ease,background .16s ease
+}
+input::placeholder,textarea::placeholder{color:var(--txt3)}
+input:focus,select:focus,textarea:focus{border-color:var(--pri);box-shadow:var(--ring);background:#0c1226}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--txt2) 50%),linear-gradient(135deg,var(--txt2) 50%,transparent 50%);background-position:calc(100% - 17px) calc(50% + 1px),calc(100% - 12px) calc(50% + 1px);background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:34px}
+label.f{display:block;font-size:12px;color:var(--txt2);margin:10px 0 5px;font-weight:600;letter-spacing:.01em}
+input[type=checkbox]{accent-color:var(--pri)}
+
+/* --------------------------------- Progresso ------------------------------ */
+.bar{height:8px;background:#0b1020;border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.bar > i{display:block;height:100%;background:linear-gradient(90deg,#4f7dfb,#7fa0ff);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.bar.ok > i{background:linear-gradient(90deg,#1e9c62,#34d399)}
+.bar.gold > i{background:linear-gradient(90deg,#d9a527,#f5c451)}
+.kpi{
+  background:linear-gradient(180deg,var(--card2),#111827);
+  border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center
+}
+.kpi b{display:block;font-size:24px;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11px;color:var(--txt2);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+/* ---------------------------------- Questão ------------------------------- */
+.qhead{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.qtext{font-size:16.5px;line-height:1.68;white-space:pre-wrap;letter-spacing:-.005em}
+.qtext code{background:#0b1020;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14px;font-family:var(--mono)}
+.alt{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;
+  background:#0d1324;border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin:8px 0;
+  transition:border-color .16s ease,background .16s ease,transform .12s ease
+}
+.alt:hover{border-color:var(--line2);background:#101731;transform:translateY(-1px)}
+.alt .ltr{
+  flex:0 0 27px;height:27px;border-radius:8px;background:var(--card2);border:1px solid var(--line);
+  display:grid;place-items:center;font-weight:700;font-size:12.5px;color:var(--txt2)
+}
+.alt .tx{flex:1;white-space:pre-wrap;font-size:14.5px;line-height:1.6}
+.alt.sel{border-color:var(--pri);background:rgba(79,125,251,.12)}
+.alt.sel .ltr{background:var(--pri);border-color:var(--pri);color:#fff}
+.alt.right{border-color:rgba(52,211,153,.6);background:rgba(52,211,153,.10)}
+.alt.right .ltr{background:#1e9c62;border-color:#1e9c62;color:#fff}
+.alt.wrong{border-color:rgba(251,113,133,.6);background:rgba(251,113,133,.10)}
+.alt.wrong .ltr{background:#c73b52;border-color:#c73b52;color:#fff}
 .alt[disabled]{cursor:default}
-.fb{margin-top:12px;border-radius:12px;padding:13px;border:1px solid var(--line);background:#0c1densit}
-.fb{background:#0c142c}
-.fb.right{border-color:#14532d}
-.fb.wrong{border-color:#7f1d1d}
-.fb .tt{font-weight:800;margin-bottom:6px}
-.fb .com{white-space:pre-wrap;font-size:14.5px;color:#dfe6ff}
-.explica{margin-top:10px;border-top:1px dashed var(--line);padding-top:9px}
+.alt[disabled]:hover{transform:none}
+
+.fb{border-radius:12px;padding:14px;border:1px solid var(--line);background:var(--card2);margin-top:12px;border-left-width:3px}
+.fb.right{border-color:rgba(52,211,153,.35);border-left-color:var(--ok);background:rgba(52,211,153,.07)}
+.fb.wrong{border-color:rgba(251,113,133,.35);border-left-color:var(--err);background:rgba(251,113,133,.07)}
+.fb .tt{font-weight:700;margin-bottom:6px;letter-spacing:-.01em;font-size:14.5px}
+.fb .com{white-space:pre-wrap;font-size:14.5px;color:#dbe3f7;line-height:1.65}
+.explica{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px}
 .explica b{color:#fff}
 
-/* ---------- Simulado ---------- */
-.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:20px}
+/* --------------------------------- Simulado ------------------------------- */
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:21px;letter-spacing:-.01em}
 .qnav{display:flex;flex-wrap:wrap;gap:6px}
-.qnav button{width:34px;height:34px;border-radius:9px;background:#0e1730;border:1px solid var(--line);font-weight:700;font-size:12.5px}
-.qnav button.done{background:#0f2d1c;border-color:#15803d;color:#86efac}
-.qnav button.cur{outline:2px solid var(--pri);outline-offset:1px}
-.qnav button.flag{border-color:#a16207;color:#fcd34d}
+.qnav button{
+  width:34px;height:34px;border-radius:9px;background:#0d1324;border:1px solid var(--line);
+  font-weight:700;font-size:12.5px;font-variant-numeric:tabular-nums;transition:.14s
+}
+.qnav button:hover{border-color:var(--line2)}
+.qnav button.done{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.5);color:#6ee7b7}
+.qnav button.cur{box-shadow:var(--ring);border-color:var(--pri)}
+.qnav button.flag{border-color:rgba(251,191,36,.6);color:#fcd34d}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
-th,td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left}
-th{color:var(--txt2);font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--txt2);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+tbody tr:hover{background:rgba(255,255,255,.025)}
 tr:last-child td{border-bottom:none}
+td b{font-variant-numeric:tabular-nums}
 
-/* ---------- Chat IA ---------- */
+/* ----------------------------------- Chat --------------------------------- */
 .chat{display:flex;flex-direction:column;gap:10px;max-height:62vh;overflow-y:auto;padding:6px}
-.msg{max-width:88%;padding:11px 13px;border-radius:14px;white-space:pre-wrap;font-size:14.5px;border:1px solid var(--line)}
-.msg.user{align-self:flex-end;background:#132b57;border-color:#1d3c74}
-.msg.bot{align-self:flex-start;background:#0e1730}
-.msg.sys{align-self:center;background:transparent;border:none;color:var(--txt2);font-size:12.5px;text-align:center}
-.chatbar{display:flex;gap:8px;margin-top:10px}
-.chatbar textarea{resize:none;height:44px}
-.spin{display:inline-block;width:14px;height:14px;border:2px solid #ffffff40;border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite}
+.msg{
+  max-width:88%;padding:12px 14px;border-radius:14px;white-space:pre-wrap;
+  font-size:14.5px;line-height:1.65;border:1px solid var(--line);box-shadow:0 8px 20px -14px rgba(0,0,0,.8)
+}
+.msg.user{align-self:flex-end;background:linear-gradient(180deg,#1b3163,#16264c);border-color:#294b8f}
+.msg.bot{align-self:flex-start;background:var(--card2)}
+.msg.sys{align-self:center;background:transparent;border:none;box-shadow:none;color:var(--txt2);font-size:12.5px;text-align:center;max-width:96%}
+.chatbar{display:flex;gap:8px;margin-top:10px;align-items:flex-end}
+.chatbar textarea{resize:none;height:46px}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--pri2);border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px}
 @keyframes sp{to{transform:rotate(360deg)}}
-.qgen{border-left:3px solid var(--pri);padding-left:11px;margin:10px 0}
+.qgen{border-left:3px solid var(--pri);padding-left:12px;margin:10px 0}
 
-/* ---------- Misc ---------- */
+/* ------------------------------------ Misc -------------------------------- */
 .streak{display:flex;gap:4px;flex-wrap:wrap}
-.streak i{width:15px;height:15px;border-radius:4px;background:#0d1530;border:1px solid var(--line);display:block}
-.streak i.on{background:linear-gradient(135deg,#f59e0b,#facc15);border-color:#b45309}
-.topic-pill{display:inline-block;background:#0e1730;border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin:3px 3px 0 0;font-size:12px;color:var(--txt2)}
-details{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;background:#0d1530}
-details summary{cursor:pointer;font-weight:650}
-details[open] summary{margin-bottom:8px}
-.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#132b57;border:1px solid var(--line);padding:10px 16px;border-radius:12px;z-index:99;box-shadow:var(--shadow);font-size:13.5px}
-.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:8px}
-.fab button{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;font-size:20px;box-shadow:var(--shadow)}
+.streak i{width:15px;height:15px;border-radius:4px;background:#0d1324;border:1px solid var(--line);display:block}
+.streak i.on{background:linear-gradient(135deg,#e0ad2f,#f7cf63);border-color:#b45309}
+.topic-pill{
+  display:inline-block;background:rgba(255,255,255,.035);border:1px solid var(--line);
+  border-radius:999px;padding:4px 11px;margin:3px 3px 0 0;font-size:12px;color:var(--txt2)
+}
+details{border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin:8px 0;background:#0c1222}
+details summary{cursor:pointer;font-weight:650;letter-spacing:-.005em}
+details[open] summary{margin-bottom:9px}
+.toast{
+  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+  background:#16203a;border:1px solid var(--line2);padding:11px 17px;border-radius:12px;
+  z-index:99;box-shadow:0 20px 40px -18px rgba(0,0,0,.9);font-size:13.5px;max-width:92vw
+}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:8px}
+.fab button{
+  width:46px;height:46px;border-radius:50%;font-size:18px;
+  background:var(--card2);border:1px solid var(--line2);color:var(--txt);
+  box-shadow:0 12px 26px -12px rgba(0,0,0,.9);transition:.16s
+}
+.fab button:hover{background:#1b2540;transform:translateY(-2px)}
 .heat{display:grid;grid-template-columns:repeat(auto-fill,minmax(13px,1fr));gap:3px}
-.heat i{aspect-ratio:1;border-radius:3px;background:#0d1530;border:1px solid var(--line);display:block}
-.heat i.l1{background:#1e3a8a;border-color:#1e40af}
-.heat i.l2{background:#2563eb;border-color:#3b82f6}
-.heat i.l3{background:#60a5fa;border-color:#93c5fd}
-.heat i.l4{background:#f59e0b;border-color:#facc15}
-.seg{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}
-.seg button{padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#0d1530;font-size:13px;color:var(--txt2);font-weight:600}
+.heat i{aspect-ratio:1;border-radius:3px;background:#0d1324;border:1px solid var(--line);display:block}
+.heat i.l1{background:#1b3a7d;border-color:#22458c}
+.heat i.l2{background:#2c5bd0;border-color:#3c6ee0}
+.heat i.l3{background:#5b86ff;border-color:#7fa0ff}
+.heat i.l4{background:#e0ad2f;border-color:#f5c451}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 14px}
+.seg button{
+  padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:#0c1222;
+  font-size:13px;color:var(--txt2);font-weight:600;transition:.16s
+}
+.seg button:hover{color:var(--txt);border-color:var(--line2)}
 .seg button.active{background:var(--pri);color:#fff;border-color:transparent}
-@media print{header.top,.fab,nav.tabs{display:none}}
-@media (max-width:560px){
-  .wrap{padding:10px 10px 90px}
+
+/* acessibilidade: respeita quem pediu menos animação */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+}
+@media print{header.top,.fab,nav.tabs{display:none}.card{break-inside:avoid;box-shadow:none}}
+@media (max-width:620px){
+  body{font-size:14.5px}
+  .wrap{padding:14px 12px 88px}
+  .card{padding:14px;border-radius:13px}
   .qtext{font-size:16px}
-  .card{padding:13px}
   .msg{max-width:94%}
+  .top-in{padding:9px 12px;gap:7px}
+  .logo small{display:none}
+  .logo{font-size:14px}
+  .kpi b{font-size:21px}
+  nav.tabs{padding:6px 10px 8px}
 }
 </style>
 </head>
@@ -300,8 +420,10 @@ function marcarTempo(seg) {
 function metricas() {
   const ids = Object.keys(S.resp);
   const resp = ids.length ? ids.map(i => S.resp[i]) : [];
-  const tot = resp.reduce((s, r) => s + r.t, 0);
-  const ok = resp.reduce((s, r) => s + r.ok, 0);
+  /* "questões feitas" = soma do que foi respondido em cada dia (inclui repetições);
+     "acertos" vem do mesmo histórico. Antes daqui saía a soma dos *timestamps*. */
+  const tot = Object.keys(S.hist).reduce((s, d) => s + (S.hist[d] && S.hist[d].q || 0), 0);
+  const ok = Object.keys(S.hist).reduce((s, d) => s + (S.hist[d] && S.hist[d].a || 0), 0);
   const hoje = S.hist[hojeISO()] || { q: 0, a: 0, min: 0 };
   const dias = Object.keys(S.hist).filter(d => S.hist[d].q > 0).sort();
   // streak
@@ -323,7 +445,7 @@ function metricas() {
 }
 function statsMateria(mid) {
   const qs = porMateria(mid); let t = 0, ok = 0, vistas = 0;
-  qs.forEach(q => { const r = statQ(q.id); if (r) { t += r.t; ok += r.ok; vistas++; } });
+  qs.forEach(q => { const r = statQ(q.id); if (r) { t++; ok += r.ok ? 1 : 0; vistas++; } });
   return { banco: qs.length, vistas, t, ok, pct: t ? ok / t * 100 : 0, cobertura: qs.length ? vistas / qs.length * 100 : 0 };
 }
 function emRevisao(qid) { const r = statQ(qid); return !!r && r.prox <= Date.now(); }
@@ -360,6 +482,10 @@ function montarTabs() {
 }
 
 /* ------------------------------- 6. PAINEL ------------------------------- */
+/* Largura de barra em %: numero simples entre 0 e 100 (nunca notacao cientifica,
+   que o navegador ignora silenciosamente). */
+function larguraPct(x) { const v = Number(x); if (!isFinite(v)) return 0; return Math.max(0, Math.min(100, +v.toFixed(1))); }
+
 function renderPainel(root) {
   const m = metricas();
   const pctMeta = Math.min(100, m.hoje.q / Math.max(1, S.config.metaDia) * 100);
@@ -383,7 +509,7 @@ function renderPainel(root) {
     <div style="margin-top:14px">
       <div class="row" style="justify-content:space-between"><b>Meta de hoje: ${m.hoje.q} / ${S.config.metaDia} questões</b>
       <span class="muted small">${m.hoje.q >= S.config.metaDia ? '✅ meta batida!' : `faltam ${S.config.metaDia - m.hoje.q}`} · acerto hoje ${m.hoje.q ? nf(m.hoje.a / m.hoje.q * 100, 0) : 0}%</span></div>
-      <div class="bar gold" style="margin-top:6px"><i style="width:${pctMeta}%"></i></div>
+      <div class="bar gold" style="margin-top:6px"><i style="width:${larguraPct(pctMeta)}%"></i></div>
     </div>
     <div class="row" style="margin-top:14px">
       <button class="btn pri" onclick="iniciarTreinoRapido()">▶ Treinar agora (${S.config.metaDia > 20 ? 20 : S.config.metaDia} questões)</button>
@@ -401,7 +527,7 @@ function renderPainel(root) {
 
   <div class="card">
     <h3 style="margin-top:0">🎯 Rumo às ${m.metaTotal} questões</h3>
-    <div class="bar"><i style="width:${Math.min(100, m.tot / m.metaTotal * 100)}%"></i></div>
+    <div class="bar"><i style="width:${larguraPct(m.tot / m.metaTotal * 100)}%"></i></div>
     <div class="row" style="justify-content:space-between;margin-top:6px">
       <span class="muted small">${m.tot} de ${m.metaTotal} (${nf(m.tot / m.metaTotal * 100, 0)}%)</span>
       <span class="muted small">faltam <b style="color:#fff">${m.faltam}</b> → <b style="color:var(--pri2)">${m.metaDia}/dia</b> até 13/12</span>
@@ -424,7 +550,7 @@ function renderPainel(root) {
           <span><b>${esc(mat.nome)}</b> <span class="badge">${s.banco} no banco</span></span>
           <span class="muted small">${s.t ? `${nf(s.pct, 0)}% em ${s.t} respostas` : 'não treinado'}</span>
         </div>
-        <div class="bar ${s.pct >= 60 ? 'ok' : 'gold'}" style="margin-top:5px"><i style="width:${s.t ? s.pct : 0}%"></i></div>
+        <div class="bar ${s.pct >= 60 ? 'ok' : 'gold'}" style="margin-top:5px"><i style="width:${larguraPct(s.t ? s.pct : 0)}%"></i></div>
         <div class="tiny muted" style="margin-top:3px">cobertura do conteúdo: ${nf(s.cobertura, 0)}% (${s.vistas}/${s.banco})</div>
       </div>`; }).join('')}
   </div>`;
@@ -588,7 +714,7 @@ function renderSessao(root) {
         <button class="btn sm" id="btn-sair">✖ Sair</button>
       </div>
     </div>
-    <div class="bar" style="margin:10px 0 16px"><i style="width:${(s.i) / s.qs.length * 100}%"></i></div>
+    <div class="bar" style="margin:10px 0 16px"><i style="width:${larguraPct((s.i) / s.qs.length * 100)}%"></i></div>
     <div class="qhead">
       <span class="badge">${q.banca || 'CETAP'} ${q.ano || ''}</span>
       ${q.ref ? `<span class="tiny muted">${esc(q.ref)}</span>` : ''}
@@ -645,7 +771,7 @@ function renderSessao(root) {
     });
     $('#fb').innerHTML = `
       <div class="fb ${acertou ? 'right' : 'wrong'}">
-        <div class="tt">${acertou ? '✅ Você acertou!' : `❌ Errou. Gabarito: <span style="color:#86efac">${LETRAS[q.correta]}</span>`}</div>
+        <div class="tt">${acertou ? '✅ Você acertou!' : `❌ Errou. Gabarito: <span style="color:#6ee7b7">${LETRAS[q.correta]}</span>`}</div>
         <div class="com">${fmtTxt(q.comentario || 'Sem comentário.')}</div>
         ${q.analise ? `<div class="explica"><b>Análise das alternativas:</b><div class="com">${fmtTxt(q.analise)}</div></div>` : ''}
         ${!acertou && q.materia !== 'GEN' ? `<div class="row" style="margin-top:10px"><button class="btn sm gold" id="btn-ia-expl">🤖 Pedir explicação detalhada à IA</button></div>` : ''}
@@ -817,7 +943,7 @@ function finalizarProva(tempo) {
         <summary>${ac ? '✅' : '❌'} Q${i + 1} — ${esc(MATBYID[q.materia] ? MATBYID[q.materia].nome : '')}${mar === undefined ? ' (em branco)' : ''}</summary>
         <div class="small muted">${esc(q.topico || '')}</div>
         <div style="margin:8px 0">${fmtTxt(q.enunciado)}</div>
-        ${q.alternativas.map((a, k) => `<div class="tiny" style="padding:3px 0;color:${k === q.correta ? '#86efac' : k === mar ? '#fca5a5' : 'var(--txt2)'}"><b>${LETRAS[k]})</b> ${esc(a)}</div>`).join('')}
+        ${q.alternativas.map((a, k) => `<div class="tiny" style="padding:3px 0;color:${k === q.correta ? '#6ee7b7' : k === mar ? '#fda4af' : 'var(--txt2)'}"><b>${LETRAS[k]})</b> ${esc(a)}</div>`).join('')}
         <div class="fb" style="margin-top:8px"><div class="com">${fmtTxt(q.comentario || '')}</div>${q.analise ? `<div class="explica">${fmtTxt(q.analise)}</div>` : ''}</div>
       </details>`; }).join('')}
     </div>
@@ -861,6 +987,7 @@ const PROVEDORES = {
     ajuda: 'Grátis. Crie o token e marque a permissão “Make calls to Inference Providers”.',
     prefixo: 'hf_', custo: 'grátis (cota diária)',
     modelos: ['openai/gpt-oss-120b', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct', 'google/gemma-3-4b-it', 'Qwen/Qwen2.5-7B-Instruct'],
+    /* se algum sair do ar, o app descobre sozinho outro disponível para a sua conta */
     obs: 'Também é a IA usada para sincronizar o progresso entre aparelhos (precisa de permissão de escrita se você usar a nuvem).'
   },
   gemini: {
@@ -870,8 +997,8 @@ const PROVEDORES = {
     criar: 'https://aistudio.google.com/apikey',
     ajuda: 'Grátis. No Google AI Studio, clique em “Create API key” e copie a chave (começa com AIza).',
     prefixo: 'AIza', custo: 'grátis (cota diária generosa)',
-    modelos: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-flash'],
-    obs: 'Ótima para explicar questões e resumir leis. Usa conexão especial que dispensa o bloqueio do navegador.'
+    modelos: ['gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-2.5-flash'],
+    obs: 'Ótima para explicar questões e resumir leis. Usa conexão especial que dispensa o bloqueio do navegador. Os modelos 2.5 estão sendo aposentados pelo Google — se um deles falhar, use ✨ “escolher por mim”.'
   },
   groq: {
     nome: 'Groq', emoji: '⚡', tipo: 'openai',
@@ -880,8 +1007,8 @@ const PROVEDORES = {
     criar: 'https://console.groq.com/keys',
     ajuda: 'Grátis e muito rápido. Crie a chave em console.groq.com/keys (começa com gsk_).',
     prefixo: 'gsk_', custo: 'grátis (com limites por minuto)',
-    modelos: ['llama-3.3-70b-versatile', 'openai/gpt-oss-120b', 'llama-3.1-8b-instant'],
-    obs: 'A resposta mais rápida entre as gratuitas — boa para gerar questões em sequência.'
+    modelos: ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.6-27b'],
+    obs: 'A resposta mais rápida entre as gratuitas. A Groq aposenta modelos de tempos em tempos — se um nome sair do ar, toque em “buscas modelos” (o app também se corrige sozinho).'
   },
   openai: {
     nome: 'ChatGPT (OpenAI)', emoji: '💬', tipo: 'openai',
@@ -965,6 +1092,18 @@ const PROVEDORES = {
 
 const IDS_IA = Object.keys(PROVEDORES);
 
+/* MODO SIMPLES (padrão): aparecem só as três IAs gratuitas — Hugging Face, Gemini e Groq.
+   As outras ficam escondidas atrás do botão "mostrar todas as IAs" na janela de configuracao.
+   Uma IA que ja tenha chave salva NUNCA e escondida (ninguem perde acesso ao que ja usava). */
+const IAS_SIMPLES = ['hf', 'gemini', 'groq'];
+function iasVisiveis() {
+  try {
+    if (S.config.iaMostrarTodas) return IDS_IA;
+    const configuradas = provedoresConfigurados();
+    return IDS_IA.filter(id => IAS_SIMPLES.indexOf(id) >= 0 || configuradas.indexOf(id) >= 0);
+  } catch (e) { return IAS_SIMPLES; }
+}
+
 /* ---------- estado da conexão (servidor local / proxy da Vercel) ---------- */
 const IA_STATUS = { servidor: null, erro: '', erroSync: '', tokenNoServidor: false };
 
@@ -992,6 +1131,7 @@ function migrarIA() {
     if (!S.config.iaPrincipal) S.config.iaPrincipal = 'hf';
     if (typeof S.config.iaReserva !== 'boolean') S.config.iaReserva = true;
     if (!Array.isArray(S.config.iaParalelo)) S.config.iaParalelo = [];   /* vazio = todas as ligadas */
+    if (typeof S.config.iaMostrarTodas !== 'boolean') S.config.iaMostrarTodas = false;  /* padrao: so HF, Gemini e Groq */
   } catch (e) { console.warn('migrarIA:', e); }
 }
 function cfgProv(id) {
@@ -1143,6 +1283,20 @@ function mensagemDeErro(id, status, txt, j) {
 }
 
 /* ---------- erros explicados em português ---------- */
+/* A chave é realmente aceita? Olha o conteúdo da resposta (algumas APIs devolvem
+   200 com um erro dentro). Devolve {ok, motivo, conta}. */
+async function conferirChaveHF(tok) {
+  try {
+    const r = await fetchTimeout('https://huggingface.co/api/whoami-v2', { headers: { Authorization: 'Bearer ' + tok } }, 20000);
+    const txt = await r.text();
+    let j = {}; try { j = JSON.parse(txt); } catch (e) { }
+    if (j && j.error) return { ok: false, motivo: String(j.error) };
+    if (j && j.name) return { ok: true, conta: j.name, tipo: j.type || '', perfil: ((j.auth || {}).accessToken || {}).role || '' };
+    if (!r.ok) return { ok: false, motivo: 'HTTP ' + r.status };
+    return { ok: false, motivo: 'resposta inesperada: ' + txt.slice(0, 80) };
+  } catch (e) { return { ok: false, motivo: 'sem conexão: ' + ((e && e.message) || e) }; }
+}
+
 function ambienteRestrito() {
   try { return location.origin === 'null' || !/^https?:$/.test(location.protocol); } catch (e) { return true; }
 }
@@ -1164,6 +1318,10 @@ function explicarErroIA(e, provedorId) {
   }
   if (e && e.__http) {
     const s = e.__http;
+    /* modelo aposentado/indisponível: mensagem específica, com o caminho da solução */
+    if (ERRO_MODELO.test(m)) return 'O modelo “' + (modeloDe(provedorId) || 'escolhido') + '” NÃO está mais disponível na ' + p.nome + ' — os provedores aposentam modelos de tempos em tempos.\n\nComo resolver: toque em ✨ “escolher por mim” (na janela 🔑): o app consulta a lista da sua conta, escolhe um modelo de conversa que funciona e já testa. O app também tenta isso automaticamente.'
+      + (provedorId === 'groq' ? '\n\nNa Groq, os modelos de hoje são: openai/gpt-oss-120b, openai/gpt-oss-20b e qwen/qwen3.6-27b (os llama-3.3 e llama-3.1 saíram do ar em 16/08/2026).' : '')
+      + (provedorId === 'gemini' ? '\n\nNo Gemini, os modelos atuais são gemini-3.8-flash, gemini-3.5-flash e gemini-3.5-flash-lite (os 2.5 estão sendo aposentados).' : '');
     if (s === 401 || s === 403) return 'A ' + p.nome + ' RECUSOU a chave (erro ' + s + '). Isso acontece quando o token foi copiado incompleto, expirou, foi revogado ou não tem a permissão necessária.\n\nComo resolver: crie outra chave em ' + (p.criar || '') + ' e cole de novo.';
     if (s === 404) return 'O modelo “' + (modeloDe(provedorId) || 'escolhido') + '” não existe ou não está disponível na ' + p.nome + ' (404). Toque em 🔄 “buscar modelos disponíveis” na janela 🔑 e escolha um da lista.';
     if (s === 429) return 'A ' + p.nome + ' recusou por LIMITE DE USO (429). Espere um minuto e tente de novo — a cota gratuita renova sozinha.' + (p.custo.indexOf('grátis') === 0 ? '' : '');
@@ -1175,7 +1333,27 @@ function explicarErroIA(e, provedorId) {
   return m;
 }
 
+/* Pega a lista real do provedor (com a chave do usuário) e escolhe um modelo de conversa. */
+async function descobrirModeloQueFunciona(id) {
+  const lista = (await listarModelos(id)).filter(ehModeloDeConversa);
+  if (!lista.length) throw new Error('não encontrei nenhum modelo de conversa disponível na sua conta');
+  return escolherModeloBom(lista);
+}
+
 /* ---------- chamada unificada, com reserva automática ---------- */
+/* modelos que não servem para conversar */
+function ehModeloDeConversa(m) { return !/whisper|tts|guard|prompt-guard|embed|moderation|vision-only|rerank|audio|image/i.test(String(m)); }
+
+/* escolhe, na lista do provedor, o modelo mais adequado para o tutor */
+function escolherModeloBom(lista) {
+  const preferencia = [/gpt-oss-120b/i, /gpt-oss/i, /versatile/i, /qwen3?[.-]?\d/i, /(sonnet|opus|pro|large|70b|120b|405b)/i, /flash|mini|small|instant|8b|7b/i];
+  for (const re of preferencia) { const achado = lista.find(m => re.test(m)); if (achado) return achado; }
+  return lista[0];
+}
+
+/* o erro é "esse modelo não existe mais / não tenho acesso"? */
+const ERRO_MODELO = /does not exist|no access|not found|decommission|deprecat|invalid model|model_not_found|unsupported model|model.*not.*available|no longer/i;
+
 async function chamarIAProvedor(id, mensagens, opts) {
   const p = PROVEDORES[id], cfg = cfgProv(id);
   if (!p) throw new Error('Provedor de IA desconhecido: ' + id);
@@ -1189,9 +1367,31 @@ async function chamarIAProvedor(id, mensagens, opts) {
   }, (opts && opts.timeout) || 60000);
   const txt = await r.text();
   let j = {}; try { j = JSON.parse(txt); } catch (e) { }
-  if (!r.ok) throw errHTTP(r.status, mensagemDeErro(id, r.status, txt, j));
+  if (!r.ok) {
+    const msgErro = mensagemDeErro(id, r.status, txt, j);
+    /* AUTOCORREÇÃO: modelo aposentado/indisponível → descobre um modelo válido e tenta de novo */
+    if (ERRO_MODELO.test(msgErro) && !(opts && opts.__semAutocorrecao)) {
+      const novo = await descobrirModeloQueFunciona(id).catch(() => '');
+      if (novo && novo !== cfg.modelo) {
+        try {
+          const conteudo = await chamarIAProvedor(id, mensagens, Object.assign({}, opts, { modelo: novo, __semAutocorrecao: true }));
+          cfg.modelo = novo; try { salvar(); } catch (e) { }
+          if (typeof toast === 'function') toast('O modelo anterior saiu do ar — passei a usar ' + novo);
+          return conteudo;
+        } catch (e2) { /* se o novo também falhar, mostra o erro original */ }
+      }
+    }
+    throw errHTTP(r.status, msgErro);
+  }
   const conteudo = lerResposta(id, j);
-  if (!conteudo) throw new Error('A ' + p.nome + ' respondeu sem texto. Tente de novo ou troque o modelo.');
+  if (!conteudo) {
+    /* algumas APIs devolvem 200 com um erro dentro do corpo — trata como erro de verdade */
+    if (/invalid username or password|unauthorized|token.*invalid|invalid.*token/i.test(txt)) {
+      throw errHTTP(401, 'Invalid username or password.');
+    }
+    if (/quota|rate limit|too many requests/i.test(txt)) throw errHTTP(429, txt.slice(0, 160));
+    throw new Error('A ' + p.nome + ' respondeu sem texto. Resposta recebida: ' + String(txt || '(vazia)').slice(0, 180));
+  }
   return conteudo;
 }
 
@@ -1253,8 +1453,9 @@ async function listarModelos(id) {
   }
   if (!url) throw new Error('Falta o endereço da API.');
   const r = await fetchTimeout(url, { method: 'GET', headers: cab }, 25000);
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(mensagemDeErro(id, r.status, '', j));
+  const txt = await r.text();
+  let j = {}; try { j = JSON.parse(txt); } catch (e) { }
+  if (!r.ok) throw new Error(mensagemDeErro(id, r.status, txt, j));
   let ids = [];
   if (p.tipo === 'gemini') ids = (j.models || []).filter(m => (m.supportedGenerationMethods || []).indexOf('generateContent') >= 0).map(m => String(m.name || '').replace(/^models\//, ''));
   else ids = (j.data || j.models || []).map(m => m.id || m.name || m.model).filter(Boolean).map(String);
@@ -1292,22 +1493,33 @@ async function diagnosticarIA() {
       let resposta;
       if (IA_STATUS.servidor) {
         const cfg = cfgProv(id);
-        const r = await fetchTimeout('api/ia', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provedor: id, modelo: cfg.modelo, baseUrl: cfg.baseUrl, token: cfg.token, mensagens: [{ role: 'user', content: 'Responda apenas: OK' }], max_tokens: 5, temperature: 0 }) }, 30000);
+        const r = await fetchTimeout('api/ia', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provedor: id, modelo: cfg.modelo, baseUrl: cfg.baseUrl, token: cfg.token, mensagens: [{ role: 'user', content: 'Responda apenas: OK' }], max_tokens: 128, temperature: 0 }) }, 30000);
         const j = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(j.error || ('HTTP ' + r.status));
         resposta = j.content;
       } else {
-        resposta = await chamarIAProvedor(id, [{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 5, temperature: 0, timeout: 30000 });
+        resposta = await chamarIAProvedor(id, [{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 128, temperature: 0, timeout: 30000 });
       }
       add('✅', PROVEDORES[id].nome + ' respondeu em ' + ((Date.now() - t0) / 1000).toFixed(1) + 's (“' + String(resposta).trim().slice(0, 20) + '”) — esta IA está funcionando.');
     } catch (e) {
       add('❌', PROVEDORES[id].nome + ' falhou: ' + explicarErroIA(e, id).split('\n')[0]);
-      if (id === 'hf') { try { const r2 = await fetchTimeout('https://huggingface.co/api/whoami-v2', { headers: { Authorization: 'Bearer ' + cfgProv('hf').token } }, 20000); add(r2.ok ? '✅' : '❌', 'Hugging Face: a chave ' + (r2.ok ? 'é válida.' : 'NÃO é aceita (código ' + r2.status + ').')); } catch (e2) { } }
+      if (id === 'hf') {
+        const c = await conferirChaveHF(cfgProv('hf').token);
+        if (c.ok) add('✅', 'Hugging Face: a chave é VÁLIDA (conta: ' + c.conta + (c.perfil ? ', perfil ' + c.perfil : '') + ').');
+        else {
+          add('❌', 'Hugging Face: a chave NÃO é aceita — ' + c.motivo);
+          add('👉', 'Como resolver: abra ' + PROVEDORES.hf.criar + ' → “New token” → tipo Fine-grained → marque “Make calls to Inference Providers” → copie o código hf_… e cole no campo acima. A chave mostrada agora tem ' + String(cfgProv('hf').token).length + ' caracteres.');
+          add('💡', 'Se você já tem uma chave de outra IA (Gemini, Groq…), pode usá-la enquanto isso: escolha na lista “Qual IA usar como principal?”.');
+        }
+      }
     }
   }
   add('•', 'Se pelo menos uma apareceu ✅, o tutor de IA vai funcionar. Você pode deixar várias configuradas: o app usa a principal e passa para as outras sozinho se alguma falhar.');
   return L.join('\n');
 }
+
+/* as três gratuitas, para textos de ajuda */
+function nomesSimples() { return IAS_SIMPLES.map(id => PROVEDORES[id].nome).join(', '); }
 
 /* ajuda: descreve o que está configurado, para mostrar na aba IA */
 function resumoIA() {
@@ -1549,9 +1761,9 @@ function renderIA(root) {
   root.innerHTML = `
   <div class="card">
     <h2>🤖 Tutor de IA + gerador de questões</h2>
-    <div class="muted small">Estude as <b>35+ páginas</b> do Anexo II conversando: peça explicações, resumos, mnemônicos, comparações e questões inéditas sobre qualquer tópico do edital. Funciona com <b>várias IAs</b> — Hugging Face, Google Gemini, Groq, ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok ou uma IA no seu computador.</div>
+    <div class="muted small">Estude as <b>35+ páginas</b> do Anexo II conversando: peça explicações, resumos, mnemônicos, comparações e questões inéditas sobre qualquer tópico do edital. Funciona com as <b>três IAs gratuitas</b> — Hugging Face, Google Gemini e Groq (e ainda aceita outras, se você quiser).</div>
     <div class="row" style="margin-top:10px">
-      <button class="btn gold" onclick="abrirConfigIA()">🔑 ${temChaveIA() ? 'Minhas IAs / trocar a chave' : 'Escolher e ligar uma IA (grátis)'}</button>
+      <button class="btn gold" onclick="abrirConfigIA()">🔑 ${temChaveIA() ? 'Minhas IAs / trocar a chave' : 'Ligar uma IA grátis'}</button>
       <span class="badge ${srv ? 'ok' : 'warn'}" id="ia-status">${srv === null ? 'verificando conexão…' : srv ? '✅ servidor local ativo (chaves protegidas)' : (temChaveIA() ? '⚠️ modo navegador (usa sua chave direto)' : '⚠️ nenhuma IA ligada ainda')}</span>
       <span class="badge">${esc(rotuloIA())}</span>
     </div>
@@ -1798,7 +2010,8 @@ function renderProgresso(root) {
   const maxNota = Math.max(10, ...provas.map(p => p.nota));
   // tópicos mais errados
   const porTopico = {};
-  Object.entries(S.resp).forEach(([qid, r]) => { const q = QIDX[qid]; if (!q) return; const k = (MATBYID[q.materia] ? MATBYID[q.materia].nome : '') + ' · ' + (q.topico || '—'); porTopico[k] = porTopico[k] || { t: 0, ok: 0 }; porTopico[k].t += r.t; porTopico[k].ok += r.ok; });
+  /* conta respostas (1 por questão vista), não o instante em que foram respondidas */
+  Object.entries(S.resp).forEach(([qid, r]) => { const q = QIDX[qid]; if (!q) return; const k = (MATBYID[q.materia] ? MATBYID[q.materia].nome : '') + ' · ' + (q.topico || '—'); porTopico[k] = porTopico[k] || { t: 0, ok: 0 }; porTopico[k].t++; porTopico[k].ok += r.ok ? 1 : 0; });
   const piores = Object.entries(porTopico).filter(([, v]) => v.t >= 2).map(([k, v]) => ({ k, pct: v.ok / v.t * 100, t: v.t })).sort((a, b) => a.pct - b.pct).slice(0, 10);
   const conquistas = [
     ['🥇', 'Primeira questão', m.tot >= 1], ['💯', '100 questões', m.tot >= 100], ['🚀', '500 questões', m.tot >= 500],
@@ -1831,7 +2044,7 @@ function renderProgresso(root) {
   <div class="card">
     <h3 style="margin-top:0">⏱️ Histórico de simulados</h3>
     ${provas.length ? `
-      <svg viewBox="0 0 300 90" style="width:100%;height:110px;background:#0d1530;border:1px solid var(--line);border-radius:10px;padding:6px">
+      <svg viewBox="0 0 300 90" style="width:100%;height:110px;background:#0b1020;border:1px solid var(--line);border-radius:10px;padding:6px">
         <polyline fill="none" stroke="#60a5fa" stroke-width="2" points="${provas.map((p, i) => `${8 + i * (284 / Math.max(1, provas.length - 1))},${86 - p.nota / maxNota * 74}`).join(' ')}"/>
         ${provas.map((p, i) => `<circle cx="${8 + i * (284 / Math.max(1, provas.length - 1))}" cy="${86 - p.nota / maxNota * 74}" r="3" fill="#facc15"><title>${nf(p.nota, 1)} em ${new Date(p.data).toLocaleDateString('pt-BR')}</title></circle>`).join('')}
       </svg>
@@ -1861,7 +2074,7 @@ function renderProgresso(root) {
       <button class="btn pri" id="p-salvar">Salvar configurações</button>
       <button class="btn" id="p-export">⬇️ Exportar progresso (JSON)</button>
       <button class="btn" id="p-import">⬆️ Importar backup</button>
-      <button class="btn" id="p-reset" style="border-color:#7f1d1d;color:#fca5a5">🧨 Zerar tudo</button>
+      <button class="btn" id="p-reset" style="border-color:#7f1d1d;color:#fda4af">🧨 Zerar tudo</button>
     </div>
     <input type="file" id="p-file" accept=".json" class="hidden">
     <div class="tiny muted" style="margin-top:8px">Seus dados ficam somente no seu aparelho (localStorage). Exporte o JSON de vez em quando — se limpar o cache do navegador, o progresso se perde.</div>
@@ -1901,7 +2114,7 @@ function renderPlano(root) {
     </div>
     <h3>Como o peso do edital se distribui</h3>
     ${MATERIAS.map(x => `<div style="margin:6px 0"><div class="row" style="justify-content:space-between"><span class="small">${esc(x.nome)}</span><span class="tiny muted">~${nf((pesos[x.id] || 5) / totalPeso * 100, 0)}% da prova</span></div>
-      <div class="bar"><i style="width:${(pesos[x.id] || 5) / Math.max(...Object.values(pesos)) * 100}%"></i></div></div>`).join('')}
+      <div class="bar"><i style="width:${larguraPct((pesos[x.id] || 5) / Math.max(...Object.values(pesos)) * 100)}%"></i></div></div>`).join('')}
     <div class="tiny muted" style="margin-top:6px">Pesos estimados a partir da relevância dos blocos do Anexo II (o edital não divulga o número de questões por matéria — ajuste conforme o seu desempenho).</div>
   </div>
 
@@ -1975,15 +2188,20 @@ function conteudoConfigIA() {
     <h3 style="margin:0">🔑 Escolha e configure a sua IA</h3>
     <button class="btn sm ghost" onclick="fecharModal()">✕</button>
   </div>
+  ${(!S.config.iaMostrarTodas) ? `<div class="row tiny" style="margin-top:8px;justify-content:space-between"><span class="muted">Modo simples: <b>${esc(nomesSimples())}</b> — as três são gratuitas.</span>${S.config.iaMostrarTodas === false ? '' : ''}</div>` : ''}
   <div class="muted small" style="margin-top:6px">A chave de cada IA fica salva <b>somente neste aparelho</b>. Ligue mais de uma: o app usa a principal, passa para as outras sozinho se alguma falhar e — se você quiser — pergunta para <b>várias ao mesmo tempo</b> para comparar as respostas.</div>
 
   <label class="f" style="margin-top:12px">Qual IA usar como principal?</label>
   <select id="ia-prov">
-    ${IDS_IA.map(k => `<option value="${k}"${k === id ? ' selected' : ''}>${PROVEDORES[k].emoji} ${esc(PROVEDORES[k].nome)}${iaConfigurada(k) ? '  ✅' : ''}</option>`).join('')}
+    ${iasVisiveis().map(k => `<option value="${k}"${k === id ? ' selected' : ''}>${PROVEDORES[k].emoji} ${esc(PROVEDORES[k].nome)}${iaConfigurada(k) ? '  ✅' : ''}</option>`).join('')}
   </select>
   <div class="tiny muted" style="margin-top:4px">✅ = já tem chave salva neste aparelho · ${ligadas.length} IA(s) ligada(s): ${esc(resumoIA())}</div>
+  <label class="row tiny muted" style="margin-top:6px;gap:6px;cursor:pointer">
+    <input type="checkbox" id="ia-todas" style="width:auto" ${S.config.iaMostrarTodas ? 'checked' : ''}>
+    mostrar todas as IAs (avançado: ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok, IA local…)
+  </label>
 
-  <div style="margin-top:12px;background:#0d1526;border:1px solid var(--line);border-radius:12px;padding:12px">
+  <div style="margin-top:12px;background:#0c1222;border:1px solid var(--line);border-radius:12px;padding:12px">
     <div class="row" style="justify-content:space-between">
       <b>${p.emoji} ${esc(p.nome)}</b>
       <span class="badge ${String(p.custo).indexOf('grátis') === 0 ? 'ok' : 'warn'}">${esc(p.custo)}</span>
@@ -2011,6 +2229,7 @@ function conteudoConfigIA() {
     <div class="row" style="align-items:stretch">
       <input id="ia-modelo" list="ia-modelos-lista" placeholder="${esc((p.modelos && p.modelos[0]) || 'nome do modelo')}" value="${esc(c.modelo || '')}" style="flex:1">
       <button class="btn sm" id="ia-buscar-modelos" title="Buscar os modelos que a sua chave enxerga">🔄 buscas modelos</button>
+      <button class="btn sm" id="ia-auto2" title="Escolhe automaticamente um modelo de conversa que funcione e testa">✨ escolher por mim</button>
     </div>
     <datalist id="ia-modelos-lista">${(p.modelos || []).map(m => `<option value="${esc(m)}">`).join('')}</datalist>
     <div class="tiny muted" style="margin-top:4px" id="ia-modelos-hint">Sugestões: ${esc((p.modelos || []).slice(0, 4).join(' · ') || 'clique em “buscas modelos”')}</div>
@@ -2021,7 +2240,7 @@ function conteudoConfigIA() {
   </div>
 
   ${ligadas.length > 1 ? `
-  <div style="margin-top:12px;background:#0d1526;border:1px solid var(--line);border-radius:12px;padding:12px">
+  <div style="margin-top:12px;background:#0c1222;border:1px solid var(--line);border-radius:12px;padding:12px">
     <b>⚡ Uso simultâneo (comparar respostas / gerar questões em paralelo)</b>
     <div class="small muted" style="margin-top:4px">Marque quais IAs devem responder <b>ao mesmo tempo</b> quando você ativar o modo comparar ou o gerador paralelo. Máximo de 4 (para não estourar as cotas grátis). A principal aparece primeiro.</div>
     <div class="row" style="margin-top:8px;flex-wrap:wrap">
@@ -2036,6 +2255,7 @@ function conteudoConfigIA() {
     <button class="btn" id="ia-somente-salvar">Salvar sem testar</button>
   </div>
   <div class="tiny muted" style="margin-top:10px">🔒 Sobre segurança: a chave fica no seu aparelho e serve só para o app. Se usar uma chave com permissões restritas (como no Hugging Face: só “Inference Providers”), mesmo que ela vaze não dá acesso à sua conta. Você pode revogar quando quiser.</div>
+  <div class="tiny muted" style="margin-top:6px">💡 Modo simples: <b>${esc(nomesSimples())}</b> — todas gratuitas. Precisa de outra? Marque "mostrar todas as IAs" ali em cima.</div>
   <div class="tiny muted" style="margin-top:6px">☁️ Para <b>sincronizar o progresso entre aparelhos</b> é preciso a chave do <b>Hugging Face</b> (com permissão de escrita) — é a única que guarda o arquivo do seu progresso.</div>`;
 }
 
@@ -2071,6 +2291,14 @@ function ligarConfigIA() {
     } catch (err) { toast('Não consegui listar: ' + err.message, 5000); }
     b.textContent = '🔄 buscas modelos';
   };
+  const verTodas = $('#ia-todas');
+  if (verTodas) verTodas.onchange = e => {
+    S.config.iaMostrarTodas = e.target.checked;
+    try { salvar(); } catch (err) { }
+    abrirConfigIA();
+    toast(e.target.checked ? 'Mostrando todas as IAs' : 'Modo simples: Hugging Face, Gemini e Groq');
+  };
+  const auto2 = $('#ia-auto2'); if (auto2) auto2.onclick = acharModeloQueFunciona;
   document.querySelectorAll('[data-paralelo]').forEach(cx => {
     cx.onchange = () => {
       S.config.iaParalelo = Array.prototype.slice.call(document.querySelectorAll('[data-paralelo]')).filter(c => c.checked).map(c => c.dataset.paralelo);
@@ -2089,8 +2317,12 @@ function ligarConfigIA() {
       atualizarAvisoIA(); setTimeout(fecharModal, 1700);
     } catch (e) {
       out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Não funcionou</div><div class="com" style="white-space:pre-wrap">${esc(e.message)}</div>
-        <div class="row" style="margin-top:8px"><button class="btn sm" id="ia-diag2">🔍 Testar todas as minhas IAs</button></div></div>`;
+        <div class="row" style="margin-top:8px">
+          <button class="btn sm gold" id="ia-auto-modelo">🔄 achar um modelo que funciona</button>
+          <button class="btn sm" id="ia-diag2">🔍 Testar todas as minhas IAs</button>
+        </div></div>`;
       const d2 = $('#ia-diag2'); if (d2) d2.onclick = rodarDiagnostico;
+      const am = $('#ia-auto-modelo'); if (am) am.onclick = acharModeloQueFunciona;
     }
   };
   $('#ia-diag').onclick = rodarDiagnostico;
@@ -2108,13 +2340,40 @@ function salvarConfigIA() {
   try { salvar(); } catch (e) { }
 }
 
+/* Um clique para resolver "esse modelo não existe mais": consulta a lista da
+   própria conta, escolhe um modelo de conversa, salva e testa na hora. */
+async function acharModeloQueFunciona() {
+  const id = provAtualId(), out = $('#ia-teste-out');
+  out.innerHTML = '<span class="badge"><span class="spin"></span> consultando a lista de modelos da ' + esc(PROVEDORES[id].nome) + '…</span>';
+  try {
+    const lista = await listarModelos(id);
+    const bons = lista.filter(ehModeloDeConversa);
+    if (!bons.length) throw new Error('Não encontrei nenhum modelo de conversa disponível na sua conta (' + lista.length + ' modelos listados).');
+    const escolhido = escolherModeloBom(bons);
+    cfgProv(id).modelo = escolhido;
+    try { salvar(); } catch (e) { }
+    const campo = $('#ia-modelo'); if (campo) campo.value = escolhido;
+    const dl = $('#ia-modelos-lista'); if (dl) dl.innerHTML = lista.map(m => `<option value="${esc(m)}">`).join('');
+    out.innerHTML = `<span class="badge"><span class="spin"></span> testando “${esc(escolhido)}”…</span>`;
+    const r = await chamarIAProvedor(id, [{ role: 'user', content: 'Responda apenas: OK' }], { max_tokens: 128, temperature: 0 });
+    out.innerHTML = `<div class="fb right"><div class="tt">✅ Resolvido! Agora usando “${esc(escolhido)}”</div>
+      <div class="com">A ${esc(PROVEDORES[id].nome)} respondeu: "${esc(String(r).slice(0, 50))}". Já salvei essa escolha neste aparelho — pode fechar esta janela e usar a aba 🤖 IA.</div>
+      <div class="tiny muted" style="margin-top:6px">A lista completa tem ${lista.length} modelos: clique no campo “Modelo” para escolher outro, se preferir.</div></div>`;
+    atualizarAvisoIA();
+  } catch (e) {
+    out.innerHTML = `<div class="fb wrong"><div class="tt">❌ Não consegui resolver automaticamente</div><div class="com" style="white-space:pre-wrap">${esc(e.message)}</div>
+      <div class="row" style="margin-top:8px"><button class="btn sm" id="ia-diag3">🔍 Testar todas as minhas IAs</button></div></div>`;
+    const d3 = $('#ia-diag3'); if (d3) d3.onclick = rodarDiagnostico;
+  }
+}
+
 async function rodarDiagnostico() {
   const out = $('#ia-teste-out');
   out.innerHTML = '<span class="badge"><span class="spin"></span> testando endereço, chave e modelos… (pode levar ~30s)</span>';
   let rel;
   try { rel = await diagnosticarIA(); } catch (e) { rel = 'Erro ao diagnosticar: ' + ((e && e.message) || e); }
-  out.innerHTML = `<div class="fb" style="background:#101a2e;border:1px solid #1e3a8a"><div class="tt">🔍 Diagnóstico do tutor de IA</div>
-    <pre style="white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;margin:0;color:#dbeafe">${esc(rel)}</pre>
+  out.innerHTML = `<div class="fb" style="background:rgba(79,125,251,.08);border:1px solid rgba(79,125,251,.35)"><div class="tt">🔍 Diagnóstico do tutor de IA</div>
+    <pre style="white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;margin:0;color:#dbe3f7">${esc(rel)}</pre>
     <div class="row" style="margin-top:8px">
       <button class="btn sm" id="ia-copiar-diag">📋 Copiar relatório</button>
       <button class="btn sm ghost" id="ia-fechar-diag">Fechar</button>
@@ -2126,7 +2385,7 @@ async function rodarDiagnostico() {
 /* aviso permanente no topo do painel quando não há chave */
 function cartaoIA() {
   if (temChaveIA() || IA_STATUS.servidor) return '';
-  return `<div class="card" style="border-color:#78350f;background:linear-gradient(180deg,#241802,#1a1206)">
+  return `<div class="card" style="border-color:rgba(251,191,36,.32);background:linear-gradient(180deg,rgba(251,191,36,.07),rgba(251,191,36,.015))">
     <div class="row" style="justify-content:space-between">
       <div><b>🤖 Nenhuma IA ligada ainda</b>
         <div class="small muted">Escolha a sua IA (Hugging Face, Google Gemini, Groq… — as gratuitas estão marcadas) e cole a chave. Leva 1 minuto e libera o tutor, os resumos e a geração de questões inéditas.</div>
@@ -2176,7 +2435,7 @@ function passo2() {
   abrirModal(`
     <h2 style="margin:0 0 6px">🤖 Passo 2 de 3 — Ligar a IA (opcional, mas recomendado)</h2>
     <div class="muted small" style="margin-bottom:12px">A IA serve para: explicar qualquer questão que você errar, resumir matérias do edital e <b>criar questões inéditas</b> sobre qualquer tópico. É gratuita e usa a sua conta do Hugging Face.</div>
-    <div class="card" style="margin:0 0 12px;background:#0c142c">
+    <div class="card" style="margin:0 0 12px;background:var(--card2)">
       <b class="small">Onde colocar a chave — em 5 passos</b>
       <ol class="small" style="margin:8px 0 0;padding-left:20px;line-height:1.7">
         <li>Acesse <a href="${HF_SIGNUP_URL}" target="_blank" rel="noopener">huggingface.co/join</a> e crie a conta grátis (sem cartão).</li>
@@ -2221,7 +2480,7 @@ function passo3() {
       <div>3. <b>🤖 IA</b>: peça resumos e gere questões inéditas dos tópicos mais fracos.</div>
       <div>4. <b>⏱️ Simulado</b>: 2 vezes por semana, 60 questões, cronometrado.</div>
     </div>
-    <div class="card" style="margin:12px 0 0;background:#0c142c">
+    <div class="card" style="margin:12px 0 0;background:var(--card2)">
       <b class="small">💾 Para não perder nada</b>
       <div class="small muted" style="margin-top:4px">Seu progresso fica salvo neste aparelho. Use a aba <b>Progresso → Exportar</b> para guardar um backup, ou ative a <b>sincronização em nuvem</b> (também pela aba Progresso) para estudar no celular e no computador com o mesmo histórico.</div>
     </div>

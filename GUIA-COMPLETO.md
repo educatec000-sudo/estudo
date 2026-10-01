@@ -141,7 +141,7 @@ O servidor serve o app (com manifest, service worker e ícones) e faz o proxy da
 | ✍️ **Treinar** | Filtros por matéria, tópico do edital, dificuldade e modo (não vistas / caderno de erros / revisão de hoje / favoritas) |
 | ⚡ **Geradores infinitos** | 13 tipos de questões de RLM/Matemática criadas na hora, com resolução comentada — não acabam nunca |
 | ⏱️ **Simulado** | Monte provas com a distribuição que quiser, cronômetro, correção comentada e diagnóstico por matéria |
-| 🤖 **IA** | Tutor do edital em **Hugging Face, Gemini ou Groq** (reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada" |
+| 🤖 **IA** | Tutor do edital em **Hugging Face, Gemini ou Groq** (reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada". As respostas chegam **formatadas**: títulos, negrito, listas, tabelas e citações — sem `**` nem `###` na sua cara |
 | 📥 **Importar provas antigas** | Cola o texto de questões de PDFs da banca (Ctrl+C / Ctrl+V) e o app separa enunciado, alternativas e gabarito; revisa, salva no seu banco e exporta em `.json` |
 | 📚 **Teoria** | Resumos de bolso das 14 matérias + tópicos oficiais para marcar como estudados |
 | 📈 **Progresso** | Prioridades, tópicos mais errados, evolução dos simulados, conquistas, nuvem e backup |
@@ -199,9 +199,9 @@ app/
   assets/               ← ícones do app (192 e 512 px)
   src/                  ← template, CSS e JavaScript
 tests/
-  smoke.js              ← 153 verificações (assistente, chaves, IAs, abas, métricas, sync, PWA, importador)
+  smoke.js              ← 171 verificações (assistente, chaves, IAs, abas, métricas, sync, PWA, importador, formatação)
   geradores.js          ← confere os 13 geradores, o banco e os filtros
-  telas.js              ← gera imagens das telas (desktop e celular) para conferir o visual
+  telas.js              ← gera 15 imagens das telas (desktop e celular) para conferir o visual
 uploads/alepa.pdf       ← o edital que você enviou
 ```
 

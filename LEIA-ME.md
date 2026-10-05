@@ -1,0 +1,274 @@
+# 🎯 Arena Estudos ALEPA — Concurso 002/2026 (Fundação CETAP)
+
+App de estudos feito a partir do **Anexo II (Conteúdo Programático)** do Edital nº 001/2026 da **Assembleia Legislativa do Estado do Pará**, focado no **Cargo 15 — Analista Legislativo — Assistência Legislativa** (o cargo com 44 vagas, cuja prova cobra o bloco *"Conhecimentos Específicos comuns aos cargos 01, 02, 03, 12, 13, 14 e 15"*).
+
+**Prova: 13/12/2026** — o app calcula sozinho quantas questões por dia você precisa fazer.
+
+---
+
+## 1️⃣ ACESSAR DE QUALQUER LUGAR (escolha uma opção)
+
+### Opção A — Publicar grátis na internet (recomendado: vira um app de verdade)
+
+O app já está pronto para publicar: existe a pasta **`publicar/`** (e o arquivo **`publicar.zip`**) com tudo o que o site precisa.
+
+**✅ Funciona na Vercel? Sim.** O pacote é 100% estático (um `index.html` + ícones + manifest), sem build e sem servidor — exatamente o tipo de coisa que a Vercel serve de graça, com HTTPS. E o mais importante: eu testei os endpoints do Hugging Face a partir de um domínio tipo Vercel e **todos liberam CORS**, então tanto a **IA** quanto a **sincronização** funcionam direto do navegador com a sua chave. (O único recurso que fica de fora é o proxy do `server.py`, que na Vercel não é necessário.)
+
+**Na Vercel — opção 1 (linha de comando, ~2 min):**
+1. Instale o Node.js (nodejs.org) se ainda não tiver.
+2. Baixe/descompacte a pasta `publicar` e abra o terminal dentro dela.
+3. Rode: `npx vercel --prod` → ele pede login (dá para entrar com Google/GitHub), depois Enter em todas as perguntas.
+4. No fim ele imprime o link: `https://seu-app.vercel.app`. Pronto — abre em qualquer aparelho, de qualquer lugar.
+
+**Na Vercel — opção 2 (pelo site, com GitHub):**
+1. Crie um repositório no GitHub e envie os arquivos da pasta `publicar`.
+2. Vá em **vercel.com/new** → *Import Git Repository* → escolha o repositório.
+3. Framework Preset: **Other** · Build Command: *(deixe vazio)* · Root/Output Directory: **a pasta onde estão os arquivos**.
+4. **Deploy**. Cada atualização que você enviar ao GitHub republica sozinho.
+
+> O arquivo `vercel.json` que vem no pacote já ajusta o cache do service worker (garante que a atualização do app chegue ao seu celular). Não precisa mexer nele.
+
+**Sem instalar nada (Netlify Drop):**
+1. Abra **[app.netlify.com/drop](https://app.netlify.com/drop)**.
+2. **Arraste a pasta `publicar`** para dentro da página (ou o `publicar.zip`).
+3. Pronto: endereço tipo `https://seu-app-alepa.netlify.app`.
+
+> Outras opções igualmente gratuitas: **Cloudflare Pages** (pages.cloudflare.com → *Upload assets*) ou **GitHub Pages**. O pacote traz também `netlify.toml` e `_headers` já configurados.
+
+**No celular Android:** dá para publicar tudo pelo navegador — baixe o zip, extraia com o app "Files"/"RAR" e envie pelo site do Netlify/Cloudflare.
+
+### Opção B — Instalar na tela inicial do celular (funciona offline!)
+
+Quando você abrir o app pelo link publicado:
+- **Android (Chrome):** aparece um aviso "Instalar aplicativo" ou toque no botão **📲** no topo do app → **Instalar**.
+- **iPhone (Safari):** toque em **Compartilhar** → **Adicionar à Tela de Início**.
+
+O ícone fica igual a um app normal, abre em tela cheia e funciona **offline** depois da primeira visita (só a IA precisa de internet).
+
+### Opção C — Só para você, sem publicar
+
+Baixe o arquivo **`ALEPA_Estudos.html`** e abra (duplo clique no PC, ou "abrir com Chrome" no celular). Funciona 100% offline; o progresso fica salvo no aparelho. É a melhor opção se você não quer expor nada na internet.
+
+### Sincronizar o progresso entre celular e computador ☁️
+
+Há **duas formas** na aba **📈 Progresso** — use a que preferir (as duas convivem):
+
+**🥇 Forma simples: Cloudflare (recomendada — sem token, sem repositório, sem criar nada no Hugging Face)**
+
+1. Monte a sua "gaveta" uma única vez, seguindo o guia **`cloudflare/LEIA-CLOUDFLARE.md`** (≈5 min, grátis, não pede cartão): você cria um Worker, cola o arquivo `cloudflare/worker.js` e liga a KV chamada `PROGRESSO`.
+2. No app: aba **📈 Progresso** → **☁️ Progresso na nuvem (Cloudflare)** → cole o endereço do seu Worker (ex.: `https://alepa-progresso.SEU-USUARIO.workers.dev`).
+3. Clique em **🎲 gerar** para criar o seu **código de progresso** (ex.: `ALEPA-7K3F-92QX`) → **⬆️ Enviar progresso**.
+4. No outro aparelho: mesmo endereço, **mesmo código** → **⬇️ Baixar progresso**. Deixe **"sincronizar sozinho"** marcado e nunca mais precise clicar: o app busca novidades ao abrir e envia quando você termina de estudar.
+5. **Outra pessoa sem interferir nos seus estudos:** ela clica em **🎲 gerar** para criar **o código dela**. Códigos diferentes = progressos separados (o seu fica intacto).
+
+O que é enviado **nunca** inclui as suas chaves de IA. E o que vem da nuvem é **juntado** ao que já existe no aparelho — nada é apagado (os dias de estudo somam, as questões dos dois aparelhos convivem).
+
+**🥈 Forma antiga: Hugging Face** (se você já usava) — aba Progresso → **☁️ Sincronizar progresso**: o progresso fica num repositório **privado da sua conta**. Exige uma chave com permissão de **escrita** (veja abaixo). Se der erro 403, crie o repositório pelo site em `huggingface.co/new-dataset` ou use a forma do Cloudflare, que é mais simples.
+
+**🥉 Sem nuvem nenhuma:** **⬇️ Exportar progresso (JSON)** no celular e **⬆️ Importar backup** no PC. Funciona sempre.
+
+---
+
+## 2️⃣ ONDE COLOCAR A CHAVE DA SUA IA 🔑 (e como usar OUTRAS IAs)
+
+Agora existem **3 lugares** para fazer isso (o app te guia no primeiro):
+
+| Onde | Quando aparece |
+|---|---|
+| **Assistente da primeira abertura** | Na primeira vez que você abre o app — o passo 2 de 3 é exatamente isso, com o passo a passo na tela |
+| **Botão 🔑 no topo da tela** | Sempre visível, em todas as abas |
+| **Aba 🤖 IA / Hugging Face** | Botão amarelo "Informar minha chave do Hugging Face" |
+
+### Passo a passo (1 minuto, grátis, sem cartão)
+
+1. Crie a conta (ou entre) em **huggingface.co/join**.
+2. Abra **huggingface.co/settings/tokens → New token**.
+3. Tipo: **Fine-grained**. Marque a permissão **“Make calls to Inference Providers”**.
+   - *Quer também usar a sincronização entre aparelhos?* Marque **“Write access to contents of repos”**.
+   - Alternativa mais simples: crie um token **Read** (serve para a IA) ou **Write** (serve para IA + nuvem).
+4. Clique em **Create token** e **copie** o código que começa com `hf_`.
+5. No app: toque em **🔑** → **cole no campo** → **💾 Salvar e testar**. Se aparecer "✅ Chave funcionando!", está tudo pronto.
+6. Se aparecer qualquer erro, clique em **🔍 Testar tudo (diagnóstico)**: ele diz em português o que está errado e como resolver.
+
+> 🔒 A chave fica salva **somente no seu aparelho**. Você pode revogá-la a qualquer momento na mesma página do Hugging Face. Use Fine-grained só com Inference Providers: mesmo que vaze, não dá acesso à sua conta.
+
+### Se der erro
+
+Se algo falhar, **clique no botão 🔍 "Testar tudo (diagnóstico)"** dentro da janela da chave: ele testa o endereço do app, verifica se a sua chave é válida e experimenta 3 modelos, dizendo em português exatamente o que está errado.
+
+| Mensagem | O que fazer |
+|---|---|
+| "Failed to fetch" / "Não alcancei huggingface.co" | A chamada nem saiu do navegador. Acontece quando o app está aberto **como arquivo local (`file://`)** ou dentro de um **visualizador/preview restrito** (por exemplo, o preview aqui dentro da conversa): nesses lugares o navegador bloqueia a conversa com o Hugging Face. **Publique o app** (Opção A) ou rode o servidor local e abra por `http://localhost:8000`. |
+| **"O Hugging Face RECUSOU a chave (erro 401)"** | A chave está incompleta, expirou ou foi revogada — **é o erro mais comum**. Gere outra em huggingface.co/settings/tokens → *New token* → **Fine-grained** → marque **"Make calls to Inference Providers"** → copie o código `hf_…` **inteiro** (37 caracteres) e cole no botão 🔑. |
+| **"O modelo … não está mais disponível"** | Os provedores **aposentam modelos de tempos em tempos** (a Groq desligou o `llama-3.3-70b-versatile` em 16/08/2026 e o Google está aposentando os `gemini-2.5`). O app **se corrige sozinho**: descobre a lista real da sua conta e passa a usar um modelo que funciona. Se quiser forçar, clique em **✨ "escolher por mim"** na janela 🔑 — ele escolhe e já testa. |
+| "respondeu sem texto" | Pode ser modelo sem provedor no momento ou resposta vazia. O app mostra o trecho recebido e já tenta outros modelos sozinho; se persistir, use **✨ escolher por mim**. |
+| "A chave não tem permissão (erro 403)" | Falta marcar "Make calls to Inference Providers". Se o modelo for Llama ou Gemma, aceite a licença na página do modelo. |
+| "O modelo ... não está com provedor disponível (404)" | Não precisa fazer nada: o app já troca de modelo sozinho. Se preferir escolher manualmente, use o seletor no botão 🔑 (o **openai/gpt-oss-120b** é o que tem mais provedores). |
+| "Limite do plano gratuito atingido (429)" | Espere 1 minuto e tente de novo — a cota renova sozinha. |
+| "Não consegui falar com huggingface.co" (mas o app está publicado) | Internet caiu, ou VPN/antivírus/DNS bloqueando o site. Teste abrir huggingface.co no mesmo aparelho. |
+| A resposta demora e dá "tempo esgotado" | Escolha um modelo mais leve no seletor (Qwen/Qwen3-8B) ou tente de novo. |
+
+> O app **troca de modelo automaticamente** quando o escolhido não tem provedor disponível no momento e avisa qual passou a usar. Você não precisa entender nada disso para estudar.
+
+### 🔑 As três IAs do app (modo simples)
+
+O app mostra **apenas três IAs**, todas **gratuitas** — é o que basta:
+
+| IA | Custo | Onde pegar a chave |
+|---|---|---|
+| 🤗 **Hugging Face** (a principal) | grátis | huggingface.co/settings/tokens → *New token* → **Fine-grained** → marque **"Make calls to Inference Providers"** |
+| ✨ **Google Gemini** | grátis | aistudio.google.com/apikey → *Create API key* (modelos atuais: `gemini-3.8-flash`, `gemini-3.5-flash`) |
+| ⚡ **Groq** (a mais rápida) | grátis | console.groq.com/keys (modelos atuais: `openai/gpt-oss-120b`, `openai/gpt-oss-20b`) |
+
+**Como ligar:** botão **🔑 no topo do app** → escolha a IA na lista → cole a chave → **💾 Salvar e testar**.
+- O botão **🔄 buscas modelos** mostra os modelos que a *sua* chave enxerga — e **✨ escolher por mim** escolhe automaticamente um bom modelo de conversa e já testa. Assim você nunca depende de eu acertar o nome de um modelo (eles mudam toda hora).
+- **Ligue as três e pronto:** a principal responde e, se ela falhar (cota cheia, internet, chave), o app **passa sozinho para a próxima** e avisa qual usou. Com as três ligadas é quase impossível ficar sem IA.
+- **Uso simultâneo** (aba 🤖 IA): **⚖️ comparar** — manda a mesma pergunta para as três ao mesmo tempo e mostra uma resposta de cada, com nome e tempo; e **⚡ gerar questões em paralelo** — cada uma gera o lote, o app junta tudo e descarta as repetidas.
+- **A nuvem de progresso** (entre celular e computador) usa a chave do **Hugging Face** — mantenha ela ligada nem que seja como reserva.
+- **Privacidade:** as chaves ficam **só no seu aparelho**; o backup e a nuvem **não levam nenhuma chave**.
+
+**Precisa de outra IA?** (ChatGPT, Claude, OpenRouter, Mistral, DeepSeek, Grok, IA local…) Na janela 🔑 marque **"mostrar todas as IAs"** — aparecem as 11 opções, cada uma com o seu campo de chave. Depois é só desmarcar para voltar ao modo simples.
+
+### Modo servidor (opcional, para quem usa computador)
+
+```bash
+python3 app/server.py              # abre em http://localhost:8000
+# ou já com a chave embutida (não precisa digitar no app):
+HF_TOKEN=hf_suachave python3 app/server.py
+```
+
+O servidor serve o app (com manifest, service worker e ícones) e faz o proxy das chamadas de IA e de sincronização — o token deixa de trafegar no navegador.
+
+---
+
+## 3️⃣ O que tem dentro do app
+
+| Recurso | O que faz |
+|---|---|
+| 🎯 **Painel** | Dias até a prova, meta diária recalculada, sequência (streak), heatmap de 35 dias, desempenho por matéria |
+| ✍️ **Treinar** | Filtros por matéria, tópico do edital, dificuldade e modo (não vistas / caderno de erros / revisão de hoje / favoritas) |
+| ⚡ **Geradores infinitos** | 13 tipos de questões de RLM/Matemática criadas na hora, com resolução comentada — não acabam nunca |
+| ⏱️ **Simulado** | Monte provas com a distribuição que quiser, cronômetro, correção comentada e diagnóstico por matéria |
+| 🤖 **IA** | Tutor do edital em **Hugging Face, Gemini ou Groq** (reserva automática, modo **⚖️ comparar** e **⚡ gerar questões em paralelo**) + "explicar minha questão errada". As respostas chegam **formatadas**: títulos, negrito, listas, tabelas e citações — sem `**` nem `###` na sua cara |
+| 📥 **Importar provas antigas** | Cola o texto de questões de PDFs da banca (Ctrl+C / Ctrl+V) e o app separa enunciado, alternativas e gabarito; revisa, salva no seu banco e exporta em `.json` |
+| 📚 **Teoria** | Resumos de bolso das 14 matérias + tópicos oficiais para marcar como estudados |
+| 📈 **Progresso** | Prioridades, tópicos mais errados, evolução dos simulados, conquistas, nuvem e backup |
+| 🗓️ **Plano até a prova** | Cronograma dos próximos 7 dias + estratégia por peso das matérias |
+
+**Banco inicial: 1.704 questões comentadas** (14 matérias) + 13 geradores infinitos + importador de provas antigas.
+
+Língua Portuguesa 131 · Legislação e Ética 148 · Informática 107 · Raciocínio Lógico 152 · Secretaria/Adm. Geral 249 · **Direito Administrativo 295** · Direito Constitucional 129 · Processual Constitucional 35 · **Processo Legislativo/RIALEPA/LC 95: 136** · Direito Financeiro 102 · Previdenciário 46 · Civil 55 · Processual Civil 54 · Direitos Humanos 65.
+
+Todas têm comentário com o **fundamento legal** (artigo/lei) e alternativas plausíveis. As questões novas aparecem com o selo **“Estilo CETAP”** — foram escritas a partir de uma base de **506 fatos** extraídos do conteúdo programático (cada fato rende 3 questões: pergunta direta, “assinale a correta” e “qual pergunta corresponde a esta resposta”). Se você importar provas antigas, elas se somam a esse banco.
+
+---
+
+## 4️⃣ Estratégia para passar de 3.000 questões até 13/12
+
+| Fonte | Volume estimado |
+|---|---|
+| Banco curado | **1.704** (já pronto) |
+| Importador de provas antigas CETAP (1 prova ≈ 40 questões) | +200 a +600 |
+| Questões vindas das suas provas antigas (arquivo .json) | ilimitado |
+| Geradores infinitos — 15 min/dia ≈ 25 questões | ~1.850 em 74 dias |
+| Questões geradas pela IA (5 por clique, 1 tópico/dia) | ~370 |
+| Simulados (2 por semana × 60 questões) | ~1.200 |
+| **Total possível** | **~5.000+** |
+
+Rotina sugerida: **manhã** 20 questões do banco (matéria fraca) → **tarde** 20 nos geradores → **noite** 1 tópico gerado por IA + um resumo de bolso. **Domingo:** simulado de 60 questões e correção no mesmo dia.
+
+Prioridades (o app já ordena assim na aba Plano): **Processo Legislativo/RIALEPA** e **Técnica Legislativa (LC 95/1998)** no topo, depois **Direito Administrativo**, **Língua Portuguesa** e **Legislação e Ética**.
+
+---
+
+## 5️⃣ Arquivos do projeto
+
+```
+ALEPA_Estudos.html      ← o app completo em arquivo único (offline)  📌
+LEIA-ME.md              ← este guia
+cloudflare/
+  worker.js             ← código que você cola no Cloudflare (progresso na nuvem)
+  LEIA-CLOUDFLARE.md    ← passo a passo de 5 minutos do Cloudflare
+  wrangler.toml         ← só para quem publicar pelo computador (opcional)
+publicar/               ← pacote pronto para publicar (index, manifest, sw, ícones)  📌
+  └─ api/               ← (Vercel) intermediário que guarda a sua chave fora do navegador
+publicar.zip            ← o mesmo pacote zipado, para subir na Vercel/Netlify/Cloudflare
+  ├─ vercel.json        ← ajustes de cache p/ Vercel (opcional)
+  ├─ netlify.toml, _headers ← ajustes equivalentes p/ Netlify e Cloudflare
+  └─ LEIA-PUBLICAR.md   ← instruções curtas (as mesmas de cima, resumidas)
+app/
+  server.py             ← servidor local (app + proxy de IA + sincronização em nuvem)
+  build.py              ← regenera o app a partir das fontes
+  src/app.ias.js        ← as 11 IAs: chaves, modelos, reserva, uso simultâneo e diagnóstico
+  src/app.import.js     ← importador de questões de provas antigas (colar do PDF)
+  provedores.py         ← os mesmos provedores, para o servidor intermediar a chamada
+  data/edital.json      ← árvore de tópicos do Anexo II (14 matérias)
+  data/teoria.json      ← resumos de bolso
+  questoes/*.json       ← banco de questões comentadas (14 arquivos curados + 13 gerados)
+  fatos/*.json          ← base de fatos (506) que gera as questões “Estilo CETAP”
+  gerar_fatos.py        ← gera o banco a partir dos fatos: python3 app/gerar_fatos.py
+  pwa/                  ← manifest.webmanifest e sw.js (modo aplicativo/offline)
+  assets/               ← ícones do app (192 e 512 px)
+  src/                  ← template, CSS e JavaScript
+tests/
+  smoke.js              ← 203 verificações (assistente, chaves, IAs, abas, métricas, sync HF, nuvem Cloudflare, PWA, importador, formatação)
+  worker.mjs            ← 20 verificações do Worker do Cloudflare (sem internet)
+  geradores.js          ← confere os 13 geradores, o banco e os filtros
+  telas.js              ← gera 15 imagens das telas (desktop e celular) para conferir o visual
+uploads/alepa.pdf       ← o edital que você enviou
+```
+
+Para rodar os testes: `cd tests && npm install jsdom && node smoke.js && node geradores.js`
+Para gerar as telas: `npm install puppeteer && node telas.js` (salva em `views/`).
+
+### 📥 Importar as provas antigas da CETAP (dentro do app)
+
+1. Baixe o PDF de uma prova anterior da banca (veja os portais abaixo).
+2. Abra o PDF, **selecione as questões com as alternativas** e copie (**Ctrl+C** no PC / toque longo → copiar no celular).
+3. No app: aba **✍️ Treinar** → botão **📥 Importar questões de provas antigas da CETAP**.
+4. Cole no campo, escolha **matéria** e **tópico** (opcional), clique em **🔍 Analisar texto colado**.
+5. Confira a prévia: se o gabarito não vier no texto, **clique no círculo** da alternativa correta (aparece “defina o gabarito”).
+6. **✔ Salvar no meu banco** — as questões entram no treino, no simulado, nas estatísticas e na revisão espaçada. Use **⬇ Exportar minhas questões (.json)** para levar para outro aparelho.
+
+O parser entende `Questão 1`, `1)`, `1.`, alternativas em linhas (`A)`, `(A)`, `A -`) e também tudo na mesma linha, além de `Gabarito: C` / `Resposta: C`. Questões repetidas são descartadas automaticamente.
+
+**Onde baixar provas da banca (grátis):**
+
+| Portal | Endereço |
+|---|---|
+| QConcursos (banco CETAP) | qconcursos.com/questoes-de-concursos/bancas/cetap |
+| Tec Concursos | tecconcursos.com.br/bancas/cetap |
+| Provas Brasil | provasbrasil.com.br/provas-anteriores/cetap/ |
+| Ética Concursos | eticaconcursos.com.br/provas/bancas/cetap |
+| Site oficial da banca | cetapnet.com.br · fundacaocetap.com.br |
+
+Provas para começar: **SEOP-PA 2024**, **BANPARÁ 2025**, **SEPLAD/JUCEPA 2021**, **SEAP-PA 2021**, **Prefeitura de Marituba 2025** — todas com blocos de Direito Administrativo, Constitucional, Português e Informática parecidos com o seu edital.
+
+### Como adicionar mais questões
+
+1. Crie/edite um arquivo em `app/questoes/` (ex.: `15_novas.json`):
+
+```json
+[{
+  "id": "DA-029", "materia": "DA", "topico": "Licitações: Lei nº 14.133/2021",
+  "dif": "media", "banca": "Fundação CETAP", "ano": 2026,
+  "enunciado": "Sua pergunta aqui.",
+  "alternativas": ["A", "B", "C", "D", "E"],
+  "correta": 2,
+  "comentario": "Explicação com base legal.",
+  "analise": "(opcional) análise de cada alternativa",
+  "ref": "(opcional) dispositivo/assunto"
+}]
+```
+2. Rode `python3 app/build.py` → o app é regerado (`ALEPA_Estudos.html`, `publicar/` e `publicar.zip`). Basta republicar a pasta para atualizar o site.
+
+Códigos de matéria: `LP, LE, INFO, RL, SEC, DA, DC, DPC, PL, DF, DPREV, DCIV, DPCIV, DH`.
+
+---
+
+## 6️⃣ Avisos importantes
+
+- O banco foi escrito a partir **do conteúdo programático que você enviou** e da legislação vigente; confira sempre o **Anexo II oficial** e o site da Fundação CETAP. A IA pode errar — trate as respostas dela como apoio, não como gabarito.
+- Para o **Regimento Interno da ALEPA** e os **Decretos Legislativos/Resoluções** citados no edital, combine as questões (concentradas na matéria de Processo Legislativo) com a leitura do texto atualizado — e use a IA para resumir cada diploma.
+- O app estima o peso das matérias porque o edital não divulga o número de questões por matéria; ajuste conforme seu desempenho.
+- Seu progresso fica no navegador/aparelho. Limpar os dados do navegador apaga o histórico — **exporte o backup** (aba Progresso) ou use a **sincronização em nuvem**.

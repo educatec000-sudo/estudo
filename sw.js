@@ -1,6 +1,6 @@
 /* Arena Estudos ALEPA — service worker
    Deixa o app instalável e funcionando offline depois da primeira visita. */
-const CACHE = 'alepa-estudos-v1';
+const CACHE = 'alepa-estudos-v2';
 const ESSENCIAIS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {

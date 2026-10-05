@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#080b13">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Estudos ALEPA">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Arena Estudos — ALEPA 002/2026 (Fundação CETAP) — Cargo 15</title>
@@ -58,10 +58,20 @@ button{cursor:pointer;border:none;background:none}
 ::-webkit-scrollbar-thumb{background:#232c47;border:3px solid transparent;background-clip:content-box;border-radius:99px}
 ::-webkit-scrollbar-thumb:hover{background:#39456e;background-clip:content-box}
 
+/* ---------------------- Área segura do celular (notch) ------------------- */
+/* O app roda em tela cheia (viewport-fit=cover). Estas variáveis devolvem o
+   espaço ocupado pela câmera/relógio/bateria (topo) e pela barra de gestos
+   (base) — em aparelho sem notch o valor é 0 e nada muda. */
+
 /* ---------------------------------- Layout ------------------------------- */
-.wrap{max-width:1060px;margin:0 auto;padding:20px 16px 96px}
+.wrap{max-width:1060px;margin:0 auto;
+  padding:20px calc(16px + env(safe-area-inset-right,0px)) calc(96px + env(safe-area-inset-bottom,0px)) calc(16px + env(safe-area-inset-left,0px))}
 header.top{
   position:sticky;top:0;z-index:50;
+  /* área segura do celular: não deixa logo/abas ficarem atrás da câmera, do relógio e da bateria */
+  padding-top:env(safe-area-inset-top,0px);
+  padding-left:env(safe-area-inset-left,0px);
+  padding-right:env(safe-area-inset-right,0px);
   background:rgba(8,11,19,.86);
   -webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);
   border-bottom:1px solid var(--line);
@@ -241,11 +251,11 @@ details{border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin
 details summary{cursor:pointer;font-weight:650;letter-spacing:-.005em}
 details[open] summary{margin-bottom:9px}
 .toast{
-  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+  position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);
   background:#16203a;border:1px solid var(--line2);padding:11px 17px;border-radius:12px;
   z-index:99;box-shadow:0 20px 40px -18px rgba(0,0,0,.9);font-size:13.5px;max-width:92vw
 }
-.fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:8px}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;flex-direction:column;gap:8px}
 .fab button{
   width:46px;height:46px;border-radius:50%;font-size:18px;
   background:var(--card2);border:1px solid var(--line2);color:var(--txt);
@@ -274,7 +284,8 @@ details[open] summary{margin-bottom:9px}
 @media print{header.top,.fab,nav.tabs{display:none}.card{break-inside:avoid;box-shadow:none}}
 @media (max-width:620px){
   body{font-size:14.5px}
-  .wrap{padding:14px 12px 88px}
+  .wrap{padding:14px calc(12px + env(safe-area-inset-right,0px)) calc(88px + env(safe-area-inset-bottom,0px)) calc(12px + env(safe-area-inset-left,0px))}
+  header.top{padding-top:max(env(safe-area-inset-top,0px), 2px)}
   .card{padding:14px;border-radius:13px}
   .qtext{font-size:16px}
   .msg{max-width:94%}
@@ -2321,7 +2332,7 @@ function abrirModal(html, largura) {
   fecharModal();
   const el = document.createElement('div');
   el.id = 'modal-root';
-  el.style.cssText = 'position:fixed;inset:0;z-index:200;background:rgba(5,8,18,.82);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow:auto';
+  el.style.cssText = 'position:fixed;inset:0;z-index:200;background:rgba(5,8,18,.82);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:calc(16px + env(safe-area-inset-top,0px)) calc(16px + env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) calc(16px + env(safe-area-inset-left,0px));overflow:auto';
   el.innerHTML = `<div style="width:100%;max-width:${largura || 620}px;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);margin:auto 0">${html}</div>`;
   el.addEventListener('click', e => { if (e.target === el) fecharModal(); });
   document.body.appendChild(el);

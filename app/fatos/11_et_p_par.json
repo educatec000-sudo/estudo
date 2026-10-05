@@ -1,0 +1,286 @@
+{
+ "descricao": "Base de fatos: Gestão de pessoas (motivação, liderança, comunicação, avaliação de desempenho) e Finanças Públicas (receita, controle e prestação de contas).",
+ "categorias": [
+  {
+   "materia": "SEC",
+   "id": "motivacao",
+   "tema": "Motivação no trabalho",
+   "fatos": [
+    [
+     "O que propõe a teoria das necessidades de Maslow?",
+     "a hierarquia de necessidades, em cinco níveis, das fisiológicas às de autorrealização",
+     "A teoria de Maslow propõe que as necessidades humanas se organizam em uma hierarquia — fisiológicas, de segurança, sociais, de estima e de autorrealização —, e que as necessidades superiores só se tornam motivadoras quando as inferiores estão razoavelmente satisfeitas.",
+     "Teorias da motivação (Maslow)."
+    ],
+    [
+     "Quais são os dois fatores da teoria de Herzberg?",
+     "os fatores higiênicos e os fatores motivacionais",
+     "Herzberg propõe a teoria dos dois fatores: os higiênicos, ligados ao ambiente e à remuneração, que evitam insatisfação, e os motivacionais, ligados ao conteúdo do trabalho, como reconhecimento e responsabilidade, que geram satisfação.",
+     "Teorias da motivação (Herzberg)."
+    ],
+    [
+     "Como McClelland explica a motivação?",
+     "por três necessidades: realização, poder e afiliação",
+     "McClelland sustenta que a motivação é influenciada por três necessidades adquiridas: a necessidade de realização, a de poder e a de afiliação, com intensidade variável em cada pessoa.",
+     "Teorias da motivação (McClelland)."
+    ],
+    [
+     "O que diz a teoria X e Y de McGregor?",
+     "que os gestores adotam pressupostos distintos sobre o trabalhador, um negativo (X) e outro positivo (Y)",
+     "McGregor distingue duas visões: a teoria X, segundo a qual o trabalhador é avesso ao trabalho e precisa de controle, e a teoria Y, segundo a qual o trabalhador pode se motivar e assumir responsabilidades com autonomia.",
+     "Teorias da motivação (McGregor)."
+    ],
+    [
+     "O que a teoria da expectativa de Vroom sustenta sobre a motivação?",
+     "que a motivação resulta da expectativa de que o esforço levará ao desempenho e este à recompensa desejada",
+     "Para Vroom, a motivação resulta da combinação de expectativa (o esforço levará ao desempenho), instrumentalidade (o desempenho levará à recompensa) e valência (o valor atribuído à recompensa).",
+     "Teorias da motivação (Vroom)."
+    ],
+    [
+     "O que é motivação intrínseca?",
+     "aquela que surge do próprio interesse e prazer na realização da tarefa",
+     "A motivação intrínseca decorre do próprio interesse, do prazer e da satisfação pessoal na realização da tarefa, sem depender de recompensas externas.",
+     "Teorias da motivação."
+    ]
+   ]
+  },
+  {
+   "materia": "SEC",
+   "id": "lideranca_comunicacao",
+   "tema": "Liderança, comunicação e trabalho em equipe",
+   "fatos": [
+    [
+     "O que caracteriza a liderança autocrática?",
+     "a centralização das decisões no líder, com pouca participação da equipe",
+     "Na liderança autocrática, o líder centraliza as decisões, determina tarefas sem consulta à equipe e exerce controle rígido, o que pode gerar maior produtividade imediata e menor satisfação do grupo.",
+     "Teorias de liderança."
+    ],
+    [
+     "O que caracteriza a liderança democrática?",
+     "a participação da equipe nas decisões, com o líder orientando e incentivando o grupo",
+     "Na liderança democrática, o líder estimula a participação da equipe nas decisões, delega responsabilidades e atua como orientador, favorecendo o comprometimento e o clima organizacional.",
+     "Teorias de liderança."
+    ],
+    [
+     "O que caracteriza a liderança liberal ou laissez-faire?",
+     "a total liberdade da equipe para decidir, com intervenção mínima do líder",
+     "Na liderança liberal, ou laissez-faire, o líder concede total liberdade ao grupo para decidir e executar, intervindo minimamente, o que pode funcionar com equipes maduras e gerar desorganização em equipes inexperientes.",
+     "Teorias de liderança."
+    ],
+    [
+     "O que distingue o líder do chefe?",
+     "o líder influencia pela autoridade pessoal e pelo exemplo; o chefe se apoia na autoridade formal do cargo",
+     "O chefe se apoia na autoridade formal conferida pelo cargo, enquanto o líder exerce influência a partir de competências pessoais, exemplo e credibilidade, obtendo adesão voluntária da equipe.",
+     "Teorias de liderança."
+    ],
+    [
+     "Quais elementos compõem o processo de comunicação?",
+     "emissor, mensagem, canal, receptor e retroalimentação",
+     "O processo de comunicação envolve o emissor, que codifica a mensagem; a mensagem transmitida; o canal utilizado; o receptor, que decodifica; e a retroalimentação, que permite verificar o entendimento.",
+     "Teorias da comunicação."
+    ],
+    [
+     "O que é comunicação formal e comunicação informal nas organizações?",
+     "a formal segue os canais oficiais hierárquicos; a informal surge das relações espontâneas entre as pessoas",
+     "A comunicação formal segue os canais oficiais definidos pela estrutura hierárquica, enquanto a comunicação informal surge espontaneamente das relações sociais, podendo complementar ou distorcer a informação oficial.",
+     "Teorias da comunicação organizacional."
+    ],
+    [
+     "O que é feedback na comunicação organizacional?",
+     "a retroalimentação que informa ao emissor como a mensagem foi recebida e compreendida",
+     "O feedback é a retroalimentação do processo comunicativo: informa ao emissor como sua mensagem foi recebida, permitindo corrigir ruídos, ajustar a conduta e melhorar o desempenho.",
+     "Teorias da comunicação organizacional."
+    ],
+    [
+     "Que situações caracterizam conflito nas equipes de trabalho?",
+     "divergências de interesses, metas, valores ou recursos percebidos como incompatíveis",
+     "O conflito nas equipes decorre de divergências de interesses, metas, valores, percepções ou por disputa de recursos escassos, podendo ser funcional, quando estimula melhorias, ou disfuncional, quando prejudica os resultados.",
+     "Gestão de conflitos."
+    ],
+    [
+     "Quais são as formas de lidar com conflitos nas organizações?",
+     "evitação, acomodação, competição, compromisso e colaboração",
+     "Entre as estratégias de gestão de conflitos estão a evitação, a acomodação, a competição, o compromisso e a colaboração, sendo a colaboração, em geral, a que busca solução de ganho mútuo.",
+     "Gestão de conflitos."
+    ]
+   ]
+  },
+  {
+   "materia": "SEC",
+   "id": "rh_processos",
+   "tema": "Processos de gestão de pessoas",
+   "fatos": [
+    [
+     "O que é gestão por competências?",
+     "a gestão baseada na identificação de conhecimentos, habilidades e atitudes necessários ao desempenho das funções",
+     "A gestão por competências orienta os processos de gestão de pessoas pela identificação dos conhecimentos, habilidades e atitudes necessários ao desempenho das funções, alinhando capacitação, avaliação e alocação de pessoas às metas institucionais.",
+     "Gestão de pessoas por competências."
+    ],
+    [
+     "Quais etapas compõem o processo de treinamento e desenvolvimento?",
+     "levantamento de necessidades, planejamento, execução e avaliação",
+     "O processo de treinamento e desenvolvimento compreende o levantamento de necessidades, o planejamento dos programas, a execução e a avaliação dos resultados obtidos.",
+     "Gestão de pessoas: T&D."
+    ],
+    [
+     "O que distingue treinamento de desenvolvimento?",
+     "o treinamento focaliza competências para o cargo atual; o desenvolvimento prepara para funções futuras",
+     "O treinamento está voltado ao aprimoramento de competências necessárias ao cargo atual, com foco em curto prazo, enquanto o desenvolvimento busca preparar a pessoa para desafios e funções futuras, com perspectiva de longo prazo.",
+     "Gestão de pessoas: T&D."
+    ],
+    [
+     "Quais são as etapas do processo de recrutamento e seleção?",
+     "identificação da vaga e do perfil, divulgação, triagem, aplicação de instrumentos e decisão de contratação",
+     "O recrutamento e seleção compreende a identificação da vaga e do perfil desejado, a divulgação, a triagem de candidatos, a aplicação de instrumentos de avaliação e a decisão de contratação e integração do novo servidor.",
+     "Gestão de pessoas: provisão."
+    ],
+    [
+     "O que é a avaliação de desempenho e para que serve?",
+     "o processo de aferir o desempenho do servidor em relação aos objetivos e competências, subsidiando decisões de gestão",
+     "A avaliação de desempenho afere a atuação do servidor em relação aos objetivos e às competências definidas, subsidiando decisões de capacitação, movimentação, progressão e melhoria contínua dos serviços.",
+     "Gestão de pessoas: avaliação."
+    ],
+    [
+     "Quais erros comuns devem ser evitados na avaliação de desempenho?",
+     "efeito halo, erro de tendência central, leniência, severidade e erro por semelhança",
+     "Entre os erros comuns na avaliação de desempenho estão o efeito halo, o erro de tendência central, a leniência, a severidade e o erro por semelhança, que comprometem a objetividade do resultado.",
+     "Gestão de pessoas: avaliação."
+    ],
+    [
+     "O que é clima organizacional?",
+     "a percepção compartilhada dos trabalhadores sobre o ambiente de trabalho e as práticas da organização",
+     "O clima organizacional é a percepção compartilhada pelos trabalhadores a respeito do ambiente, das práticas, das relações e das políticas da organização, influenciando a motivação, a cooperação e a produtividade.",
+     "Gestão de pessoas: clima organizacional."
+    ],
+    [
+     "O que é cultura organizacional?",
+     "o conjunto de valores, crenças, normas e práticas que caracterizam a organização e orientam o comportamento das pessoas",
+     "A cultura organizacional reúne valores, crenças, normas informais, rituais e práticas que caracterizam a organização e orientam o comportamento de seus membros, sendo mais estável e profunda que o clima organizacional.",
+     "Gestão de pessoas: cultura organizacional."
+    ],
+    [
+     "Quais são as etapas do processo de planejamento de pessoal?",
+     "dimensionamento da força de trabalho, identificação de lacunas, definição de estratégias de provisão e capacitação e acompanhamento",
+     "O planejamento de pessoal envolve o dimensionamento da força de trabalho, a identificação das lacunas de competências, a definição de estratégias de provisão e capacitação e o acompanhamento periódico dos resultados.",
+     "Gestão de pessoas: planejamento."
+    ],
+    [
+     "O que a política de saúde e qualidade de vida no trabalho busca?",
+     "prevenir agravos, promover a saúde e melhorar as condições de trabalho e o bem-estar dos servidores",
+     "A política de saúde e qualidade de vida no trabalho busca prevenir agravos ocupacionais, promover a saúde física e mental, melhorar as condições e a organização do trabalho e ampliar o bem-estar e a satisfação dos servidores.",
+     "Gestão de pessoas: qualidade de vida."
+    ]
+   ]
+  },
+  {
+   "materia": "DF",
+   "id": "receita_publica",
+   "tema": "Receita pública e estágios",
+   "fatos": [
+    [
+     "Quais são os estágios da receita pública?",
+     "lançamento, arrecadação e recolhimento",
+     "A receita pública percorre os estágios de lançamento, quando a administração identifica e registra o crédito, arrecadação, quando o contribuinte paga, e recolhimento, quando os valores são transferidos ao caixa do Tesouro.",
+     "Lei 4.320/1964, arts. 51 a 53; doutrina de finanças públicas."
+    ],
+    [
+     "O que são receitas correntes?",
+     "os recursos provenientes de tributos, contribuições, patrimonial e outras receitas correntes",
+     "As receitas correntes compreendem as receitas tributária, de contribuições, patrimonial, agropecuária, industrial, de serviços e outras receitas correntes, incluindo multas, juros e restituições.",
+     "Lei 4.320/1964, art. 11, § 1º."
+    ],
+    [
+     "O que são receitas de capital?",
+     "os recursos provenientes de operações de crédito, alienação de bens, amortização de empréstimos e transferências de capital",
+     "As receitas de capital compreendem as provenientes de operações de crédito, alienação de bens, amortização de empréstimos, transferências de capital e outras receitas de capital.",
+     "Lei 4.320/1964, art. 11, § 2º."
+    ],
+    [
+     "O que é dívida ativa?",
+     "o crédito da Fazenda Pública, líquido e certo, não recolhido no prazo legal, inscrito para cobrança",
+     "A dívida ativa compreende os créditos da Fazenda Pública, de natureza tributária ou não tributária, líquidos e certos, vencidos e não pagos no prazo legal, que passam a ser inscritos para cobrança executiva.",
+     "Lei 4.320/1964, art. 39; Lei 6.830/1980."
+    ],
+    [
+     "O que é a renúncia de receita e como a LRF a disciplina?",
+     "a renúncia deve estar acompanhada de estimativa do impacto orçamentário-financeiro e de medidas de compensação",
+     "A concessão de incentivo ou benefício de natureza tributária da qual decorra renúncia de receita deverá estar acompanhada de estimativa do impacto orçamentário-financeiro e de atendimento às medidas de compensação previstas na Lei de Responsabilidade Fiscal.",
+     "LC 101/2000, art. 14."
+    ],
+    [
+     "Quais princípios orçamentários devem ser observados?",
+     "unidade, universalidade, anualidade, exclusividade, legalidade, publicidade e especificação, entre outros",
+     "Entre os princípios orçamentários estão a unidade, a universalidade, a anualidade ou periodicidade, a exclusividade, a legalidade, a publicidade, a especificação e a não afetação das receitas de impostos.",
+     "CF/88, art. 165 e seguintes; doutrina orçamentária."
+    ]
+   ]
+  },
+  {
+   "materia": "DF",
+   "id": "controle_prestacao",
+   "tema": "Controle interno e externo e prestação de contas",
+   "fatos": [
+    [
+     "Quais são as duas modalidades básicas de controle na administração pública?",
+     "controle interno, exercido por cada Poder, e controle externo, exercido pelo Poder Legislativo com auxílio dos tribunais de contas",
+     "A Constituição prevê o controle interno, mantido por cada Poder para fiscalizar a legalidade e a eficiência dos atos, e o controle externo, exercido pelo Congresso Nacional ou pelas casas legislativas com o auxílio dos tribunais de contas.",
+     "CF/88, arts. 70 a 74."
+    ],
+    [
+     "Quais são as finalidades do sistema de controle interno, conforme a Constituição?",
+     "avaliar o cumprimento das metas do plano plurianual, comprovar a legalidade dos atos e exercer o controle dos recursos públicos, entre outras",
+     "Ao sistema de controle interno compete avaliar o cumprimento das metas previstas no plano plurianual e a execução dos programas de governo, comprovar a legalidade e avaliar os resultados da gestão orçamentária, financeira e patrimonial, e exercer o controle de operações de crédito e renúncia de receitas, entre outras finalidades.",
+     "CF/88, art. 74."
+    ],
+    [
+     "Qual é o prazo para o Chefe do Poder Executivo prestar contas anualmente?",
+     "sessenta dias após a abertura da sessão legislativa",
+     "O Chefe do Poder Executivo deve prestar, anualmente, ao Poder Legislativo, dentro de sessenta dias após a abertura da sessão legislativa, as contas referentes ao exercício anterior.",
+     "CF/88, art. 84, XXIV."
+    ],
+    [
+     "A quem compete apreciar o parecer prévio das contas do Chefe do Executivo estadual?",
+     "ao Tribunal de Contas do Estado, cabendo à Assembleia Legislativa o julgamento das contas",
+     "Compete ao Tribunal de Contas apreciar e emitir parecer prévio sobre as contas do Chefe do Poder Executivo, cabendo ao Poder Legislativo o julgamento das contas, observados os prazos e a forma da lei.",
+     "CF/88, arts. 71 e 75."
+    ],
+    [
+     "Qual é a competência sancionadora dos tribunais de contas?",
+     "aplicar sanções previstas em lei aos responsáveis por ilegalidade de despesa ou irregularidade de contas",
+     "Os tribunais de contas, no exercício do controle externo, podem aplicar aos responsáveis as sanções previstas em lei, em caso de ilegalidade de despesa ou irregularidade de contas, incluindo multas.",
+     "CF/88, arts. 71, VIII e X; Lei 8.443/1992."
+    ],
+    [
+     "O que são restos a pagar?",
+     "as despesas empenhadas e não pagas até o encerramento do exercício financeiro",
+     "Restos a pagar são as despesas empenhadas e ainda não pagas até 31 de dezembro, distinguindo-se os processados, quando a despesa já foi liquidada, dos não processados, que dependem de liquidação.",
+     "Lei 4.320/1964, art. 36; Decreto 93.872/1986."
+    ],
+    [
+     "Qual é a consequência do não atendimento das exigências da Lei de Responsabilidade Fiscal quanto às contas?",
+     "a suspensão das transferências voluntárias e das garantias, entre outras sanções institucionais",
+     "O não atendimento das exigências da Lei de Responsabilidade Fiscal sujeita o ente às sanções institucionais previstas, como a suspensão de transferências voluntárias, de garantias e de operações de crédito, além de responsabilização pessoal do agente.",
+     "LC 101/2000, arts. 23 e 25."
+    ],
+    [
+     "O que a Lei de Responsabilidade Fiscal determina quanto à transparência da gestão fiscal?",
+     "a disponibilização em tempo real de informações sobre a execução orçamentária e financeira, em meios eletrônicos de acesso público",
+     "A transparência da gestão fiscal é assegurada mediante a disponibilização, em tempo real, de informações pormenorizadas sobre a execução orçamentária e financeira da União, dos Estados, do Distrito Federal e dos Municípios, em meios eletrônicos de amplo acesso público.",
+     "LC 101/2000, art. 48 e 48-A."
+    ],
+    [
+     "O que a LRF exige quanto à criação de nova despesa obrigatória de caráter continuado?",
+     "estimativa do impacto orçamentário-financeiro e comprovação da origem dos recursos, com medidas de compensação",
+     "A criação ou o aumento de despesa obrigatória de caráter continuado depende de estimativa do impacto orçamentário-financeiro no exercício e nos dois seguintes e da comprovação de que a despesa criada ou aumentada não afetará as metas fiscais, comprovando-se a origem dos recursos por aumento permanente de receita ou redução permanente de despesa.",
+     "LC 101/2000, art. 17."
+    ],
+    [
+     "Quais são as vedações no último ano do mandato quanto a despesas de pessoal?",
+     "é vedado o aumento de despesa com pessoal nos cento e oitenta dias anteriores ao final do mandato, salvo as ressalvas legais",
+     "É vedado ao titular de Poder ou órgão referido na Lei de Responsabilidade Fiscal, nos últimos cento e oitenta dias do seu mandato, contrair obrigação de despesa que não possa ser cumprida integralmente dentro dele, ou que tenha parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa.",
+     "LC 101/2000, art. 42."
+    ]
+   ]
+  }
+ ]
+}

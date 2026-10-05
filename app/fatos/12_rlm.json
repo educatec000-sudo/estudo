@@ -1,0 +1,394 @@
+{
+ "descricao": "Base de fatos: Raciocínio Lógico (porcentagem, proporção, regra de três, sequências, conjuntos e lógica proposicional).",
+ "categorias": [
+  {
+   "materia": "RL",
+   "id": "rl_porcentagem",
+   "tema": "Porcentagem, frações e números decimais",
+   "fatos": [
+    [
+     "Quanto é 20% de 350?",
+     "70",
+     "20% de 350 corresponde a 0,20 × 350 = 70.",
+     "Aritmética: cálculo de porcentagem."
+    ],
+    [
+     "Quanto é 15% de 200?",
+     "30",
+     "15% de 200 corresponde a 0,15 × 200 = 30.",
+     "Aritmética: cálculo de porcentagem."
+    ],
+    [
+     "Um produto de R$ 80,00 recebe desconto de 25%. Qual é o valor final?",
+     "R$ 60,00",
+     "O desconto é de 25% de 80 = 20, logo o valor final é 80 − 20 = R$ 60,00.",
+     "Aritmética: porcentagem e desconto."
+    ],
+    [
+     "Um salário de R$ 1.200,00 recebe aumento de 10%. Qual é o novo valor?",
+     "R$ 1.320,00",
+     "O aumento é de 10% de 1.200 = 120, logo o novo valor é 1.200 + 120 = R$ 1.320,00.",
+     "Aritmética: porcentagem e acréscimo."
+    ],
+    [
+     "Quanto é 2,5% de 400?",
+     "10",
+     "2,5% de 400 corresponde a 0,025 × 400 = 10.",
+     "Aritmética: cálculo de porcentagem."
+    ],
+    [
+     "A fração 3/4 corresponde a quantos por cento?",
+     "75%",
+     "3/4 = 0,75, que corresponde a 75%.",
+     "Aritmética: frações e porcentagem."
+    ],
+    [
+     "O número decimal 0,25 corresponde a qual fração irredutível?",
+     "1/4",
+     "0,25 = 25/100, que simplificado por 25 resulta em 1/4.",
+     "Aritmética: frações e decimais."
+    ],
+    [
+     "Quanto é 1/3 de 90?",
+     "30",
+     "Um terço de 90 corresponde a 90 ÷ 3 = 30.",
+     "Aritmética: frações."
+    ],
+    [
+     "Um servidor gastou 40% do seu salário de R$ 2.500,00. Quanto sobrou?",
+     "R$ 1.500,00",
+     "40% de 2.500 = 1.000, e o que sobrou corresponde a 2.500 − 1.000 = R$ 1.500,00, ou 60% do total.",
+     "Aritmética: porcentagem."
+    ],
+    [
+     "Um valor de R$ 250,00 sofre acréscimo de 20% e, em seguida, desconto de 20% sobre o novo valor. Qual é o valor final?",
+     "R$ 240,00",
+     "Com o acréscimo, o valor passa a 300; o desconto de 20% sobre 300 dá 60, resultando em R$ 240,00 — menos que o valor inicial, pois as bases de cálculo são diferentes.",
+     "Aritmética: porcentagem (acréscimos e descontos sucessivos)."
+    ],
+    [
+     "Quanto é 0,5% de 1.000?",
+     "5",
+     "0,5% de 1.000 corresponde a 0,005 × 1.000 = 5.",
+     "Aritmética: porcentagem."
+    ]
+   ]
+  },
+  {
+   "materia": "RL",
+   "id": "rl_proporcao",
+   "tema": "Razão, proporção, regra de três e grandezas",
+   "fatos": [
+    [
+     "Se 3 servidores protocolam 90 processos em um dia, quantos processos 5 servidores protocolam nas mesmas condições?",
+     "150",
+     "Trata-se de grandezas diretamente proporcionais: 90 ÷ 3 = 30 processos por servidor, logo 5 × 30 = 150 processos.",
+     "Razão e proporção: regra de três."
+    ],
+    [
+     "Dividir R$ 900,00 em partes proporcionais a 2 e 3. Qual é a maior parte?",
+     "R$ 540,00",
+     "A soma das partes da proporção é 2 + 3 = 5, logo cada unidade vale 180; a maior parte é 3 × 180 = R$ 540,00.",
+     "Divisão proporcional."
+    ],
+    [
+     "Dividir 120 em partes inversamente proporcionais a 2 e 4. Qual é a maior parte?",
+     "80",
+     "Inversamente proporcionais a 2 e 4 equivale a diretamente proporcionais a 1/2 e 1/4, ou seja, a 2 e 1; a soma é 3, cada unidade vale 40, e a maior parte é 2 × 40 = 80.",
+     "Divisão proporcional inversa."
+    ],
+    [
+     "Se 4 máquinas produzem 200 peças em uma hora, quantas peças 6 máquinas produzem no mesmo tempo?",
+     "300 peças",
+     "As grandezas são diretamente proporcionais: 200 ÷ 4 = 50 peças por máquina, e 6 × 50 = 300 peças.",
+     "Regra de três simples."
+    ],
+    [
+     "Se 2 torneiras de mesma vazão enchem um tanque em 6 horas, em quanto tempo 3 torneiras iguais enchem o mesmo tanque?",
+     "4 horas",
+     "As grandezas são inversamente proporcionais: 2 × 6 = 12 torneira-horas, e 12 ÷ 3 = 4 horas.",
+     "Regra de três simples inversa."
+    ],
+    [
+     "Se 5 pessoas fazem um trabalho em 12 dias, em quantos dias 6 pessoas farão o mesmo trabalho no mesmo ritmo?",
+     "10 dias",
+     "As grandezas são inversamente proporcionais: 5 × 12 = 60 pessoas-dia, e 60 ÷ 6 = 10 dias.",
+     "Regra de três simples inversa."
+    ],
+    [
+     "Um trajeto é percorrido em 3 horas a 80 km/h. Qual será o tempo a 120 km/h?",
+     "2 horas",
+     "A distância é 3 × 80 = 240 km; a 120 km/h, o tempo é 240 ÷ 120 = 2 horas, pois velocidade e tempo são inversamente proporcionais.",
+     "Regra de três simples inversa."
+    ],
+    [
+     "Um carro a 60 km/h percorre qual distância em 2 horas e meia?",
+     "150 km",
+     "A distância é dada por velocidade × tempo: 60 × 2,5 = 150 km.",
+     "Grandezas: velocidade, tempo e distância."
+    ],
+    [
+     "Se 8 operários constroem um muro em 15 dias, quantos dias 12 operários levarão para o mesmo muro, no mesmo ritmo?",
+     "10 dias",
+     "8 × 15 = 120 operário-dia; 120 ÷ 12 = 10 dias, pois operários e dias são inversamente proporcionais.",
+     "Regra de três simples inversa."
+    ],
+    [
+     "Se 3 kg de um produto custam R$ 18,00, quanto custam 5 kg?",
+     "R$ 30,00",
+     "O preço por quilo é 18 ÷ 3 = R$ 6,00; logo 5 kg custam 5 × 6 = R$ 30,00.",
+     "Razão e proporção."
+    ],
+    [
+     "Uma razão de 3 para 5 equivale a qual porcentagem?",
+     "60%",
+     "A razão 3/5 = 0,6, que corresponde a 60%.",
+     "Razão e porcentagem."
+    ],
+    [
+     "Se 2/5 de um valor correspondem a R$ 240,00, qual é o valor total?",
+     "R$ 600,00",
+     "Se 2/5 equivalem a 240, então 1/5 equivale a 120 e o total (5/5) é 5 × 120 = R$ 600,00.",
+     "Proporção: fração de um total."
+    ]
+   ]
+  },
+  {
+   "materia": "RL",
+   "id": "rl_sequencias",
+   "tema": "Raciocínio sequencial, conjuntos e orientação temporal",
+   "fatos": [
+    [
+     "Qual é o próximo termo da sequência 2, 6, 12, 20, 30, ...?",
+     "42",
+     "As diferenças entre os termos são 4, 6, 8, 10 e, em seguida, 12; logo o próximo termo é 30 + 12 = 42, seguindo o padrão de números retangulares.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Qual é o próximo termo da sequência 1, 4, 9, 16, 25, ...?",
+     "36",
+     "A sequência apresenta os quadrados dos números naturais (1², 2², 3², 4², 5²); o próximo termo é 6² = 36.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Qual é o próximo termo da sequência 3, 6, 12, 24, ...?",
+     "48",
+     "Cada termo é o dobro do anterior, logo o próximo termo é 24 × 2 = 48.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Qual é o próximo termo da sequência 1, 1, 2, 3, 5, 8, ...?",
+     "13",
+     "Trata-se da sequência de Fibonacci, em que cada termo é a soma dos dois anteriores: 5 + 8 = 13.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Qual é o próximo termo da sequência 2, 3, 5, 7, 11, ...?",
+     "13",
+     "A sequência é formada pelos números primos, e o próximo primo após 11 é 13.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Qual é o próximo termo da sequência 100, 90, 81, 73, ...?",
+     "66",
+     "As diferenças são 10, 9, 8 e, em seguida, 7; logo o próximo termo é 73 − 7 = 66.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Numa turma de 40 alunos, 25 estudam inglês, 18 estudam espanhol e 10 estudam os dois idiomas. Quantos alunos não estudam nenhum dos dois?",
+     "7",
+     "Pelo princípio da inclusão-exclusão, 25 + 18 − 10 = 33 estudam pelo menos um idioma; logo 40 − 33 = 7 não estudam nenhum.",
+     "Teoria dos conjuntos."
+    ],
+    [
+     "Em um grupo de 50 pessoas, 30 falam inglês e 25 falam espanhol, e todas falam pelo menos um dos dois idiomas. Quantas pessoas falam os dois idiomas?",
+     "5",
+     "Pelo princípio da inclusão-exclusão, o número de pessoas que falam os dois idiomas é 30 + 25 − 50 = 5.",
+     "Teoria dos conjuntos: princípio da inclusão-exclusão."
+    ],
+    [
+     "Se hoje é terça-feira, que dia da semana será daqui a 100 dias?",
+     "quinta-feira",
+     "100 dividido por 7 dá resto 2; avançando dois dias a partir de terça-feira, chega-se à quinta-feira.",
+     "Orientação temporal: congruência de dias."
+    ],
+    [
+     "Se hoje é sexta-feira, que dia da semana foi há 40 dias?",
+     "terça-feira",
+     "40 dividido por 7 dá resto 5; recuando cinco dias a partir de sexta-feira, chega-se à terça-feira.",
+     "Orientação temporal: congruência de dias."
+    ],
+    [
+     "Quantos números ímpares existem de 1 a 20, inclusive?",
+     "10",
+     "Os ímpares de 1 a 20 são 1, 3, 5, 7, 9, 11, 13, 15, 17 e 19, totalizando 10 números.",
+     "Raciocínio sequencial."
+    ],
+    [
+     "Se em um relógio o ponteiro dos minutos aponta para o número 3, quantos minutos se passaram desde a hora cheia?",
+     "15 minutos",
+     "Cada número do relógio corresponde a 5 minutos; apontando para o 3, passaram-se 3 × 5 = 15 minutos.",
+     "Orientação espacial e temporal."
+    ]
+   ]
+  },
+  {
+   "materia": "RL",
+   "id": "rl_logica",
+   "tema": "Lógica proposicional e argumentação",
+   "fatos": [
+    [
+     "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+     "Alguns servidores não são pontuais",
+     "A negação de uma proposição universal afirmativa é uma particular negativa: 'Alguns servidores não são pontuais'.",
+     "Lógica: negação de proposições categóricas."
+    ],
+    [
+     "Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+     "Nenhum candidato foi aprovado",
+     "A negação de uma proposição particular afirmativa é uma universal negativa: 'Nenhum candidato foi aprovado'.",
+     "Lógica: negação de proposições categóricas."
+    ],
+    [
+     "Qual é o valor lógico da conjunção entre uma proposição verdadeira e uma proposição falsa?",
+     "falso",
+     "A conjunção (e) só é verdadeira quando as duas proposições são verdadeiras; havendo uma falsa, o resultado é falso.",
+     "Lógica proposicional: tabela-verdade da conjunção."
+    ],
+    [
+     "Em que situação a proposição condicional 'se A, então B' é falsa?",
+     "quando A é verdadeira e B é falsa",
+     "A condicional só é falsa quando o antecedente é verdadeiro e o consequente é falso; nos demais casos, é verdadeira.",
+     "Lógica proposicional: tabela-verdade da condicional."
+    ],
+    [
+     "Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+     "quando as duas proposições são falsas",
+     "A disjunção inclusiva (ou) só é falsa quando ambas as proposições são falsas; basta uma verdadeira para que o resultado seja verdadeiro.",
+     "Lógica proposicional: tabela-verdade da disjunção."
+    ],
+    [
+     "Quando a bicondicional 'A se e somente se B' é verdadeira?",
+     "quando A e B têm o mesmo valor lógico",
+     "A bicondicional é verdadeira quando as duas proposições são verdadeiras ou quando as duas são falsas, isto é, quando têm valores lógicos iguais.",
+     "Lógica proposicional: tabela-verdade da bicondicional."
+    ],
+    [
+     "Qual é a negação da proposição composta 'A e B'?",
+     "não A ou não B",
+     "Pela lei de De Morgan, a negação de uma conjunção é a disjunção das negações: 'não A ou não B'.",
+     "Lógica proposicional: Leis de De Morgan."
+    ],
+    [
+     "Qual é a negação da proposição composta 'A ou B'?",
+     "não A e não B",
+     "Pela lei de De Morgan, a negação de uma disjunção é a conjunção das negações: 'não A e não B'.",
+     "Lógica proposicional: Leis de De Morgan."
+    ],
+    [
+     "Quando um argumento dedutivo é considerado válido?",
+     "quando é impossível que as premissas sejam verdadeiras e a conclusão seja falsa",
+     "Um argumento dedutivo é válido quando sua forma lógica garante que, sendo verdadeiras as premissas, a conclusão necessariamente será verdadeira.",
+     "Lógica: validade de argumentos."
+    ],
+    [
+     "O que é uma tautologia?",
+     "uma proposição composta sempre verdadeira, independentemente dos valores das proposições simples",
+     "Tautologia é a proposição composta cujo valor lógico é sempre verdadeiro em qualquer combinação de valores das proposições simples que a compõem.",
+     "Lógica proposicional: tautologia."
+    ],
+    [
+     "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+     "chove e a rua não fica molhada",
+     "A negação de uma condicional 'A → B' é a conjunção do antecedente com a negação do consequente: 'A e não B'.",
+     "Lógica proposicional: negação da condicional."
+    ],
+    [
+     "Qual é a contrapositiva da proposição 'Se A, então B'?",
+     "se não B, então não A",
+     "A contrapositiva de 'A → B' é 'não B → não A', proposição logicamente equivalente à original.",
+     "Lógica proposicional: equivalências."
+    ]
+   ]
+  },
+  {
+   "materia": "RL",
+   "id": "rl_operacoes",
+   "tema": "Operações, múltiplos e médias",
+   "fatos": [
+    [
+     "Qual é o valor da expressão 2³ + 3²?",
+     "17",
+     "2³ = 8 e 3² = 9; logo 8 + 9 = 17.",
+     "Aritmética: potenciação e adição."
+    ],
+    [
+     "Qual é o resultado de (5 + 3) × 2 − 4?",
+     "12",
+     "Resolvendo primeiro os parênteses: 8 × 2 = 16; 16 − 4 = 12.",
+     "Aritmética: ordem das operações."
+    ],
+    [
+     "Qual é o mínimo múltiplo comum entre 6 e 8?",
+     "24",
+     "Os múltiplos de 6 e de 8 coincidem pela primeira vez em 24, que é o mínimo múltiplo comum.",
+     "Aritmética: mmc."
+    ],
+    [
+     "Qual é o máximo divisor comum entre 24 e 36?",
+     "12",
+     "Os divisores comuns de 24 e 36 têm como maior valor 12, que é o máximo divisor comum.",
+     "Aritmética: mdc."
+    ],
+    [
+     "Qual é a média aritmética dos números 6, 8, 10 e 12?",
+     "9",
+     "A soma é 36 e, dividindo por 4, a média aritmética é 9.",
+     "Estatística básica: média aritmética."
+    ],
+    [
+     "A média de cinco notas é 7. Se quatro delas são 6, 7, 8 e 7, qual é a quinta nota?",
+     "7",
+     "A soma total é 5 × 7 = 35; a soma das quatro notas conhecidas é 28; logo a quinta nota é 35 − 28 = 7.",
+     "Estatística básica: média aritmética."
+    ],
+    [
+     "Quanto é 15% de 15% de 400?",
+     "9",
+     "15% de 400 = 60 e 15% de 60 = 9.",
+     "Aritmética: porcentagem sucessiva."
+    ],
+    [
+     "Qual é a terça parte do dobro de 27?",
+     "18",
+     "O dobro de 27 é 54 e a terça parte de 54 é 18.",
+     "Aritmética: operações com frações."
+    ],
+    [
+     "Qual é o valor de 1/2 + 1/4 + 1/4?",
+     "1",
+     "Somando as frações: 1/2 + 1/4 + 1/4 = 2/4 + 1/4 + 1/4 = 4/4 = 1.",
+     "Aritmética: adição de frações."
+    ],
+    [
+     "Um número somado com o seu dobro resulta em 45. Qual é esse número?",
+     "15",
+     "Chamando o número de x, tem-se x + 2x = 45, logo 3x = 45 e x = 15.",
+     "Álgebra elementar: equação de primeiro grau."
+    ],
+    [
+     "Qual é o valor de x na equação 5x − 10 = 25?",
+     "7",
+     "Somando 10 aos dois lados: 5x = 35; dividindo por 5, x = 7.",
+     "Álgebra elementar: equação de primeiro grau."
+    ],
+    [
+     "Se dois números somam 30 e a diferença entre eles é 8, qual é o maior?",
+     "19",
+     "Resolvendo o sistema, o maior número é (30 + 8) ÷ 2 = 19 e o menor é 11.",
+     "Álgebra elementar: sistema de equações."
+    ]
+   ]
+  }
+ ]
+}

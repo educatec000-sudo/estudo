@@ -1,0 +1,33 @@
+**Questão** – Lei Anticorrupção (Lei nº 12.846/2013) – "Qual é a natureza da responsabilidade das pessoas jurídicas?"
+
+**Gabarito oficial:** **B) objetiva, na esfera administrativa e civil**
+
+A seguir, explicamos passo a passo por que a alternativa B é a correta.
+
+---
+
+## 1. Por que a alternativa **B** está correta
+
+| Dispositivo da Lei 12.846/2013 | Conteúdo relevante |
+|-------------------------------|--------------------|
+| **Art. 1º** | Estabelece a **responsabilidade objetiva** da pessoa jurídica. |
+| Art. 2º | A responsabilidade é **civil** e **administrativa**. |
+
+**Resumo:**
+- **Objetiva** → basta a comprovação do ato lesivo;
+- **Esfera administrativa e civil** → multas e reparação integral do dano.
+
+> Dica de prova: a pessoa jurídica não responde criminalmente.
+
+1. Leia o caput do art. 1º
+2. Fixe: objetiva, não subjetiva
+3. Revise as sanções do art. 12
+
+\`\`\`
+art. 1º — responsabilidade objetiva
+\`\`\`
+
+Veja também [a lei no Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm).
+
+<script>window.__xss = 1</script>
+<img src=x onerror="window.__xss=2">

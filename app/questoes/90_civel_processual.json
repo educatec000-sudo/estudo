@@ -1,0 +1,1614 @@
+[
+ {
+  "id": "F05-civil_pessoas_fatos-000-A",
+  "enunciado": "Quando se inicia a personalidade civil da pessoa natural?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "sim, desde que configurada a convivência pública, contínua e duradoura com o objetivo de constituição de família",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 2º",
+  "comentario": "A personalidade civil da pessoa começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro. Fundamento: Código Civil, art. 2º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-000-B",
+  "enunciado": "Assinale a alternativa correta. Quando se inicia a personalidade civil da pessoa natural?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "sim, desde que configurada a convivência pública, contínua e duradoura com o objetivo de constituição de família",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "aos dezoito anos completos"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 2º",
+  "comentario": "A personalidade civil da pessoa começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro. Fundamento: Código Civil, art. 2º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-000-C",
+  "enunciado": "A resposta \"do nascimento com vida, assegurados desde a concepção os direitos do nascituro\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Qual é o prazo de prescrição da pretensão de reparação civil?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 2º",
+  "comentario": "A personalidade civil da pessoa começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro. Fundamento: Código Civil, art. 2º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-001-A",
+  "enunciado": "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "dez anos",
+   "três anos",
+   "aos dezoito anos completos",
+   "a boa-fé e os usos do lugar"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, caput",
+  "comentario": "A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil. Fundamento: Código Civil, art. 5º, caput."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "a boa-fé e os usos do lugar",
+   "três anos",
+   "somente o menor de dezesseis anos",
+   "dez anos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, caput",
+  "comentario": "A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil. Fundamento: Código Civil, art. 5º, caput."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-001-C",
+  "enunciado": "A resposta \"aos dezoito anos completos\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Qual é o prazo de prescrição da pretensão de reparação civil?",
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, caput",
+  "comentario": "A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil. Fundamento: Código Civil, art. 5º, caput."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-002-A",
+  "enunciado": "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+  "alternativas": [
+   "dez anos",
+   "a boa-fé e os usos do lugar",
+   "aos dezoito anos completos",
+   "três anos",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 3º",
+  "comentario": "Após a Lei 13.146/2015, são absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de dezesseis anos. Fundamento: Código Civil, art. 3º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-002-B",
+  "enunciado": "Assinale a alternativa correta. Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+  "alternativas": [
+   "três anos",
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos",
+   "dez anos",
+   "a boa-fé e os usos do lugar"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 3º",
+  "comentario": "Após a Lei 13.146/2015, são absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de dezesseis anos. Fundamento: Código Civil, art. 3º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-002-C",
+  "enunciado": "A resposta \"somente o menor de dezesseis anos\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Qual é o prazo de prescrição da pretensão de reparação civil?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 3º",
+  "comentario": "Após a Lei 13.146/2015, são absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de dezesseis anos. Fundamento: Código Civil, art. 3º."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-003-A",
+  "enunciado": "Em quais hipóteses a emancipação voluntária ocorre?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos",
+   "três anos",
+   "dez anos",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, parágrafo único, I",
+  "comentario": "A emancipação voluntária ocorre pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, desde que o menor tenha dezesseis anos completos. Fundamento: Código Civil, art. 5º, parágrafo único, I."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Em quais hipóteses a emancipação voluntária ocorre?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "dez anos",
+   "três anos",
+   "aos dezoito anos completos",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, parágrafo único, I",
+  "comentario": "A emancipação voluntária ocorre pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, desde que o menor tenha dezesseis anos completos. Fundamento: Código Civil, art. 5º, parágrafo único, I."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-003-C",
+  "enunciado": "A resposta \"pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Em quais hipóteses a emancipação voluntária ocorre?",
+   "Qual princípio deve orientar a interpretação dos negócios jurídicos?",
+   "O que caracteriza a posse?"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 5º, parágrafo único, I",
+  "comentario": "A emancipação voluntária ocorre pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, desde que o menor tenha dezesseis anos completos. Fundamento: Código Civil, art. 5º, parágrafo único, I."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-004-A",
+  "enunciado": "Qual é o prazo geral de prescrição dos direitos pessoais?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "dez anos",
+   "somente o menor de dezesseis anos",
+   "a boa-fé e os usos do lugar",
+   "três anos"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Prescrição e decadência",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 205",
+  "comentario": "Salvo disposição legal específica, a prescrição dos direitos pessoais ocorre em dez anos. Fundamento: Código Civil, art. 205."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o prazo geral de prescrição dos direitos pessoais?",
+  "alternativas": [
+   "três anos",
+   "somente o menor de dezesseis anos",
+   "aos dezoito anos completos",
+   "dez anos",
+   "a boa-fé e os usos do lugar"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": "Prescrição e decadência",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 205",
+  "comentario": "Salvo disposição legal específica, a prescrição dos direitos pessoais ocorre em dez anos. Fundamento: Código Civil, art. 205."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-005-A",
+  "enunciado": "Qual é o prazo de prescrição da pretensão de reparação civil?",
+  "alternativas": [
+   "três anos",
+   "dez anos",
+   "somente o menor de dezesseis anos",
+   "a boa-fé e os usos do lugar",
+   "aos dezoito anos completos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Prescrição e decadência",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 206, § 3º, V",
+  "comentario": "A pretensão de reparação civil prescreve em três anos, conforme o art. 206, § 3º, V, do Código Civil. Fundamento: Código Civil, art. 206, § 3º, V."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o prazo de prescrição da pretensão de reparação civil?",
+  "alternativas": [
+   "três anos",
+   "a boa-fé e os usos do lugar",
+   "somente o menor de dezesseis anos",
+   "aos dezoito anos completos",
+   "dez anos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Prescrição e decadência",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 206, § 3º, V",
+  "comentario": "A pretensão de reparação civil prescreve em três anos, conforme o art. 206, § 3º, V, do Código Civil. Fundamento: Código Civil, art. 206, § 3º, V."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-006-A",
+  "enunciado": "O que caracteriza a posse?",
+  "alternativas": [
+   "o exercício, de fato, de algum dos poderes inerentes à propriedade",
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Bens imóveis, móveis e públicos",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.196",
+  "comentario": "A posse é o exercício, de fato, de algum dos poderes inerentes à propriedade, como usar, gozar, dispor ou reivindicar a coisa. Fundamento: Código Civil, art. 1.196."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-006-B",
+  "enunciado": "Assinale a alternativa correta. O que caracteriza a posse?",
+  "alternativas": [
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos",
+   "o exercício, de fato, de algum dos poderes inerentes à propriedade"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": "Bens imóveis, móveis e públicos",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.196",
+  "comentario": "A posse é o exercício, de fato, de algum dos poderes inerentes à propriedade, como usar, gozar, dispor ou reivindicar a coisa. Fundamento: Código Civil, art. 1.196."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-006-C",
+  "enunciado": "A resposta \"o exercício, de fato, de algum dos poderes inerentes à propriedade\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+   "Em quais hipóteses a emancipação voluntária ocorre?",
+   "O que caracteriza a posse?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": "Bens imóveis, móveis e públicos",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.196",
+  "comentario": "A posse é o exercício, de fato, de algum dos poderes inerentes à propriedade, como usar, gozar, dispor ou reivindicar a coisa. Fundamento: Código Civil, art. 1.196."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-007-A",
+  "enunciado": "Qual princípio deve orientar a interpretação dos negócios jurídicos?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "a boa-fé e os usos do lugar",
+   "três anos",
+   "aos dezoito anos completos",
+   "dez anos"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Fato jurídico e negócio jurídico: defeitos e invalidade",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 113 e art. 421",
+  "comentario": "Os negócios jurídicos devem ser interpretados conforme a boa-fé e os usos do lugar de sua celebração, buscando o sentido que corresponda à vontade das partes e à função social do contrato. Fundamento: Código Civil, art. 113 e art. 421."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual princípio deve orientar a interpretação dos negócios jurídicos?",
+  "alternativas": [
+   "três anos",
+   "aos dezoito anos completos",
+   "dez anos",
+   "a boa-fé e os usos do lugar",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": "Fato jurídico e negócio jurídico: defeitos e invalidade",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 113 e art. 421",
+  "comentario": "Os negócios jurídicos devem ser interpretados conforme a boa-fé e os usos do lugar de sua celebração, buscando o sentido que corresponda à vontade das partes e à função social do contrato. Fundamento: Código Civil, art. 113 e art. 421."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-007-C",
+  "enunciado": "A resposta \"a boa-fé e os usos do lugar\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Qual é a ordem de vocação hereditária na sucessão legítima?",
+   "Qual é o prazo geral de prescrição dos direitos pessoais?",
+   "Como se define a legítima dos herdeiros necessários?",
+   "Qual princípio deve orientar a interpretação dos negócios jurídicos?"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": "Fato jurídico e negócio jurídico: defeitos e invalidade",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 113 e art. 421",
+  "comentario": "Os negócios jurídicos devem ser interpretados conforme a boa-fé e os usos do lugar de sua celebração, buscando o sentido que corresponda à vontade das partes e à função social do contrato. Fundamento: Código Civil, art. 113 e art. 421."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-008-A",
+  "enunciado": "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+  "alternativas": [
+   "quem causa dano a outrem por ato ilícito fica obrigado a repará-lo",
+   "somente o menor de dezesseis anos",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "dez anos",
+   "aos dezoito anos completos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 927",
+  "comentario": "Aquele que, por ato ilícito, causar dano a outrem, ainda que exclusivamente moral, fica obrigado a repará-lo. Fundamento: Código Civil, art. 927."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-008-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a regra geral da responsabilidade civil por ato ilícito?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "quem causa dano a outrem por ato ilícito fica obrigado a repará-lo",
+   "somente o menor de dezesseis anos",
+   "dez anos",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 927",
+  "comentario": "Aquele que, por ato ilícito, causar dano a outrem, ainda que exclusivamente moral, fica obrigado a repará-lo. Fundamento: Código Civil, art. 927."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-008-C",
+  "enunciado": "A resposta \"quem causa dano a outrem por ato ilícito fica obrigado a repará-lo\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Qual é o prazo de prescrição da pretensão de reparação civil?",
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Quando se inicia a personalidade civil da pessoa natural?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 927",
+  "comentario": "Aquele que, por ato ilícito, causar dano a outrem, ainda que exclusivamente moral, fica obrigado a repará-lo. Fundamento: Código Civil, art. 927."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-009-A",
+  "enunciado": "Quem responde pelos atos praticados por empregados, no exercício do trabalho?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "três anos",
+   "dez anos",
+   "o empregador, nos termos da lei civil",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 932, III",
+  "comentario": "O empregador ou comitente responde pelos atos de seus empregados, serviçais e prepostos praticados no exercício do trabalho que lhes competir ou em razão dele, nos termos do art. 932 do Código Civil. Fundamento: Código Civil, art. 932, III."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Quem responde pelos atos praticados por empregados, no exercício do trabalho?",
+  "alternativas": [
+   "o empregador, nos termos da lei civil",
+   "aos dezoito anos completos",
+   "três anos",
+   "dez anos",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 932, III",
+  "comentario": "O empregador ou comitente responde pelos atos de seus empregados, serviçais e prepostos praticados no exercício do trabalho que lhes competir ou em razão dele, nos termos do art. 932 do Código Civil. Fundamento: Código Civil, art. 932, III."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-009-C",
+  "enunciado": "A resposta \"o empregador, nos termos da lei civil\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Quem responde pelos atos praticados por empregados, no exercício do trabalho?",
+   "Quais são os regimes de bens que podem ser adotados no casamento, sem pacto antenupcial?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 932, III",
+  "comentario": "O empregador ou comitente responde pelos atos de seus empregados, serviçais e prepostos praticados no exercício do trabalho que lhes competir ou em razão dele, nos termos do art. 932 do Código Civil. Fundamento: Código Civil, art. 932, III."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-010-A",
+  "enunciado": "Quais são os regimes de bens que podem ser adotados no casamento, sem pacto antenupcial?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "três anos",
+   "a comunhão parcial de bens",
+   "aos dezoito anos completos",
+   "dez anos"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.640",
+  "comentario": "Na ausência de pacto antenupcial, vigora entre os cônjuges o regime da comunhão parcial de bens, que se torna o regime legal supletivo no casamento. Fundamento: Código Civil, art. 1.640."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-010-B",
+  "enunciado": "Assinale a alternativa correta. Quais são os regimes de bens que podem ser adotados no casamento, sem pacto antenupcial?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "dez anos",
+   "a comunhão parcial de bens",
+   "três anos",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.640",
+  "comentario": "Na ausência de pacto antenupcial, vigora entre os cônjuges o regime da comunhão parcial de bens, que se torna o regime legal supletivo no casamento. Fundamento: Código Civil, art. 1.640."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-010-C",
+  "enunciado": "A resposta \"a comunhão parcial de bens\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Qual é o prazo geral de prescrição dos direitos pessoais?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Quais são os regimes de bens que podem ser adotados no casamento, sem pacto antenupcial?",
+   "Quem é absolutamente incapaz para os atos da vida civil, após a Lei 13.146/2015?",
+   "Em quais hipóteses a emancipação voluntária ocorre?"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.640",
+  "comentario": "Na ausência de pacto antenupcial, vigora entre os cônjuges o regime da comunhão parcial de bens, que se torna o regime legal supletivo no casamento. Fundamento: Código Civil, art. 1.640."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-011-A",
+  "enunciado": "Como se define a legítima dos herdeiros necessários?",
+  "alternativas": [
+   "aos dezoito anos completos",
+   "três anos",
+   "corresponde à metade dos bens do espólio",
+   "somente o menor de dezesseis anos",
+   "dez anos"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.846 e art. 1.789",
+  "comentario": "A legítima corresponde à metade dos bens da herança, constituindo a porção que pertence de pleno direito aos herdeiros necessários, que são os descendentes, os ascendentes e o cônjuge. Fundamento: Código Civil, art. 1.846 e art. 1.789."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Como se define a legítima dos herdeiros necessários?",
+  "alternativas": [
+   "dez anos",
+   "somente o menor de dezesseis anos",
+   "corresponde à metade dos bens do espólio",
+   "aos dezoito anos completos",
+   "três anos"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.846 e art. 1.789",
+  "comentario": "A legítima corresponde à metade dos bens da herança, constituindo a porção que pertence de pleno direito aos herdeiros necessários, que são os descendentes, os ascendentes e o cônjuge. Fundamento: Código Civil, art. 1.846 e art. 1.789."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-011-C",
+  "enunciado": "A resposta \"corresponde à metade dos bens do espólio\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Qual princípio deve orientar a interpretação dos negócios jurídicos?",
+   "Como se define a legítima dos herdeiros necessários?",
+   "Qual é a ordem de vocação hereditária na sucessão legítima?",
+   "Quando se inicia a personalidade civil da pessoa natural?"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.846 e art. 1.789",
+  "comentario": "A legítima corresponde à metade dos bens da herança, constituindo a porção que pertence de pleno direito aos herdeiros necessários, que são os descendentes, os ascendentes e o cônjuge. Fundamento: Código Civil, art. 1.846 e art. 1.789."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-012-A",
+  "enunciado": "Qual é a ordem de vocação hereditária na sucessão legítima?",
+  "alternativas": [
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "aos dezoito anos completos",
+   "descendentes, cônjuge, ascendentes e colaterais, nessa ordem",
+   "somente o menor de dezesseis anos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro"
+  ],
+  "correta": 2,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.829",
+  "comentario": "A sucessão legítima defere-se na ordem seguinte: aos descendentes, em concorrência com o cônjuge sobrevivente conforme o regime de bens; aos ascendentes, em concorrência com o cônjuge; ao cônjuge sobrevivente; aos colaterais até o quarto grau. Fundamento: Código Civil, art. 1.829."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-012-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a ordem de vocação hereditária na sucessão legítima?",
+  "alternativas": [
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "aos dezoito anos completos",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "descendentes, cônjuge, ascendentes e colaterais, nessa ordem",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 3,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.829",
+  "comentario": "A sucessão legítima defere-se na ordem seguinte: aos descendentes, em concorrência com o cônjuge sobrevivente conforme o regime de bens; aos ascendentes, em concorrência com o cônjuge; ao cônjuge sobrevivente; aos colaterais até o quarto grau. Fundamento: Código Civil, art. 1.829."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-012-C",
+  "enunciado": "A resposta \"descendentes, cônjuge, ascendentes e colaterais, nessa ordem\" corresponde a qual dos questionamentos a seguir? (Tema: Pessoas, personalidade e fatos jurídicos (Código Civil).)",
+  "alternativas": [
+   "Qual é a ordem de vocação hereditária na sucessão legítima?",
+   "Qual é a regra geral da responsabilidade civil por ato ilícito?",
+   "Em que idade cessa a menoridade e a pessoa se torna capaz para os atos da vida civil?",
+   "Qual é o prazo de prescrição da pretensão de reparação civil?",
+   "Qual é o prazo geral de prescrição dos direitos pessoais?"
+  ],
+  "correta": 0,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.829",
+  "comentario": "A sucessão legítima defere-se na ordem seguinte: aos descendentes, em concorrência com o cônjuge sobrevivente conforme o regime de bens; aos ascendentes, em concorrência com o cônjuge; ao cônjuge sobrevivente; aos colaterais até o quarto grau. Fundamento: Código Civil, art. 1.829."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-013-A",
+  "enunciado": "A união estável é reconhecida como entidade familiar?",
+  "alternativas": [
+   "somente o menor de dezesseis anos",
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "aos dezoito anos completos",
+   "sim, desde que configurada a convivência pública, contínua e duradoura com o objetivo de constituição de família"
+  ],
+  "correta": 4,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.723",
+  "comentario": "A união estável é reconhecida como entidade familiar quando configurada na convivência pública, contínua e duradoura entre duas pessoas, estabelecida com o objetivo de constituição de família. Fundamento: Código Civil, art. 1.723."
+ },
+ {
+  "id": "F05-civil_pessoas_fatos-013-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. A união estável é reconhecida como entidade familiar?",
+  "alternativas": [
+   "do nascimento com vida, assegurados desde a concepção os direitos do nascituro",
+   "sim, desde que configurada a convivência pública, contínua e duradoura com o objetivo de constituição de família",
+   "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, para o menor com dezesseis anos completos",
+   "aos dezoito anos completos",
+   "somente o menor de dezesseis anos"
+  ],
+  "correta": 1,
+  "materia": "DCIV",
+  "topico": null,
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Código Civil, art. 1.723",
+  "comentario": "A união estável é reconhecida como entidade familiar quando configurada na convivência pública, contínua e duradoura entre duas pessoas, estabelecida com o objetivo de constituição de família. Fundamento: Código Civil, art. 1.723."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-000-A",
+  "enunciado": "Qual é o prazo para apresentar contestação no processo civil?",
+  "alternativas": [
+   "quinze dias úteis",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 335",
+  "comentario": "O réu deve apresentar contestação no prazo de quinze dias úteis, contados da data da audiência de conciliação ou da juntada do comprovante de citação, na forma da lei processual. Fundamento: CPC/2015, art. 335."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o prazo para apresentar contestação no processo civil?",
+  "alternativas": [
+   "cinco dias úteis",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "quinze dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 335",
+  "comentario": "O réu deve apresentar contestação no prazo de quinze dias úteis, contados da data da audiência de conciliação ou da juntada do comprovante de citação, na forma da lei processual. Fundamento: CPC/2015, art. 335."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-000-C",
+  "enunciado": "A resposta \"quinze dias úteis\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Qual é o prazo para apresentar contestação no processo civil?",
+   "Como os prazos processuais são contados no processo civil?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "Qual é o prazo para a ação rescisória?"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 335",
+  "comentario": "O réu deve apresentar contestação no prazo de quinze dias úteis, contados da data da audiência de conciliação ou da juntada do comprovante de citação, na forma da lei processual. Fundamento: CPC/2015, art. 335."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-001-A",
+  "enunciado": "Qual é o prazo para interpor apelação?",
+  "alternativas": [
+   "dois anos, contados do trânsito em julgado da decisão",
+   "cinco dias úteis",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.003, § 5º",
+  "comentario": "A apelação deve ser interposta no prazo de quinze dias úteis, contados da intimação da sentença, e, nos autos do processo, deve ser apresentada com as razões do recurso. Fundamento: CPC/2015, art. 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o prazo para interpor apelação?",
+  "alternativas": [
+   "cinco dias úteis",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.003, § 5º",
+  "comentario": "A apelação deve ser interposta no prazo de quinze dias úteis, contados da intimação da sentença, e, nos autos do processo, deve ser apresentada com as razões do recurso. Fundamento: CPC/2015, art. 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-001-C",
+  "enunciado": "A resposta \"quinze dias úteis\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "O que é a tutela provisória de evidência?",
+   "Qual é o prazo para a ação rescisória?",
+   "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "Qual é o prazo para interpor apelação?"
+  ],
+  "correta": 4,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.003, § 5º",
+  "comentario": "A apelação deve ser interposta no prazo de quinze dias úteis, contados da intimação da sentença, e, nos autos do processo, deve ser apresentada com as razões do recurso. Fundamento: CPC/2015, art. 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-002-A",
+  "enunciado": "Qual é o prazo para opor embargos de declaração?",
+  "alternativas": [
+   "dois anos, contados do trânsito em julgado da decisão",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.023",
+  "comentario": "Os embargos de declaração devem ser opostos no prazo de cinco dias úteis, contados da intimação da decisão, para sanar obscuridade, omissão, contradição ou erro material. Fundamento: CPC/2015, art. 1.023."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o prazo para opor embargos de declaração?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "quinze dias úteis",
+   "cinco dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.023",
+  "comentario": "Os embargos de declaração devem ser opostos no prazo de cinco dias úteis, contados da intimação da decisão, para sanar obscuridade, omissão, contradição ou erro material. Fundamento: CPC/2015, art. 1.023."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-002-C",
+  "enunciado": "A resposta \"cinco dias úteis\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Qual é o prazo para interpor apelação?",
+   "Qual é o prazo para a ação rescisória?",
+   "Qual é o prazo para apresentar contestação no processo civil?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "Qual é o prazo para interpor agravo de instrumento?"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.023",
+  "comentario": "Os embargos de declaração devem ser opostos no prazo de cinco dias úteis, contados da intimação da decisão, para sanar obscuridade, omissão, contradição ou erro material. Fundamento: CPC/2015, art. 1.023."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-003-A",
+  "enunciado": "Como os prazos processuais são contados no processo civil?",
+  "alternativas": [
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "expor os fatos conforme a verdade, não formular pretensões destituídas de fundamento e não produzir provas inúteis, entre outros",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Atos processuais: forma, tempo, lugar, prazos, comunicações e nulidades",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 219",
+  "comentario": "Os prazos processuais são contados somente em dias úteis, excluindo o dia do começo e incluindo o do vencimento, conforme o art. 219 do CPC, salvo disposição em sentido diverso. Fundamento: CPC/2015, art. 219."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Como os prazos processuais são contados no processo civil?",
+  "alternativas": [
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis",
+   "cinco dias úteis",
+   "expor os fatos conforme a verdade, não formular pretensões destituídas de fundamento e não produzir provas inúteis, entre outros",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 4,
+  "materia": "DPCIV",
+  "topico": "Atos processuais: forma, tempo, lugar, prazos, comunicações e nulidades",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 219",
+  "comentario": "Os prazos processuais são contados somente em dias úteis, excluindo o dia do começo e incluindo o do vencimento, conforme o art. 219 do CPC, salvo disposição em sentido diverso. Fundamento: CPC/2015, art. 219."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-003-C",
+  "enunciado": "A resposta \"em dias úteis, excluindo o dia do começo e incluindo o do vencimento\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os deveres das partes no processo civil?",
+   "Como os prazos processuais são contados no processo civil?",
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Quais são os efeitos da revelia no processo civil?",
+   "Quais são os recursos previstos no Código de Processo Civil de 2015?"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Atos processuais: forma, tempo, lugar, prazos, comunicações e nulidades",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 219",
+  "comentario": "Os prazos processuais são contados somente em dias úteis, excluindo o dia do começo e incluindo o do vencimento, conforme o art. 219 do CPC, salvo disposição em sentido diverso. Fundamento: CPC/2015, art. 219."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-004-A",
+  "enunciado": "Quais são os requisitos da petição inicial no processo civil?",
+  "alternativas": [
+   "se ambas as partes manifestarem desinteresse ou se o litígio não admitir autocomposição",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 319",
+  "comentario": "A petição inicial indicará o juízo, qualificará as partes, conterá os fatos e os fundamentos jurídicos do pedido, o pedido com suas especificações, o valor da causa, as provas pretendidas e a opção pela realização de audiência de conciliação ou mediação. Fundamento: CPC/2015, art. 319."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-004-B",
+  "enunciado": "Assinale a alternativa correta. Quais são os requisitos da petição inicial no processo civil?",
+  "alternativas": [
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "quinze dias úteis",
+   "se ambas as partes manifestarem desinteresse ou se o litígio não admitir autocomposição"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 319",
+  "comentario": "A petição inicial indicará o juízo, qualificará as partes, conterá os fatos e os fundamentos jurídicos do pedido, o pedido com suas especificações, o valor da causa, as provas pretendidas e a opção pela realização de audiência de conciliação ou mediação. Fundamento: CPC/2015, art. 319."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-004-C",
+  "enunciado": "A resposta \"indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Como os prazos processuais são contados no processo civil?",
+   "Quais são os efeitos da revelia no processo civil?",
+   "Quais são os deveres das partes no processo civil?",
+   "Quais são os recursos previstos no Código de Processo Civil de 2015?"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 319",
+  "comentario": "A petição inicial indicará o juízo, qualificará as partes, conterá os fatos e os fundamentos jurídicos do pedido, o pedido com suas especificações, o valor da causa, as provas pretendidas e a opção pela realização de audiência de conciliação ou mediação. Fundamento: CPC/2015, art. 319."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-005-A",
+  "enunciado": "Em que hipótese a audiência de conciliação ou mediação não será realizada?",
+  "alternativas": [
+   "cinco dias úteis",
+   "se ambas as partes manifestarem desinteresse ou se o litígio não admitir autocomposição",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 4º",
+  "comentario": "A audiência de conciliação ou mediação não será realizada se ambas as partes manifestarem, expressamente, desinteresse na composição consensual ou quando não se admitir a autocomposição. Fundamento: CPC/2015, art. 334, § 4º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Em que hipótese a audiência de conciliação ou mediação não será realizada?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "cinco dias úteis",
+   "quinze dias úteis",
+   "se ambas as partes manifestarem desinteresse ou se o litígio não admitir autocomposição"
+  ],
+  "correta": 4,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 4º",
+  "comentario": "A audiência de conciliação ou mediação não será realizada se ambas as partes manifestarem, expressamente, desinteresse na composição consensual ou quando não se admitir a autocomposição. Fundamento: CPC/2015, art. 334, § 4º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-005-C",
+  "enunciado": "A resposta \"se ambas as partes manifestarem desinteresse ou se o litígio não admitir autocomposição\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Em que hipótese a audiência de conciliação ou mediação não será realizada?",
+   "O que é a tutela provisória de evidência?",
+   "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+   "Como se dá a audiência de conciliação quanto ao comparecimento das partes?",
+   "Qual é o prazo para opor embargos de declaração?"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 4º",
+  "comentario": "A audiência de conciliação ou mediação não será realizada se ambas as partes manifestarem, expressamente, desinteresse na composição consensual ou quando não se admitir a autocomposição. Fundamento: CPC/2015, art. 334, § 4º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-006-A",
+  "enunciado": "Quais são os efeitos da revelia no processo civil?",
+  "alternativas": [
+   "quinze dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "cinco dias úteis",
+   "presume-se verdadeiras as alegações de fato da inicial, salvo exceções legais",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 344 e 345",
+  "comentario": "A revelia produz o efeito de presumirem-se verdadeiras as alegações de fato formuladas pelo autor, salvo nas hipóteses legais de exceção, como pluralidade de réus com defesa divergente e direitos indisponíveis. Fundamento: CPC/2015, art. 344 e 345."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-006-B",
+  "enunciado": "Assinale a alternativa correta. Quais são os efeitos da revelia no processo civil?",
+  "alternativas": [
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "presume-se verdadeiras as alegações de fato da inicial, salvo exceções legais",
+   "cinco dias úteis",
+   "quinze dias úteis"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 344 e 345",
+  "comentario": "A revelia produz o efeito de presumirem-se verdadeiras as alegações de fato formuladas pelo autor, salvo nas hipóteses legais de exceção, como pluralidade de réus com defesa divergente e direitos indisponíveis. Fundamento: CPC/2015, art. 344 e 345."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-006-C",
+  "enunciado": "A resposta \"presume-se verdadeiras as alegações de fato da inicial, salvo exceções legais\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os recursos previstos no Código de Processo Civil de 2015?",
+   "Quais são os deveres das partes no processo civil?",
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Quais são os efeitos da revelia no processo civil?",
+   "Como os prazos processuais são contados no processo civil?"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Contestação, reconvenção, revelia e audiência de instrução",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 344 e 345",
+  "comentario": "A revelia produz o efeito de presumirem-se verdadeiras as alegações de fato formuladas pelo autor, salvo nas hipóteses legais de exceção, como pluralidade de réus com defesa divergente e direitos indisponíveis. Fundamento: CPC/2015, art. 344 e 345."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-007-A",
+  "enunciado": "Quais são os recursos previstos no Código de Processo Civil de 2015?",
+  "alternativas": [
+   "apelação, agravo de instrumento, agravo interno, embargos de declaração, recurso ordinário, recurso especial, recurso extraordinário, agravo em recurso especial ou extraordinário e embargos de divergência",
+   "quinze dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 994",
+  "comentario": "São recursos previstos no CPC a apelação, o agravo de instrumento, o agravo interno, os embargos de declaração, o recurso ordinário, o recurso especial, o recurso extraordinário, o agravo em recurso especial ou extraordinário e os embargos de divergência. Fundamento: CPC/2015, art. 994."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Quais são os recursos previstos no Código de Processo Civil de 2015?",
+  "alternativas": [
+   "apelação, agravo de instrumento, agravo interno, embargos de declaração, recurso ordinário, recurso especial, recurso extraordinário, agravo em recurso especial ou extraordinário e embargos de divergência",
+   "quinze dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 994",
+  "comentario": "São recursos previstos no CPC a apelação, o agravo de instrumento, o agravo interno, os embargos de declaração, o recurso ordinário, o recurso especial, o recurso extraordinário, o agravo em recurso especial ou extraordinário e os embargos de divergência. Fundamento: CPC/2015, art. 994."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-007-C",
+  "enunciado": "A resposta \"apelação, agravo de instrumento, agravo interno, embargos de declaração, recurso ordinário, recurso especial, recurso extraordinário, agravo em recurso especial ou extraordinário e embargos de divergência\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Quais são os deveres das partes no processo civil?",
+   "Como os prazos processuais são contados no processo civil?",
+   "Quais são os efeitos da revelia no processo civil?",
+   "Quais são os recursos previstos no Código de Processo Civil de 2015?"
+  ],
+  "correta": 4,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 994",
+  "comentario": "São recursos previstos no CPC a apelação, o agravo de instrumento, o agravo interno, os embargos de declaração, o recurso ordinário, o recurso especial, o recurso extraordinário, o agravo em recurso especial ou extraordinário e os embargos de divergência. Fundamento: CPC/2015, art. 994."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-008-A",
+  "enunciado": "Qual é o prazo para a ação rescisória?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "quinze dias úteis",
+   "a tutela concedida quando as provas produzidas evidenciarem a probabilidade do direito, independentemente do perigo de dano",
+   "cinco dias úteis"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 975",
+  "comentario": "A ação rescisória deve ser proposta no prazo de dois anos, contados do trânsito em julgado da decisão de mérito, na forma do art. 975 do CPC. Fundamento: CPC/2015, art. 975."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-008-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o prazo para a ação rescisória?",
+  "alternativas": [
+   "a tutela concedida quando as provas produzidas evidenciarem a probabilidade do direito, independentemente do perigo de dano",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "quinze dias úteis"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 975",
+  "comentario": "A ação rescisória deve ser proposta no prazo de dois anos, contados do trânsito em julgado da decisão de mérito, na forma do art. 975 do CPC. Fundamento: CPC/2015, art. 975."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-008-C",
+  "enunciado": "A resposta \"dois anos, contados do trânsito em julgado da decisão\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Qual é o prazo para interpor agravo de instrumento?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "Qual é o prazo para apresentar contestação no processo civil?",
+   "Qual é o prazo para a ação rescisória?",
+   "Qual é o prazo para interpor apelação?"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 975",
+  "comentario": "A ação rescisória deve ser proposta no prazo de dois anos, contados do trânsito em julgado da decisão de mérito, na forma do art. 975 do CPC. Fundamento: CPC/2015, art. 975."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-009-A",
+  "enunciado": "Qual é o prazo para interpor agravo de instrumento?",
+  "alternativas": [
+   "dois anos, contados do trânsito em julgado da decisão",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis",
+   "quinze dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.015 e 1.003, § 5º",
+  "comentario": "O agravo de instrumento deve ser interposto no prazo de quinze dias úteis, por meio de petição que indicará os nomes e endereços das partes e do processo de origem. Fundamento: CPC/2015, art. 1.015 e 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o prazo para interpor agravo de instrumento?",
+  "alternativas": [
+   "cinco dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "quinze dias úteis",
+   "dois anos, contados do trânsito em julgado da decisão"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.015 e 1.003, § 5º",
+  "comentario": "O agravo de instrumento deve ser interposto no prazo de quinze dias úteis, por meio de petição que indicará os nomes e endereços das partes e do processo de origem. Fundamento: CPC/2015, art. 1.015 e 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-009-C",
+  "enunciado": "A resposta \"quinze dias úteis\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Qual é o prazo para interpor agravo de instrumento?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "O que é a tutela provisória de evidência?",
+   "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+   "Qual é o prazo para a ação rescisória?"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processos nos tribunais, recursos e ações de impugnação",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 1.015 e 1.003, § 5º",
+  "comentario": "O agravo de instrumento deve ser interposto no prazo de quinze dias úteis, por meio de petição que indicará os nomes e endereços das partes e do processo de origem. Fundamento: CPC/2015, art. 1.015 e 1.003, § 5º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-010-A",
+  "enunciado": "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+  "alternativas": [
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, podendo o juiz modular efeitos quando necessário",
+   "cinco dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Jurisprudência dos tribunais superiores",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, arts. 926 e 927",
+  "comentario": "Os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, cabendo ao juiz, na aplicação dos precedentes, observar a modulação de efeitos quando as circunstâncias exigirem, em respeito à segurança jurídica. Fundamento: CPC/2015, arts. 926 e 927."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-010-B",
+  "enunciado": "Assinale a alternativa correta. Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, podendo o juiz modular efeitos quando necessário",
+   "quinze dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Jurisprudência dos tribunais superiores",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, arts. 926 e 927",
+  "comentario": "Os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, cabendo ao juiz, na aplicação dos precedentes, observar a modulação de efeitos quando as circunstâncias exigirem, em respeito à segurança jurídica. Fundamento: CPC/2015, arts. 926 e 927."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-010-C",
+  "enunciado": "A resposta \"os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, podendo o juiz modular efeitos quando necessário\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Em que hipótese a audiência de conciliação ou mediação não será realizada?",
+   "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+   "Como os prazos processuais são contados no processo civil?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "Quais são os efeitos da revelia no processo civil?"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Jurisprudência dos tribunais superiores",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, arts. 926 e 927",
+  "comentario": "Os tribunais devem uniformizar sua jurisprudência e mantê-la estável, íntegra e coerente, cabendo ao juiz, na aplicação dos precedentes, observar a modulação de efeitos quando as circunstâncias exigirem, em respeito à segurança jurídica. Fundamento: CPC/2015, arts. 926 e 927."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-011-A",
+  "enunciado": "Como se dá a audiência de conciliação quanto ao comparecimento das partes?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "a ausência injustificada do autor ou do réu é considerada ato atentatório à dignidade da justiça",
+   "quinze dias úteis"
+  ],
+  "correta": 3,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 8º",
+  "comentario": "A ausência injustificada do autor ou do réu à audiência de conciliação ou mediação é considerada ato atentatório à dignidade da justiça, podendo ser sancionada com multa de até dois por cento do valor da causa. Fundamento: CPC/2015, art. 334, § 8º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Como se dá a audiência de conciliação quanto ao comparecimento das partes?",
+  "alternativas": [
+   "a ausência injustificada do autor ou do réu é considerada ato atentatório à dignidade da justiça",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 8º",
+  "comentario": "A ausência injustificada do autor ou do réu à audiência de conciliação ou mediação é considerada ato atentatório à dignidade da justiça, podendo ser sancionada com multa de até dois por cento do valor da causa. Fundamento: CPC/2015, art. 334, § 8º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-011-C",
+  "enunciado": "A resposta \"a ausência injustificada do autor ou do réu é considerada ato atentatório à dignidade da justiça\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Como o juiz pode modular os efeitos de suas decisões em controle de precedentes?",
+   "Como se dá a audiência de conciliação quanto ao comparecimento das partes?",
+   "O que é a tutela provisória de evidência?",
+   "Quais são os deveres das partes no processo civil?",
+   "Em que hipótese a audiência de conciliação ou mediação não será realizada?"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 334, § 8º",
+  "comentario": "A ausência injustificada do autor ou do réu à audiência de conciliação ou mediação é considerada ato atentatório à dignidade da justiça, podendo ser sancionada com multa de até dois por cento do valor da causa. Fundamento: CPC/2015, art. 334, § 8º."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-012-A",
+  "enunciado": "Quais são os deveres das partes no processo civil?",
+  "alternativas": [
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "expor os fatos conforme a verdade, não formular pretensões destituídas de fundamento e não produzir provas inúteis, entre outros",
+   "quinze dias úteis",
+   "cinco dias úteis"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Poderes, deveres e responsabilidade do juiz",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 77",
+  "comentario": "São deveres das partes e de todos que participam do processo expor os fatos em juízo conforme a verdade, não formular pretensão ou defesa destituída de fundamento, não produzir provas inúteis ou desnecessárias, cumprir com lealdade e boa-fé, entre outros. Fundamento: CPC/2015, art. 77."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-012-B",
+  "enunciado": "Assinale a alternativa correta. Quais são os deveres das partes no processo civil?",
+  "alternativas": [
+   "expor os fatos conforme a verdade, não formular pretensões destituídas de fundamento e não produzir provas inúteis, entre outros",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "cinco dias úteis",
+   "indicação do juízo, qualificação das partes, fatos e fundamentos jurídicos, pedido, valor da causa, provas e opção pela audiência de conciliação",
+   "quinze dias úteis"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Poderes, deveres e responsabilidade do juiz",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 77",
+  "comentario": "São deveres das partes e de todos que participam do processo expor os fatos em juízo conforme a verdade, não formular pretensão ou defesa destituída de fundamento, não produzir provas inúteis ou desnecessárias, cumprir com lealdade e boa-fé, entre outros. Fundamento: CPC/2015, art. 77."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-012-C",
+  "enunciado": "A resposta \"expor os fatos conforme a verdade, não formular pretensões destituídas de fundamento e não produzir provas inúteis, entre outros\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Quais são os recursos previstos no Código de Processo Civil de 2015?",
+   "Quais são os deveres das partes no processo civil?",
+   "Quais são os efeitos da revelia no processo civil?",
+   "Quais são os requisitos da petição inicial no processo civil?",
+   "Como os prazos processuais são contados no processo civil?"
+  ],
+  "correta": 1,
+  "materia": "DPCIV",
+  "topico": "Poderes, deveres e responsabilidade do juiz",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 77",
+  "comentario": "São deveres das partes e de todos que participam do processo expor os fatos em juízo conforme a verdade, não formular pretensão ou defesa destituída de fundamento, não produzir provas inúteis ou desnecessárias, cumprir com lealdade e boa-fé, entre outros. Fundamento: CPC/2015, art. 77."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-013-A",
+  "enunciado": "O que é a tutela provisória de evidência?",
+  "alternativas": [
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento",
+   "quinze dias úteis",
+   "a tutela concedida quando as provas produzidas evidenciarem a probabilidade do direito, independentemente do perigo de dano",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "cinco dias úteis"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Tutela provisória: tutela de urgência",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 311",
+  "comentario": "A tutela provisória de evidência é concedida quando as provas produzidas nos autos demonstrarem a probabilidade do direito, sem a necessidade de se demonstrar o perigo de dano ou risco ao resultado útil do processo. Fundamento: CPC/2015, art. 311."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-013-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. O que é a tutela provisória de evidência?",
+  "alternativas": [
+   "a tutela concedida quando as provas produzidas evidenciarem a probabilidade do direito, independentemente do perigo de dano",
+   "dois anos, contados do trânsito em julgado da decisão",
+   "cinco dias úteis",
+   "quinze dias úteis",
+   "em dias úteis, excluindo o dia do começo e incluindo o do vencimento"
+  ],
+  "correta": 0,
+  "materia": "DPCIV",
+  "topico": "Tutela provisória: tutela de urgência",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 311",
+  "comentario": "A tutela provisória de evidência é concedida quando as provas produzidas nos autos demonstrarem a probabilidade do direito, sem a necessidade de se demonstrar o perigo de dano ou risco ao resultado útil do processo. Fundamento: CPC/2015, art. 311."
+ },
+ {
+  "id": "F05-cpc_prazos_recursos-013-C",
+  "enunciado": "A resposta \"a tutela concedida quando as provas produzidas evidenciarem a probabilidade do direito, independentemente do perigo de dano\" corresponde a qual dos questionamentos a seguir? (Tema: Prazos e recursos no Código de Processo Civil.)",
+  "alternativas": [
+   "Qual é o prazo para interpor agravo de instrumento?",
+   "Qual é o prazo para opor embargos de declaração?",
+   "O que é a tutela provisória de evidência?",
+   "Qual é o prazo para a ação rescisória?",
+   "Em que hipótese a audiência de conciliação ou mediação não será realizada?"
+  ],
+  "correta": 2,
+  "materia": "DPCIV",
+  "topico": "Tutela provisória: tutela de urgência",
+  "dif": "dificil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "CPC/2015, art. 311",
+  "comentario": "A tutela provisória de evidência é concedida quando as provas produzidas nos autos demonstrarem a probabilidade do direito, sem a necessidade de se demonstrar o perigo de dano ou risco ao resultado útil do processo. Fundamento: CPC/2015, art. 311."
+ }
+]

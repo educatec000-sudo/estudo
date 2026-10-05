@@ -1,0 +1,2542 @@
+[
+ {
+  "id": "F12-rl_porcentagem-000-A",
+  "enunciado": "Quanto é 20% de 350?",
+  "alternativas": [
+   "70",
+   "R$ 1.320,00",
+   "10",
+   "R$ 60,00",
+   "30"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "20% de 350 corresponde a 0,20 × 350 = 70. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-000-B",
+  "enunciado": "Assinale a alternativa correta. Quanto é 20% de 350?",
+  "alternativas": [
+   "30",
+   "10",
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "70"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "20% de 350 corresponde a 0,20 × 350 = 70. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-001-A",
+  "enunciado": "Quanto é 15% de 200?",
+  "alternativas": [
+   "70",
+   "30",
+   "10",
+   "R$ 60,00",
+   "R$ 1.320,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "15% de 200 corresponde a 0,15 × 200 = 30. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Quanto é 15% de 200?",
+  "alternativas": [
+   "R$ 60,00",
+   "70",
+   "10",
+   "30",
+   "R$ 1.320,00"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "15% de 200 corresponde a 0,15 × 200 = 30. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-002-A",
+  "enunciado": "Um produto de R$ 80,00 recebe desconto de 25%. Qual é o valor final?",
+  "alternativas": [
+   "R$ 1.500,00",
+   "R$ 240,00",
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "70"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem e desconto",
+  "comentario": "O desconto é de 25% de 80 = 20, logo o valor final é 80 − 20 = R$ 60,00. Fundamento: Aritmética: porcentagem e desconto."
+ },
+ {
+  "id": "F12-rl_porcentagem-002-B",
+  "enunciado": "Assinale a alternativa correta. Um produto de R$ 80,00 recebe desconto de 25%. Qual é o valor final?",
+  "alternativas": [
+   "R$ 1.320,00",
+   "R$ 240,00",
+   "70",
+   "R$ 60,00",
+   "R$ 1.500,00"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem e desconto",
+  "comentario": "O desconto é de 25% de 80 = 20, logo o valor final é 80 − 20 = R$ 60,00. Fundamento: Aritmética: porcentagem e desconto."
+ },
+ {
+  "id": "F12-rl_porcentagem-003-A",
+  "enunciado": "Um salário de R$ 1.200,00 recebe aumento de 10%. Qual é o novo valor?",
+  "alternativas": [
+   "1/4",
+   "R$ 1.500,00",
+   "R$ 1.320,00",
+   "R$ 240,00",
+   "R$ 60,00"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem e acréscimo",
+  "comentario": "O aumento é de 10% de 1.200 = 120, logo o novo valor é 1.200 + 120 = R$ 1.320,00. Fundamento: Aritmética: porcentagem e acréscimo."
+ },
+ {
+  "id": "F12-rl_porcentagem-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Um salário de R$ 1.200,00 recebe aumento de 10%. Qual é o novo valor?",
+  "alternativas": [
+   "R$ 60,00",
+   "R$ 240,00",
+   "R$ 1.500,00",
+   "1/4",
+   "R$ 1.320,00"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem e acréscimo",
+  "comentario": "O aumento é de 10% de 1.200 = 120, logo o novo valor é 1.200 + 120 = R$ 1.320,00. Fundamento: Aritmética: porcentagem e acréscimo."
+ },
+ {
+  "id": "F12-rl_porcentagem-004-A",
+  "enunciado": "Quanto é 2,5% de 400?",
+  "alternativas": [
+   "30",
+   "R$ 1.320,00",
+   "R$ 60,00",
+   "10",
+   "70"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "2,5% de 400 corresponde a 0,025 × 400 = 10. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-004-B",
+  "enunciado": "Assinale a alternativa correta. Quanto é 2,5% de 400?",
+  "alternativas": [
+   "R$ 60,00",
+   "10",
+   "R$ 1.320,00",
+   "30",
+   "70"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: cálculo de porcentagem",
+  "comentario": "2,5% de 400 corresponde a 0,025 × 400 = 10. Fundamento: Aritmética: cálculo de porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-005-A",
+  "enunciado": "A fração 3/4 corresponde a quantos por cento?",
+  "alternativas": [
+   "R$ 60,00",
+   "75%",
+   "70",
+   "R$ 1.320,00",
+   "30"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações e porcentagem",
+  "comentario": "3/4 = 0,75, que corresponde a 75%. Fundamento: Aritmética: frações e porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. A fração 3/4 corresponde a quantos por cento?",
+  "alternativas": [
+   "75%",
+   "30",
+   "R$ 60,00",
+   "70",
+   "R$ 1.320,00"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações e porcentagem",
+  "comentario": "3/4 = 0,75, que corresponde a 75%. Fundamento: Aritmética: frações e porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-006-A",
+  "enunciado": "O número decimal 0,25 corresponde a qual fração irredutível?",
+  "alternativas": [
+   "R$ 1.320,00",
+   "70",
+   "1/4",
+   "R$ 1.500,00",
+   "30"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações e decimais",
+  "comentario": "0,25 = 25/100, que simplificado por 25 resulta em 1/4. Fundamento: Aritmética: frações e decimais."
+ },
+ {
+  "id": "F12-rl_porcentagem-006-B",
+  "enunciado": "Assinale a alternativa correta. O número decimal 0,25 corresponde a qual fração irredutível?",
+  "alternativas": [
+   "R$ 1.320,00",
+   "1/4",
+   "30",
+   "70",
+   "R$ 1.500,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações e decimais",
+  "comentario": "0,25 = 25/100, que simplificado por 25 resulta em 1/4. Fundamento: Aritmética: frações e decimais."
+ },
+ {
+  "id": "F12-rl_porcentagem-007-A",
+  "enunciado": "Quanto é 1/3 de 90?",
+  "alternativas": [
+   "R$ 60,00",
+   "30",
+   "70",
+   "R$ 1.320,00",
+   "10"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações",
+  "comentario": "Um terço de 90 corresponde a 90 ÷ 3 = 30. Fundamento: Aritmética: frações."
+ },
+ {
+  "id": "F12-rl_porcentagem-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Quanto é 1/3 de 90?",
+  "alternativas": [
+   "10",
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "70",
+   "30"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: frações",
+  "comentario": "Um terço de 90 corresponde a 90 ÷ 3 = 30. Fundamento: Aritmética: frações."
+ },
+ {
+  "id": "F12-rl_porcentagem-008-A",
+  "enunciado": "Um servidor gastou 40% do seu salário de R$ 2.500,00. Quanto sobrou?",
+  "alternativas": [
+   "R$ 1.500,00",
+   "R$ 1.320,00",
+   "1/4",
+   "R$ 240,00",
+   "R$ 60,00"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem",
+  "comentario": "40% de 2.500 = 1.000, e o que sobrou corresponde a 2.500 − 1.000 = R$ 1.500,00, ou 60% do total. Fundamento: Aritmética: porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-008-B",
+  "enunciado": "Assinale a alternativa correta. Um servidor gastou 40% do seu salário de R$ 2.500,00. Quanto sobrou?",
+  "alternativas": [
+   "1/4",
+   "R$ 1.500,00",
+   "R$ 60,00",
+   "R$ 240,00",
+   "R$ 1.320,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem",
+  "comentario": "40% de 2.500 = 1.000, e o que sobrou corresponde a 2.500 − 1.000 = R$ 1.500,00, ou 60% do total. Fundamento: Aritmética: porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-009-A",
+  "enunciado": "Um valor de R$ 250,00 sofre acréscimo de 20% e, em seguida, desconto de 20% sobre o novo valor. Qual é o valor final?",
+  "alternativas": [
+   "R$ 240,00",
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "70",
+   "R$ 1.500,00"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem (acréscimos e descontos sucessivos",
+  "comentario": "Com o acréscimo, o valor passa a 300; o desconto de 20% sobre 300 dá 60, resultando em R$ 240,00 — menos que o valor inicial, pois as bases de cálculo são diferentes. Fundamento: Aritmética: porcentagem (acréscimos e descontos sucessivos)."
+ },
+ {
+  "id": "F12-rl_porcentagem-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Um valor de R$ 250,00 sofre acréscimo de 20% e, em seguida, desconto de 20% sobre o novo valor. Qual é o valor final?",
+  "alternativas": [
+   "R$ 1.500,00",
+   "70",
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "R$ 240,00"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem (acréscimos e descontos sucessivos",
+  "comentario": "Com o acréscimo, o valor passa a 300; o desconto de 20% sobre 300 dá 60, resultando em R$ 240,00 — menos que o valor inicial, pois as bases de cálculo são diferentes. Fundamento: Aritmética: porcentagem (acréscimos e descontos sucessivos)."
+ },
+ {
+  "id": "F12-rl_porcentagem-010-A",
+  "enunciado": "Quanto é 0,5% de 1.000?",
+  "alternativas": [
+   "R$ 60,00",
+   "5",
+   "70",
+   "30",
+   "R$ 1.320,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem",
+  "comentario": "0,5% de 1.000 corresponde a 0,005 × 1.000 = 5. Fundamento: Aritmética: porcentagem."
+ },
+ {
+  "id": "F12-rl_porcentagem-010-B",
+  "enunciado": "Assinale a alternativa correta. Quanto é 0,5% de 1.000?",
+  "alternativas": [
+   "R$ 60,00",
+   "R$ 1.320,00",
+   "5",
+   "70",
+   "30"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Porcentagem",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem",
+  "comentario": "0,5% de 1.000 corresponde a 0,005 × 1.000 = 5. Fundamento: Aritmética: porcentagem."
+ },
+ {
+  "id": "F12-rl_proporcao-000-A",
+  "enunciado": "Se 3 servidores protocolam 90 processos em um dia, quantos processos 5 servidores protocolam nas mesmas condições?",
+  "alternativas": [
+   "150 km",
+   "R$ 540,00",
+   "300 peças",
+   "150",
+   "80"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e proporção: regra de três",
+  "comentario": "Trata-se de grandezas diretamente proporcionais: 90 ÷ 3 = 30 processos por servidor, logo 5 × 30 = 150 processos. Fundamento: Razão e proporção: regra de três."
+ },
+ {
+  "id": "F12-rl_proporcao-000-B",
+  "enunciado": "Assinale a alternativa correta. Se 3 servidores protocolam 90 processos em um dia, quantos processos 5 servidores protocolam nas mesmas condições?",
+  "alternativas": [
+   "150 km",
+   "300 peças",
+   "80",
+   "R$ 540,00",
+   "150"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e proporção: regra de três",
+  "comentario": "Trata-se de grandezas diretamente proporcionais: 90 ÷ 3 = 30 processos por servidor, logo 5 × 30 = 150 processos. Fundamento: Razão e proporção: regra de três."
+ },
+ {
+  "id": "F12-rl_proporcao-001-A",
+  "enunciado": "Dividir R$ 900,00 em partes proporcionais a 2 e 3. Qual é a maior parte?",
+  "alternativas": [
+   "80",
+   "R$ 30,00",
+   "R$ 600,00",
+   "R$ 540,00",
+   "150"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Divisão proporcional",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Divisão proporcional",
+  "comentario": "A soma das partes da proporção é 2 + 3 = 5, logo cada unidade vale 180; a maior parte é 3 × 180 = R$ 540,00. Fundamento: Divisão proporcional."
+ },
+ {
+  "id": "F12-rl_proporcao-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Dividir R$ 900,00 em partes proporcionais a 2 e 3. Qual é a maior parte?",
+  "alternativas": [
+   "150",
+   "80",
+   "R$ 30,00",
+   "R$ 540,00",
+   "R$ 600,00"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Divisão proporcional",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Divisão proporcional",
+  "comentario": "A soma das partes da proporção é 2 + 3 = 5, logo cada unidade vale 180; a maior parte é 3 × 180 = R$ 540,00. Fundamento: Divisão proporcional."
+ },
+ {
+  "id": "F12-rl_proporcao-002-A",
+  "enunciado": "Dividir 120 em partes inversamente proporcionais a 2 e 4. Qual é a maior parte?",
+  "alternativas": [
+   "R$ 540,00",
+   "300 peças",
+   "150",
+   "4 horas",
+   "80"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Divisão proporcional",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Divisão proporcional inversa",
+  "comentario": "Inversamente proporcionais a 2 e 4 equivale a diretamente proporcionais a 1/2 e 1/4, ou seja, a 2 e 1; a soma é 3, cada unidade vale 40, e a maior parte é 2 × 40 = 80. Fundamento: Divisão proporcional inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-002-B",
+  "enunciado": "Assinale a alternativa correta. Dividir 120 em partes inversamente proporcionais a 2 e 4. Qual é a maior parte?",
+  "alternativas": [
+   "4 horas",
+   "R$ 540,00",
+   "80",
+   "300 peças",
+   "150"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Divisão proporcional",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Divisão proporcional inversa",
+  "comentario": "Inversamente proporcionais a 2 e 4 equivale a diretamente proporcionais a 1/2 e 1/4, ou seja, a 2 e 1; a soma é 3, cada unidade vale 40, e a maior parte é 2 × 40 = 80. Fundamento: Divisão proporcional inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-003-A",
+  "enunciado": "Se 4 máquinas produzem 200 peças em uma hora, quantas peças 6 máquinas produzem no mesmo tempo?",
+  "alternativas": [
+   "80",
+   "R$ 540,00",
+   "4 horas",
+   "150",
+   "300 peças"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples",
+  "comentario": "As grandezas são diretamente proporcionais: 200 ÷ 4 = 50 peças por máquina, e 6 × 50 = 300 peças. Fundamento: Regra de três simples."
+ },
+ {
+  "id": "F12-rl_proporcao-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se 4 máquinas produzem 200 peças em uma hora, quantas peças 6 máquinas produzem no mesmo tempo?",
+  "alternativas": [
+   "150",
+   "300 peças",
+   "R$ 540,00",
+   "80",
+   "4 horas"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples",
+  "comentario": "As grandezas são diretamente proporcionais: 200 ÷ 4 = 50 peças por máquina, e 6 × 50 = 300 peças. Fundamento: Regra de três simples."
+ },
+ {
+  "id": "F12-rl_proporcao-004-A",
+  "enunciado": "Se 2 torneiras de mesma vazão enchem um tanque em 6 horas, em quanto tempo 3 torneiras iguais enchem o mesmo tanque?",
+  "alternativas": [
+   "150",
+   "4 horas",
+   "2 horas",
+   "80",
+   "R$ 540,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "As grandezas são inversamente proporcionais: 2 × 6 = 12 torneira-horas, e 12 ÷ 3 = 4 horas. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-004-B",
+  "enunciado": "Assinale a alternativa correta. Se 2 torneiras de mesma vazão enchem um tanque em 6 horas, em quanto tempo 3 torneiras iguais enchem o mesmo tanque?",
+  "alternativas": [
+   "2 horas",
+   "4 horas",
+   "R$ 540,00",
+   "150",
+   "80"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "As grandezas são inversamente proporcionais: 2 × 6 = 12 torneira-horas, e 12 ÷ 3 = 4 horas. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-005-A",
+  "enunciado": "Se 5 pessoas fazem um trabalho em 12 dias, em quantos dias 6 pessoas farão o mesmo trabalho no mesmo ritmo?",
+  "alternativas": [
+   "R$ 540,00",
+   "10 dias",
+   "80",
+   "300 peças",
+   "150"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "As grandezas são inversamente proporcionais: 5 × 12 = 60 pessoas-dia, e 60 ÷ 6 = 10 dias. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se 5 pessoas fazem um trabalho em 12 dias, em quantos dias 6 pessoas farão o mesmo trabalho no mesmo ritmo?",
+  "alternativas": [
+   "150",
+   "80",
+   "10 dias",
+   "R$ 540,00",
+   "300 peças"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "As grandezas são inversamente proporcionais: 5 × 12 = 60 pessoas-dia, e 60 ÷ 6 = 10 dias. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-006-A",
+  "enunciado": "Um trajeto é percorrido em 3 horas a 80 km/h. Qual será o tempo a 120 km/h?",
+  "alternativas": [
+   "80",
+   "2 horas",
+   "R$ 540,00",
+   "4 horas",
+   "150"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "A distância é 3 × 80 = 240 km; a 120 km/h, o tempo é 240 ÷ 120 = 2 horas, pois velocidade e tempo são inversamente proporcionais. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-006-B",
+  "enunciado": "Assinale a alternativa correta. Um trajeto é percorrido em 3 horas a 80 km/h. Qual será o tempo a 120 km/h?",
+  "alternativas": [
+   "4 horas",
+   "2 horas",
+   "80",
+   "150",
+   "R$ 540,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "A distância é 3 × 80 = 240 km; a 120 km/h, o tempo é 240 ÷ 120 = 2 horas, pois velocidade e tempo são inversamente proporcionais. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-007-A",
+  "enunciado": "Um carro a 60 km/h percorre qual distância em 2 horas e meia?",
+  "alternativas": [
+   "80",
+   "150",
+   "150 km",
+   "R$ 540,00",
+   "300 peças"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Grandezas: velocidade, tempo e distância",
+  "comentario": "A distância é dada por velocidade × tempo: 60 × 2,5 = 150 km. Fundamento: Grandezas: velocidade, tempo e distância."
+ },
+ {
+  "id": "F12-rl_proporcao-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Um carro a 60 km/h percorre qual distância em 2 horas e meia?",
+  "alternativas": [
+   "R$ 540,00",
+   "300 peças",
+   "150 km",
+   "150",
+   "80"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Grandezas: velocidade, tempo e distância",
+  "comentario": "A distância é dada por velocidade × tempo: 60 × 2,5 = 150 km. Fundamento: Grandezas: velocidade, tempo e distância."
+ },
+ {
+  "id": "F12-rl_proporcao-008-A",
+  "enunciado": "Se 8 operários constroem um muro em 15 dias, quantos dias 12 operários levarão para o mesmo muro, no mesmo ritmo?",
+  "alternativas": [
+   "150",
+   "10 dias",
+   "R$ 540,00",
+   "300 peças",
+   "80"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "8 × 15 = 120 operário-dia; 120 ÷ 12 = 10 dias, pois operários e dias são inversamente proporcionais. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-008-B",
+  "enunciado": "Assinale a alternativa correta. Se 8 operários constroem um muro em 15 dias, quantos dias 12 operários levarão para o mesmo muro, no mesmo ritmo?",
+  "alternativas": [
+   "10 dias",
+   "300 peças",
+   "80",
+   "R$ 540,00",
+   "150"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Regra de três simples e composta",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Regra de três simples inversa",
+  "comentario": "8 × 15 = 120 operário-dia; 120 ÷ 12 = 10 dias, pois operários e dias são inversamente proporcionais. Fundamento: Regra de três simples inversa."
+ },
+ {
+  "id": "F12-rl_proporcao-009-A",
+  "enunciado": "Se 3 kg de um produto custam R$ 18,00, quanto custam 5 kg?",
+  "alternativas": [
+   "R$ 540,00",
+   "R$ 30,00",
+   "80",
+   "150",
+   "R$ 600,00"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e proporção",
+  "comentario": "O preço por quilo é 18 ÷ 3 = R$ 6,00; logo 5 kg custam 5 × 6 = R$ 30,00. Fundamento: Razão e proporção."
+ },
+ {
+  "id": "F12-rl_proporcao-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se 3 kg de um produto custam R$ 18,00, quanto custam 5 kg?",
+  "alternativas": [
+   "80",
+   "R$ 600,00",
+   "150",
+   "R$ 30,00",
+   "R$ 540,00"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e proporção",
+  "comentario": "O preço por quilo é 18 ÷ 3 = R$ 6,00; logo 5 kg custam 5 × 6 = R$ 30,00. Fundamento: Razão e proporção."
+ },
+ {
+  "id": "F12-rl_proporcao-010-A",
+  "enunciado": "Uma razão de 3 para 5 equivale a qual porcentagem?",
+  "alternativas": [
+   "150",
+   "60%",
+   "80",
+   "R$ 540,00",
+   "300 peças"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e porcentagem",
+  "comentario": "A razão 3/5 = 0,6, que corresponde a 60%. Fundamento: Razão e porcentagem."
+ },
+ {
+  "id": "F12-rl_proporcao-010-B",
+  "enunciado": "Assinale a alternativa correta. Uma razão de 3 para 5 equivale a qual porcentagem?",
+  "alternativas": [
+   "300 peças",
+   "R$ 540,00",
+   "150",
+   "80",
+   "60%"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Razão e porcentagem",
+  "comentario": "A razão 3/5 = 0,6, que corresponde a 60%. Fundamento: Razão e porcentagem."
+ },
+ {
+  "id": "F12-rl_proporcao-011-A",
+  "enunciado": "Se 2/5 de um valor correspondem a R$ 240,00, qual é o valor total?",
+  "alternativas": [
+   "150",
+   "80",
+   "R$ 30,00",
+   "R$ 600,00",
+   "R$ 540,00"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Proporção: fração de um total",
+  "comentario": "Se 2/5 equivalem a 240, então 1/5 equivale a 120 e o total (5/5) é 5 × 120 = R$ 600,00. Fundamento: Proporção: fração de um total."
+ },
+ {
+  "id": "F12-rl_proporcao-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se 2/5 de um valor correspondem a R$ 240,00, qual é o valor total?",
+  "alternativas": [
+   "150",
+   "R$ 30,00",
+   "R$ 540,00",
+   "80",
+   "R$ 600,00"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Números e grandezas proporcionais: razão e proporção",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Proporção: fração de um total",
+  "comentario": "Se 2/5 equivalem a 240, então 1/5 equivale a 120 e o total (5/5) é 5 × 120 = R$ 600,00. Fundamento: Proporção: fração de um total."
+ },
+ {
+  "id": "F12-rl_sequencias-000-A",
+  "enunciado": "Qual é o próximo termo da sequência 2, 6, 12, 20, 30, ...?",
+  "alternativas": [
+   "66",
+   "36",
+   "48",
+   "13",
+   "42"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "As diferenças entre os termos são 4, 6, 8, 10 e, em seguida, 12; logo o próximo termo é 30 + 12 = 42, seguindo o padrão de números retangulares. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o próximo termo da sequência 2, 6, 12, 20, 30, ...?",
+  "alternativas": [
+   "36",
+   "13",
+   "48",
+   "66",
+   "42"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "As diferenças entre os termos são 4, 6, 8, 10 e, em seguida, 12; logo o próximo termo é 30 + 12 = 42, seguindo o padrão de números retangulares. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-001-A",
+  "enunciado": "Qual é o próximo termo da sequência 1, 4, 9, 16, 25, ...?",
+  "alternativas": [
+   "36",
+   "66",
+   "13",
+   "42",
+   "48"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "A sequência apresenta os quadrados dos números naturais (1², 2², 3², 4², 5²); o próximo termo é 6² = 36. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o próximo termo da sequência 1, 4, 9, 16, 25, ...?",
+  "alternativas": [
+   "36",
+   "48",
+   "66",
+   "13",
+   "42"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "A sequência apresenta os quadrados dos números naturais (1², 2², 3², 4², 5²); o próximo termo é 6² = 36. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-002-A",
+  "enunciado": "Qual é o próximo termo da sequência 3, 6, 12, 24, ...?",
+  "alternativas": [
+   "13",
+   "48",
+   "36",
+   "66",
+   "42"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Cada termo é o dobro do anterior, logo o próximo termo é 24 × 2 = 48. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o próximo termo da sequência 3, 6, 12, 24, ...?",
+  "alternativas": [
+   "42",
+   "48",
+   "36",
+   "66",
+   "13"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Cada termo é o dobro do anterior, logo o próximo termo é 24 × 2 = 48. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-003-A",
+  "enunciado": "Qual é o próximo termo da sequência 1, 1, 2, 3, 5, 8, ...?",
+  "alternativas": [
+   "13",
+   "66",
+   "42",
+   "48",
+   "36"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Trata-se da sequência de Fibonacci, em que cada termo é a soma dos dois anteriores: 5 + 8 = 13. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o próximo termo da sequência 1, 1, 2, 3, 5, 8, ...?",
+  "alternativas": [
+   "48",
+   "13",
+   "42",
+   "66",
+   "36"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Trata-se da sequência de Fibonacci, em que cada termo é a soma dos dois anteriores: 5 + 8 = 13. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-004-A",
+  "enunciado": "Qual é o próximo termo da sequência 2, 3, 5, 7, 11, ...?",
+  "alternativas": [
+   "48",
+   "36",
+   "66",
+   "42",
+   "13"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "A sequência é formada pelos números primos, e o próximo primo após 11 é 13. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o próximo termo da sequência 2, 3, 5, 7, 11, ...?",
+  "alternativas": [
+   "66",
+   "13",
+   "48",
+   "36",
+   "42"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "A sequência é formada pelos números primos, e o próximo primo após 11 é 13. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-005-A",
+  "enunciado": "Qual é o próximo termo da sequência 100, 90, 81, 73, ...?",
+  "alternativas": [
+   "13",
+   "36",
+   "66",
+   "48",
+   "42"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "As diferenças são 10, 9, 8 e, em seguida, 7; logo o próximo termo é 73 − 7 = 66. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o próximo termo da sequência 100, 90, 81, 73, ...?",
+  "alternativas": [
+   "36",
+   "66",
+   "48",
+   "42",
+   "13"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "As diferenças são 10, 9, 8 e, em seguida, 7; logo o próximo termo é 73 − 7 = 66. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-006-A",
+  "enunciado": "Numa turma de 40 alunos, 25 estudam inglês, 18 estudam espanhol e 10 estudam os dois idiomas. Quantos alunos não estudam nenhum dos dois?",
+  "alternativas": [
+   "48",
+   "7",
+   "36",
+   "13",
+   "42"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Teoria dos conjuntos",
+  "comentario": "Pelo princípio da inclusão-exclusão, 25 + 18 − 10 = 33 estudam pelo menos um idioma; logo 40 − 33 = 7 não estudam nenhum. Fundamento: Teoria dos conjuntos."
+ },
+ {
+  "id": "F12-rl_sequencias-006-B",
+  "enunciado": "Assinale a alternativa correta. Numa turma de 40 alunos, 25 estudam inglês, 18 estudam espanhol e 10 estudam os dois idiomas. Quantos alunos não estudam nenhum dos dois?",
+  "alternativas": [
+   "36",
+   "42",
+   "7",
+   "13",
+   "48"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Teoria dos conjuntos",
+  "comentario": "Pelo princípio da inclusão-exclusão, 25 + 18 − 10 = 33 estudam pelo menos um idioma; logo 40 − 33 = 7 não estudam nenhum. Fundamento: Teoria dos conjuntos."
+ },
+ {
+  "id": "F12-rl_sequencias-007-A",
+  "enunciado": "Em um grupo de 50 pessoas, 30 falam inglês e 25 falam espanhol, e todas falam pelo menos um dos dois idiomas. Quantas pessoas falam os dois idiomas?",
+  "alternativas": [
+   "36",
+   "42",
+   "13",
+   "5",
+   "48"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Teoria dos conjuntos: princípio da inclusão-exclusão",
+  "comentario": "Pelo princípio da inclusão-exclusão, o número de pessoas que falam os dois idiomas é 30 + 25 − 50 = 5. Fundamento: Teoria dos conjuntos: princípio da inclusão-exclusão."
+ },
+ {
+  "id": "F12-rl_sequencias-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Em um grupo de 50 pessoas, 30 falam inglês e 25 falam espanhol, e todas falam pelo menos um dos dois idiomas. Quantas pessoas falam os dois idiomas?",
+  "alternativas": [
+   "36",
+   "13",
+   "48",
+   "42",
+   "5"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Teoria dos conjuntos: princípio da inclusão-exclusão",
+  "comentario": "Pelo princípio da inclusão-exclusão, o número de pessoas que falam os dois idiomas é 30 + 25 − 50 = 5. Fundamento: Teoria dos conjuntos: princípio da inclusão-exclusão."
+ },
+ {
+  "id": "F12-rl_sequencias-008-A",
+  "enunciado": "Se hoje é terça-feira, que dia da semana será daqui a 100 dias?",
+  "alternativas": [
+   "48",
+   "terça-feira",
+   "42",
+   "quinta-feira",
+   "36"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação temporal: congruência de dias",
+  "comentario": "100 dividido por 7 dá resto 2; avançando dois dias a partir de terça-feira, chega-se à quinta-feira. Fundamento: Orientação temporal: congruência de dias."
+ },
+ {
+  "id": "F12-rl_sequencias-008-B",
+  "enunciado": "Assinale a alternativa correta. Se hoje é terça-feira, que dia da semana será daqui a 100 dias?",
+  "alternativas": [
+   "48",
+   "quinta-feira",
+   "42",
+   "36",
+   "terça-feira"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação temporal: congruência de dias",
+  "comentario": "100 dividido por 7 dá resto 2; avançando dois dias a partir de terça-feira, chega-se à quinta-feira. Fundamento: Orientação temporal: congruência de dias."
+ },
+ {
+  "id": "F12-rl_sequencias-009-A",
+  "enunciado": "Se hoje é sexta-feira, que dia da semana foi há 40 dias?",
+  "alternativas": [
+   "36",
+   "terça-feira",
+   "42",
+   "48",
+   "quinta-feira"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação temporal: congruência de dias",
+  "comentario": "40 dividido por 7 dá resto 5; recuando cinco dias a partir de sexta-feira, chega-se à terça-feira. Fundamento: Orientação temporal: congruência de dias."
+ },
+ {
+  "id": "F12-rl_sequencias-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se hoje é sexta-feira, que dia da semana foi há 40 dias?",
+  "alternativas": [
+   "42",
+   "quinta-feira",
+   "48",
+   "36",
+   "terça-feira"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação temporal: congruência de dias",
+  "comentario": "40 dividido por 7 dá resto 5; recuando cinco dias a partir de sexta-feira, chega-se à terça-feira. Fundamento: Orientação temporal: congruência de dias."
+ },
+ {
+  "id": "F12-rl_sequencias-010-A",
+  "enunciado": "Quantos números ímpares existem de 1 a 20, inclusive?",
+  "alternativas": [
+   "48",
+   "13",
+   "42",
+   "36",
+   "10"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Os ímpares de 1 a 20 são 1, 3, 5, 7, 9, 11, 13, 15, 17 e 19, totalizando 10 números. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-010-B",
+  "enunciado": "Assinale a alternativa correta. Quantos números ímpares existem de 1 a 20, inclusive?",
+  "alternativas": [
+   "13",
+   "36",
+   "10",
+   "42",
+   "48"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Raciocínio sequencial",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Raciocínio sequencial",
+  "comentario": "Os ímpares de 1 a 20 são 1, 3, 5, 7, 9, 11, 13, 15, 17 e 19, totalizando 10 números. Fundamento: Raciocínio sequencial."
+ },
+ {
+  "id": "F12-rl_sequencias-011-A",
+  "enunciado": "Se em um relógio o ponteiro dos minutos aponta para o número 3, quantos minutos se passaram desde a hora cheia?",
+  "alternativas": [
+   "13",
+   "15 minutos",
+   "36",
+   "48",
+   "42"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação espacial e temporal",
+  "comentario": "Cada número do relógio corresponde a 5 minutos; apontando para o 3, passaram-se 3 × 5 = 15 minutos. Fundamento: Orientação espacial e temporal."
+ },
+ {
+  "id": "F12-rl_sequencias-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se em um relógio o ponteiro dos minutos aponta para o número 3, quantos minutos se passaram desde a hora cheia?",
+  "alternativas": [
+   "15 minutos",
+   "48",
+   "42",
+   "36",
+   "13"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Orientação espacial e temporal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Orientação espacial e temporal",
+  "comentario": "Cada número do relógio corresponde a 5 minutos; apontando para o 3, passaram-se 3 × 5 = 15 minutos. Fundamento: Orientação espacial e temporal."
+ },
+ {
+  "id": "F12-rl_logica-000-A",
+  "enunciado": "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+  "alternativas": [
+   "Nenhum candidato foi aprovado",
+   "falso",
+   "quando A é verdadeira e B é falsa",
+   "Alguns servidores não são pontuais",
+   "quando as duas proposições são falsas"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição universal afirmativa é uma particular negativa: 'Alguns servidores não são pontuais'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+  "alternativas": [
+   "falso",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais",
+   "quando A é verdadeira e B é falsa",
+   "quando as duas proposições são falsas"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição universal afirmativa é uma particular negativa: 'Alguns servidores não são pontuais'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-000-C",
+  "enunciado": "A resposta \"Alguns servidores não são pontuais\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+   "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+   "Qual é a negação da proposição composta 'A ou B'?",
+   "Qual é a negação da proposição composta 'A e B'?",
+   "Qual é a negação da proposição 'Algum candidato foi aprovado'?"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição universal afirmativa é uma particular negativa: 'Alguns servidores não são pontuais'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-001-A",
+  "enunciado": "Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+  "alternativas": [
+   "quando A é verdadeira e B é falsa",
+   "falso",
+   "Alguns servidores não são pontuais",
+   "quando as duas proposições são falsas",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição particular afirmativa é uma universal negativa: 'Nenhum candidato foi aprovado'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+  "alternativas": [
+   "falso",
+   "quando as duas proposições são falsas",
+   "quando A é verdadeira e B é falsa",
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição particular afirmativa é uma universal negativa: 'Nenhum candidato foi aprovado'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-001-C",
+  "enunciado": "A resposta \"Nenhum candidato foi aprovado\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Qual é a negação da proposição composta 'A ou B'?",
+   "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+   "Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+   "Qual é a negação da proposição composta 'A e B'?",
+   "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: negação de proposições categóricas",
+  "comentario": "A negação de uma proposição particular afirmativa é uma universal negativa: 'Nenhum candidato foi aprovado'. Fundamento: Lógica: negação de proposições categóricas."
+ },
+ {
+  "id": "F12-rl_logica-002-A",
+  "enunciado": "Qual é o valor lógico da conjunção entre uma proposição verdadeira e uma proposição falsa?",
+  "alternativas": [
+   "falso",
+   "não A ou não B",
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado",
+   "quando A é verdadeira e B é falsa"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da conjunção",
+  "comentario": "A conjunção (e) só é verdadeira quando as duas proposições são verdadeiras; havendo uma falsa, o resultado é falso. Fundamento: Lógica proposicional: tabela-verdade da conjunção."
+ },
+ {
+  "id": "F12-rl_logica-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o valor lógico da conjunção entre uma proposição verdadeira e uma proposição falsa?",
+  "alternativas": [
+   "Alguns servidores não são pontuais",
+   "quando A é verdadeira e B é falsa",
+   "falso",
+   "Nenhum candidato foi aprovado",
+   "não A ou não B"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da conjunção",
+  "comentario": "A conjunção (e) só é verdadeira quando as duas proposições são verdadeiras; havendo uma falsa, o resultado é falso. Fundamento: Lógica proposicional: tabela-verdade da conjunção."
+ },
+ {
+  "id": "F12-rl_logica-003-A",
+  "enunciado": "Em que situação a proposição condicional 'se A, então B' é falsa?",
+  "alternativas": [
+   "quando A e B têm o mesmo valor lógico",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais",
+   "quando as duas proposições são falsas"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da condicional",
+  "comentario": "A condicional só é falsa quando o antecedente é verdadeiro e o consequente é falso; nos demais casos, é verdadeira. Fundamento: Lógica proposicional: tabela-verdade da condicional."
+ },
+ {
+  "id": "F12-rl_logica-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Em que situação a proposição condicional 'se A, então B' é falsa?",
+  "alternativas": [
+   "quando as duas proposições são falsas",
+   "Alguns servidores não são pontuais",
+   "quando A é verdadeira e B é falsa",
+   "quando A e B têm o mesmo valor lógico",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da condicional",
+  "comentario": "A condicional só é falsa quando o antecedente é verdadeiro e o consequente é falso; nos demais casos, é verdadeira. Fundamento: Lógica proposicional: tabela-verdade da condicional."
+ },
+ {
+  "id": "F12-rl_logica-003-C",
+  "enunciado": "A resposta \"quando A é verdadeira e B é falsa\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Quando a bicondicional 'A se e somente se B' é verdadeira?",
+   "Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+   "Qual é a contrapositiva da proposição 'Se A, então B'?",
+   "Em que situação a proposição condicional 'se A, então B' é falsa?",
+   "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da condicional",
+  "comentario": "A condicional só é falsa quando o antecedente é verdadeiro e o consequente é falso; nos demais casos, é verdadeira. Fundamento: Lógica proposicional: tabela-verdade da condicional."
+ },
+ {
+  "id": "F12-rl_logica-004-A",
+  "enunciado": "Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+  "alternativas": [
+   "quando A é verdadeira e B é falsa",
+   "quando A e B têm o mesmo valor lógico",
+   "quando as duas proposições são falsas",
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da disjunção",
+  "comentario": "A disjunção inclusiva (ou) só é falsa quando ambas as proposições são falsas; basta uma verdadeira para que o resultado seja verdadeiro. Fundamento: Lógica proposicional: tabela-verdade da disjunção."
+ },
+ {
+  "id": "F12-rl_logica-004-B",
+  "enunciado": "Assinale a alternativa correta. Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+  "alternativas": [
+   "quando as duas proposições são falsas",
+   "Nenhum candidato foi aprovado",
+   "quando A é verdadeira e B é falsa",
+   "quando A e B têm o mesmo valor lógico",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da disjunção",
+  "comentario": "A disjunção inclusiva (ou) só é falsa quando ambas as proposições são falsas; basta uma verdadeira para que o resultado seja verdadeiro. Fundamento: Lógica proposicional: tabela-verdade da disjunção."
+ },
+ {
+  "id": "F12-rl_logica-004-C",
+  "enunciado": "A resposta \"quando as duas proposições são falsas\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Qual é a negação da proposição composta 'A ou B'?",
+   "Quando a bicondicional 'A se e somente se B' é verdadeira?",
+   "Qual é a negação da proposição composta 'A e B'?",
+   "Em que situação a proposição condicional 'se A, então B' é falsa?",
+   "Em que situação a disjunção inclusiva 'A ou B' é falsa?"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da disjunção",
+  "comentario": "A disjunção inclusiva (ou) só é falsa quando ambas as proposições são falsas; basta uma verdadeira para que o resultado seja verdadeiro. Fundamento: Lógica proposicional: tabela-verdade da disjunção."
+ },
+ {
+  "id": "F12-rl_logica-005-A",
+  "enunciado": "Quando a bicondicional 'A se e somente se B' é verdadeira?",
+  "alternativas": [
+   "quando A e B têm o mesmo valor lógico",
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado",
+   "quando A é verdadeira e B é falsa",
+   "quando as duas proposições são falsas"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da bicondicional",
+  "comentario": "A bicondicional é verdadeira quando as duas proposições são verdadeiras ou quando as duas são falsas, isto é, quando têm valores lógicos iguais. Fundamento: Lógica proposicional: tabela-verdade da bicondicional."
+ },
+ {
+  "id": "F12-rl_logica-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Quando a bicondicional 'A se e somente se B' é verdadeira?",
+  "alternativas": [
+   "quando A e B têm o mesmo valor lógico",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado",
+   "quando as duas proposições são falsas",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da bicondicional",
+  "comentario": "A bicondicional é verdadeira quando as duas proposições são verdadeiras ou quando as duas são falsas, isto é, quando têm valores lógicos iguais. Fundamento: Lógica proposicional: tabela-verdade da bicondicional."
+ },
+ {
+  "id": "F12-rl_logica-005-C",
+  "enunciado": "A resposta \"quando A e B têm o mesmo valor lógico\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+   "Qual é a negação da proposição composta 'A e B'?",
+   "Em que situação a proposição condicional 'se A, então B' é falsa?",
+   "Quando a bicondicional 'A se e somente se B' é verdadeira?",
+   "Qual é a contrapositiva da proposição 'Se A, então B'?"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tabela-verdade da bicondicional",
+  "comentario": "A bicondicional é verdadeira quando as duas proposições são verdadeiras ou quando as duas são falsas, isto é, quando têm valores lógicos iguais. Fundamento: Lógica proposicional: tabela-verdade da bicondicional."
+ },
+ {
+  "id": "F12-rl_logica-006-A",
+  "enunciado": "Qual é a negação da proposição composta 'A e B'?",
+  "alternativas": [
+   "não A ou não B",
+   "Alguns servidores não são pontuais",
+   "falso",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: Leis de De Morgan",
+  "comentario": "Pela lei de De Morgan, a negação de uma conjunção é a disjunção das negações: 'não A ou não B'. Fundamento: Lógica proposicional: Leis de De Morgan."
+ },
+ {
+  "id": "F12-rl_logica-006-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a negação da proposição composta 'A e B'?",
+  "alternativas": [
+   "não A ou não B",
+   "falso",
+   "quando A é verdadeira e B é falsa",
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: Leis de De Morgan",
+  "comentario": "Pela lei de De Morgan, a negação de uma conjunção é a disjunção das negações: 'não A ou não B'. Fundamento: Lógica proposicional: Leis de De Morgan."
+ },
+ {
+  "id": "F12-rl_logica-007-A",
+  "enunciado": "Qual é a negação da proposição composta 'A ou B'?",
+  "alternativas": [
+   "falso",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado",
+   "não A e não B",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: Leis de De Morgan",
+  "comentario": "Pela lei de De Morgan, a negação de uma disjunção é a conjunção das negações: 'não A e não B'. Fundamento: Lógica proposicional: Leis de De Morgan."
+ },
+ {
+  "id": "F12-rl_logica-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é a negação da proposição composta 'A ou B'?",
+  "alternativas": [
+   "quando A é verdadeira e B é falsa",
+   "falso",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais",
+   "não A e não B"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: Leis de De Morgan",
+  "comentario": "Pela lei de De Morgan, a negação de uma disjunção é a conjunção das negações: 'não A e não B'. Fundamento: Lógica proposicional: Leis de De Morgan."
+ },
+ {
+  "id": "F12-rl_logica-008-A",
+  "enunciado": "Quando um argumento dedutivo é considerado válido?",
+  "alternativas": [
+   "quando A e B têm o mesmo valor lógico",
+   "Alguns servidores não são pontuais",
+   "quando é impossível que as premissas sejam verdadeiras e a conclusão seja falsa",
+   "quando as duas proposições são falsas",
+   "quando A é verdadeira e B é falsa"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: validade de argumentos",
+  "comentario": "Um argumento dedutivo é válido quando sua forma lógica garante que, sendo verdadeiras as premissas, a conclusão necessariamente será verdadeira. Fundamento: Lógica: validade de argumentos."
+ },
+ {
+  "id": "F12-rl_logica-008-B",
+  "enunciado": "Assinale a alternativa correta. Quando um argumento dedutivo é considerado válido?",
+  "alternativas": [
+   "quando é impossível que as premissas sejam verdadeiras e a conclusão seja falsa",
+   "quando A e B têm o mesmo valor lógico",
+   "quando A é verdadeira e B é falsa",
+   "quando as duas proposições são falsas",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: validade de argumentos",
+  "comentario": "Um argumento dedutivo é válido quando sua forma lógica garante que, sendo verdadeiras as premissas, a conclusão necessariamente será verdadeira. Fundamento: Lógica: validade de argumentos."
+ },
+ {
+  "id": "F12-rl_logica-008-C",
+  "enunciado": "A resposta \"quando é impossível que as premissas sejam verdadeiras e a conclusão seja falsa\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Quando um argumento dedutivo é considerado válido?",
+   "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+   "Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+   "Qual é o valor lógico da conjunção entre uma proposição verdadeira e uma proposição falsa?",
+   "Quando a bicondicional 'A se e somente se B' é verdadeira?"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica: validade de argumentos",
+  "comentario": "Um argumento dedutivo é válido quando sua forma lógica garante que, sendo verdadeiras as premissas, a conclusão necessariamente será verdadeira. Fundamento: Lógica: validade de argumentos."
+ },
+ {
+  "id": "F12-rl_logica-009-A",
+  "enunciado": "O que é uma tautologia?",
+  "alternativas": [
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado",
+   "quando A é verdadeira e B é falsa",
+   "falso",
+   "uma proposição composta sempre verdadeira, independentemente dos valores das proposições simples"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tautologia",
+  "comentario": "Tautologia é a proposição composta cujo valor lógico é sempre verdadeiro em qualquer combinação de valores das proposições simples que a compõem. Fundamento: Lógica proposicional: tautologia."
+ },
+ {
+  "id": "F12-rl_logica-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. O que é uma tautologia?",
+  "alternativas": [
+   "Alguns servidores não são pontuais",
+   "Nenhum candidato foi aprovado",
+   "falso",
+   "uma proposição composta sempre verdadeira, independentemente dos valores das proposições simples",
+   "quando A é verdadeira e B é falsa"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tautologia",
+  "comentario": "Tautologia é a proposição composta cujo valor lógico é sempre verdadeiro em qualquer combinação de valores das proposições simples que a compõem. Fundamento: Lógica proposicional: tautologia."
+ },
+ {
+  "id": "F12-rl_logica-009-C",
+  "enunciado": "A resposta \"uma proposição composta sempre verdadeira, independentemente dos valores das proposições simples\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Em que situação a proposição condicional 'se A, então B' é falsa?",
+   "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+   "Em que situação a disjunção inclusiva 'A ou B' é falsa?",
+   "O que é uma tautologia?",
+   "Qual é o valor lógico da conjunção entre uma proposição verdadeira e uma proposição falsa?"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: tautologia",
+  "comentario": "Tautologia é a proposição composta cujo valor lógico é sempre verdadeiro em qualquer combinação de valores das proposições simples que a compõem. Fundamento: Lógica proposicional: tautologia."
+ },
+ {
+  "id": "F12-rl_logica-010-A",
+  "enunciado": "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+  "alternativas": [
+   "falso",
+   "chove e a rua não fica molhada",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: negação da condicional",
+  "comentario": "A negação de uma condicional 'A → B' é a conjunção do antecedente com a negação do consequente: 'A e não B'. Fundamento: Lógica proposicional: negação da condicional."
+ },
+ {
+  "id": "F12-rl_logica-010-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+  "alternativas": [
+   "falso",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais",
+   "quando A é verdadeira e B é falsa",
+   "chove e a rua não fica molhada"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: negação da condicional",
+  "comentario": "A negação de uma condicional 'A → B' é a conjunção do antecedente com a negação do consequente: 'A e não B'. Fundamento: Lógica proposicional: negação da condicional."
+ },
+ {
+  "id": "F12-rl_logica-010-C",
+  "enunciado": "A resposta \"chove e a rua não fica molhada\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Qual é a negação da proposição 'Todos os servidores são pontuais'?",
+   "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+   "Qual é a contrapositiva da proposição 'Se A, então B'?",
+   "Qual é a negação da proposição 'Algum candidato foi aprovado'?",
+   "Qual é a negação da proposição composta 'A e B'?"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: negação da condicional",
+  "comentario": "A negação de uma condicional 'A → B' é a conjunção do antecedente com a negação do consequente: 'A e não B'. Fundamento: Lógica proposicional: negação da condicional."
+ },
+ {
+  "id": "F12-rl_logica-011-A",
+  "enunciado": "Qual é a contrapositiva da proposição 'Se A, então B'?",
+  "alternativas": [
+   "se não B, então não A",
+   "falso",
+   "quando A é verdadeira e B é falsa",
+   "Nenhum candidato foi aprovado",
+   "Alguns servidores não são pontuais"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: equivalências",
+  "comentario": "A contrapositiva de 'A → B' é 'não B → não A', proposição logicamente equivalente à original. Fundamento: Lógica proposicional: equivalências."
+ },
+ {
+  "id": "F12-rl_logica-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é a contrapositiva da proposição 'Se A, então B'?",
+  "alternativas": [
+   "Nenhum candidato foi aprovado",
+   "falso",
+   "Alguns servidores não são pontuais",
+   "quando A é verdadeira e B é falsa",
+   "se não B, então não A"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: equivalências",
+  "comentario": "A contrapositiva de 'A → B' é 'não B → não A', proposição logicamente equivalente à original. Fundamento: Lógica proposicional: equivalências."
+ },
+ {
+  "id": "F12-rl_logica-011-C",
+  "enunciado": "A resposta \"se não B, então não A\" corresponde a qual dos questionamentos a seguir? (Tema: Lógica proposicional e argumentação.)",
+  "alternativas": [
+   "Em que situação a proposição condicional 'se A, então B' é falsa?",
+   "Qual é a negação da proposição 'Se chove, então a rua fica molhada'?",
+   "Qual é a negação da proposição composta 'A ou B'?",
+   "Qual é a negação da proposição composta 'A e B'?",
+   "Qual é a contrapositiva da proposição 'Se A, então B'?"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Compreensão do processo lógico: hipóteses e conclusões válidas",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Lógica proposicional: equivalências",
+  "comentario": "A contrapositiva de 'A → B' é 'não B → não A', proposição logicamente equivalente à original. Fundamento: Lógica proposicional: equivalências."
+ },
+ {
+  "id": "F12-rl_operacoes-000-A",
+  "enunciado": "Qual é o valor da expressão 2³ + 3²?",
+  "alternativas": [
+   "7",
+   "9",
+   "24",
+   "12",
+   "17"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: potenciação e adição",
+  "comentario": "2³ = 8 e 3² = 9; logo 8 + 9 = 17. Fundamento: Aritmética: potenciação e adição."
+ },
+ {
+  "id": "F12-rl_operacoes-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o valor da expressão 2³ + 3²?",
+  "alternativas": [
+   "24",
+   "12",
+   "17",
+   "7",
+   "9"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: potenciação e adição",
+  "comentario": "2³ = 8 e 3² = 9; logo 8 + 9 = 17. Fundamento: Aritmética: potenciação e adição."
+ },
+ {
+  "id": "F12-rl_operacoes-001-A",
+  "enunciado": "Qual é o resultado de (5 + 3) × 2 − 4?",
+  "alternativas": [
+   "12",
+   "24",
+   "7",
+   "17",
+   "9"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: ordem das operações",
+  "comentario": "Resolvendo primeiro os parênteses: 8 × 2 = 16; 16 − 4 = 12. Fundamento: Aritmética: ordem das operações."
+ },
+ {
+  "id": "F12-rl_operacoes-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o resultado de (5 + 3) × 2 − 4?",
+  "alternativas": [
+   "17",
+   "9",
+   "7",
+   "12",
+   "24"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: ordem das operações",
+  "comentario": "Resolvendo primeiro os parênteses: 8 × 2 = 16; 16 − 4 = 12. Fundamento: Aritmética: ordem das operações."
+ },
+ {
+  "id": "F12-rl_operacoes-002-A",
+  "enunciado": "Qual é o mínimo múltiplo comum entre 6 e 8?",
+  "alternativas": [
+   "7",
+   "17",
+   "24",
+   "9",
+   "12"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: mmc",
+  "comentario": "Os múltiplos de 6 e de 8 coincidem pela primeira vez em 24, que é o mínimo múltiplo comum. Fundamento: Aritmética: mmc."
+ },
+ {
+  "id": "F12-rl_operacoes-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o mínimo múltiplo comum entre 6 e 8?",
+  "alternativas": [
+   "24",
+   "9",
+   "7",
+   "17",
+   "12"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: mmc",
+  "comentario": "Os múltiplos de 6 e de 8 coincidem pela primeira vez em 24, que é o mínimo múltiplo comum. Fundamento: Aritmética: mmc."
+ },
+ {
+  "id": "F12-rl_operacoes-003-A",
+  "enunciado": "Qual é o máximo divisor comum entre 24 e 36?",
+  "alternativas": [
+   "7",
+   "17",
+   "9",
+   "24",
+   "12"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: mdc",
+  "comentario": "Os divisores comuns de 24 e 36 têm como maior valor 12, que é o máximo divisor comum. Fundamento: Aritmética: mdc."
+ },
+ {
+  "id": "F12-rl_operacoes-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é o máximo divisor comum entre 24 e 36?",
+  "alternativas": [
+   "17",
+   "7",
+   "9",
+   "24",
+   "12"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: mdc",
+  "comentario": "Os divisores comuns de 24 e 36 têm como maior valor 12, que é o máximo divisor comum. Fundamento: Aritmética: mdc."
+ },
+ {
+  "id": "F12-rl_operacoes-004-A",
+  "enunciado": "Qual é a média aritmética dos números 6, 8, 10 e 12?",
+  "alternativas": [
+   "9",
+   "12",
+   "17",
+   "24",
+   "7"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Estatística básica: média aritmética",
+  "comentario": "A soma é 36 e, dividindo por 4, a média aritmética é 9. Fundamento: Estatística básica: média aritmética."
+ },
+ {
+  "id": "F12-rl_operacoes-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual é a média aritmética dos números 6, 8, 10 e 12?",
+  "alternativas": [
+   "12",
+   "17",
+   "24",
+   "7",
+   "9"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Estatística básica: média aritmética",
+  "comentario": "A soma é 36 e, dividindo por 4, a média aritmética é 9. Fundamento: Estatística básica: média aritmética."
+ },
+ {
+  "id": "F12-rl_operacoes-005-A",
+  "enunciado": "A média de cinco notas é 7. Se quatro delas são 6, 7, 8 e 7, qual é a quinta nota?",
+  "alternativas": [
+   "17",
+   "7",
+   "12",
+   "9",
+   "24"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Estatística básica: média aritmética",
+  "comentario": "A soma total é 5 × 7 = 35; a soma das quatro notas conhecidas é 28; logo a quinta nota é 35 − 28 = 7. Fundamento: Estatística básica: média aritmética."
+ },
+ {
+  "id": "F12-rl_operacoes-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. A média de cinco notas é 7. Se quatro delas são 6, 7, 8 e 7, qual é a quinta nota?",
+  "alternativas": [
+   "9",
+   "24",
+   "17",
+   "7",
+   "12"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Estatística básica: média aritmética",
+  "comentario": "A soma total é 5 × 7 = 35; a soma das quatro notas conhecidas é 28; logo a quinta nota é 35 − 28 = 7. Fundamento: Estatística básica: média aritmética."
+ },
+ {
+  "id": "F12-rl_operacoes-006-A",
+  "enunciado": "Quanto é 15% de 15% de 400?",
+  "alternativas": [
+   "7",
+   "9",
+   "17",
+   "24",
+   "12"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem sucessiva",
+  "comentario": "15% de 400 = 60 e 15% de 60 = 9. Fundamento: Aritmética: porcentagem sucessiva."
+ },
+ {
+  "id": "F12-rl_operacoes-006-B",
+  "enunciado": "Assinale a alternativa correta. Quanto é 15% de 15% de 400?",
+  "alternativas": [
+   "9",
+   "24",
+   "7",
+   "17",
+   "12"
+  ],
+  "correta": 0,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: porcentagem sucessiva",
+  "comentario": "15% de 400 = 60 e 15% de 60 = 9. Fundamento: Aritmética: porcentagem sucessiva."
+ },
+ {
+  "id": "F12-rl_operacoes-007-A",
+  "enunciado": "Qual é a terça parte do dobro de 27?",
+  "alternativas": [
+   "9",
+   "18",
+   "24",
+   "12",
+   "17"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: operações com frações",
+  "comentario": "O dobro de 27 é 54 e a terça parte de 54 é 18. Fundamento: Aritmética: operações com frações."
+ },
+ {
+  "id": "F12-rl_operacoes-007-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é a terça parte do dobro de 27?",
+  "alternativas": [
+   "24",
+   "9",
+   "17",
+   "18",
+   "12"
+  ],
+  "correta": 3,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: operações com frações",
+  "comentario": "O dobro de 27 é 54 e a terça parte de 54 é 18. Fundamento: Aritmética: operações com frações."
+ },
+ {
+  "id": "F12-rl_operacoes-008-A",
+  "enunciado": "Qual é o valor de 1/2 + 1/4 + 1/4?",
+  "alternativas": [
+   "24",
+   "1",
+   "12",
+   "17",
+   "9"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: adição de frações",
+  "comentario": "Somando as frações: 1/2 + 1/4 + 1/4 = 2/4 + 1/4 + 1/4 = 4/4 = 1. Fundamento: Aritmética: adição de frações."
+ },
+ {
+  "id": "F12-rl_operacoes-008-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o valor de 1/2 + 1/4 + 1/4?",
+  "alternativas": [
+   "24",
+   "9",
+   "1",
+   "12",
+   "17"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Aritmética: adição de frações",
+  "comentario": "Somando as frações: 1/2 + 1/4 + 1/4 = 2/4 + 1/4 + 1/4 = 4/4 = 1. Fundamento: Aritmética: adição de frações."
+ },
+ {
+  "id": "F12-rl_operacoes-009-A",
+  "enunciado": "Um número somado com o seu dobro resulta em 45. Qual é esse número?",
+  "alternativas": [
+   "17",
+   "24",
+   "9",
+   "12",
+   "15"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: equação de primeiro grau",
+  "comentario": "Chamando o número de x, tem-se x + 2x = 45, logo 3x = 45 e x = 15. Fundamento: Álgebra elementar: equação de primeiro grau."
+ },
+ {
+  "id": "F12-rl_operacoes-009-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Um número somado com o seu dobro resulta em 45. Qual é esse número?",
+  "alternativas": [
+   "17",
+   "24",
+   "12",
+   "9",
+   "15"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: equação de primeiro grau",
+  "comentario": "Chamando o número de x, tem-se x + 2x = 45, logo 3x = 45 e x = 15. Fundamento: Álgebra elementar: equação de primeiro grau."
+ },
+ {
+  "id": "F12-rl_operacoes-010-A",
+  "enunciado": "Qual é o valor de x na equação 5x − 10 = 25?",
+  "alternativas": [
+   "17",
+   "24",
+   "7",
+   "9",
+   "12"
+  ],
+  "correta": 2,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: equação de primeiro grau",
+  "comentario": "Somando 10 aos dois lados: 5x = 35; dividindo por 5, x = 7. Fundamento: Álgebra elementar: equação de primeiro grau."
+ },
+ {
+  "id": "F12-rl_operacoes-010-B",
+  "enunciado": "Assinale a alternativa correta. Qual é o valor de x na equação 5x − 10 = 25?",
+  "alternativas": [
+   "24",
+   "17",
+   "9",
+   "12",
+   "7"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: equação de primeiro grau",
+  "comentario": "Somando 10 aos dois lados: 5x = 35; dividindo por 5, x = 7. Fundamento: Álgebra elementar: equação de primeiro grau."
+ },
+ {
+  "id": "F12-rl_operacoes-011-A",
+  "enunciado": "Se dois números somam 30 e a diferença entre eles é 8, qual é o maior?",
+  "alternativas": [
+   "17",
+   "12",
+   "24",
+   "9",
+   "19"
+  ],
+  "correta": 4,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: sistema de equações",
+  "comentario": "Resolvendo o sistema, o maior número é (30 + 8) ÷ 2 = 19 e o menor é 11. Fundamento: Álgebra elementar: sistema de equações."
+ },
+ {
+  "id": "F12-rl_operacoes-011-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Se dois números somam 30 e a diferença entre eles é 8, qual é o maior?",
+  "alternativas": [
+   "17",
+   "19",
+   "12",
+   "24",
+   "9"
+  ],
+  "correta": 1,
+  "materia": "RL",
+  "topico": "Problemas com as quatro operações, formas fracionária e decimal",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Álgebra elementar: sistema de equações",
+  "comentario": "Resolvendo o sistema, o maior número é (30 + 8) ÷ 2 = 19 e o menor é 11. Fundamento: Álgebra elementar: sistema de equações."
+ }
+]

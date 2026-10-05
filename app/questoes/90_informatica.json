@@ -1,0 +1,1568 @@
+[
+ {
+  "id": "F07-word_recursos-000-A",
+  "enunciado": "Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?",
+  "alternativas": [
+   "estilos",
+   "controle de alterações",
+   "mala direta",
+   "nota de rodapé",
+   "sumário automático"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Correspondências",
+  "comentario": "O recurso de mala direta do Word permite gerar vários documentos personalizados, como ofícios com nome e endereço de cada destinatário, a partir de uma base de dados em planilha. Fundamento: Word: guia Correspondências."
+ },
+ {
+  "id": "F07-word_recursos-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?",
+  "alternativas": [
+   "nota de rodapé",
+   "mala direta",
+   "estilos",
+   "controle de alterações",
+   "sumário automático"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Correspondências",
+  "comentario": "O recurso de mala direta do Word permite gerar vários documentos personalizados, como ofícios com nome e endereço de cada destinatário, a partir de uma base de dados em planilha. Fundamento: Word: guia Correspondências."
+ },
+ {
+  "id": "F07-word_recursos-001-A",
+  "enunciado": "Qual recurso do Word marca as alterações feitas no documento para posterior revisão?",
+  "alternativas": [
+   "controle de alterações",
+   "sumário automático",
+   "estilos",
+   "mala direta",
+   "nota de rodapé"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Revisão",
+  "comentario": "O recurso de controle de alterações do Word registra as modificações feitas no documento, permitindo que o autor aceite ou rejeite cada mudança na revisão. Fundamento: Word: guia Revisão."
+ },
+ {
+  "id": "F07-word_recursos-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual recurso do Word marca as alterações feitas no documento para posterior revisão?",
+  "alternativas": [
+   "estilos",
+   "sumário automático",
+   "nota de rodapé",
+   "controle de alterações",
+   "mala direta"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Revisão",
+  "comentario": "O recurso de controle de alterações do Word registra as modificações feitas no documento, permitindo que o autor aceite ou rejeite cada mudança na revisão. Fundamento: Word: guia Revisão."
+ },
+ {
+  "id": "F07-word_recursos-001-C",
+  "enunciado": "A resposta \"controle de alterações\" corresponde a qual dos questionamentos a seguir? (Tema: Editor de textos (Word).)",
+  "alternativas": [
+   "Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?",
+   "Qual recurso do Word insere texto explicativo no rodapé da página?",
+   "Qual recurso do Word marca as alterações feitas no documento para posterior revisão?",
+   "Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?",
+   "Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Revisão",
+  "comentario": "O recurso de controle de alterações do Word registra as modificações feitas no documento, permitindo que o autor aceite ou rejeite cada mudança na revisão. Fundamento: Word: guia Revisão."
+ },
+ {
+  "id": "F07-word_recursos-002-A",
+  "enunciado": "Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?",
+  "alternativas": [
+   "controle de alterações",
+   "sumário automático",
+   "mala direta",
+   "nota de rodapé",
+   "estilos"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "O sumário automático do Word é gerado a partir dos estilos de título aplicados ao documento, permitindo atualização automática dos números de página. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?",
+  "alternativas": [
+   "controle de alterações",
+   "estilos",
+   "sumário automático",
+   "mala direta",
+   "nota de rodapé"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "O sumário automático do Word é gerado a partir dos estilos de título aplicados ao documento, permitindo atualização automática dos números de página. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-002-C",
+  "enunciado": "A resposta \"sumário automático\" corresponde a qual dos questionamentos a seguir? (Tema: Editor de textos (Word).)",
+  "alternativas": [
+   "Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?",
+   "Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?",
+   "Qual atalho do Word e do Excel executa a verificação ortográfica e gramatical?",
+   "Qual recurso do Word marca as alterações feitas no documento para posterior revisão?",
+   "Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "O sumário automático do Word é gerado a partir dos estilos de título aplicados ao documento, permitindo atualização automática dos números de página. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-003-A",
+  "enunciado": "Qual recurso do Word insere texto explicativo no rodapé da página?",
+  "alternativas": [
+   "controle de alterações",
+   "estilos",
+   "mala direta",
+   "nota de rodapé",
+   "sumário automático"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "A nota de rodapé insere texto explicativo ao pé da página, referenciado por um número sobrescrito no corpo do documento, ao contrário da nota de fim, que é lançada ao final do texto. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual recurso do Word insere texto explicativo no rodapé da página?",
+  "alternativas": [
+   "mala direta",
+   "estilos",
+   "sumário automático",
+   "controle de alterações",
+   "nota de rodapé"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "A nota de rodapé insere texto explicativo ao pé da página, referenciado por um número sobrescrito no corpo do documento, ao contrário da nota de fim, que é lançada ao final do texto. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-003-C",
+  "enunciado": "A resposta \"nota de rodapé\" corresponde a qual dos questionamentos a seguir? (Tema: Editor de textos (Word).)",
+  "alternativas": [
+   "Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?",
+   "Qual recurso do Word marca as alterações feitas no documento para posterior revisão?",
+   "Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?",
+   "Qual recurso do Word insere texto explicativo no rodapé da página?",
+   "Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Referências",
+  "comentario": "A nota de rodapé insere texto explicativo ao pé da página, referenciado por um número sobrescrito no corpo do documento, ao contrário da nota de fim, que é lançada ao final do texto. Fundamento: Word: guia Referências."
+ },
+ {
+  "id": "F07-word_recursos-004-A",
+  "enunciado": "Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?",
+  "alternativas": [
+   "mala direta",
+   "estilos",
+   "controle de alterações",
+   "sumário automático",
+   "nota de rodapé"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Página Inicial",
+  "comentario": "Os estilos do Word permitem aplicar conjuntos de formatação padronizados a títulos e textos, facilitando a consistência visual e a geração de sumários. Fundamento: Word: guia Página Inicial."
+ },
+ {
+  "id": "F07-word_recursos-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?",
+  "alternativas": [
+   "mala direta",
+   "controle de alterações",
+   "estilos",
+   "nota de rodapé",
+   "sumário automático"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word: guia Página Inicial",
+  "comentario": "Os estilos do Word permitem aplicar conjuntos de formatação padronizados a títulos e textos, facilitando a consistência visual e a geração de sumários. Fundamento: Word: guia Página Inicial."
+ },
+ {
+  "id": "F07-word_recursos-005-A",
+  "enunciado": "Qual atalho do Word e do Excel executa a verificação ortográfica e gramatical?",
+  "alternativas": [
+   "mala direta",
+   "nota de rodapé",
+   "sumário automático",
+   "F7",
+   "controle de alterações"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word/Excel: atalho F7",
+  "comentario": "A tecla F7 aciona a verificação ortográfica e gramatical nos editores de texto e planilhas, abrindo o painel de revisão de escrita. Fundamento: Word/Excel: atalho F7."
+ },
+ {
+  "id": "F07-word_recursos-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual atalho do Word e do Excel executa a verificação ortográfica e gramatical?",
+  "alternativas": [
+   "mala direta",
+   "F7",
+   "sumário automático",
+   "controle de alterações",
+   "nota de rodapé"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Word/Excel: atalho F7",
+  "comentario": "A tecla F7 aciona a verificação ortográfica e gramatical nos editores de texto e planilhas, abrindo o painel de revisão de escrita. Fundamento: Word/Excel: atalho F7."
+ },
+ {
+  "id": "F07-excel_funcoes-000-A",
+  "enunciado": "Qual função do Excel soma os valores de um intervalo?",
+  "alternativas": [
+   "SE",
+   "CONT.NÚM",
+   "SOMA",
+   "PROCV",
+   "MÉDIA"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função SOMA",
+  "comentario": "A função SOMA do Excel totaliza os valores numéricos de um intervalo de células, como em =SOMA(A1:A10). Fundamento: Excel: função SOMA."
+ },
+ {
+  "id": "F07-excel_funcoes-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual função do Excel soma os valores de um intervalo?",
+  "alternativas": [
+   "PROCV",
+   "SOMA",
+   "CONT.NÚM",
+   "MÉDIA",
+   "SE"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função SOMA",
+  "comentario": "A função SOMA do Excel totaliza os valores numéricos de um intervalo de células, como em =SOMA(A1:A10). Fundamento: Excel: função SOMA."
+ },
+ {
+  "id": "F07-excel_funcoes-001-A",
+  "enunciado": "Qual função do Excel calcula a média aritmética de um intervalo?",
+  "alternativas": [
+   "SE",
+   "SOMA",
+   "PROCV",
+   "CONT.NÚM",
+   "MÉDIA"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função MÉDIA",
+  "comentario": "A função MÉDIA do Excel calcula a média aritmética dos valores numéricos de um intervalo de células. Fundamento: Excel: função MÉDIA."
+ },
+ {
+  "id": "F07-excel_funcoes-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual função do Excel calcula a média aritmética de um intervalo?",
+  "alternativas": [
+   "PROCV",
+   "SOMA",
+   "CONT.NÚM",
+   "SE",
+   "MÉDIA"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função MÉDIA",
+  "comentario": "A função MÉDIA do Excel calcula a média aritmética dos valores numéricos de um intervalo de células. Fundamento: Excel: função MÉDIA."
+ },
+ {
+  "id": "F07-excel_funcoes-002-A",
+  "enunciado": "Qual função do Excel retorna um valor se uma condição for verdadeira e outro se for falsa?",
+  "alternativas": [
+   "SOMA",
+   "MÉDIA",
+   "PROCV",
+   "SE",
+   "CONT.NÚM"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função SE",
+  "comentario": "A função SE do Excel testa uma condição e devolve um valor para o caso verdadeiro e outro para o caso falso, como em =SE(A1>=7;\"Aprovado\";\"Reprovado\"). Fundamento: Excel: função SE."
+ },
+ {
+  "id": "F07-excel_funcoes-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual função do Excel retorna um valor se uma condição for verdadeira e outro se for falsa?",
+  "alternativas": [
+   "MÉDIA",
+   "PROCV",
+   "SOMA",
+   "SE",
+   "CONT.NÚM"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função SE",
+  "comentario": "A função SE do Excel testa uma condição e devolve um valor para o caso verdadeiro e outro para o caso falso, como em =SE(A1>=7;\"Aprovado\";\"Reprovado\"). Fundamento: Excel: função SE."
+ },
+ {
+  "id": "F07-excel_funcoes-003-A",
+  "enunciado": "Qual função do Excel procura um valor na primeira coluna de uma matriz e devolve o valor de outra coluna?",
+  "alternativas": [
+   "SOMA",
+   "MÉDIA",
+   "PROCV",
+   "CONT.NÚM",
+   "SE"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função PROCV",
+  "comentario": "A função PROCV do Excel procura um valor na primeira coluna de um intervalo e retorna o valor correspondente de uma coluna indicada, sendo muito usada para cruzar dados. Fundamento: Excel: função PROCV."
+ },
+ {
+  "id": "F07-excel_funcoes-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual função do Excel procura um valor na primeira coluna de uma matriz e devolve o valor de outra coluna?",
+  "alternativas": [
+   "SOMA",
+   "CONT.NÚM",
+   "SE",
+   "PROCV",
+   "MÉDIA"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função PROCV",
+  "comentario": "A função PROCV do Excel procura um valor na primeira coluna de um intervalo e retorna o valor correspondente de uma coluna indicada, sendo muito usada para cruzar dados. Fundamento: Excel: função PROCV."
+ },
+ {
+  "id": "F07-excel_funcoes-004-A",
+  "enunciado": "Qual função do Excel conta quantas células de um intervalo contêm apenas números?",
+  "alternativas": [
+   "PROCV",
+   "SE",
+   "MÉDIA",
+   "CONT.NÚM",
+   "SOMA"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função CONT.NÚM",
+  "comentario": "A função CONT.NÚM do Excel conta quantas células de um intervalo contêm números, ignorando textos e células vazias. Fundamento: Excel: função CONT.NÚM."
+ },
+ {
+  "id": "F07-excel_funcoes-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual função do Excel conta quantas células de um intervalo contêm apenas números?",
+  "alternativas": [
+   "SOMA",
+   "PROCV",
+   "CONT.NÚM",
+   "SE",
+   "MÉDIA"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: função CONT.NÚM",
+  "comentario": "A função CONT.NÚM do Excel conta quantas células de um intervalo contêm números, ignorando textos e células vazias. Fundamento: Excel: função CONT.NÚM."
+ },
+ {
+  "id": "F07-excel_funcoes-005-A",
+  "enunciado": "O que significa o símbolo $ em uma referência de célula do Excel?",
+  "alternativas": [
+   "PROCV",
+   "SOMA",
+   "MÉDIA",
+   "indica referência absoluta, que não se altera ao copiar a fórmula",
+   "SE"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: referências relativas e absolutas",
+  "comentario": "O símbolo $ em uma referência, como $A$1, indica referência absoluta: a linha e a coluna permanecem fixas quando a fórmula é copiada para outras células. Fundamento: Excel: referências relativas e absolutas."
+ },
+ {
+  "id": "F07-excel_funcoes-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. O que significa o símbolo $ em uma referência de célula do Excel?",
+  "alternativas": [
+   "PROCV",
+   "SE",
+   "SOMA",
+   "MÉDIA",
+   "indica referência absoluta, que não se altera ao copiar a fórmula"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: referências relativas e absolutas",
+  "comentario": "O símbolo $ em uma referência, como $A$1, indica referência absoluta: a linha e a coluna permanecem fixas quando a fórmula é copiada para outras células. Fundamento: Excel: referências relativas e absolutas."
+ },
+ {
+  "id": "F07-excel_funcoes-005-C",
+  "enunciado": "A resposta \"indica referência absoluta, que não se altera ao copiar a fórmula\" corresponde a qual dos questionamentos a seguir? (Tema: Planilhas (Excel).)",
+  "alternativas": [
+   "Qual função do Excel procura um valor na primeira coluna de uma matriz e devolve o valor de outra coluna?",
+   "Qual função do Excel soma os valores de um intervalo?",
+   "Qual função do Excel calcula a média aritmética de um intervalo?",
+   "O que significa o símbolo $ em uma referência de célula do Excel?",
+   "Qual função do Excel conta quantas células de um intervalo contêm apenas números?"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Excel: referências relativas e absolutas",
+  "comentario": "O símbolo $ em uma referência, como $A$1, indica referência absoluta: a linha e a coluna permanecem fixas quando a fórmula é copiada para outras células. Fundamento: Excel: referências relativas e absolutas."
+ },
+ {
+  "id": "F07-apresentacoes-000-A",
+  "enunciado": "Qual recurso define a formatação de todos os slides de uma apresentação?",
+  "alternativas": [
+   "slide mestre",
+   "apresentação em quiosque",
+   "PPTX",
+   "F5"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: modo de exibição Slide Mestre",
+  "comentario": "O slide mestre define a formatação padrão de todos os slides de uma apresentação, incluindo fontes, cores, logotipos e posicionamento de elementos. Fundamento: PowerPoint: modo de exibição Slide Mestre."
+ },
+ {
+  "id": "F07-apresentacoes-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso define a formatação de todos os slides de uma apresentação?",
+  "alternativas": [
+   "PPTX",
+   "apresentação em quiosque",
+   "F5",
+   "slide mestre"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: modo de exibição Slide Mestre",
+  "comentario": "O slide mestre define a formatação padrão de todos os slides de uma apresentação, incluindo fontes, cores, logotipos e posicionamento de elementos. Fundamento: PowerPoint: modo de exibição Slide Mestre."
+ },
+ {
+  "id": "F07-apresentacoes-001-A",
+  "enunciado": "O que diferencia transição de animação no PowerPoint?",
+  "alternativas": [
+   "slide mestre",
+   "apresentação em quiosque",
+   "PPTX",
+   "F5",
+   "a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: guias Transições e Animações",
+  "comentario": "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para outro, enquanto a animação é o efeito aplicado a objetos dentro de um mesmo slide. Fundamento: PowerPoint: guias Transições e Animações."
+ },
+ {
+  "id": "F07-apresentacoes-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. O que diferencia transição de animação no PowerPoint?",
+  "alternativas": [
+   "apresentação em quiosque",
+   "a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos",
+   "F5",
+   "slide mestre",
+   "PPTX"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: guias Transições e Animações",
+  "comentario": "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para outro, enquanto a animação é o efeito aplicado a objetos dentro de um mesmo slide. Fundamento: PowerPoint: guias Transições e Animações."
+ },
+ {
+  "id": "F07-apresentacoes-001-C",
+  "enunciado": "A resposta \"a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos\" corresponde a qual dos questionamentos a seguir? (Tema: Apresentações (PowerPoint).)",
+  "alternativas": [
+   "Qual tecla inicia a apresentação de slides do começo no PowerPoint?",
+   "Qual formato nativo salva a apresentação editável no PowerPoint?",
+   "Qual recurso define a formatação de todos os slides de uma apresentação?",
+   "Qual recurso repete a apresentação automaticamente em intervalos programados?",
+   "O que diferencia transição de animação no PowerPoint?"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: guias Transições e Animações",
+  "comentario": "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para outro, enquanto a animação é o efeito aplicado a objetos dentro de um mesmo slide. Fundamento: PowerPoint: guias Transições e Animações."
+ },
+ {
+  "id": "F07-apresentacoes-002-A",
+  "enunciado": "Qual tecla inicia a apresentação de slides do começo no PowerPoint?",
+  "alternativas": [
+   "PPTX",
+   "apresentação em quiosque",
+   "F5",
+   "slide mestre"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: atalhos de apresentação",
+  "comentario": "A tecla F5 inicia a apresentação de slides a partir do primeiro slide; Shift+F5 inicia a partir do slide atual. Fundamento: PowerPoint: atalhos de apresentação."
+ },
+ {
+  "id": "F07-apresentacoes-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual tecla inicia a apresentação de slides do começo no PowerPoint?",
+  "alternativas": [
+   "apresentação em quiosque",
+   "PPTX",
+   "F5",
+   "slide mestre"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: atalhos de apresentação",
+  "comentario": "A tecla F5 inicia a apresentação de slides a partir do primeiro slide; Shift+F5 inicia a partir do slide atual. Fundamento: PowerPoint: atalhos de apresentação."
+ },
+ {
+  "id": "F07-apresentacoes-003-A",
+  "enunciado": "Qual recurso repete a apresentação automaticamente em intervalos programados?",
+  "alternativas": [
+   "F5",
+   "apresentação em quiosque",
+   "a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos",
+   "PPTX",
+   "slide mestre"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: configurar apresentação",
+  "comentario": "O modo de apresentação em quiosque, ou executada automaticamente, repete a apresentação em um ciclo contínuo, com controle de tempo e possibilidade de avanço automático. Fundamento: PowerPoint: configurar apresentação."
+ },
+ {
+  "id": "F07-apresentacoes-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual recurso repete a apresentação automaticamente em intervalos programados?",
+  "alternativas": [
+   "slide mestre",
+   "apresentação em quiosque",
+   "F5",
+   "a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos",
+   "PPTX"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: configurar apresentação",
+  "comentario": "O modo de apresentação em quiosque, ou executada automaticamente, repete a apresentação em um ciclo contínuo, com controle de tempo e possibilidade de avanço automático. Fundamento: PowerPoint: configurar apresentação."
+ },
+ {
+  "id": "F07-apresentacoes-003-C",
+  "enunciado": "A resposta \"apresentação em quiosque\" corresponde a qual dos questionamentos a seguir? (Tema: Apresentações (PowerPoint).)",
+  "alternativas": [
+   "Qual tecla inicia a apresentação de slides do começo no PowerPoint?",
+   "Qual formato nativo salva a apresentação editável no PowerPoint?",
+   "O que diferencia transição de animação no PowerPoint?",
+   "Qual recurso define a formatação de todos os slides de uma apresentação?",
+   "Qual recurso repete a apresentação automaticamente em intervalos programados?"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: configurar apresentação",
+  "comentario": "O modo de apresentação em quiosque, ou executada automaticamente, repete a apresentação em um ciclo contínuo, com controle de tempo e possibilidade de avanço automático. Fundamento: PowerPoint: configurar apresentação."
+ },
+ {
+  "id": "F07-apresentacoes-004-A",
+  "enunciado": "Qual formato nativo salva a apresentação editável no PowerPoint?",
+  "alternativas": [
+   "apresentação em quiosque",
+   "PPTX",
+   "slide mestre",
+   "F5"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: formatos de arquivo",
+  "comentario": "O formato PPTX é o nativo do PowerPoint a partir de 2007, permitindo salvar a apresentação de forma editável, em oposição ao PDF, que não permite edição direta. Fundamento: PowerPoint: formatos de arquivo."
+ },
+ {
+  "id": "F07-apresentacoes-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual formato nativo salva a apresentação editável no PowerPoint?",
+  "alternativas": [
+   "apresentação em quiosque",
+   "PPTX",
+   "slide mestre",
+   "F5"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "PowerPoint: formatos de arquivo",
+  "comentario": "O formato PPTX é o nativo do PowerPoint a partir de 2007, permitindo salvar a apresentação de forma editável, em oposição ao PDF, que não permite edição direta. Fundamento: PowerPoint: formatos de arquivo."
+ },
+ {
+  "id": "F07-seguranca-000-A",
+  "enunciado": "Qual golpe usa mensagens falsas que imitam instituições para roubar dados do usuário?",
+  "alternativas": [
+   "autenticação de dois fatores",
+   "phishing",
+   "firewall",
+   "criptografia",
+   "ransomware"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O phishing é o golpe que usa mensagens, sites ou ligações falsas imitando instituições conhecidas para induzir o usuário a fornecer dados pessoais e senhas. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-000-B",
+  "enunciado": "Assinale a alternativa correta. Qual golpe usa mensagens falsas que imitam instituições para roubar dados do usuário?",
+  "alternativas": [
+   "phishing",
+   "ransomware",
+   "autenticação de dois fatores",
+   "firewall",
+   "criptografia"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O phishing é o golpe que usa mensagens, sites ou ligações falsas imitando instituições conhecidas para induzir o usuário a fornecer dados pessoais e senhas. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-001-A",
+  "enunciado": "Qual programa malicioso criptografa os arquivos da vítima e exige resgate?",
+  "alternativas": [
+   "firewall",
+   "criptografia",
+   "phishing",
+   "autenticação de dois fatores",
+   "ransomware"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O ransomware é o programa malicioso que criptografa os arquivos do usuário e exige pagamento de resgate para liberar o acesso, sendo o backup a principal defesa. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual programa malicioso criptografa os arquivos da vítima e exige resgate?",
+  "alternativas": [
+   "ransomware",
+   "autenticação de dois fatores",
+   "phishing",
+   "firewall",
+   "criptografia"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O ransomware é o programa malicioso que criptografa os arquivos do usuário e exige pagamento de resgate para liberar o acesso, sendo o backup a principal defesa. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-002-A",
+  "enunciado": "Qual recurso bloqueia acessos não autorizados entre a rede interna e a internet?",
+  "alternativas": [
+   "ransomware",
+   "autenticação de dois fatores",
+   "firewall",
+   "criptografia",
+   "phishing"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O firewall é o recurso que controla e filtra o tráfego de rede entre a rede interna e a internet, bloqueando acessos não autorizados com base em regras. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso bloqueia acessos não autorizados entre a rede interna e a internet?",
+  "alternativas": [
+   "autenticação de dois fatores",
+   "criptografia",
+   "phishing",
+   "firewall",
+   "ransomware"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O firewall é o recurso que controla e filtra o tráfego de rede entre a rede interna e a internet, bloqueando acessos não autorizados com base em regras. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-003-A",
+  "enunciado": "Qual recurso transforma a informação em dado ilegível para quem não tem a chave?",
+  "alternativas": [
+   "autenticação de dois fatores",
+   "firewall",
+   "ransomware",
+   "criptografia",
+   "phishing"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "A criptografia é o recurso que transforma a informação em dado ilegível, garantindo confidencialidade, e pode assegurar também a integridade e a autenticidade quando usada com assinatura digital. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual recurso transforma a informação em dado ilegível para quem não tem a chave?",
+  "alternativas": [
+   "autenticação de dois fatores",
+   "ransomware",
+   "firewall",
+   "phishing",
+   "criptografia"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "A criptografia é o recurso que transforma a informação em dado ilegível, garantindo confidencialidade, e pode assegurar também a integridade e a autenticidade quando usada com assinatura digital. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-004-A",
+  "enunciado": "Qual recurso acrescenta uma segunda confirmação além da senha no login?",
+  "alternativas": [
+   "firewall",
+   "autenticação de dois fatores",
+   "criptografia",
+   "phishing",
+   "ransomware"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "A autenticação de dois fatores exige, além da senha, uma segunda confirmação, como código enviado por aplicativo ou mensagem, aumentando a segurança do acesso. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-004-B",
+  "enunciado": "Assinale a alternativa correta. Qual recurso acrescenta uma segunda confirmação além da senha no login?",
+  "alternativas": [
+   "autenticação de dois fatores",
+   "phishing",
+   "criptografia",
+   "ransomware",
+   "firewall"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "A autenticação de dois fatores exige, além da senha, uma segunda confirmação, como código enviado por aplicativo ou mensagem, aumentando a segurança do acesso. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-004-C",
+  "enunciado": "A resposta \"autenticação de dois fatores\" corresponde a qual dos questionamentos a seguir? (Tema: Segurança da informação.)",
+  "alternativas": [
+   "Qual programa malicioso criptografa os arquivos da vítima e exige resgate?",
+   "Qual recurso acrescenta uma segunda confirmação além da senha no login?",
+   "Qual recurso transforma a informação em dado ilegível para quem não tem a chave?",
+   "Qual golpe usa mensagens falsas que imitam instituições para roubar dados do usuário?",
+   "Qual recurso bloqueia acessos não autorizados entre a rede interna e a internet?"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "A autenticação de dois fatores exige, além da senha, uma segunda confirmação, como código enviado por aplicativo ou mensagem, aumentando a segurança do acesso. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-005-A",
+  "enunciado": "Qual prática protege os dados contra perda em caso de falha ou ataque?",
+  "alternativas": [
+   "ransomware",
+   "backup",
+   "phishing",
+   "firewall",
+   "criptografia"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O backup é a cópia de segurança dos dados, que deve ser feita periodicamente e armazenada em local diferente do original, servindo de proteção contra falhas, exclusões e ataques como ransomware. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-seguranca-005-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual prática protege os dados contra perda em caso de falha ou ataque?",
+  "alternativas": [
+   "phishing",
+   "backup",
+   "ransomware",
+   "criptografia",
+   "firewall"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de segurança da informação",
+  "comentario": "O backup é a cópia de segurança dos dados, que deve ser feita periodicamente e armazenada em local diferente do original, servindo de proteção contra falhas, exclusões e ataques como ransomware. Fundamento: Noções de segurança da informação."
+ },
+ {
+  "id": "F07-redes_web-000-A",
+  "enunciado": "O que o protocolo HTTPS garante em uma comunicação web?",
+  "alternativas": [
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "conexão criptografada entre o navegador e o servidor",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "DNS",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet e segurança",
+  "comentario": "O HTTPS é a versão segura do HTTP e garante a conexão criptografada entre o navegador e o servidor, protegendo a integridade e a confidencialidade das informações transmitidas. Fundamento: Noções de internet e segurança."
+ },
+ {
+  "id": "F07-redes_web-000-B",
+  "enunciado": "Assinale a alternativa correta. O que o protocolo HTTPS garante em uma comunicação web?",
+  "alternativas": [
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "conexão criptografada entre o navegador e o servidor",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "DNS"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet e segurança",
+  "comentario": "O HTTPS é a versão segura do HTTP e garante a conexão criptografada entre o navegador e o servidor, protegendo a integridade e a confidencialidade das informações transmitidas. Fundamento: Noções de internet e segurança."
+ },
+ {
+  "id": "F07-redes_web-000-C",
+  "enunciado": "A resposta \"conexão criptografada entre o navegador e o servidor\" corresponde a qual dos questionamentos a seguir? (Tema: Internet, redes e nuvem.)",
+  "alternativas": [
+   "O que é uma VPN?",
+   "Qual serviço traduz nomes de domínio em endereços IP?",
+   "O que é computação em nuvem?",
+   "O que são cookies em um navegador?",
+   "O que o protocolo HTTPS garante em uma comunicação web?"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet e segurança",
+  "comentario": "O HTTPS é a versão segura do HTTP e garante a conexão criptografada entre o navegador e o servidor, protegendo a integridade e a confidencialidade das informações transmitidas. Fundamento: Noções de internet e segurança."
+ },
+ {
+  "id": "F07-redes_web-001-A",
+  "enunciado": "Qual serviço traduz nomes de domínio em endereços IP?",
+  "alternativas": [
+   "DNS",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "conexão criptografada entre o navegador e o servidor"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de redes de computadores",
+  "comentario": "O DNS (Domain Name System) é o serviço que traduz nomes de domínio, como exemplo.com, em endereços IP, permitindo a localização dos servidores na internet. Fundamento: Noções de redes de computadores."
+ },
+ {
+  "id": "F07-redes_web-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual serviço traduz nomes de domínio em endereços IP?",
+  "alternativas": [
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "conexão criptografada entre o navegador e o servidor",
+   "DNS"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de redes de computadores",
+  "comentario": "O DNS (Domain Name System) é o serviço que traduz nomes de domínio, como exemplo.com, em endereços IP, permitindo a localização dos servidores na internet. Fundamento: Noções de redes de computadores."
+ },
+ {
+  "id": "F07-redes_web-002-A",
+  "enunciado": "O que é computação em nuvem?",
+  "alternativas": [
+   "conexão criptografada entre o navegador e o servidor",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "DNS",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de computação em nuvem",
+  "comentario": "A computação em nuvem é o fornecimento de serviços de computação — como armazenamento, processamento, softwares e plataformas — por meio da internet, dispensando infraestrutura local. Fundamento: Noções de computação em nuvem."
+ },
+ {
+  "id": "F07-redes_web-002-B",
+  "enunciado": "Assinale a alternativa correta. O que é computação em nuvem?",
+  "alternativas": [
+   "DNS",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "conexão criptografada entre o navegador e o servidor",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de computação em nuvem",
+  "comentario": "A computação em nuvem é o fornecimento de serviços de computação — como armazenamento, processamento, softwares e plataformas — por meio da internet, dispensando infraestrutura local. Fundamento: Noções de computação em nuvem."
+ },
+ {
+  "id": "F07-redes_web-002-C",
+  "enunciado": "A resposta \"o fornecimento de serviços de computação pela internet, como armazenamento e processamento\" corresponde a qual dos questionamentos a seguir? (Tema: Internet, redes e nuvem.)",
+  "alternativas": [
+   "Qual serviço traduz nomes de domínio em endereços IP?",
+   "O que é uma VPN?",
+   "O que é computação em nuvem?",
+   "O que são cookies em um navegador?",
+   "O que o protocolo HTTPS garante em uma comunicação web?"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de computação em nuvem",
+  "comentario": "A computação em nuvem é o fornecimento de serviços de computação — como armazenamento, processamento, softwares e plataformas — por meio da internet, dispensando infraestrutura local. Fundamento: Noções de computação em nuvem."
+ },
+ {
+  "id": "F07-redes_web-003-A",
+  "enunciado": "O que é uma VPN?",
+  "alternativas": [
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "conexão criptografada entre o navegador e o servidor",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "DNS",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de redes de computadores",
+  "comentario": "A VPN (Virtual Private Network) cria um túnel criptografado entre o dispositivo do usuário e um servidor, protegendo a transmissão de dados e permitindo acesso remoto seguro a redes privadas. Fundamento: Noções de redes de computadores."
+ },
+ {
+  "id": "F07-redes_web-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. O que é uma VPN?",
+  "alternativas": [
+   "DNS",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "conexão criptografada entre o navegador e o servidor",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de redes de computadores",
+  "comentario": "A VPN (Virtual Private Network) cria um túnel criptografado entre o dispositivo do usuário e um servidor, protegendo a transmissão de dados e permitindo acesso remoto seguro a redes privadas. Fundamento: Noções de redes de computadores."
+ },
+ {
+  "id": "F07-redes_web-003-C",
+  "enunciado": "A resposta \"uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor\" corresponde a qual dos questionamentos a seguir? (Tema: Internet, redes e nuvem.)",
+  "alternativas": [
+   "O que são cookies em um navegador?",
+   "Qual serviço traduz nomes de domínio em endereços IP?",
+   "O que é uma VPN?",
+   "O que é computação em nuvem?",
+   "O que o protocolo HTTPS garante em uma comunicação web?"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de redes de computadores",
+  "comentario": "A VPN (Virtual Private Network) cria um túnel criptografado entre o dispositivo do usuário e um servidor, protegendo a transmissão de dados e permitindo acesso remoto seguro a redes privadas. Fundamento: Noções de redes de computadores."
+ },
+ {
+  "id": "F07-redes_web-004-A",
+  "enunciado": "O que são cookies em um navegador?",
+  "alternativas": [
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "DNS",
+   "conexão criptografada entre o navegador e o servidor"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet",
+  "comentario": "Cookies são pequenos arquivos gravados pelo site no dispositivo do usuário para armazenar preferências, manter sessões e identificar o navegador em acessos posteriores. Fundamento: Noções de internet."
+ },
+ {
+  "id": "F07-redes_web-004-B",
+  "enunciado": "Assinale a alternativa correta. O que são cookies em um navegador?",
+  "alternativas": [
+   "DNS",
+   "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões",
+   "o fornecimento de serviços de computação pela internet, como armazenamento e processamento",
+   "conexão criptografada entre o navegador e o servidor",
+   "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet",
+  "comentario": "Cookies são pequenos arquivos gravados pelo site no dispositivo do usuário para armazenar preferências, manter sessões e identificar o navegador em acessos posteriores. Fundamento: Noções de internet."
+ },
+ {
+  "id": "F07-redes_web-004-C",
+  "enunciado": "A resposta \"pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões\" corresponde a qual dos questionamentos a seguir? (Tema: Internet, redes e nuvem.)",
+  "alternativas": [
+   "O que o protocolo HTTPS garante em uma comunicação web?",
+   "Qual serviço traduz nomes de domínio em endereços IP?",
+   "O que são cookies em um navegador?",
+   "O que é uma VPN?",
+   "O que é computação em nuvem?"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Redes de computadores: conceitos básicos, Internet e intranet",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de internet",
+  "comentario": "Cookies são pequenos arquivos gravados pelo site no dispositivo do usuário para armazenar preferências, manter sessões e identificar o navegador em acessos posteriores. Fundamento: Noções de internet."
+ },
+ {
+  "id": "F07-conceitos_hardware-000-A",
+  "enunciado": "Quantos bits correspondem a um byte?",
+  "alternativas": [
+   "a unidade central de processamento",
+   "a memória RAM",
+   "oito bits"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de informática básica",
+  "comentario": "Um byte corresponde a oito bits, sendo a unidade básica de armazenamento de caracteres na computação. Fundamento: Noções de informática básica."
+ },
+ {
+  "id": "F07-conceitos_hardware-000-B",
+  "enunciado": "Assinale a alternativa correta. Quantos bits correspondem a um byte?",
+  "alternativas": [
+   "oito bits",
+   "a unidade central de processamento",
+   "a memória RAM"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de informática básica",
+  "comentario": "Um byte corresponde a oito bits, sendo a unidade básica de armazenamento de caracteres na computação. Fundamento: Noções de informática básica."
+ },
+ {
+  "id": "F07-conceitos_hardware-001-A",
+  "enunciado": "Qual componente é responsável por executar as instruções dos programas?",
+  "alternativas": [
+   "a memória RAM",
+   "oito bits",
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido",
+   "a unidade central de processamento",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "A unidade central de processamento, também chamada de processador, é o componente responsável por executar as instruções dos programas e realizar os cálculos. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-001-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual componente é responsável por executar as instruções dos programas?",
+  "alternativas": [
+   "a memória RAM",
+   "a unidade central de processamento",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente",
+   "oito bits",
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "A unidade central de processamento, também chamada de processador, é o componente responsável por executar as instruções dos programas e realizar os cálculos. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-001-C",
+  "enunciado": "A resposta \"a unidade central de processamento\" corresponde a qual dos questionamentos a seguir? (Tema: Conceitos de hardware e software.)",
+  "alternativas": [
+   "Quantos bits correspondem a um byte?",
+   "Qual memória perde o conteúdo quando o computador é desligado?",
+   "O que é software livre?",
+   "Qual componente é responsável por executar as instruções dos programas?",
+   "Qual é a principal característica de um disco de estado sólido (SSD)?"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "A unidade central de processamento, também chamada de processador, é o componente responsável por executar as instruções dos programas e realizar os cálculos. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-002-A",
+  "enunciado": "Qual memória perde o conteúdo quando o computador é desligado?",
+  "alternativas": [
+   "a unidade central de processamento",
+   "a memória RAM",
+   "oito bits"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "A memória RAM é volátil: seu conteúdo é perdido quando o computador é desligado, sendo utilizada para armazenar temporariamente os dados dos programas em execução. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-002-B",
+  "enunciado": "Assinale a alternativa correta. Qual memória perde o conteúdo quando o computador é desligado?",
+  "alternativas": [
+   "a unidade central de processamento",
+   "oito bits",
+   "a memória RAM"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "facil",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "A memória RAM é volátil: seu conteúdo é perdido quando o computador é desligado, sendo utilizada para armazenar temporariamente os dados dos programas em execução. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-003-A",
+  "enunciado": "Qual é a principal característica de um disco de estado sólido (SSD)?",
+  "alternativas": [
+   "a memória RAM",
+   "a unidade central de processamento",
+   "oito bits",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente",
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido"
+  ],
+  "correta": 4,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "O SSD é um dispositivo de armazenamento sem partes móveis, com tempo de acesso muito menor que o do disco rígido tradicional, além de maior resistência a impactos. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-003-B",
+  "enunciado": "Assinale a alternativa que responde corretamente ao questionamento a seguir. Qual é a principal característica de um disco de estado sólido (SSD)?",
+  "alternativas": [
+   "a memória RAM",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente",
+   "a unidade central de processamento",
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido",
+   "oito bits"
+  ],
+  "correta": 3,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de hardware",
+  "comentario": "O SSD é um dispositivo de armazenamento sem partes móveis, com tempo de acesso muito menor que o do disco rígido tradicional, além de maior resistência a impactos. Fundamento: Noções de hardware."
+ },
+ {
+  "id": "F07-conceitos_hardware-004-A",
+  "enunciado": "O que é software livre?",
+  "alternativas": [
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido",
+   "a memória RAM",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente",
+   "a unidade central de processamento",
+   "oito bits"
+  ],
+  "correta": 2,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de software",
+  "comentario": "Software livre é aquele que concede ao usuário as liberdades de executar, estudar, modificar e redistribuir o programa, com acesso ao código-fonte, conforme definição amplamente adotada. Fundamento: Noções de software."
+ },
+ {
+  "id": "F07-conceitos_hardware-004-B",
+  "enunciado": "Assinale a alternativa correta. O que é software livre?",
+  "alternativas": [
+   "a memória RAM",
+   "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente",
+   "não possui partes móveis e tem acesso mais rápido que o disco rígido",
+   "oito bits",
+   "a unidade central de processamento"
+  ],
+  "correta": 1,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de software",
+  "comentario": "Software livre é aquele que concede ao usuário as liberdades de executar, estudar, modificar e redistribuir o programa, com acesso ao código-fonte, conforme definição amplamente adotada. Fundamento: Noções de software."
+ },
+ {
+  "id": "F07-conceitos_hardware-004-C",
+  "enunciado": "A resposta \"o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente\" corresponde a qual dos questionamentos a seguir? (Tema: Conceitos de hardware e software.)",
+  "alternativas": [
+   "O que é software livre?",
+   "Qual componente é responsável por executar as instruções dos programas?",
+   "Qual memória perde o conteúdo quando o computador é desligado?",
+   "Quantos bits correspondem a um byte?",
+   "Qual é a principal característica de um disco de estado sólido (SSD)?"
+  ],
+  "correta": 0,
+  "materia": "INFO",
+  "topico": "Hardware e periféricos de microcomputador",
+  "dif": "media",
+  "banca": "Estilo CETAP",
+  "ano": 2026,
+  "origem": "gerada",
+  "ref": "Noções de software",
+  "comentario": "Software livre é aquele que concede ao usuário as liberdades de executar, estudar, modificar e redistribuir o programa, com acesso ao código-fonte, conforme definição amplamente adotada. Fundamento: Noções de software."
+ }
+]

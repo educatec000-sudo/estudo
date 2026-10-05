@@ -1,0 +1,68 @@
+{
+ "descricao": "Base de fatos: Noções de Informática.",
+ "categorias": [
+  {
+   "materia": "INFO", "id": "word_recursos", "tema": "Editor de textos (Word)",
+   "fatos": [
+    ["Qual recurso do Word gera vários documentos personalizados a partir de uma planilha de dados?", "mala direta", "O recurso de mala direta do Word permite gerar vários documentos personalizados, como ofícios com nome e endereço de cada destinatário, a partir de uma base de dados em planilha.", "Word: guia Correspondências."],
+    ["Qual recurso do Word marca as alterações feitas no documento para posterior revisão?", "controle de alterações", "O recurso de controle de alterações do Word registra as modificações feitas no documento, permitindo que o autor aceite ou rejeite cada mudança na revisão.", "Word: guia Revisão."],
+    ["Qual recurso do Word cria automaticamente a lista de títulos e páginas do documento?", "sumário automático", "O sumário automático do Word é gerado a partir dos estilos de título aplicados ao documento, permitindo atualização automática dos números de página.", "Word: guia Referências."],
+    ["Qual recurso do Word insere texto explicativo no rodapé da página?", "nota de rodapé", "A nota de rodapé insere texto explicativo ao pé da página, referenciado por um número sobrescrito no corpo do documento, ao contrário da nota de fim, que é lançada ao final do texto.", "Word: guia Referências."],
+    ["Qual recurso do Word aplica formatação uniforme a títulos e textos do documento?", "estilos", "Os estilos do Word permitem aplicar conjuntos de formatação padronizados a títulos e textos, facilitando a consistência visual e a geração de sumários.", "Word: guia Página Inicial."],
+    ["Qual atalho do Word e do Excel executa a verificação ortográfica e gramatical?", "F7", "A tecla F7 aciona a verificação ortográfica e gramatical nos editores de texto e planilhas, abrindo o painel de revisão de escrita.", "Word/Excel: atalho F7."]
+   ]
+  },
+  {
+   "materia": "INFO", "id": "excel_funcoes", "tema": "Planilhas (Excel)",
+   "fatos": [
+    ["Qual função do Excel soma os valores de um intervalo?", "SOMA", "A função SOMA do Excel totaliza os valores numéricos de um intervalo de células, como em =SOMA(A1:A10).", "Excel: função SOMA."],
+    ["Qual função do Excel calcula a média aritmética de um intervalo?", "MÉDIA", "A função MÉDIA do Excel calcula a média aritmética dos valores numéricos de um intervalo de células.", "Excel: função MÉDIA."],
+    ["Qual função do Excel retorna um valor se uma condição for verdadeira e outro se for falsa?", "SE", "A função SE do Excel testa uma condição e devolve um valor para o caso verdadeiro e outro para o caso falso, como em =SE(A1>=7;\"Aprovado\";\"Reprovado\").", "Excel: função SE."],
+    ["Qual função do Excel procura um valor na primeira coluna de uma matriz e devolve o valor de outra coluna?", "PROCV", "A função PROCV do Excel procura um valor na primeira coluna de um intervalo e retorna o valor correspondente de uma coluna indicada, sendo muito usada para cruzar dados.", "Excel: função PROCV."],
+    ["Qual função do Excel conta quantas células de um intervalo contêm apenas números?", "CONT.NÚM", "A função CONT.NÚM do Excel conta quantas células de um intervalo contêm números, ignorando textos e células vazias.", "Excel: função CONT.NÚM."],
+    ["O que significa o símbolo $ em uma referência de célula do Excel?", "indica referência absoluta, que não se altera ao copiar a fórmula", "O símbolo $ em uma referência, como $A$1, indica referência absoluta: a linha e a coluna permanecem fixas quando a fórmula é copiada para outras células.", "Excel: referências relativas e absolutas."]
+   ]
+  },
+  {
+   "materia": "INFO", "id": "apresentacoes", "tema": "Apresentações (PowerPoint)",
+   "fatos": [
+    ["Qual recurso define a formatação de todos os slides de uma apresentação?", "slide mestre", "O slide mestre define a formatação padrão de todos os slides de uma apresentação, incluindo fontes, cores, logotipos e posicionamento de elementos.", "PowerPoint: modo de exibição Slide Mestre."],
+    ["O que diferencia transição de animação no PowerPoint?", "a transição ocorre entre slides; a animação ocorre dentro do slide, nos objetos", "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para outro, enquanto a animação é o efeito aplicado a objetos dentro de um mesmo slide.", "PowerPoint: guias Transições e Animações."],
+    ["Qual tecla inicia a apresentação de slides do começo no PowerPoint?", "F5", "A tecla F5 inicia a apresentação de slides a partir do primeiro slide; Shift+F5 inicia a partir do slide atual.", "PowerPoint: atalhos de apresentação."],
+    ["Qual recurso repete a apresentação automaticamente em intervalos programados?", "apresentação em quiosque", "O modo de apresentação em quiosque, ou executada automaticamente, repete a apresentação em um ciclo contínuo, com controle de tempo e possibilidade de avanço automático.", "PowerPoint: configurar apresentação."],
+    ["Qual formato nativo salva a apresentação editável no PowerPoint?", "PPTX", "O formato PPTX é o nativo do PowerPoint a partir de 2007, permitindo salvar a apresentação de forma editável, em oposição ao PDF, que não permite edição direta.", "PowerPoint: formatos de arquivo."]
+   ]
+  },
+  {
+   "materia": "INFO", "id": "seguranca", "tema": "Segurança da informação",
+   "fatos": [
+    ["Qual golpe usa mensagens falsas que imitam instituições para roubar dados do usuário?", "phishing", "O phishing é o golpe que usa mensagens, sites ou ligações falsas imitando instituições conhecidas para induzir o usuário a fornecer dados pessoais e senhas.", "Noções de segurança da informação."],
+    ["Qual programa malicioso criptografa os arquivos da vítima e exige resgate?", "ransomware", "O ransomware é o programa malicioso que criptografa os arquivos do usuário e exige pagamento de resgate para liberar o acesso, sendo o backup a principal defesa.", "Noções de segurança da informação."],
+    ["Qual recurso bloqueia acessos não autorizados entre a rede interna e a internet?", "firewall", "O firewall é o recurso que controla e filtra o tráfego de rede entre a rede interna e a internet, bloqueando acessos não autorizados com base em regras.", "Noções de segurança da informação."],
+    ["Qual recurso transforma a informação em dado ilegível para quem não tem a chave?", "criptografia", "A criptografia é o recurso que transforma a informação em dado ilegível, garantindo confidencialidade, e pode assegurar também a integridade e a autenticidade quando usada com assinatura digital.", "Noções de segurança da informação."],
+    ["Qual recurso acrescenta uma segunda confirmação além da senha no login?", "autenticação de dois fatores", "A autenticação de dois fatores exige, além da senha, uma segunda confirmação, como código enviado por aplicativo ou mensagem, aumentando a segurança do acesso.", "Noções de segurança da informação."],
+    ["Qual prática protege os dados contra perda em caso de falha ou ataque?", "backup", "O backup é a cópia de segurança dos dados, que deve ser feita periodicamente e armazenada em local diferente do original, servindo de proteção contra falhas, exclusões e ataques como ransomware.", "Noções de segurança da informação."]
+   ]
+  },
+  {
+   "materia": "INFO", "id": "redes_web", "tema": "Internet, redes e nuvem",
+   "fatos": [
+    ["O que o protocolo HTTPS garante em uma comunicação web?", "conexão criptografada entre o navegador e o servidor", "O HTTPS é a versão segura do HTTP e garante a conexão criptografada entre o navegador e o servidor, protegendo a integridade e a confidencialidade das informações transmitidas.", "Noções de internet e segurança."],
+    ["Qual serviço traduz nomes de domínio em endereços IP?", "DNS", "O DNS (Domain Name System) é o serviço que traduz nomes de domínio, como exemplo.com, em endereços IP, permitindo a localização dos servidores na internet.", "Noções de redes de computadores."],
+    ["O que é computação em nuvem?", "o fornecimento de serviços de computação pela internet, como armazenamento e processamento", "A computação em nuvem é o fornecimento de serviços de computação — como armazenamento, processamento, softwares e plataformas — por meio da internet, dispensando infraestrutura local.", "Noções de computação em nuvem."],
+    ["O que é uma VPN?", "uma rede privada virtual que cria um túnel criptografado entre o dispositivo e o servidor", "A VPN (Virtual Private Network) cria um túnel criptografado entre o dispositivo do usuário e um servidor, protegendo a transmissão de dados e permitindo acesso remoto seguro a redes privadas.", "Noções de redes de computadores."],
+    ["O que são cookies em um navegador?", "pequenos arquivos gravados pelo site no dispositivo para armazenar preferências e identificar sessões", "Cookies são pequenos arquivos gravados pelo site no dispositivo do usuário para armazenar preferências, manter sessões e identificar o navegador em acessos posteriores.", "Noções de internet."]
+   ]
+  },
+  {
+   "materia": "INFO", "id": "conceitos_hardware", "tema": "Conceitos de hardware e software",
+   "fatos": [
+    ["Quantos bits correspondem a um byte?", "oito bits", "Um byte corresponde a oito bits, sendo a unidade básica de armazenamento de caracteres na computação.", "Noções de informática básica."],
+    ["Qual componente é responsável por executar as instruções dos programas?", "a unidade central de processamento", "A unidade central de processamento, também chamada de processador, é o componente responsável por executar as instruções dos programas e realizar os cálculos.", "Noções de hardware."],
+    ["Qual memória perde o conteúdo quando o computador é desligado?", "a memória RAM", "A memória RAM é volátil: seu conteúdo é perdido quando o computador é desligado, sendo utilizada para armazenar temporariamente os dados dos programas em execução.", "Noções de hardware."],
+    ["Qual é a principal característica de um disco de estado sólido (SSD)?", "não possui partes móveis e tem acesso mais rápido que o disco rígido", "O SSD é um dispositivo de armazenamento sem partes móveis, com tempo de acesso muito menor que o do disco rígido tradicional, além de maior resistência a impactos.", "Noções de hardware."],
+    ["O que é software livre?", "o programa cujo código-fonte pode ser executado, estudado, modificado e redistribuído livremente", "Software livre é aquele que concede ao usuário as liberdades de executar, estudar, modificar e redistribuir o programa, com acesso ao código-fonte, conforme definição amplamente adotada.", "Noções de software."]
+   ]
+  }
+ ]
+}

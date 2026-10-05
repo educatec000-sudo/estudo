@@ -1,0 +1,19 @@
+# Sobe o Worker do Cloudflare para guardar o progresso do app.
+#
+# Você NÃO precisa usar isto se preferir o painel do navegador
+# (o passo a passo está em LEIA-CLOUDFLARE.md).
+#
+# Este arquivo serve para quem quiser publicar pelo computador:
+#   npm install -g wrangler
+#   wrangler login
+#   wrangler kv namespace create alepa_progresso     <- copie o "id" que aparecer
+#   (cole o id abaixo, no lugar de COLE_AQUI_O_ID)
+#   wrangler deploy
+
+name = "alepa-progresso"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "PROGRESSO"
+id = "COLE_AQUI_O_ID"

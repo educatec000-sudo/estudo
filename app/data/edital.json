@@ -1,0 +1,308 @@
+{
+  "concurso": "ALEPA – Concurso Público nº 002/2026",
+  "banca": "Fundação CETAP",
+  "orgao": "Assembleia Legislativa do Estado do Pará",
+  "edital": "Edital de Abertura nº 001/2026, de 28/09/2026 – Anexo II (Conteúdo Programático)",
+  "cargo": "Cargo 15 – Analista Legislativo – Assistência Legislativa (PL.AL.0..)",
+  "observacao_cargo": "O cargo 15 integra o bloco 'Conhecimentos Específicos comuns aos cargos 01, 02, 03, 12, 13, 14 e 15' do Anexo II.",
+  "data_prova": "2026-12-13",
+  "materias": [
+    {
+      "id": "LP",
+      "nome": "Língua Portuguesa",
+      "grupo": "Conhecimentos Básicos",
+      "cor": "#2563eb",
+      "topicos": [
+        "Compreensão e Interpretação de Textos",
+        "Argumentação e persuasão",
+        "Ortografia",
+        "Acentuação gráfica",
+        "Comunicação assertiva: linguagem simples, concisa e objetiva",
+        "Crase",
+        "Uso dos porquês",
+        "Coesão e coerência",
+        "Significação das palavras: sinônimos, antônimos, homônimos e parônimos",
+        "Classes de palavras",
+        "Período simples e composto",
+        "Pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal",
+        "Colocação dos pronomes oblíquos átonos",
+        "Figuras de linguagem",
+        "Redação oficial: escrita de textos formais e Manual de Redação da Presidência da República"
+      ]
+    },
+    {
+      "id": "LE",
+      "nome": "Legislação e Ética no Serviço Público",
+      "grupo": "Conhecimentos Básicos",
+      "cor": "#7c3aed",
+      "topicos": [
+        "Assédio moral e sexual: conceitos e medidas de enfrentamento",
+        "Segurança da informação: fundamentos, conceitos e mecanismos",
+        "LGPD – Lei nº 13.709/2018",
+        "Lei Anticorrupção – Lei nº 12.846/2013",
+        "Decreto nº 11.129/2022",
+        "Ética e moral; ética, princípios, valores e a lei",
+        "Ética e democracia: exercício da cidadania",
+        "Conduta ética e ética profissional",
+        "Ética e responsabilidade social; ética e função pública",
+        "Lei nº 8.429/1992 e alterações (Lei nº 14.230/2021)",
+        "Constituição do Estado do Pará aplicada ao Poder Legislativo",
+        "Técnica Legislativa – LC nº 95/1998",
+        "Regimento Interno e Processo Legislativo da ALEPA",
+        "Decretos Legislativos e Resoluções da ALEPA"
+      ]
+    },
+    {
+      "id": "INFO",
+      "nome": "Noções de Informática",
+      "grupo": "Conhecimentos Básicos",
+      "cor": "#0891b2",
+      "topicos": [
+        "Sistemas operacionais Windows 10 e Windows 11",
+        "Hardware e periféricos de microcomputador",
+        "Ferramentas de escritório: Word, Excel e PowerPoint (2013 a O365)",
+        "LibreOffice 7 ou superior (Writer, Calc, Impress)",
+        "Segurança da informação: fundamentos, antimalware, firewall, hardening, controle de USB",
+        "Organização e gerenciamento de informações, arquivos, pastas e programas",
+        "Redes de computadores: conceitos básicos, Internet e intranet",
+        "Navegadores Web: Chrome, Edge e Firefox",
+        "Busca e pesquisa na Web",
+        "Correio eletrônico (Outlook 2013 a O365); grupos de discussão, fóruns e wikis",
+        "Redes sociais: X, Facebook, LinkedIn, WhatsApp, YouTube, Instagram e Telegram",
+        "Educação a distância: Moodle, SharePoint e Google Drive",
+        "Tecnologias e ferramentas multimídia; áudio e vídeo",
+        "Ferramentas colaborativas: Teams, Cisco Webex e Google Meet"
+      ]
+    },
+    {
+      "id": "RL",
+      "nome": "Raciocínio Lógico",
+      "grupo": "Conhecimentos Básicos",
+      "cor": "#ea580c",
+      "topicos": [
+        "Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos",
+        "Dedução de novas informações e avaliação das condições da estrutura",
+        "Raciocínio verbal",
+        "Conjuntos numéricos racionais e reais: operações e propriedades",
+        "Problemas com as quatro operações, formas fracionária e decimal",
+        "Números e grandezas proporcionais: razão e proporção",
+        "Divisão proporcional",
+        "Regra de três simples e composta",
+        "Porcentagem",
+        "Raciocínio sequencial",
+        "Orientação espacial e temporal",
+        "Formação de conceitos e discriminação de elementos",
+        "Compreensão do processo lógico: hipóteses e conclusões válidas"
+      ]
+    },
+    {
+      "id": "SEC",
+      "nome": "Noções de Secretaria e Administração Geral",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#16a34a",
+      "topicos": [
+        "Noções básicas de secretaria: preparo, preenchimento e tratamento de documentos",
+        "Preparo de relatórios, formulários e planilhas",
+        "Controle de documentos: envio e recebimento",
+        "Técnicas de arquivo",
+        "Modelos de gestão: competência, processos, projetos e resultados",
+        "Noções de atendimento ao público",
+        "Manual de Redação da Presidência da República",
+        "Planejamento: tipos de planos, abrangência e horizonte temporal",
+        "Plano de Ação 5W2H",
+        "Ciclo PDCA",
+        "Gerenciamento de projetos: conceito, projeto x processo, tipos, stakeholders, benefícios, ciclo de vida e papel do gerente"
+      ]
+    },
+    {
+      "id": "DA",
+      "nome": "Direito Administrativo",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#dc2626",
+      "topicos": [
+        "Direito administrativo: conceito, objeto e fontes",
+        "Princípios constitucionais do direito administrativo",
+        "Organização administrativa: centralização, descentralização, concentração e desconcentração",
+        "Administração direta e órgão público",
+        "Administração indireta: autarquias, agências reguladoras e executivas",
+        "Fundações públicas, empresas públicas e sociedades de economia mista",
+        "Lei nº 13.303/2016 (Lei das Estatais)",
+        "Consórcios públicos; serviços sociais autônomos; entidades de apoio; OS e OSCIP",
+        "Atos administrativos: conceito, elementos, atributos e classificação",
+        "Atos administrativos em espécie; silêncio administrativo",
+        "Extinção dos atos: revogação, anulação e cassação; convalidação",
+        "Vinculação e discricionariedade; atos nulos, anuláveis e inexistentes; decadência",
+        "Poderes e deveres da Administração Pública",
+        "Abuso de poder: Lei nº 13.869/2019",
+        "Agentes públicos: espécies, cargo, emprego e função",
+        "Lei nº 5.810/1994 (RJÚ dos servidores do Estado do Pará)",
+        "Serviços públicos: Leis nº 8.987/1995, 11.079/2004, 13.019/2014 e 13.460/2017",
+        "Licitações e contratos: Lei nº 14.133/2021",
+        "Contratos administrativos e Lei nº 11.107/2005",
+        "Controle da administração pública (administrativo, legislativo, judicial, TC e social)",
+        "Responsabilidade civil do Estado",
+        "Processo administrativo no Estado do Pará: Lei nº 8.972/2020"
+      ]
+    },
+    {
+      "id": "DC",
+      "nome": "Direito Constitucional",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#b91c1c",
+      "topicos": [
+        "Constituição: conceito, objeto, elementos e classificações",
+        "Supremacia da Constituição e aplicabilidade das normas constitucionais",
+        "Interpretação das normas constitucionais",
+        "Poder constituinte originário e derivado",
+        "Princípios fundamentais",
+        "Direitos e garantias fundamentais; individuais e coletivos",
+        "Remédios constitucionais: HC, MS, MI e HD",
+        "Direitos sociais e direitos políticos",
+        "Organização do Estado: organização político-administrativa e federalismo",
+        "União, Estados, Municípios, DF e Territórios",
+        "Intervenção federal e intervenção dos estados nos municípios",
+        "Administração Pública na CF (disposições gerais)",
+        "Organização dos Poderes e freios e contrapesos",
+        "Funções essenciais à Justiça",
+        "Controle de constitucionalidade: sistemas, incidental e abstrato"
+      ]
+    },
+    {
+      "id": "DPC",
+      "nome": "Direito Processual Constitucional",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#9d174d",
+      "topicos": [
+        "Jurisdição constitucional: controle difuso e concentrado",
+        "ADI, ADC e ADO (Lei nº 9.868/1999)",
+        "ADPF (Lei nº 9.882/1999)",
+        "Controle de constitucionalidade estadual: representação de inconstitucionalidade",
+        "Súmulas vinculantes (Lei nº 11.417/2006) e reclamação",
+        "Remédios constitucionais e suas leis (HC, HD, MS, MI, ação popular, ACP)",
+        "Tutela provisória contra o Poder Público (Lei nº 8.437/1992)",
+        "Precedentes: IRDR e incidente de assunção de competência"
+      ]
+    },
+    {
+      "id": "PL",
+      "nome": "Processo Legislativo e Técnica Legislativa",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#065f46",
+      "topicos": [
+        "Órgãos internos das casas legislativas; Mesa e Plenário",
+        "Comissões permanentes e temporárias; CPI",
+        "Mandato parlamentar: federal, estadual e municipal",
+        "Iniciativa no processo legislativo: executivo, legislativo e judiciário",
+        "Iniciativa popular e iniciativa reservada",
+        "Processo de emendas: espécies, titularidade, objeto, conteúdo e momento",
+        "Proposições legislativas: espécies e diferenças",
+        "Fases da elaboração legislativa",
+        "Incidentes no processo legislativo",
+        "Sanção, veto, promulgação e publicação",
+        "Decreto legislativo",
+        "LC nº 95/1998: técnica legislativa (estrutura, articulação, redação e alteração de leis)",
+        "RIALEPA: organização, Mesa Diretora, sessões e deliberações",
+        "RIALEPA: comissões, pareceres e tramitação de matérias",
+        "RIALEPA: quóruns, turnos, regimes de tramitação, urgência e preferência",
+        "RIALEPA: discussão, votação, redação final, autógrafos, veto e promulgação",
+        "RIALEPA: PPA, LDO e LOA; CCFO e emendas orçamentárias",
+        "Iniciativa popular e assessoramento legislativo"
+      ]
+    },
+    {
+      "id": "DF",
+      "nome": "Direito Financeiro",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#0f766e",
+      "topicos": [
+        "Lei Complementar nº 101/2000 (LRF): responsabilidade fiscal",
+        "Lei nº 4.320/1964: orçamentos e balanços",
+        "Orçamento público na CF (arts. 165 a 169)",
+        "Plano Plurianual (PPA)",
+        "Lei de Diretrizes Orçamentárias (LDO)",
+        "Lei Orçamentária Anual (LOA)"
+      ]
+    },
+    {
+      "id": "DPREV",
+      "nome": "Direito Previdenciário",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#7e22ce",
+      "topicos": [
+        "Seguridade social: conceito, origem, evolução, organização e princípios",
+        "Custeio da seguridade social: receitas, contribuições e salário de contribuição",
+        "Regime geral de previdência social: segurados e dependentes",
+        "Filiação, inscrição e carência",
+        "Espécies de benefícios e prestações; salário de benefício e renda mensal inicial",
+        "Reajustamento, revisão, prescrição e decadência",
+        "Acumulação de benefícios; justificação; ações judiciais previdenciárias",
+        "Acidente de trabalho",
+        "Regime próprio dos servidores públicos (EC nº 103/2019)",
+        "Contagem recíproca e compensação financeira; previdência complementar"
+      ]
+    },
+    {
+      "id": "DCIV",
+      "nome": "Direito Civil",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#9333ea",
+      "topicos": [
+        "LINDB: vigência, aplicação, obrigatoriedade, interpretação e integração",
+        "Conflito das leis no tempo e eficácia das leis no espaço",
+        "Pessoas naturais: personalidade, capacidade, direitos da personalidade e domicílio",
+        "Pessoas jurídicas: disposições gerais, constituição, extinção, associações, sociedades e fundações",
+        "Bens imóveis, móveis e públicos",
+        "Fato jurídico e negócio jurídico: defeitos e invalidade",
+        "Prescrição e decadência",
+        "Obrigações: características, pagamento, inadimplemento e mora",
+        "Contratos: princípios, contratos em geral e disposições gerais",
+        "Responsabilidade civil objetiva e subjetiva; dano material e moral",
+        "Lei nº 8.078/1990: consumidor e fornecedor",
+        "Lei nº 10.741/2003 (Estatuto da Pessoa Idosa)"
+      ]
+    },
+    {
+      "id": "DPCIV",
+      "nome": "Direito Processual Civil",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#a16207",
+      "topicos": [
+        "Normas processuais civis; função jurisdicional",
+        "Ação: conceito, condições e classificação; pressupostos processuais",
+        "Sujeitos do processo; litisconsórcio e intervenção de terceiros",
+        "Poderes, deveres e responsabilidade do juiz",
+        "Ministério Público, Advocacia Pública e Defensoria",
+        "Atos processuais: forma, tempo, lugar, prazos, comunicações e nulidades",
+        "Tutela provisória: tutela de urgência",
+        "Formação, suspensão e extinção do processo",
+        "Processo de conhecimento: petição inicial, improcedência liminar, conciliação e mediação",
+        "Contestação, reconvenção, revelia e audiência de instrução",
+        "Provas; sentença e coisa julgada",
+        "Cumprimento de sentença e execução contra a Fazenda Pública",
+        "Procedimentos especiais e jurisdição voluntária; processos de execução",
+        "Processos nos tribunais, recursos e ações de impugnação",
+        "Ação de improbidade administrativa (Lei nº 8.429/1992 com a Lei nº 14.230/2021)",
+        "Lei nº 8.245/1991 (Locação de imóveis urbanos)",
+        "Jurisprudência dos tribunais superiores"
+      ]
+    },
+    {
+      "id": "DH",
+      "nome": "Noções de Direitos Humanos",
+      "grupo": "Conhecimentos Específicos (comuns)",
+      "cor": "#155e75",
+      "topicos": [
+        "Afirmação histórica dos direitos humanos",
+        "Fundamentação dos direitos humanos",
+        "Genealogia: origens clássicas, direitos naturais, revoluções e declarações",
+        "O paradoxo dos direitos humanos",
+        "Universalismo x multiculturalismo",
+        "Direitos humanos e direitos fundamentais: diferenças",
+        "Dimensões (gerações) dos direitos humanos",
+        "Características: imprescritibilidade, irrenunciabilidade, inalienabilidade, complementaridade e universalidade"
+      ]
+    }
+  ]
+}

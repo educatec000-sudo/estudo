@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b13">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Estudos ALEPA">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Arena Estudos — ALEPA 002/2026 (Fundação CETAP) — Cargo 15</title>
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="logo"><span class="dot">📘</span><span>Arena Estudos ALEPA<small>Concurso 002/2026 · Fundação CETAP · Cargo 15 – Assistência Legislativa</small></span></div>
+    <span class="spacer"></span>
+    <span class="badge pri" id="badge-hoje">0/0 hoje</span>
+    <span class="badge warn" id="badge-up">— dias</span>
+    <button class="btn sm" id="badge-ia" title="Configurar a chave do Hugging Face">🔑 IA desligada</button>
+    <button class="btn sm" id="btn-instalar" title="Instalar no celular">📲</button>
+    <button class="btn sm" id="btn-config" title="Configurações rápidas">⚙️</button>
+  </div>
+  <nav class="tabs"></nav>
+  <div id="cfgbar" class="hidden" style="max-width:1080px;margin:0 auto;padding:0 14px 12px">
+    <div class="grid c4">
+      <div><label class="f">Seu nome</label><input type="text" id="app-nome" placeholder="Como quer ser chamado?"></div>
+      <div><label class="f">Meta diária</label><input type="number" id="app-meta" value="41"></div>
+      <div><label class="f">Meta total</label><input type="number" id="app-meta-total" value="3000"></div>
+      <div><label class="f">Data da prova</label><input type="date" id="app-prova" value="2026-12-13"></div>
+    </div>
+    <div class="row" style="margin-top:8px"><button class="btn sm pri" id="cfg-salvar">Salvar</button><span class="tiny muted">Fica salvo no seu aparelho.</span></div>
+  </div>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<div class="fab">
+  <button id="fab-topo" title="Voltar ao topo">↑</button>
+</div>
+
+<script>
+/* ---------- DADOS EMBUTIDOS (gerados pelo build: questões, edital e teoria) ---------- */
+window.__EDITAL__ = /*__EDITAL__*/;
+window.__BANCO__ = /*__BANCO__*/;
+window.__TEORIA__ = /*__TEORIA__*/;
+</script>
+<script>/*__CORE__*/</script>
+<script>/*__IAS__*/</script>
+<script>/*__EXTRA__*/</script>
+<script>/*__SYNC__*/</script>
+<script>/*__IMPORT__*/</script>
+<script>/*__NUVEM__*/</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cb = document.getElementById('cfgbar');
+  document.getElementById('btn-config').onclick = () => cb.classList.toggle('hidden');
+  document.getElementById('cfg-salvar').onclick = () => {
+    S.config.nome = document.getElementById('app-nome').value;
+    S.config.metaDia = +document.getElementById('app-meta').value || 41;
+    S.config.metaTotal = +document.getElementById('app-meta-total').value || 3000;
+    S.config.dataProva = document.getElementById('app-prova').value || '2026-12-13';
+    salvar(); atualizarBadges(); toast('Salvo ✅'); cb.classList.add('hidden');
+  };
+  document.getElementById('fab-topo').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('badge-ia').onclick = () => { irPara('ia'); setTimeout(abrirConfigIA, 150); };
+  document.getElementById('btn-instalar').onclick = () => instalarPWA();
+});
+</script>
+</body>
+</html>

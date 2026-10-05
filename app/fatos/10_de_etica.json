@@ -1,0 +1,334 @@
+{
+ "descricao": "Base de fatos: Direito do Servidor Público — Estatuto (Lei 8.112/1990), processo administrativo disciplinar e regime jurídico estadual.",
+ "categorias": [
+  {
+   "materia": "DA",
+   "id": "estatuto_provimento",
+   "tema": "Estatuto do servidor — provimento, posse e vacância",
+   "fatos": [
+    [
+     "Quais são as formas de provimento de cargo público previstas na Lei 8.112/1990?",
+     "nomeação, promoção, readaptação, reversão, aproveitamento, reintegração e recondução",
+     "A Lei 8.112/1990 prevê como formas de provimento de cargo público a nomeação, a promoção, a readaptação, a reversão, o aproveitamento, a reintegração e a recondução.",
+     "Lei 8.112/1990, art. 8º."
+    ],
+    [
+     "Qual forma de provimento é a única originária e depende de concurso público?",
+     "a nomeação",
+     "A nomeação é a única forma originária de provimento de cargo público e depende de aprovação prévia em concurso público de provas ou de provas e títulos, salvo os cargos em comissão declarados em lei de livre nomeação e exoneração.",
+     "Lei 8.112/1990, art. 10; CF/88, art. 37, II."
+    ],
+    [
+     "Qual é o prazo de validade do concurso público na lei do servidor?",
+     "até dois anos, prorrogável uma vez por igual período",
+     "O concurso público tem validade de até dois anos, contados da publicação do ato de homologação, prorrogável uma vez por igual período.",
+     "Lei 8.112/1990, art. 12; CF/88, art. 37, III."
+    ],
+    [
+     "Em que prazo o servidor aprovado deve tomar posse?",
+     "trinta dias, contados da publicação do ato de nomeação",
+     "A posse deve ocorrer no prazo de trinta dias, contados da publicação do ato de nomeação, podendo ser efetivada mediante procuração específica.",
+     "Lei 8.112/1990, art. 13, § 1º."
+    ],
+    [
+     "Em que prazo o servidor empossado deve entrar em exercício?",
+     "quinze dias, contados da posse",
+     "O servidor empossado em cargo público deve entrar em exercício no prazo de quinze dias, contados da data da posse.",
+     "Lei 8.112/1990, art. 15, § 1º."
+    ],
+    [
+     "Quais são as formas de vacância do cargo público?",
+     "exoneração, demissão, promoção, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento",
+     "A vacância do cargo público decorre de exoneração, demissão, promoção, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento.",
+     "Lei 8.112/1990, art. 33."
+    ],
+    [
+     "Em que consiste a readaptação?",
+     "na investidura do servidor em cargo de atribuições compatíveis com a limitação física ou mental sofrida",
+     "A readaptação é a investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental, verificada em inspeção médica oficial.",
+     "Lei 8.112/1990, art. 24."
+    ],
+    [
+     "Em que consiste a reversão?",
+     "no retorno do servidor aposentado ao cargo, quando declarada insubsistente a aposentadoria por invalidez",
+     "A reversão é o retorno do servidor aposentado ao cargo de origem, quando junta médica oficial declarar insubsistentes os motivos da aposentadoria por invalidez, ou no interesse da administração.",
+     "Lei 8.112/1990, art. 25."
+    ],
+    [
+     "Como a Constituição disciplina a acumulação remunerada de cargos públicos?",
+     "é vedada, salvo quando houver compatibilidade de horários e observado o teto remuneratório, nas hipóteses constitucionalmente autorizadas",
+     "É vedada a acumulação remunerada de cargos públicos, salvo quando houver compatibilidade de horários e observado o teto remuneratório: dois cargos de professor, um de professor com outro técnico ou científico, ou dois cargos privativos de profissionais de saúde com profissões regulamentadas.",
+     "CF/88, art. 37, XVI."
+    ],
+    [
+     "Qual é a carga horária semanal prevista para os servidores públicos federais?",
+     "quarenta horas semanais, salvo jornadas especiais fixadas em lei",
+     "A jornada de trabalho dos servidores públicos federais é de quarenta horas semanais, ressalvadas as jornadas especiais estabelecidas em lei específica.",
+     "Lei 8.112/1990, art. 19."
+    ],
+    [
+     "Quais fatores são avaliados no estágio probatório do servidor?",
+     "assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade",
+     "Durante o estágio probatório de vinte e quatro meses, são avaliados a assiduidade, a disciplina, a capacidade de iniciativa, a produtividade e a responsabilidade do servidor.",
+     "Lei 8.112/1990, art. 20."
+    ],
+    [
+     "Quais são as licenças previstas ao servidor, entre outras?",
+     "por motivo de doença em pessoa da família, por afastamento do cônjuge, para capacitação, para tratar de interesses particulares e para atividade política",
+     "Entre as licenças previstas estão a licença por motivo de doença em pessoa da família, a licença por motivo de afastamento do cônjuge, a licença para o serviço militar, a licença para capacitação, a licença para tratar de interesses particulares e a licença para atividade política.",
+     "Lei 8.112/1990, arts. 81 a 92."
+    ],
+    [
+     "Quantos dias de férias anuais tem direito o servidor público federal?",
+     "trinta dias",
+     "O servidor faz jus a trinta dias de férias por ano, que podem ser acumuladas até o máximo de dois períodos, no caso de necessidade do serviço, ressalvadas as hipóteses legais.",
+     "Lei 8.112/1990, art. 77."
+    ],
+    [
+     "Qual é a diferença entre vencimento e remuneração?",
+     "o vencimento é a retribuição pelo exercício do cargo; a remuneração é o vencimento acrescido das vantagens permanentes",
+     "Vencimento é a retribuição pecuniária pelo exercício de cargo público, com valor fixado em lei; remuneração é o vencimento do cargo acrescido das vantagens pecuniárias permanentes estabelecidas em lei.",
+     "Lei 8.112/1990, arts. 40 e 41."
+    ],
+    [
+     "O servidor público tem direito de greve?",
+     "sim, nos termos e nos limites definidos em lei específica",
+     "É assegurado ao servidor público o direito de greve, que deve ser exercido nos termos e nos limites definidos em lei específica, conforme o mandado de injunção e a legislação aplicável.",
+     "CF/88, art. 37, VII."
+    ],
+    [
+     "Como o servidor estável pode perder o cargo?",
+     "por sentença judicial transitada em julgado, por processo administrativo com ampla defesa ou por avaliação periódica de desempenho",
+     "O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado, mediante processo administrativo em que lhe seja assegurada ampla defesa, ou mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar.",
+     "CF/88, art. 41, § 1º."
+    ]
+   ]
+  },
+  {
+   "materia": "DA",
+   "id": "estatuto_disciplina",
+   "tema": "Estatuto do servidor — responsabilidades e penalidades",
+   "fatos": [
+    [
+     "Quais são as penalidades disciplinares previstas na Lei 8.112/1990?",
+     "advertência, suspensão, demissão, cassação de aposentadoria ou disponibilidade, destituição de cargo em comissão e destituição de função comissionada",
+     "São penalidades disciplinares a advertência, a suspensão, a demissão, a cassação de aposentadoria ou disponibilidade, a destituição de cargo em comissão e a destituição de função comissionada.",
+     "Lei 8.112/1990, art. 127."
+    ],
+    [
+     "Em que situações é aplicada a penalidade de advertência?",
+     "na violação de proibição ou no descumprimento de dever, quando não justificar penalidade mais grave",
+     "A advertência é aplicada por escrito na violação de proibição prevista no estatuto ou no descumprimento de dever, quando a falta não justificar imposição de penalidade mais grave.",
+     "Lei 8.112/1990, art. 129."
+    ],
+    [
+     "Qual é o prazo máximo da penalidade de suspensão?",
+     "noventa dias",
+     "A suspensão é aplicada em caso de reincidência em falta punida com advertência ou de violação de dever quando a falta não justificar demissão, e não pode exceder noventa dias.",
+     "Lei 8.112/1990, art. 130."
+    ],
+    [
+     "Quando é aplicada a penalidade de demissão?",
+     "em caso de crime contra a administração pública, abandono de cargo, inassiduidade habitual, improbidade, incontinência pública, insubordinação grave, ofensa física, entre outras hipóteses legais",
+     "A demissão é aplicada em hipóteses como crime contra a administração pública, abandono de cargo, inassiduidade habitual, improbidade administrativa, incontinência pública e conduta escandalosa, insubordinação grave em serviço, ofensa física em serviço, revelação de segredo do qual se apropriou em razão do cargo, entre outras.",
+     "Lei 8.112/1990, art. 132."
+    ],
+    [
+     "O que caracteriza o abandono de cargo?",
+     "a ausência intencional do servidor ao serviço por mais de trinta dias consecutivos",
+     "Considera-se abandono de cargo a ausência intencional do servidor ao serviço por mais de trinta dias consecutivos, hipótese punida com demissão.",
+     "Lei 8.112/1990, art. 138."
+    ],
+    [
+     "O que caracteriza a inassiduidade habitual?",
+     "a falta ao serviço, sem causa justificada, por sessenta dias, interpoladamente, em doze meses",
+     "A inassiduidade habitual caracteriza-se pela falta ao serviço, sem causa justificada, por sessenta dias, interpoladamente, durante o período de doze meses, hipótese punida com demissão.",
+     "Lei 8.112/1990, art. 139."
+    ],
+    [
+     "Qual é o prazo de prescrição da ação disciplinar em relação à demissão?",
+     "cinco anos, contados da data do conhecimento do fato",
+     "A ação disciplinar prescreve em cinco anos, quanto à demissão; em dois anos, quanto à suspensão; e em cento e oitenta dias, quanto à advertência, contando-se os prazos da data do conhecimento do fato pela autoridade competente.",
+     "Lei 8.112/1990, art. 142, § 1º."
+    ],
+    [
+     "Em que prazo prescreve a ação disciplinar para a penalidade de suspensão?",
+     "dois anos, contados da data do conhecimento do fato",
+     "A ação disciplinar prescreve em dois anos quanto à penalidade de suspensão, contados os prazos da data do conhecimento do fato pela autoridade competente.",
+     "Lei 8.112/1990, art. 142, § 1º."
+    ],
+    [
+     "Qual é o prazo de prescrição para a advertência?",
+     "cento e oitenta dias",
+     "A ação disciplinar prescreve em cento e oitenta dias quanto à penalidade de advertência, contados da data do conhecimento do fato pela autoridade competente.",
+     "Lei 8.112/1990, art. 142, § 1º."
+    ],
+    [
+     "A responsabilidade civil do servidor depende de apuração em processo disciplinar?",
+     "não, a responsabilidade civil é independente, mas depende de haver dano e culpa ou dolo",
+     "As responsabilidades civil, penal e administrativa do servidor são independentes entre si, mas a responsabilidade civil e a administrativa não podem coexistir, no mesmo caso, quando houver absolvição na esfera penal por inexistência do fato ou por negativa de autoria.",
+     "Lei 8.112/1990, art. 125."
+    ]
+   ]
+  },
+  {
+   "materia": "DA",
+   "id": "processo_disciplinar",
+   "tema": "Processo administrativo disciplinar",
+   "fatos": [
+    [
+     "Quais são as fases do processo administrativo disciplinar?",
+     "instauração, inquérito administrativo e julgamento",
+     "O processo administrativo disciplinar compreende as fases de instauração, com a publicação do ato que constitui a comissão, de inquérito administrativo, que abrange instrução, defesa e relatório, e de julgamento.",
+     "Lei 8.112/1990, art. 151."
+    ],
+    [
+     "Como deve ser composta a comissão de processo administrativo disciplinar?",
+     "por três servidores estáveis designados pela autoridade competente",
+     "A comissão do processo administrativo disciplinar deve ser composta por três servidores estáveis designados pela autoridade competente, que indicará, entre eles, o presidente.",
+     "Lei 8.112/1990, art. 149."
+    ],
+    [
+     "Qual é o prazo para a conclusão do processo administrativo disciplinar?",
+     "sessenta dias, prorrogável por igual período",
+     "O processo administrativo disciplinar deve ser concluído no prazo de sessenta dias, contados da data de constituição da comissão, admitida a prorrogação por igual período, quando as circunstâncias o exigirem.",
+     "Lei 8.112/1990, art. 152."
+    ],
+    [
+     "Qual é o prazo para a defesa escrita no processo administrativo disciplinar?",
+     "dez dias",
+     "A defesa escrita deve ser apresentada no prazo de dez dias, contados da entrega do mandado de citação ao acusado, ou da publicação do edital, quando este se encontrar em local incerto e não sabido.",
+     "Lei 8.112/1990, art. 161, § 1º."
+    ],
+    [
+     "Quais são as fases do inquérito administrativo?",
+     "instrução, defesa e relatório",
+     "O inquérito administrativo compreende três fases: instrução, defesa e relatório, conforme o art. 153 da Lei 8.112/1990.",
+     "Lei 8.112/1990, art. 153."
+    ],
+    [
+     "O que é a sindicância e qual seu prazo?",
+     "procedimento sumário destinado a apurar irregularidades, com prazo de trinta dias",
+     "A sindicância é procedimento sumário adotado quando não ficar caracterizada a infração punível com suspensão superior a trinta dias ou demissão, devendo ser concluída no prazo de trinta dias.",
+     "Lei 8.112/1990, art. 145."
+    ],
+    [
+     "Quais garantias devem ser asseguradas ao servidor no processo disciplinar?",
+     "o contraditório e a ampla defesa, com o direito de acompanhar o processo e produzir provas",
+     "No processo administrativo disciplinar são assegurados o contraditório e a ampla defesa, sendo vedada a imposição de penalidade sem que o servidor conheça o teor da acusação e possa produzir sua defesa.",
+     "Lei 8.112/1990, art. 143; CF/88, art. 5º, LV."
+    ],
+    [
+     "O que acontece quando o servidor, no curso do processo disciplinar, é exonerado a pedido?",
+     "o processo continua para apurar a falta e, se aplicável pena superior, a exoneração é convertida em demissão",
+     "A exoneração de ofício ou a pedido não impede a apuração da falta; quando o processo disciplinar conclui pela aplicação de pena superior a trinta dias, a exoneração é convertida em demissão, se aplicável.",
+     "Lei 8.112/1990, arts. 172 e 173."
+    ],
+    [
+     "Qual é o efeito do julgamento no processo disciplinar?",
+     "a autoridade decide pela aplicação de penalidade, pelo arquivamento, pela instauração de novo processo ou pela declaração de insuficiência de provas",
+     "No julgamento do processo disciplinar, a autoridade decide pela aplicação de penalidade, pelo arquivamento, pela instauração de novo processo ou pela declaração da insuficiência de provas para fundamentar a decisão.",
+     "Lei 8.112/1990, art. 168."
+    ]
+   ]
+  },
+  {
+   "materia": "DA",
+   "id": "estatuto_estadual",
+   "tema": "Regime jurídico dos servidores públicos civis do Estado do Pará",
+   "fatos": [
+    [
+     "Qual é a lei que disciplina o regime jurídico dos servidores públicos civis do Estado do Pará?",
+     "a Lei 5.810/1994",
+     "O regime jurídico dos servidores públicos civis do Estado do Pará é instituído pela Lei 5.810/1994, que disciplina provimento, vacância, direitos, deveres e responsabilidades dos servidores estaduais.",
+     "Lei estadual do Pará 5.810/1994."
+    ],
+    [
+     "Que forma de provimento depende de prévia aprovação em concurso público?",
+     "a nomeação",
+     "O provimento de cargo público efetivo depende de prévia aprovação em concurso público de provas ou de provas e títulos, sendo a nomeação o ato administrativo que efetiva o provimento, ressalvados os cargos em comissão de livre provimento.",
+     "CF/88, art. 37, II; Lei estadual do Pará 5.810/1994."
+    ],
+    [
+     "Como o servidor estadual pode perder o cargo?",
+     "por sentença judicial transitada em julgado, por processo administrativo disciplinar com ampla defesa ou por procedimento de avaliação periódica de desempenho",
+     "A perda do cargo pelo servidor estável depende de sentença judicial transitada em julgado, de processo administrativo com ampla defesa ou de avaliação periódica de desempenho, na forma da legislação e da Constituição.",
+     "CF/88, art. 41, § 1º; Lei estadual do Pará 5.810/1994."
+    ],
+    [
+     "Quais são as fases do processo disciplinar no regime estadual?",
+     "instauração, inquérito administrativo e julgamento",
+     "O processo disciplinar no regime estadual também observa as fases de instauração, inquérito administrativo, com instrução, defesa e relatório, e julgamento, com garantia de contraditório e ampla defesa.",
+     "Lei estadual do Pará 5.810/1994."
+    ],
+    [
+     "O que a legislação estadual disciplina a respeito do estágio probatório?",
+     "a avaliação do servidor por comissão, observados os critérios de assiduidade, disciplina, iniciativa, produtividade e responsabilidade",
+     "A legislação estadual disciplina a avaliação especial de desempenho no estágio probatório, realizada por comissão designada, com base em critérios como assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade.",
+     "Lei estadual do Pará 5.810/1994; CF/88, art. 41."
+    ],
+    [
+     "Qual é o princípio que veda ao servidor exercer atividades incompatíveis com o cargo?",
+     "o princípio da vedação ao conflito de interesses",
+     "A legislação veda ao servidor exercer atividades que sejam incompatíveis com o cargo, especialmente aquelas que impliquem conflito de interesses, uso de informações privilegiadas ou concorrência desleal com a administração pública.",
+     "Lei estadual do Pará 5.810/1994; Lei 12.813/2013."
+    ]
+   ]
+  },
+  {
+   "materia": "LE",
+   "id": "etica_gestao",
+   "tema": "Gestão da ética e processo ético",
+   "fatos": [
+    [
+     "Qual decreto instituiu o Sistema de Gestão da Ética do Poder Executivo Federal?",
+     "o Decreto 6.029/2007",
+     "O Decreto 6.029/2007 instituiu o Sistema de Gestão da Ética do Poder Executivo Federal, integrado pela Comissão de Ética Pública e pelas comissões de ética dos órgãos e entidades.",
+     "Decreto 6.029/2007."
+    ],
+    [
+     "Qual é a função da Comissão de Ética Pública?",
+     "atuar como instância consultiva e de supervisão da conduta ética, apreciando consultas e supervisando as comissões de ética dos órgãos",
+     "A Comissão de Ética Pública é instância consultiva, de supervisão e de apreciação de consultas sobre a conduta ética dos agentes públicos, cabendo-lhe também supervisionar as comissões de ética dos órgãos e entidades.",
+     "Decreto 6.029/2007; Decreto de 26/05/1999."
+    ],
+    [
+     "Qual é o prazo de mandato dos membros das comissões de ética?",
+     "três anos, permitida uma recondução",
+     "Os membros das comissões de ética têm mandato de três anos, sendo permitida uma recondução, conforme a regulamentação sobre gestão da ética.",
+     "Decreto 6.029/2007, art. 2º, § 1º."
+    ],
+    [
+     "Qual penalidade a comissão de ética pode aplicar ao servidor?",
+     "a censura, registrada nos assentamentos funcionais",
+     "A comissão de ética pode aplicar ao servidor a penalidade de censura, que é registrada nos assentamentos funcionais do agente público, sem prejuízo de outras responsabilidades.",
+     "Decreto 1.171/1994; Decreto 6.029/2007."
+    ],
+    [
+     "O processo ético pode ser instaurado de ofício pela comissão?",
+     "sim, por denúncia, por solicitação de autoridade ou de ofício",
+     "O processo ético pode ser instaurado por denúncia de qualquer cidadão, por solicitação expressa de autoridade ou de ofício pela própria comissão de ética, sendo assegurados o contraditório e a ampla defesa ao acusado.",
+     "Decreto 6.029/2007."
+    ],
+    [
+     "A conclusão do processo ético gera impedimento para outros processos?",
+     "não, as esferas ética, administrativa disciplinar, civil e penal são independentes",
+     "As instâncias ética, administrativa disciplinar, civil e penal são independentes entre si, sem prejuízo do dever de comunicação dos fatos apurados às autoridades competentes.",
+     "Decreto 6.029/2007."
+    ],
+    [
+     "Qual é o prazo para o servidor se manifestar em processo ético?",
+     "o prazo assinalado pela comissão, para apresentar defesa ou esclarecimentos",
+     "Instaurado o processo ético, o servidor é comunicado para apresentar defesa ou esclarecimentos no prazo assinalado pela comissão, sendo-lhe assegurado o acesso aos autos e o direito de produzir provas.",
+     "Decreto 1.171/1994, Seção III."
+    ],
+    [
+     "Que conduta é vedada ao servidor no relacionamento com o público?",
+     "retardar ou deixar de prestar serviço por motivação pessoal ou desvio de finalidade",
+     "É vedado ao servidor deixar de prestar serviço ou retardá-lo por motivação pessoal, bem como exercer suas atribuições com desvio de finalidade, tratando pessoas de forma desigual ou privilegiando interesses privados.",
+     "Decreto 1.171/1994, Seção II."
+    ]
+   ]
+  }
+ ]
+}

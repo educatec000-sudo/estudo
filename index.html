@@ -465,14 +465,17 @@ function marcarTempo(seg) {
 
 /* ------------------- 3b. REPARO DE DADOS DE VERSÕES ANTIGAS ------------- */
 /* Versões antigas do app gravaram, por engano, CARIMBOS DE TEMPO no lugar de
-   contagens (ex.: 37912586 "questões" e 222311 "minutos"). Esses valores
-   ficaram salvos no aparelho e reaparecem em qualquer versão nova.
+   contagens (ex.: 37912586 "questões" e 222311 "minutos"), e a nuvem podia
+   devolver esses valores para o aparelho. O que ficou salvo assim precisa ser
+   consertado, senão o número errado aparece para sempre.
 
-   sanearDados() conserta isso na abertura do app:
-     • resp: contagem que na verdade é carimbo de tempo volta a valer 1 tentativa;
-     • hist: dia com número impossível (mais de 1500 questões ou mais de 1440
-       minutos) é reconstruído a partir das respostas — assim os totais voltam
-       a ser reais e ninguém perde progresso de verdade. */
+   sanearDados() roda sozinho na abertura do app e faz:
+     • resp: carimbo de tempo no lugar da contagem volta a valer 1 tentativa;
+     • hist: quando o histórico é IMPOSSÍVEL — algum dia acima de 1500 questões,
+       ou o total muito maior do que as respostas realmente registradas — ele é
+       REFEITO a partir das suas respostas (dias e acertos reais). O tempo de
+       estudo vira uma estimativa de ~2 min por questão (máx. 8h por dia).
+   Nada do estudo se perde: questões, acertos, revisão e caixas continuam lá. */
 const LIM_DIA_Q = 1500;        // nenhum dia tem mais que isso de questões
 const LIM_DIA_MIN = 1440;      // um dia tem 1440 minutos
 const LIM_DIA_MIN_FIX = 480;   // ao refazer um dia estragado: no máximo 8h de estudo
@@ -484,80 +487,100 @@ function diaDoCarimbo(t) {
   const d = new Date(ms);
   return isNaN(d.getTime()) ? null : d.toLocaleDateString('sv-SE');
 }
+/* o histograma (hist) está estragado? Compara o que ele diz com o que as
+   respostas registradas provam: se o total é muito maior, o número é falso. */
+function histSuspeito(hist, totalResp) {
+  let soma = 0, diasSuspeitos = 0;
+  Object.keys(hist || {}).forEach(d => {
+    const h = hist[d] || {};
+    const q = Math.max(0, +(h.q) || 0), a = Math.max(0, +(h.a) || 0), mn = Math.max(0, +(h.min) || 0);
+    soma += Math.min(q, LIM_DIA_Q);
+    if (q > LIM_DIA_Q || mn > LIM_DIA_MIN || a > q) diasSuspeitos++;
+  });
+  const inflado = soma > 500 && soma > (totalResp || 0) * 1.5 + 200;
+  return { soma, diasSuspeitos, suspeito: diasSuspeitos > 0 || inflado, inflado };
+}
+/* refaz o histórico inteiro a partir das respostas (dias e acertos reais) */
+function histDasRespostas() {
+  const mapa = {};
+  Object.keys(S.resp).forEach(id => {
+    const r = S.resp[id] || {};
+    const n = Math.max(1, Math.round(+(r.t) || 1));
+    const ac = Math.min(n, Math.max(0, Math.round(+(r.ok) || 0)));
+    const d = diaDoCarimbo(r.ult) || hojeISO();
+    mapa[d] = mapa[d] || { q: 0, a: 0, min: 0 };
+    mapa[d].q += n; mapa[d].a += ac;
+  });
+  Object.keys(mapa).forEach(d => {   /* tempo: estimativa honesta, nunca o valor estragado */
+    mapa[d].min = Math.round(Math.min(LIM_DIA_MIN_FIX, Math.max(10, mapa[d].q * 2)));
+  });
+  return mapa;
+}
 function sanearDados() {
-  const rel = { resp: 0, dias: 0, mudou: false, qAntes: 0, minAntes: 0, qDepois: 0, minDepois: 0 };
+  const rel = { resp: 0, dias: 0, mudou: false, qAntes: 0, minAntes: 0, qDepois: 0, minDepois: 0, refez: false };
   if (!S.resp || typeof S.resp !== 'object') S.resp = {};
   if (!S.hist || typeof S.hist !== 'object') S.hist = {};
 
-  /* ---- (a) respostas ---- */
+  /* ---- (a) respostas: contagens de verdade (carimbo vira 1 tentativa) ---- */
   Object.keys(S.resp).forEach(id => {
     const r = S.resp[id];
     if (!r || typeof r !== 'object') { delete S.resp[id]; rel.mudou = true; return; }
     if (typeof r.t !== 'number' || !isFinite(r.t) || r.t < 0) { r.t = 0; rel.mudou = true; }
     if (r.t > LIM_CARIMBO) {                   // carimbo de tempo no lugar da contagem
-      const d = diaDoCarimbo(r.t);
-      if (d && !r.ult) r.ult = r.t > 1e11 ? r.t : r.t * 1000;
+      if (!r.ult) r.ult = r.t > 1e11 ? r.t : r.t * 1000;
       r.t = 1; rel.mudou = true; rel.resp++;
     }
     if (typeof r.ok === 'boolean') { r.ok = r.ok ? 1 : 0; rel.mudou = true; }
     if (typeof r.ok !== 'number' || !isFinite(r.ok) || r.ok < 0) { r.ok = 0; rel.mudou = true; }
     if (r.ok > r.t) { r.ok = r.t; rel.mudou = true; }
-    if (typeof r.a === 'number' && (!isFinite(r.a) || r.a < 0 || r.a > r.t)) { r.a = undefined; }
+    if (typeof r.a === 'number' && (!isFinite(r.a) || r.a < 0 || r.a > r.t)) r.a = undefined;
     r.t = Math.round(r.t); r.ok = Math.round(r.ok);
   });
 
-  /* ---- (b) histórico por dia ---- */
-  const antes = Object.keys(S.hist).reduce((o, d) => {
-    const h = S.hist[d] || {};
-    o.q += (+h.q) || 0; o.min += (+h.min) || 0; return o;
-  }, { q: 0, min: 0 });
-  rel.qAntes = Math.round(antes.q); rel.minAntes = Math.round(antes.min);
+  const somarHist = campo => Object.keys(S.hist).reduce((t, d) => t + Math.max(0, +((S.hist[d] || {})[campo]) || 0), 0);
+  rel.qAntes = Math.round(somarHist('q')); rel.minAntes = Math.round(somarHist('min'));
 
-  let corrompido = false;
-  Object.keys(S.hist).forEach(d => {
-    const h = S.hist[d];
-    if (!h || typeof h !== 'object' || !/^\d{4}-\d{2}-\d{2}$/.test(d)) { delete S.hist[d]; rel.mudou = true; return; }
-    ['q', 'a', 'min'].forEach(k => {
-      if (typeof h[k] !== 'number' || !isFinite(h[k]) || h[k] < 0) { h[k] = 0; rel.mudou = true; }
-    });
-    if (h.q > LIM_DIA_Q || h.min > LIM_DIA_MIN || h.a > h.q) {
-      corrompido = true; rel.dias++;
-      h.q = Math.min(h.q, LIM_DIA_Q); h.a = Math.min(h.a, h.q); h.min = Math.min(h.min, LIM_DIA_MIN_FIX);
-      rel.mudou = true;
-    }
-    h.q = Math.round(h.q); h.a = Math.round(h.a); h.min = Math.round(h.min);
+  let totalResp = 0, totalOk = 0;
+  Object.keys(S.resp).forEach(id => {
+    const n = Math.max(1, Math.round(+(S.resp[id].t) || 1));
+    totalResp += n; totalOk += Math.min(n, Math.max(0, Math.round(+(S.resp[id].ok) || 0)));
   });
 
-  /* ---- (c) dia corrompido: refaz o histórico a partir das respostas ---- */
-  if (corrompido) {
-    const mapa = {};        // dia -> {q, a, min}
-    let totalResp = 0, totalOk = 0;
-    Object.keys(S.resp).forEach(id => {
-      const r = S.resp[id];
-      const n = Math.max(1, Math.round(r.t || 1));
-      const acertos = Math.min(n, Math.round(r.ok || 0));
-      totalResp += n; totalOk += acertos;
-      const d = diaDoCarimbo(r.ult) || hojeISO();
-      mapa[d] = mapa[d] || { q: 0, a: 0, min: 0 };
-      mapa[d].q += n; mapa[d].a += acertos;
-    });
-    /* o tempo de estudo não dá para recuperar com precisão: fica uma estimativa
-       de ~2 min por questão respondida no dia (no máximo 8h), sempre menor que o
-       número estragado — melhor um pouco a menos do que um absurdo na tela */
-    Object.keys(S.hist).forEach(d => {
-      const brutoMin = S.hist[d].min || 0;
-      const qDia = (mapa[d] && mapa[d].q) || 0;
-      const estimado = Math.min(brutoMin, LIM_DIA_MIN_FIX, Math.max(10, qDia * 2));
-      if (estimado > 0) { mapa[d] = mapa[d] || { q: 0, a: 0, min: 0 }; mapa[d].min = Math.max(mapa[d].min, Math.round(estimado)); }
-    });
-    S.hist = mapa;
+  /* ---- (b) dias com formato inválido saem ---- */
+  Object.keys(S.hist).forEach(d => {
+    const h = S.hist[d];
+    if (!h || typeof h !== 'object' || !/^\d{4}-\d{2}-\d{2}$/.test(d)) { delete S.hist[d]; rel.mudou = true; }
+  });
+
+  /* ---- (c) o histórico é confiável? ---- */
+  const av = histSuspeito(S.hist, totalResp);
+  rel.dias = av.diasSuspeitos;
+
+  if (av.suspeito && totalResp > 0) {
+    /* ---- REFAZ tudo a partir das respostas ---- */
+    rel.refez = true; rel.mudou = true;
+    let mapa = histDasRespostas();
+    if (!Object.keys(mapa).length) mapa = { [hojeISO()]: { q: totalResp, a: Math.min(totalResp, totalOk), min: LIM_DIA_MIN_FIX } };
+    /* garante que nenhuma resposta ficou de fora */
     const somaQ = Object.values(mapa).reduce((t, h) => t + h.q, 0);
-    if (somaQ < totalResp) {                    // não perde respostas no caminho
-      const d = hojeISO(); mapa[d] = mapa[d] || { q: 0, a: 0, min: 0 };
+    if (somaQ < totalResp) {
+      const d = hojeISO();
+      mapa[d] = mapa[d] || { q: 0, a: 0, min: 0 };
       mapa[d].q += totalResp - somaQ;
-      mapa[d].a = Math.min(mapa[d].q, mapa[d].a + (totalOk - Object.values(mapa).reduce((t, h) => t + h.a, 0)));
+      mapa[d].a = Math.min(mapa[d].q, mapa[d].a + Math.max(0, totalOk - Object.values(mapa).reduce((t, h) => t + h.a, 0)));
+      mapa[d].min = Math.round(Math.min(LIM_DIA_MIN_FIX, Math.max(10, mapa[d].q * 2)));
     }
-    rel.mudou = true;
+    S.hist = mapa;
+  } else {
+    /* ---- mantém o que existe, só arrumando valores impossíveis ---- */
+    Object.keys(S.hist).forEach(d => {
+      const h = S.hist[d];
+      ['q', 'a', 'min'].forEach(k => {
+        if (typeof h[k] !== 'number' || !isFinite(h[k]) || h[k] < 0) { h[k] = 0; rel.mudou = true; }
+      });
+      if (h.a > h.q) { h.a = h.q; rel.mudou = true; }
+      h.q = Math.round(h.q); h.a = Math.round(h.a); h.min = Math.round(h.min);
+    });
   }
 
   const depois = Object.keys(S.hist).reduce((o, d) => {
@@ -582,8 +605,12 @@ function metricas() {
   const somaHist = campo => Object.keys(S.hist).reduce((t, d) => t + Math.min(cap(campo), (S.hist[d] && S.hist[d][campo]) || 0), 0);
   /* O maior entre "tentativas registradas por questão" e "soma do histórico do dia":
      assim um histórico antigo e legítimo não se perde e um dia estragado não estoura. */
-  const tot = Math.max(ids.length ? somaResp('t') : 0, somaHist('q'));
-  const ok = Math.min(tot, Math.max(ids.length ? somaResp('ok') : 0, somaHist('a')));
+  let tot = Math.max(ids.length ? somaResp('t') : 0, somaHist('q'));
+  let ok = Math.min(tot, Math.max(ids.length ? somaResp('ok') : 0, somaHist('a')));
+  /* rede de segurança: histórico muito maior do que as respostas registradas é
+     dado estragado — vale o que as respostas provam (e o sanearDados refaz depois) */
+  const respTot = ids.length ? somaResp('t') : 0;
+  if (ids.length && histSuspeito(S.hist, respTot).inflado) { tot = respTot; ok = Math.min(tot, somaResp('ok')); }
   const min = somaHist('min');
   const hoje = S.hist[hojeISO()] || { q: 0, a: 0, min: 0 };
   const dias = Object.keys(S.hist).filter(d => S.hist[d].q > 0).sort();
@@ -1241,7 +1268,8 @@ window.addEventListener('DOMContentLoaded', () => {
   try {
     const rel = sanearDados();
     if (rel.mudou && rel.qAntes !== rel.qDepois) {
-      setTimeout(() => toast('🧹 Contadores corrigidos: ' + rel.qAntes.toLocaleString('pt-BR') + ' → ' + rel.qDepois.toLocaleString('pt-BR') + ' questões. Nada do seu estudo foi perdido.', 8000), 1200);
+      const hojeQ = Math.round((metricas().hoje || {}).q || 0);
+      setTimeout(() => toast('🧹 Contadores corrigidos: ' + rel.qAntes.toLocaleString('pt-BR') + ' → ' + rel.qDepois.toLocaleString('pt-BR') + ' questões' + (rel.refez ? ' (refeitos a partir das suas respostas — hoje: ' + hojeQ + ')' : '') + '. Nada do seu estudo foi perdido.', 9000), 1200);
     }
   } catch (e) { console.warn('reparo:', e); }
   const h = location.hash.replace('#', '');
@@ -3418,18 +3446,12 @@ function _delta(local, remoto, base, temBase) {
   if (!temBase) return Math.max(local, remoto);          /* 1ª vez: maior, nunca soma */
   return local + Math.max(0, remoto - ((+base) || 0));    /* depois: só o que apareceu de novo */
 }
-/* limpa um pacote vindo da nuvem (pode ter valores absurdos de versão antiga) */
+/* limpa um pacote vindo da nuvem (pode ter valores absurdos de versão antiga).
+   Dia impossível é DESCARTADO (não "limitado"): limitar deixava um número
+   grande com cara de verdadeiro e ele voltava para o painel. */
 function sanearPacoteNuvem(p) {
   if (!p || typeof p !== 'object') return p;
   const h = {};
-  Object.keys(p.hist || {}).forEach(d => {
-    const x = p.hist[d] || {};
-    let q = Math.max(0, Math.round(+x.q || 0)), a = Math.max(0, Math.round(+x.a || 0));
-    let min = Math.max(0, Math.round(+x.min || 0));
-    if (q > LIM_DIA_Q) q = LIM_DIA_Q; if (min > LIM_DIA_MIN) min = LIM_DIA_MIN;
-    if (a > q) a = q;
-    h[d] = { q: q, a: a, min: min };
-  });
   const r = {};
   Object.keys(p.resp || {}).forEach(id => {
     const x = p.resp[id] || {};
@@ -3440,6 +3462,24 @@ function sanearPacoteNuvem(p) {
     if (ok > t) ok = t;
     r[id] = Object.assign({}, x, { t: t, ok: ok });
   });
+  /* o que está na nuvem é confiável? Compara com as respostas que vieram nele */
+  let totalResp = 0;
+  Object.keys(r).forEach(id => { totalResp += Math.max(1, Math.round(+r[id].t || 1)); });
+  const av = histSuspeito(p.hist || {}, totalResp);
+  if (av.suspeito) {
+    /* dado estragado: o que vale é o aparelho, que tem as respostas de verdade */
+    p.hist = {}; p._histDescartado = av;
+  } else {
+    Object.keys(p.hist || {}).forEach(d => {
+      const x = p.hist[d] || {};
+      h[d] = {
+        q: Math.max(0, Math.round(+x.q || 0)),
+        a: Math.max(0, Math.round(+x.a || 0)),
+        min: Math.max(0, Math.round(+x.min || 0))
+      };
+      if (h[d].a > h[d].q) h[d].a = h[d].q;
+    });
+  }
   p.hist = h; p.resp = r;
   return p;
 }

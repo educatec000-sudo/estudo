@@ -79,6 +79,8 @@ Ela **não usa o seu código**. Ela gera o dela (ex.: `ALEPA-9Q1M-55ZT`) e passa
 
 ---
 
+> **Como saber se o seu app está atualizado:** no topo do app, embaixo do nome, aparece **“versão 2026-10-05”**. Se aparecer “—” ou uma data mais antiga, baixe de novo o `ALEPA_Estudos.html` (ou reenvie o pacote para onde você publicou) antes de seguir o Passo 5.
+
 ## Perguntas rápidas
 
 **Preciso pagar alguma coisa?** Não. Está dentro do plano grátis (100.000 requisições/dia; o app usa umas 2 a 5).

@@ -3009,6 +3009,9 @@ window.addEventListener('load', () => {
 try { window.__S = S; window.__estado = () => S; } catch (e) { }
 window.abrirConfigIA = abrirConfigIA;
 window.__nuvem = () => (typeof cfgNuvem === 'function' ? cfgNuvem() : null);
+window.nuvemAutoBuscar = typeof nuvemAutoBuscar === 'function' ? nuvemAutoBuscar : undefined;
+window.nuvemEnviar = typeof nuvemEnviar === 'function' ? nuvemEnviar : undefined;
+window.nuvemBaixar = typeof nuvemBaixar === 'function' ? nuvemBaixar : undefined;
 window.fecharModal = fecharModal;
 window.instalarPWA = instalarPWA;
 window.passo3 = passo3;
@@ -3342,7 +3345,7 @@ const NUVEM_URL_EXEMPLO = 'https://alepa-progresso.SEU-USUARIO.workers.dev';
 const NUVEM_LIMITE_MS = 15000;
 
 function cfgNuvem() {
-  S.config.nuvem = Object.assign({ url: '', codigo: '', auto: true, ultimo: 0, visto: 0 }, S.config.nuvem || {});
+  S.config.nuvem = Object.assign({ url: '', codigo: '', auto: true, ultimo: 0, visto: 0, ultimaBusca: 0 }, S.config.nuvem || {});
   const nv = S.config.nuvem;
   /* o código é sempre tratado em maiúsculas e sem espaços */
   const limpo = String(nv.codigo || '').toUpperCase().replace(/[^A-Z0-9-]/g, '');
@@ -3581,9 +3584,20 @@ async function nuvemEnviar(silencioso) {
     return { ok: false, erro: e.message };
   }
 }
+/* assinatura curta dos números do painel (para saber se algo mudou) */
+function _assinatura() {
+  try { const m = metricas(); return [m.tot, m.ok, Math.round(m.min), m.streak, m.unicas, m.provas].join('|'); }
+  catch (e) { return ''; }
+}
+/* se a tela aberta é o painel ou o progresso (telas "paradas"), redesenha para
+   os números novos aparecerem na hora. Durante treino/simulado não mexe em nada. */
+function _redesenharSeParado() {
+  try { if (TAB === 'painel' || TAB === 'progresso') irPara(TAB); } catch (e) { }
+}
 async function nuvemBaixar(silencioso) {
   try {
     try { sanearDados(); } catch (e) { }        /* nunca mistura número estragado de versão antiga */
+    const assinaturaAntes = _assinatura();
     const remoto = await nuvemRequisicao('/progresso');
     if (remoto && remoto.vazio) {
       const msg = 'Ainda não existe progresso com esse código na nuvem. Clique em “Enviar progresso” neste aparelho primeiro.';
@@ -3596,10 +3610,14 @@ async function nuvemBaixar(silencioso) {
     aplicarProgressoMesclado(juntos);
     try { sanearDados(); } catch (e) { }
     _marcarBase();
-    cfgNuvem().visto = Date.now();
+    const nv = cfgNuvem();
+    nv.visto = Date.now();
+    nv.ultimaBusca = Date.now();   /* acabamos de olhar a nuvem: não olha de novo já */
     salvar();
-    if (!silencioso) toast('📥 Progresso baixado e juntado com o deste aparelho ✅', 3200);
-    return { ok: true };
+    const mudou = _assinatura() !== assinaturaAntes;
+    if (mudou) _redesenharSeParado();
+    if (!silencioso) toast('📥 Progresso baixado e juntado com o deste aparelho ✅' + (mudou ? '' : ' (nada novo)'), 3200);
+    return { ok: true, mudou, assinaturaAntes };
   } catch (e) {
     if (silencioso) { console.warn('nuvem (baixar):', e.message); return { ok: false, erro: e.message }; }
     desenharStatusNuvem('erro', e.message);
@@ -3607,6 +3625,39 @@ async function nuvemBaixar(silencioso) {
     return { ok: false, erro: e.message };
   }
 }
+
+/* --------------------- busca automática (sem clicar em nada) ------------- */
+/* O PC envia sozinho ~20 s depois de você estudar. Do outro lado, o celular
+   busca sozinho: (a) quando o app abre; (b) quando você volta para ele
+   (trocou de aba no celular e voltou); (c) de 3 em 3 minutos com o app aberto.
+   O intervalo mínimo de 2 minutos evita bater no Worker à toa. */
+const NUVEM_ESPERA_BUSCA = 120000;
+let _nuvemBuscando = false;
+async function nuvemAutoBuscar() {
+  try {
+    /* atenção: cfgNuvem() devolve uma cópia nova a cada chamada — a marca de
+       tempo tem de ser gravada depois de todas as consultas, senão se perde */
+    if (!cfgNuvem().auto || !nuvemUrl() || !nuvemCodigo()) return { ok: false, erro: 'nuvem desligada' };
+    if (typeof document !== 'undefined' && document.hidden) return { ok: false, erro: 'app em segundo plano' };
+    if (_nuvemBuscando) return { ok: false, erro: 'já buscando' };
+    if (Date.now() - (cfgNuvem().ultimaBusca || 0) < NUVEM_ESPERA_BUSCA) return { ok: false, erro: 'ainda é cedo' };
+    cfgNuvem().ultimaBusca = Date.now();
+    _nuvemBuscando = true;
+    const antes = _assinatura();
+    const r = await nuvemBaixar(true);
+    _nuvemBuscando = false;
+    if (r && r.ok && _assinatura() !== antes) {
+      toast('📥 Atualizado do outro aparelho ✅', 2600);
+    }
+    return r;
+  } catch (e) { _nuvemBuscando = false; return { ok: false, erro: e && e.message }; }
+}
+try {
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) nuvemAutoBuscar(); });
+  window.addEventListener('focus', () => nuvemAutoBuscar());
+  window.addEventListener('online', () => nuvemAutoBuscar());
+  setInterval(nuvemAutoBuscar, 180000);
+} catch (e) { }
 
 /* -------------------------------- a tela -------------------------------- */
 function nuvemStatusTexto() {
